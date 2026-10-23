@@ -47,6 +47,7 @@ R0的52个对话全部全新启动，没有使用resume。其实际运行器源�
 
 ## 证据索引
 
+- [GitHub桌面/手机与明暗主题检查](presentation-checks.json)
 - [本机安装与备份](local-install/installation.json) · [真实用户级新会话](local-install/result.json)
 - [最终采用索引](evaluation.json) · [输入冻结](content-freeze.json) · [真实对话运行完整性](behavior-integrity.json)
 - [原16例独立评阅](reviews/legacy-review.json) · [其余32例独立评阅](reviews/new-review.json) · [原生证据独立评阅](reviews/native-review.json)

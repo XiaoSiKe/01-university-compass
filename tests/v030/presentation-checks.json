@@ -1,0 +1,66 @@
+{
+  "version": "0.3.0",
+  "status": "PASS",
+  "tested_commit": "823cbc49e7566fcaf9dd52e0e5a05a0b78b02e18",
+  "url": "https://github.com/XiaoSiKe/01-university-compass",
+  "image_generation_used": false,
+  "readme_image_count": 1,
+  "banner_intrinsic_size": [
+    1672,
+    400
+  ],
+  "banner_loaded": true,
+  "max_table_columns": 3,
+  "long_method_tables_columns": 2,
+  "quick_start_precedes_help_examples": true,
+  "views": [
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "scheme": "dark",
+      "client_width": 1280,
+      "document_width": 1280,
+      "observation": "初心原句、原有横幅、版本和导航正常显示",
+      "screenshot": "compass-v030-readme-final.png"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "scheme": "light",
+      "client_width": 1280,
+      "document_width": 1280,
+      "observation": "学习科学与AI教学两列表格可读",
+      "screenshot": "compass-v030-methods-desktop-light.png"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "scheme": "light",
+      "client_width": 390,
+      "document_width": 390,
+      "observation": "思想方法表已改两列，书名和正文正常换行",
+      "screenshot": "compass-v030-methods-mobile-light-v2.png"
+    },
+    {
+      "viewport": [
+        360,
+        780
+      ],
+      "scheme": "dark",
+      "client_width": 360,
+      "document_width": 360,
+      "observation": "正文、快速开始与安装表格可读，无页面水平溢出",
+      "screenshot": "compass-v030-methods-mobile-dark.png"
+    }
+  ],
+  "screenshot_storage": "local_task_visualization_directory_outside_repository",
+  "temporary_viewport_reset": true,
+  "temporary_color_emulation_reset": true,
+  "limits": "GitHub真实页面的一次目视与DOM布局检查，不等于所有浏览器和设备的自动化兼容保证。"
+}
