@@ -1,51 +1,46 @@
-# 0.3.0 验证设计与复跑方法
+# 0.3.1 验证设计与复跑方法
 
-状态：实施中，未完成的测试不得写成通过。历史范围与结论见 [0.2.0设计](test-plan-v020.md)、[0.2.0报告](test-report-v020.md) 和 [0.2.1记录](v021/report.md)。真实学生试用未开展。
+本轮聚焦通俗解释、逐渐增加帮助、纠错与对话连续性。真实学生试用仍未开展，历史通过结论不自动继承为新内容的证据。
 
-## 分开保存的三类证据
+## 两次冻结，分别验收
 
-1. **确定性工具链回归**：临时项目中检查构建失败保留旧包、双产物发布失败回滚、验收索引选择、防止证据覆盖，以及结构/来源/锚点/manifest/ZIP一致性。不需要模型或真实外部写入。
-2. **实际离线模型对话**：原38情境加V01—V10，共48个Skill情境；新10例中8例为3轮。原输入不改写，预期观察不发送给被测模型。每轮新进程回放本例此前真实回答，所有Skill Markdown显式加载，不能据此证明按需读取或安装发现。
-3. **原生发现与教学**：4个独立案例（显式、自然语言、无关代码、多轮教学）。只把Skill副本安装到隔离目录，由宿主发现；不注入正文。记录实际成功读取路径、文件哈希、每轮回答与工具证据。多轮输入回放此前真实回答，不带制作对话或评审结论。
+1. **初次冻结**：14 个针对性情境、26 轮实际离线回答；8 个新交互场景与 6 个保持原学生输入的回归情境。原生 4 例、6 轮，另有本机全新会话和 3 组旧版/新版对照。
+2. **修复后冻结**：独立评阅发现“AI 自称用过工具就增加信心”的表述不可靠，补充证据规则后，重跑 6 个受影响情境、12 轮，包括新增 G15；重跑 2 个原生案例、4 轮及本机新会话。最终验收索引只采用本次冻结的回答，不把初次冻结的其他案例算成最终内容重测。
 
-行为案例见 [新增10例](cases-v030.json)、[原A组](cases-a.json)、[原B组](cases-b.json)、[0.2.0新增组](cases-v020.json)。原生案例见 [4例输入](v030/discovery-cases.json)。所有学生输入均为合成情境，不是学生试用。
+[完整案例目录](cases-v031.json)现有 15 个不同情境。[初次输入](v031/cases-initial.json)、[最终重测输入](v031/cases-final.json)与[最终验收范围](v031/suite.json)分别保存，范围文件的哈希绑定验收索引。首次 14 例不是在最终冻结文本上全量重跑；原记录与不利结果保留。
 
-## 四组条件隐藏对照
+[原生输入](v031/discovery-cases.json)、[自然语言学习请求](v031/discovery-natural.json)及[修复后原生重测](v031/discovery-final.json)均由宿主自行发现隔离项目中的 Skill，不把全文注入提示。简单术语请求 D02 未观察到读取，不计为成功发现；D04 学习引导请求单独核对。用户级本机安装另外使用普通 CODEX_HOME 和空临时工作目录。
 
-固定比较V01（核验无误）、V03（独立迁移）、V05（AI适用性）、V06（固定流程与Agent）。同一默认模型、用户输入和离线工具限制，仅改变是否提供Skill。后续历史分别使用各自真实回答，因此是多轮产品比较，后续上下文不保证逐字相同。
+## 评阅与证据边界
 
-评阅材料随机映射为A/B并去掉条件与路径，不提供映射给评阅者；完成四例评阅后再揭示映射。记录具体依据与局限，不用偏好评分推导统计效果；负向或无增益结果如实保留。评分关注条件贴合、当前可用帮助、掌握检查和反馈是否导致调整。
+每轮回放本案例此前真实回答，预期观察不发给被测模型。独立评阅关注眼前帮助、概念与例子是否准确、听不懂时是否改变帮助、提问/测验负担、目标更正与停止，以及独立检查时的证据边界；只讲解、代码或倾诉不强求练习。
 
-## 语义验收与失败处理
+三组 G01/G03/G07 对照使用 0.3.0 与初次冻结的 0.3.1，同一默认模型、学生输入与离线工具限制，后续分别使用真实历史。匿名映射后先评阅、再揭示：新版/旧版各一例偏好，一例各有优势。没有针对最终证据规则修订重新对照，不能把这些结果当作最终版本普遍更好。
 
-严重问题包括来源/能力编造、未核实承诺付费或平台条件、忽略用户更正、强迫路径、把有提示完成算独立掌握、强行给正确材料找错、将证据不足当证伪、虚构工具运行/提醒/保存等。不是每一轮都需要提问或练习；纯代码、倾诉等维度可不适用。
+运行完整性另外核对实际输入、历史、提示摘要、加载文本、模型、输出事件与覆盖集合，运行成功不自动获得语义通过。原生读取核对命令与输出内容；没有读命令不能反推宿主内部从未加载。全新本机探针曾因要求无格式的完整文件文本而标 FAIL，原记录不改写；补充检查核对真实输出的逐行内容、安装哈希和最终消息，详见报告。
 
-进程退出0、回答非空只是运行完整性，不自动判语义通过。由独立评阅者核对实际输出，保存逐例证据。失败记录保留；修复后只重测受影响情境，记录前后版本与采用依据。未经评审的成功尝试或较新的失败尝试不得挤掉验收索引明确采用的回答。
+## 最终内容的复跑入口
 
-## 复跑入口
+在项目根目录执行。模型测试有实际调用成本，默认沿用本机模型与提供者，不改变全局设置。建议省略输出参数自动创建唯一目录；指定时使用新目录。
 
 ```sh
-python3 -m unittest discover -s tests -p 'test_tooling.py'
+python3 -B -m unittest discover -s tests -p 'test_*.py' -v
 python3 scripts/validate_package.py
-python3 tests/run_behavior.py --group all --list
-python3 tests/run_behavior.py --group all --jobs 6 --output tests/v030/behavior/r0
-python3 tests/run_behavior.py --group baseline --jobs 4 --output tests/v030/behavior/r0
-python3 tests/run_discovery.py --cases-file tests/v030/discovery-cases.json --output tests/v030/discovery/r0
+python3 tests/run_behavior.py --case-file tests/v031/cases-final.json --group all --list
+python3 tests/run_behavior.py --case-file tests/v031/cases-final.json --group all --jobs 6
+python3 tests/run_discovery.py --cases-file tests/v031/discovery-final.json --jobs 2
+python3 tests/check_behavior_integrity.py --evaluation tests/v031/evaluation.json --suite tests/v031/suite.json
+python3 scripts/render_delivery.py --evaluation tests/v031/evaluation.json
 ```
 
-行为运行器保留`--case`、`--condition`、`--resume`，新增`--case-file`和`--baseline-id`以显式复跑历史集合；只有输入、模型配置、被测文本和运行器指纹一致才复用已完成轮次。未指定输出目录时生成当前版本唯一run目录，原生发现的非空目标拒绝覆写。
+`--group new`按 Skill 元数据版本选择对应案例文件，不依赖 ID 前缀；本版会列出 15 例，可用于下一次完整复跑，但不表示这 15 例已在最终冻结文本上全部跑过。`--case-file`可重复，`--case`、`--condition`、`--resume`保留；只有输入、版本、模型配置、被测文本和运行器指纹一致才复用记录。
 
-模型沿用本机已配置的默认模型与提供者，不硬编码模型、不改用户全局设置。认证只进入临时私有目录，不发布到仓库。保存时掩码项目/用户绝对路径及运行时指定的排除标识；模型回答其余内容保留，输出净化范围在完整性报告中说明。断网、超时、额度或宿主异常均记录实际失败，不补写结果。
+初次冻结的完整安装内容保存在 [skill-initial.zip](v031/skill-initial.zip)，先解压到新的临时目录，再用 `--skill <临时目录>/01-university-compass`、`--evaluation tests/v031/evaluation-initial.json --suite tests/v031/suite-initial.json` 校验原证据。0.3.0 的对照源内容由内容冻结记录中的 Git 提交恢复。不能只改版本号或沿用当前文件冒充历史源。
 
-## 打包和展示
+离线对话固定合成日期为 2026-10-23，并等量禁用外部工具。认证只进临时私有目录，公开记录掩码用户/项目路径；排除标识从运行时参数传入。联网核查、保存、提醒、第三方 API 与后台执行不在此离线测试中验证。
 
-内容冻结后先校验，再生成候选manifest与ZIP，复核候选后发布；校验失败不改变旧包，发布写入失败回滚两份产物。通过语义评审后写入当前验收索引：version、raw文件manifest的skill_digest、每例case/condition/artifact/status及artifact_sha256；artifact相对索引目录，Skill和基线都显式列出。
+## 发布与局限
 
-```sh
-python3 scripts/validate_package.py --build
-python3 scripts/render_delivery.py --evaluation tests/v030/evaluation.json
-```
+先校验输入和候选 ZIP/manifest，再事务发布；失败保留旧文件，写入失败回滚。展示页严格采用验收索引指定且版本、摘要一致的回答，同目录历史计数与其他运行轮次区分。
 
-排除标识由运行时JSON数组环境变量经`--exclude-env`传入，不写入脚本、案例或发布文件；扫描交付文件及ZIP内部。README与说明页中的版本和实际计数一起核对，历史数字须标明历史版本。
-
-本轮不验证真实联网能力、后台任务、真实学生长期学习结果或职业收益。学生自愿试用入口见 [pilot-guide.md](pilot-guide.md)。
+“更顺畅”观察首次有用解释前的额外确认、重复背景询问和强制测验；实际延迟同时受模型、网络和宿主影响，不以少量耗时宣称速度提升。真实学生舒适度、长期掌握和持续使用效果仍待[自愿试用](pilot-guide.md)。历史：[0.3.0 设计](test-plan-v030.md) · [0.3.0 报告](test-report-v030.md)。

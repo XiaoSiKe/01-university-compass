@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "version": "0.3.1",
+  "skill_digest": "7cf045b502d5f7c76fc60980f38e5efcd087593d7eb1a0eaf6c3563cef7f7307",
+  "attempt_created_ns": 1792771298401378000,
+  "case": "G06",
+  "title": "预设分支中的LLM不自动成为Agent",
+  "condition": "skill",
+  "fingerprint": "da454cb2a29810670a36c6391acd0ca7d3de0a87dfefb1dc2cf076db733c7bf3",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "tests/v031/behavior/after-evidence-fix/G06-skill/attempt-20261024T000138-31fcc648.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "e5d3ba1e18ebe445a3d81c3e394c0564b97c97f4bc14e8597b755ff2f3d17396",
+      "bytes": 8207
+    },
+    {
+      "path": "references/01.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "sha256": "ffb8386dd955f697b4e9e294bad0c143e7efae248760aa6a6ef00e87610567c7",
+      "bytes": 7250
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "9a0703399ba3fd1aefcdf77a220ef73447ffd99896fb6164efc1509feb644681",
+      "bytes": 12196
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+      "bytes": 22162
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "f40e49193e6918a87b8af9f82a5b20ac725fcb752bd326a3f171346fbbd76675",
+      "bytes": 9208
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "9bd666bb1de2069bf6e7be4428b46f84c04dbfa4ac42a46f70887f54031c8ffb",
+      "bytes": 13064
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f",
+      "bytes": 42049
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622",
+      "bytes": 2945
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我做了个程序：先让模型判断问题是课程还是活动，再按写死的两个分支生成摘要，失败就固定重试一次。它用了大模型、分支和循环，所以一定算Agent吗？请讲清楚关键区别。",
+      "prompt_sha256": "5d83e4a7120ffdf3e6d37bc869a47d2eaca4ad43544bf6195b6264e4e38dbb83",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**不一定。按你的描述，它属于“带模型分类的固定工作流”。** 用了大模型、分支和循环，都不足以单独证明它是 Agent。\n\n你的程序大致是这样：\n\n```text\n输入问题 → 模型判断类别\n             ├─ 课程 → 按课程分支生成摘要\n             └─ 活动 → 按活动分支生成摘要\n生成失败 → 固定重试一次\n```\n\n这里，**模型负责判断类别，程序负责规定后续动作**。一旦类别确定，走哪个摘要步骤、失败后怎么办、重试几次，都已经预先安排好了。循环只是执行结构，普通程序也可以有循环。\n\n你可能会追问：“模型选了课程或活动，不也在决定下一步吗？”它确实影响了程序走向，但这里的选择被限定为“输出一个类别，再触发对应流程”。**模型做分类，与模型组织完成任务的行动过程，是不同层次的决定。**\n\nAgent 的关键在于：**模型围绕目标，根据当前结果动态选择下一步行动。** 例如，假设一个系统的目标是“根据允许使用的资料，完成有依据的摘要”，模型可能在执行中发现：\n\n- 资料读取失败，于是选择换一种可用的读取方式；\n- 关键信息不足，于是选择补查授权资料，或向用户询问；\n- 信息已经充分，于是生成摘要、检查结果，再决定修订或结束。\n\n这些只是示例。关键不在于步骤多，而在于下一步如何产生：如果上述情况与处理办法也都由程序预先规定，仍然可以是一个更复杂的固定工作流；如果由模型结合目标和运行结果选择行动、调整顺序，就体现了 Agent 的特征。\n\n**Agent 也可以有固定的工具清单、权限边界和最大执行次数。** 它不需要无限自由；同样，固定工作流也可以包含多次模型调用、分支和重试。判断你的程序时，要看模型承担的是“流程中的某个判断步骤”，还是“根据进展组织后续行动”。目前你描述的是前一种，这种设计完全可以满足摘要任务，无需为了获得 Agent 的名称增加复杂度。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 59.94,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a1697f-14dc-75e1-adc2-40af1dc628a8"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-urd1fead/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会依照「零一大学指南针」，结合你的程序说明工作流与 Agent 的关键区别。"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**不一定。按你的描述，它属于“带模型分类的固定工作流”。** 用了大模型、分支和循环，都不足以单独证明它是 Agent。\n\n你的程序大致是这样：\n\n```text\n输入问题 → 模型判断类别\n             ├─ 课程 → 按课程分支生成摘要\n             └─ 活动 → 按活动分支生成摘要\n生成失败 → 固定重试一次\n```\n\n这里，**模型负责判断类别，程序负责规定后续动作**。一旦类别确定，走哪个摘要步骤、失败后怎么办、重试几次，都已经预先安排好了。循环只是执行结构，普通程序也可以有循环。\n\n你可能会追问：“模型选了课程或活动，不也在决定下一步吗？”它确实影响了程序走向，但这里的选择被限定为“输出一个类别，再触发对应流程”。**模型做分类，与模型组织完成任务的行动过程，是不同层次的决定。**\n\nAgent 的关键在于：**模型围绕目标，根据当前结果动态选择下一步行动。** 例如，假设一个系统的目标是“根据允许使用的资料，完成有依据的摘要”，模型可能在执行中发现：\n\n- 资料读取失败，于是选择换一种可用的读取方式；\n- 关键信息不足，于是选择补查授权资料，或向用户询问；\n- 信息已经充分，于是生成摘要、检查结果，再决定修订或结束。\n\n这些只是示例。关键不在于步骤多，而在于下一步如何产生：如果上述情况与处理办法也都由程序预先规定，仍然可以是一个更复杂的固定工作流；如果由模型结合目标和运行结果选择行动、调整顺序，就体现了 Agent 的特征。\n\n**Agent 也可以有固定的工具清单、权限边界和最大执行次数。** 它不需要无限自由；同样，固定工作流也可以包含多次模型调用、分支和重试。判断你的程序时，要看模型承担的是“流程中的某个判断步骤”，还是“根据进展组织后续行动”。目前你描述的是前一种，这种设计完全可以满足摘要任务，无需为了获得 Agent 的名称增加复杂度。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 52885,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1558,
+            "reasoning_output_tokens": 1034
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T16:01:38Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 59.96,
+  "finished_at_utc": "2026-10-23T16:02:38Z"
+}

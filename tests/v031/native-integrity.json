@@ -1,0 +1,35 @@
+{
+  "version": "0.3.1",
+  "scope": "native_run_integrity_and_observable_reads_only; semantic review is separate",
+  "status": "PASS",
+  "skill_digest": "7cf045b502d5f7c76fc60980f38e5efcd087593d7eb1a0eaf6c3563cef7f7307",
+  "cases": [
+    {
+      "case": "D01-agent-gentle",
+      "artifact": "discovery/after-evidence-fix/D01-agent-gentle/result.json",
+      "artifact_sha256": "1aa1163e7100795b73b22a063429dba1fad2fbb2a00cef8537693ea300cd789c",
+      "turns": 3,
+      "status": "PASS",
+      "observed_read_paths": [
+        "SKILL.md",
+        "references/ai-judgment.md"
+      ],
+      "full_entrypoint_content_observed": true
+    },
+    {
+      "case": "D04-natural-guidance",
+      "artifact": "discovery/after-evidence-fix/D04-natural-guidance/result.json",
+      "artifact_sha256": "c14b83977721fc8cada9bb5342205027ac4f28c8cad96a4fce7e45b99eae10c3",
+      "turns": 1,
+      "status": "PASS",
+      "observed_read_paths": [
+        "SKILL.md",
+        "references/ai-pathways.md",
+        "references/ai-practice.md"
+      ],
+      "full_entrypoint_content_observed": true
+    }
+  ],
+  "errors": [],
+  "note": "Final affected cases only. Initial D02/D03 results remain on the initial digest and are not relabeled as final-version evidence."
+}

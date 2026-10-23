@@ -1,8 +1,8 @@
 [
   {
     "path": "SKILL.md",
-    "bytes": 6531,
-    "sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136"
+    "bytes": 8207,
+    "sha256": "e5d3ba1e18ebe445a3d81c3e394c0564b97c97f4bc14e8597b755ff2f3d17396"
   },
   {
     "path": "agents/openai.yaml",
@@ -16,13 +16,13 @@
   },
   {
     "path": "references/ai-judgment.md",
-    "bytes": 6249,
-    "sha256": "342959e954c21d253e4975cee29250842d1be141dea0f19facb79f7c5a5d565d"
+    "bytes": 7250,
+    "sha256": "ffb8386dd955f697b4e9e294bad0c143e7efae248760aa6a6ef00e87610567c7"
   },
   {
     "path": "references/ai-pathways.md",
-    "bytes": 12103,
-    "sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a"
+    "bytes": 12196,
+    "sha256": "9a0703399ba3fd1aefcdf77a220ef73447ffd99896fb6164efc1509feb644681"
   },
   {
     "path": "references/ai-practice.md",
@@ -36,13 +36,13 @@
   },
   {
     "path": "references/dialogue.md",
-    "bytes": 6508,
-    "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4"
+    "bytes": 9208,
+    "sha256": "f40e49193e6918a87b8af9f82a5b20ac725fcb752bd326a3f171346fbbd76675"
   },
   {
     "path": "references/learning-action.md",
-    "bytes": 12600,
-    "sha256": "2670fe6e83bd551ebd1f89fac0c93972bc97fd7bf5c16711cd4aace31ea38e5e"
+    "bytes": 13064,
+    "sha256": "9bd666bb1de2069bf6e7be4428b46f84c04dbfa4ac42a46f70887f54031c8ffb"
   },
   {
     "path": "references/sources.md",

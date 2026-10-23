@@ -1,0 +1,22 @@
+{
+  "version": "0.3.1",
+  "method": "fresh_local_codex_user_skill_discovery",
+  "parent_history": false,
+  "skill_text_injected": false,
+  "temporary_project_skill_copy": false,
+  "model_override": false,
+  "exit_code": 0,
+  "has_final": true,
+  "elapsed_seconds": 54.38,
+  "read_commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' [USER_HOME]/.agents/skills/01-university-compass/references/ai-judgment.md\"",
+      "exit_code": 0,
+      "output_chars": 2724,
+      "contains_exact_entrypoint": false
+    }
+  ],
+  "skill_digest": "61255da2b8c8ce56def2bbee44efb1de328e32ad24a69096ac83a56f596cdb2d",
+  "files_verified": 12,
+  "status": "FAIL"
+}

@@ -1,0 +1,106 @@
+{
+  "version": "0.3.1",
+  "skill_digest": "61255da2b8c8ce56def2bbee44efb1de328e32ad24a69096ac83a56f596cdb2d",
+  "configured_model": "gpt-6.1-sol",
+  "group": "all",
+  "smoke": false,
+  "baseline_ids": [
+    "V01",
+    "V03",
+    "V05",
+    "V06"
+  ],
+  "semantic_verdict": "not_automatically_scored",
+  "limitations": [
+    "Synthetic student conversations, not real student outcomes",
+    "Full Skill Markdown explicitly loaded; does not test lazy loading or installation discovery",
+    "All external tools disabled equally; live verification and real side effects are not tested",
+    "Full actual history replayed per turn; not server-side resume"
+  ],
+  "results": [
+    {
+      "case": "G06",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G06-skill/attempt-20261023T234409-c4384f76.json"
+    },
+    {
+      "case": "G03",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G03-skill/attempt-20261023T234409-57b16c8e.json"
+    },
+    {
+      "case": "G02",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G02-skill/attempt-20261023T234409-b5171c46.json"
+    },
+    {
+      "case": "G05",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G05-skill/attempt-20261023T234409-0ba0131a.json"
+    },
+    {
+      "case": "G04",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G04-skill/attempt-20261023T234409-b2aff071.json"
+    },
+    {
+      "case": "G09",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G09-skill/attempt-20261023T234533-f1abc1f9.json"
+    },
+    {
+      "case": "G11",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G11-skill/attempt-20261023T234536-5ad78afe.json"
+    },
+    {
+      "case": "G01",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G01-skill/attempt-20261023T234409-4c38fd30.json"
+    },
+    {
+      "case": "G10",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G10-skill/attempt-20261023T234535-21abba5e.json"
+    },
+    {
+      "case": "G14",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G14-skill/attempt-20261023T234655-cc65432e.json"
+    },
+    {
+      "case": "G07",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G07-skill/attempt-20261023T234517-9fe2c171.json"
+    },
+    {
+      "case": "G13",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G13-skill/attempt-20261023T234640-18be9448.json"
+    },
+    {
+      "case": "G08",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G08-skill/attempt-20261023T234524-f51ea66e.json"
+    },
+    {
+      "case": "G12",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/initial/G12-skill/attempt-20261023T234638-a098e8f9.json"
+    }
+  ]
+}

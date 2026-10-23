@@ -1,0 +1,22 @@
+{
+  "version": "0.3.1",
+  "method": "native_discovery_no_skill_text_injection",
+  "configured_model": "gpt-6.1-sol",
+  "semantic_status": "requires_manual_review",
+  "results": [
+    {
+      "case": "D04-natural-guidance",
+      "status": "completed",
+      "turns": 1,
+      "has_final": true,
+      "artifact": "D04-natural-guidance/result.json"
+    },
+    {
+      "case": "D01-agent-gentle",
+      "status": "completed",
+      "turns": 3,
+      "has_final": true,
+      "artifact": "D01-agent-gentle/result.json"
+    }
+  ]
+}

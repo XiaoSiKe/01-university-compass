@@ -1,0 +1,26 @@
+{
+  "version": "0.3.1",
+  "method": "Reveal only after the independent masked review was completed; one generation per condition. Same configured model, user turns and offline tools. Later histories differ by actual condition answers.",
+  "blind_review_sha256": "a992495b76c22405c7b1a854beb163f67262118e2b4eec7741ffcab348d073bd",
+  "cases": [
+    {
+      "case": "G01",
+      "masked_verdict": "mixed",
+      "revealed_preference": "mixed",
+      "conclusion": "A 首轮更集中、生活例子更短；B 提供的比较框架和对早餐例子局限的说明更显式。两边随后都按要求简化，并正确纠正了“自动运行且能用工具就一定是 Agent”的推断，没有观察到足以证明整体教学增益的差异。"
+    },
+    {
+      "case": "G03",
+      "masked_verdict": "B",
+      "revealed_preference": "0.3.1",
+      "conclusion": "B 在首轮就围绕一个截止日期例子纠正核心误解，篇幅与当前问题更匹配。A 的验证细节和自动化验证补充有价值，但此时展开较多。第二轮双方都完成了学生要求的单点、朋友式解释，事实层面基本并列。"
+    },
+    {
+      "case": "G07",
+      "masked_verdict": "B",
+      "revealed_preference": "0.3.0",
+      "conclusion": "两边都在现有手机和对话范围内提出可执行的整理方式，接受只对照截止时间的更正，并在停止时只给一句续接小结。B 对相对日期额外索取发布日期，能提高后续对照所需材料的完整性，形成小幅文本优势；尚未收到通知正文，不能判断实际整理结果。"
+    }
+  ],
+  "limits": "One newer-version preference, one older-version preference, one mixed result. Does not establish general superiority or real student learning outcomes."
+}

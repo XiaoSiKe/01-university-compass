@@ -1,0 +1,21 @@
+{
+  "version": "0.3.1",
+  "status": "PASS",
+  "scope": "Observable installed files and successful user-level reference read; semantic review separate",
+  "checks": {
+    "installed_12_files_match_repository": true,
+    "completed_with_nonempty_answer": true,
+    "final_answer_matches_event": true,
+    "installed_reference_full_read_observed": true
+  },
+  "matching_reads": [
+    {
+      "path": "references/ai-judgment.md",
+      "sha256": "c46a019d3d5cdf78df12b45814b716b704c35f8eb4658966d4ebf259918f4481",
+      "full_output_matches_installed_file": true
+    }
+  ],
+  "skill_digest": "61255da2b8c8ce56def2bbee44efb1de328e32ad24a69096ac83a56f596cdb2d",
+  "initial_probe": "result.json retains FAIL because it required a separate shell read of SKILL.md; that command was not observed. It does not establish a failed product response.",
+  "boundary": "The host internal entrypoint delivery was not audited. This session visibly read the complete newly installed reference and produced an answer; no parent history, project Skill copy or manual full-text injection was provided."
+}

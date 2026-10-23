@@ -1,0 +1,51 @@
+{
+  "method": "Independent per-case A/B randomization; only dialogue text shown to reviewer. No version, source or expected answer supplied.",
+  "blind_input_sha256": "05764b7df9e338d7b744a12680466bd259d0e8cb20f2bea1ed2f1b03d59e7066",
+  "pairs": [
+    {
+      "case": "G01",
+      "conditions": {
+        "A": {
+          "version": "0.3.1",
+          "artifact": "behavior/initial/G01-skill/attempt-20261023T234409-4c38fd30.json",
+          "artifact_sha256": "aa4714d944bf6b11b53de452cea1a50ef54192098a722daa4b85e0f6ec715ada"
+        },
+        "B": {
+          "version": "0.3.0",
+          "artifact": "comparison/old/G01-skill/attempt-20261023T234409-fa965384.json",
+          "artifact_sha256": "55047e09b023cd15e5a8ac433e472b02eacb17123a9480944078708cc65b3b6f"
+        }
+      }
+    },
+    {
+      "case": "G03",
+      "conditions": {
+        "A": {
+          "version": "0.3.0",
+          "artifact": "comparison/old/G03-skill/attempt-20261023T234409-86bfad07.json",
+          "artifact_sha256": "c3696239e5c257e02caac42e7164f58537c3ea3c25a63b06733e09218729b0f3"
+        },
+        "B": {
+          "version": "0.3.1",
+          "artifact": "behavior/initial/G03-skill/attempt-20261023T234409-57b16c8e.json",
+          "artifact_sha256": "89ec5f71e34b71abc7fb5c622cc8e1df31511cb2f228f96f505d3bbdb17c21f4"
+        }
+      }
+    },
+    {
+      "case": "G07",
+      "conditions": {
+        "A": {
+          "version": "0.3.1",
+          "artifact": "behavior/initial/G07-skill/attempt-20261023T234517-9fe2c171.json",
+          "artifact_sha256": "9cba3a305d53b1e457313d1e6bf80f5299c77327326d51283e9d0d1c9fca3a39"
+        },
+        "B": {
+          "version": "0.3.0",
+          "artifact": "comparison/old/G07-skill/attempt-20261023T234541-4c1cabf0.json",
+          "artifact_sha256": "a2fab6bc5d186e0e44e37f356b0b65b8936e8428668a03119c149820cdf17f9f"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "version": "0.3.1",
+  "skill_digest": "7cf045b502d5f7c76fc60980f38e5efcd087593d7eb1a0eaf6c3563cef7f7307",
+  "configured_model": "gpt-6.1-sol",
+  "group": "all",
+  "smoke": false,
+  "baseline_ids": [
+    "V01",
+    "V03",
+    "V05",
+    "V06"
+  ],
+  "semantic_verdict": "not_automatically_scored",
+  "limitations": [
+    "Synthetic student conversations, not real student outcomes",
+    "Full Skill Markdown explicitly loaded; does not test lazy loading or installation discovery",
+    "All external tools disabled equally; live verification and real side effects are not tested",
+    "Full actual history replayed per turn; not server-side resume"
+  ],
+  "results": [
+    {
+      "case": "G06",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/after-evidence-fix/G06-skill/attempt-20261024T000138-31fcc648.json"
+    },
+    {
+      "case": "G15",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/after-evidence-fix/G15-skill/attempt-20261024T000138-5cc3c1d6.json"
+    },
+    {
+      "case": "G03",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/after-evidence-fix/G03-skill/attempt-20261024T000138-0120b466.json"
+    },
+    {
+      "case": "G10",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/after-evidence-fix/G10-skill/attempt-20261024T000138-8743568d.json"
+    },
+    {
+      "case": "G13",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/after-evidence-fix/G13-skill/attempt-20261024T000138-f6dacb05.json"
+    },
+    {
+      "case": "G01",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "tests/v031/behavior/after-evidence-fix/G01-skill/attempt-20261024T000138-f651b037.json"
+    }
+  ]
+}

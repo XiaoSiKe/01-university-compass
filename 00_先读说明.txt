@@ -1,4 +1,4 @@
-零一大学指南针｜0.3.0
+零一大学指南针｜0.3.1
 从零到一，让技术进步成为每个人的机会。
 
 面向大学新生与 AI 初学者，帮助明确需要、选择路径、完成真实任务，形成独立判断与实践能力。普通设备、非计算机专业与零新增预算均可开始。
@@ -16,17 +16,17 @@
 也可以从已有课程、小项目、能力检查或大学生活中的选择继续。提醒、保存和跨会话能力取决于宿主；不承诺已创建未执行的操作。
 
 当前验收
-状态：PASS（48个合成情境语义验收；真实学生效果待验证）
+状态：PASS (final affected scope; see report for initial run and limitations)
 安装文件 12 个；方法与任务卡 28 张；研究与教学参考 27 项。
-采用 48 个 Skill 情境、4 个基线情境，共 106 条实际回答；另保留 0 条未采用或历史尝试回答。
+采用 6 个 Skill 情境、0 个基线情境，共 12 条实际回答；所选记录的同目录另有 0 条未采用尝试，其他运行轮次和历史版本见报告。
 基线记录的采用表示证据完整、可用于对照，不表示其教学表现已通过与 Skill 相同的语义评审。
-采用索引：tests/v030/evaluation.json
-报告：tests/v030/report.md
+采用索引：tests/v031/evaluation.json
+报告：tests/v031/report.md
 以上是模拟对话与工具验证，真实学生的学习效果仍待自愿试用。教学示范不计作真实学生或实际模型记录。
 
 维护入口
 python3 scripts/validate_package.py
 python3 scripts/validate_package.py --build
-python3 scripts/render_delivery.py --evaluation tests/v030/evaluation.json
+python3 scripts/render_delivery.py --evaluation tests/v031/evaluation.json
 测试设计见 tests/test-plan.md；来源和适用边界见 coverage-report.md 与 research/sources.json。
 本地 HTML 仅用于阅读说明和测试记录，不提供在线模型调用或聊天服务。

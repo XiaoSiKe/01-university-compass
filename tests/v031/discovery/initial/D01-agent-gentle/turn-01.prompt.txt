@@ -1,0 +1,5 @@
+本轮只进行对话；需要时仅可只读查看当前项目内相关资料。不联网、不修改文件、不读取项目外文件、不创建提醒。
+
+<current_user_message>
+使用 $01-university-compass。我不懂agent，怎么办？我刚接触AI，先通俗讲一下。
+</current_user_message>

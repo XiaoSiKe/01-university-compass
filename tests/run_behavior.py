@@ -127,8 +127,9 @@ def read_skill(path):
 
 def cases_all(files=None):
     result = []
-    for file in files or [ROOT / "tests" / name for name in
-                          ("cases-a.json", "cases-b.json", "cases-v020.json", "cases-v030.json")]:
+    defaults = [ROOT / "tests" / name for name in ("cases-a.json", "cases-b.json")]
+    defaults += sorted((ROOT / "tests").glob("cases-v*.json"))
+    for file in files if files is not None else defaults:
         for item in load_json(file):
             if "user_turns" not in item:
                 item = dict(item, title=item["id"], user_turns=[item["user"]] + ([item["followup"]] if item.get("followup") else []))
@@ -331,6 +332,8 @@ def main():
     config, model = config_subset(args.config_home)
     skill_text, manifest = read_skill(args.skill)
     selected = cases_all(args.case_file)
+    current_file = ROOT / "tests" / ("cases-v" + args.version.replace(".", "") + ".json")
+    current_ids = {case["id"] for case in cases_all([current_file])} if current_file.is_file() else set()
     baseline_ids = set(args.baseline_id or BASELINE_IDS)
     ids = [case["id"] for case in selected]
     if len(ids) != len(set(ids)):
@@ -341,9 +344,9 @@ def main():
             parser.error("Unknown cases: " + ", ".join(sorted(unknown)))
         selected = [case for case in selected if case["id"] in args.case]
     elif args.group == "new":
-        selected = [case for case in selected if case["id"].startswith("V")]
+        selected = [case for case in selected if case["id"] in current_ids]
     elif args.group == "legacy":
-        selected = [case for case in selected if not case["id"].startswith("V")]
+        selected = [case for case in selected if case["id"] not in current_ids]
     elif args.group == "baseline":
         selected = [case for case in selected if case["id"] in baseline_ids]
     conditions = ["skill", "baseline"] if args.condition == "both" else [args.condition]

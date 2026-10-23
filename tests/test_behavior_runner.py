@@ -8,6 +8,7 @@ import io
 import json
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -196,8 +197,11 @@ class BehaviorRunnerTests(unittest.TestCase):
         self.assertNotEqual(raised.exception.code, 0)
         self.assertIn("No cases selected", stderr.getvalue())
 
-    def test_default_case_files_select_48_skill_cases(self):
-        listing = self.cli_listing("--group", "all")
+    def test_explicit_historical_files_select_48_skill_cases(self):
+        arguments = []
+        for name in ("cases-a.json", "cases-b.json", "cases-v020.json", "cases-v030.json"):
+            arguments += ["--case-file", str(TESTS / name)]
+        listing = self.cli_listing("--group", "all", *arguments)
         expected = {
             *("A%02d" % n for n in range(1, 9)),
             *("B%02d" % n for n in range(1, 9)),
@@ -207,6 +211,22 @@ class BehaviorRunnerTests(unittest.TestCase):
         self.assertEqual(len(listing["cases"]), 48)
         self.assertEqual({(c["id"], c["condition"]) for c in listing["cases"]},
                          {(case_id, "skill") for case_id in expected})
+
+    def test_new_group_uses_metadata_version_without_relying_on_id_prefix(self):
+        root = self.base / "project"
+        skill = root / "01-university-compass"
+        (skill / "references").mkdir(parents=True)
+        (root / "tests").mkdir()
+        (skill / "SKILL.md").write_text('---\nname: fixture\nmetadata:\n  version: "7.8.9"\n---\n')
+        for name, identity in (("cases-a.json", "V-OLD"), ("cases-b.json", "LEGACY"),
+                               ("cases-v789.json", "ARBITRARY-ID")):
+            (root / "tests" / name).write_text(json.dumps([
+                {"id": identity, "user_turns": ["fixture input"]}]))
+        with mock.patch.object(behavior, "ROOT", root):
+            listing = self.cli_listing("--skill", str(skill), "--group", "new")
+            self.assertEqual([c["id"] for c in listing["cases"]], ["ARBITRARY-ID"])
+            legacy = self.cli_listing("--skill", str(skill), "--group", "legacy")
+            self.assertEqual({c["id"] for c in legacy["cases"]}, {"V-OLD", "LEGACY"})
 
     def test_default_baseline_selects_only_four_comparisons(self):
         listing = self.cli_listing("--group", "baseline")
@@ -329,7 +349,15 @@ class IntegrityCoverageTests(unittest.TestCase):
 
             valid = check(complete)
             self.assertEqual(valid["status"], "PASS", valid["errors"])
-            self.assertEqual(valid["adopted_cases"], 52)
+            self.assertEqual(valid["adopted_cases"], len(cases) + len(helper.BASELINE_IDS))
+            frozen = base / "frozen-skill"
+            shutil.copytree(skill, frozen)
+            self.assertEqual(integrity.check(index_path, skill_path=frozen)["status"], "PASS")
+            entrypoint = frozen / "SKILL.md"
+            entrypoint.write_text(entrypoint.read_text() + "\nChanged fixture content\n")
+            mismatch = integrity.check(index_path, skill_path=frozen)
+            self.assertEqual(mismatch["status"], "FAIL")
+            self.assertTrue(any("digest mismatch" in error for error in mismatch["errors"]))
             invalid_sets = {
                 "only_one_baseline": [next(item for item in complete if item["condition"] == "baseline")],
                 "missing_skill": [item for item in complete if (item["case"], item["condition"]) != ("V01", "skill")],
@@ -343,6 +371,28 @@ class IntegrityCoverageTests(unittest.TestCase):
                     self.assertTrue(all(r["status"] == "PASS" for r in result["records"]))
                     self.assertEqual(len(result["errors"]), 1, result["errors"])
                     self.assertIn("adopted coverage mismatch", result["errors"][0])
+
+            suite_path = base / "suite.json"
+            suite = {"version": version, "case_files": [str(TESTS / "cases-v031.json")],
+                     "conditions": ["skill"]}
+            suite_path.write_text(json.dumps(suite))
+            subset = [item for item in complete if item["case"].startswith("G") and item["condition"] == "skill"]
+            def scoped(items):
+                index_path.write_text(json.dumps({"version": version, "skill_digest": digest,
+                    "suite_sha256": helper.sha(suite_path.read_bytes()), "cases": items}))
+                return integrity.check(index_path, suite_path)
+            self.assertEqual(scoped(subset)["status"], "PASS")
+            self.assertEqual(scoped(subset[:-1])["status"], "FAIL")
+            # A changed scope cannot silently reuse a previously accepted index.
+            suite["conditions"] = ["baseline"]
+            suite_path.write_text(json.dumps(suite))
+            with self.assertRaisesRegex(ValueError, "Suite digest"):
+                integrity.check(index_path, suite_path)
+            for invalid in ([["skill"]], ["skill", "skill"], ["unsupported"]):
+                suite["conditions"] = invalid
+                suite_path.write_text(json.dumps(suite))
+                with self.assertRaisesRegex(ValueError, "unique supported conditions"):
+                    scoped(subset)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,193 @@
+{
+  "case": "D01-agent-gentle",
+  "title": "自然概念入口与不理解反馈",
+  "condition": "native",
+  "version": "0.3.1",
+  "configured_model": "gpt-6.1-sol",
+  "status": "completed",
+  "runner_sha256": "9056de4eaf3154f6bad194fa0582094b7d269b3378cfd5bd92318362348bae6a",
+  "config_sha256": "ad8379a0287b51a4bac3476c57d57588aeb733a0140f389e8e0a33459652f094",
+  "input_sha256": "4a912264a2271b1292f9caa6bd67ddae7cadd0e94d224b964b9cfb30fba8a4ca",
+  "method": "fresh_cli_native_project_skill_discovery",
+  "context_method": "actual_history_replayed_per_turn_without_skill_text_injection",
+  "tool_policy": "read_only_local_skill_documents; external_tools_disabled",
+  "semantic_status": "requires_manual_review",
+  "turns": [
+    {
+      "number": 1,
+      "user": "使用 $01-university-compass。我不懂agent，怎么办？我刚接触AI，先通俗讲一下。",
+      "answer": "**Agent（常译作“智能体”），你可以先把它理解成：一个能围绕目标，选择下一步、使用工具来完成任务的 AI 助手。**\n\n平时你问 AI：“这个词是什么意思？”它回答你，一次对话就完成了。Agent 则可以往前多走几步：看看任务做到了哪里，再决定接下来要做什么。这里的“工具”，可以是读取文件、计算或搜索等功能。\n\n举个假想例子：你有一份课程笔记，想把它变成复习资料。一个有相应工具和权限的 Agent 可能会：\n\n- 先读笔记，整理出主要知识点。\n- 发现某个概念没写清楚，就向你询问，或在获准使用的资料中查找。\n- 根据补充的信息整理复习提纲，再检查有没有遗漏。\n\n这里最关键的是：**它会根据中途得到的结果，调整下一步行动。** 比如资料已经够了，就继续整理；缺少信息，就先补充。\n\n不过，它仍然可能理解错、找错资料。你需要告诉它目标和允许做的范围，也要检查重要结果。“能连续做事”不代表“做得一定对”。\n\n刚接触 AI，你不需要先学会搭建 Agent，也不用急着学编程。可以先拿一小段看不懂的教材，让 AI 用日常例子解释，再对照原文核对。先熟悉怎样把需求说清楚、怎样判断回答是否靠谱，以后理解 Agent 就会容易很多。",
+      "status": "completed",
+      "returncode": 0,
+      "history_messages": 0,
+      "prompt_sha256": "46f1a0af1d1fba17d528565e9d8c17b00bde6f9e9b5e92355a6869697881c6bd",
+      "elapsed_seconds": 62.21,
+      "paths_observed_in_successful_read_commands": [
+        {
+          "path": "SKILL.md",
+          "bytes": 8042,
+          "sha256": "850f6bff89ea9caa4912c5f90883cca2bca480a64063aba44fc6c1a37ab553f8"
+        },
+        {
+          "path": "references/ai-judgment.md",
+          "bytes": 7004,
+          "sha256": "c46a019d3d5cdf78df12b45814b716b704c35f8eb4658966d4ebf259918f4481"
+        }
+      ],
+      "read_command_evidence": [
+        {
+          "command": "/bin/zsh -lc \"pwd; rg --files --hidden -g 'AGENTS.md' -g 'SKILL.md' -g '\"'!node_modules'\"' -g '\"'!.git'\"' .\"",
+          "exit_code": 0,
+          "output_chars": 98
+        },
+        {
+          "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/SKILL.md'",
+          "exit_code": 0,
+          "output_chars": 3242
+        },
+        {
+          "command": "/bin/zsh -lc \"rg -n -A 75 -B 8 'workflow|Agent|流程' .agents/skills/01-university-compass/references/ai-judgment.md\"",
+          "exit_code": 0,
+          "output_chars": 2871
+        }
+      ],
+      "tool_call_count": 6
+    },
+    {
+      "number": 2,
+      "user": "还是有点绕，能换个日常例子，先别让我做题吗？",
+      "answer": "可以，先不做题。你可以把 **Agent 想成一个会看情况、接着办事的 AI 跑腿助手。**\n\n比如，你早上不想出门，想找人帮你挑早餐。假设有个能使用外卖软件的 AI，你告诉它：\n\n> “帮我找一份早餐，20 元以内，不辣，半小时内能送到。选好给我看。”\n\n它就开始找：\n\n- 看到一家包子店，发现已经打烊了，就换一家。\n- 找到一家面馆，但预计要送一个小时，就继续找。\n- 看到一家粥店，价格和送达时间都合适，就查看有哪些不辣的套餐。\n- 最后把选好的套餐给你看，由你决定要不要下单。\n\n你没有逐句指挥它“打开哪家店”“接着点哪里”。**你告诉它想办成什么，它根据看到的情况，决定下一步怎么做。** 这就是 Agent 最核心的意思。\n\n这里的“跑腿”发生在软件里：它通过操作软件帮你办事。至于能办到哪一步，要看它接上了什么功能，以及你允许它做什么。",
+      "status": "completed",
+      "returncode": 0,
+      "history_messages": 2,
+      "prompt_sha256": "ab12586612ffce94c452316a561fd07dca4407bb57181619d0ce689a4b480457",
+      "elapsed_seconds": 49.2,
+      "paths_observed_in_successful_read_commands": [
+        {
+          "path": "SKILL.md",
+          "bytes": 8042,
+          "sha256": "850f6bff89ea9caa4912c5f90883cca2bca480a64063aba44fc6c1a37ab553f8"
+        },
+        {
+          "path": "references/ai-judgment.md",
+          "bytes": 7004,
+          "sha256": "c46a019d3d5cdf78df12b45814b716b704c35f8eb4658966d4ebf259918f4481"
+        }
+      ],
+      "read_command_evidence": [
+        {
+          "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/SKILL.md'",
+          "exit_code": 0,
+          "output_chars": 3242
+        },
+        {
+          "command": "/bin/zsh -lc \"rg -n -A 65 -B 3 'workflow|流程与 Agent' .agents/skills/01-university-compass/references/ai-judgment.md\"",
+          "exit_code": 0,
+          "output_chars": 2871
+        }
+      ],
+      "tool_call_count": 4
+    },
+    {
+      "number": 3,
+      "user": "我以为有工具就一定能保证答案对。请温和地帮我改正这个理解，先不要出题。",
+      "answer": "这里需要调整的是“**一定能保证**”这几个字。工具确实可以帮助 AI 减少错误，但不能保证每次都答对。\n\n接着刚才挑早餐的例子：假设套餐 18 元，配送费 5 元，你要求总共不超过 20 元。AI 即使用了计算器，如果漏掉配送费，只输入套餐价格，最后仍可能告诉你：“18 元，符合预算。”\n\n**计算器算得没错，AI 却漏算了一笔钱，所以结论还是错了。**\n\n查资料也类似：工具可能成功打开了一张菜单，但那是去年的；也可能页面写得很清楚，AI 却看漏了条件。工具能帮助它获取信息、完成计算，AI 仍然需要选对资料、用对信息、理解对结果。\n\n所以，看到 AI 说“我已经查过了”或“我用了工具”，可以多一份信心，但重要的答案仍值得看看依据。你先记住这一点就够了：**用了什么工具，以及工具的结果有没有被正确使用，都会影响答案是否可靠。**",
+      "status": "completed",
+      "returncode": 0,
+      "history_messages": 4,
+      "prompt_sha256": "3673b162b90898cde814a0554f664cf10d21e511c0f083961d315b7c90e77de8",
+      "elapsed_seconds": 54.13,
+      "paths_observed_in_successful_read_commands": [
+        {
+          "path": "SKILL.md",
+          "bytes": 8042,
+          "sha256": "850f6bff89ea9caa4912c5f90883cca2bca480a64063aba44fc6c1a37ab553f8"
+        },
+        {
+          "path": "references/ai-judgment.md",
+          "bytes": 7004,
+          "sha256": "c46a019d3d5cdf78df12b45814b716b704c35f8eb4658966d4ebf259918f4481"
+        }
+      ],
+      "read_command_evidence": [
+        {
+          "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/SKILL.md'",
+          "exit_code": 0,
+          "output_chars": 3242
+        },
+        {
+          "command": "/bin/zsh -lc \"rg -n -A 25 -B 5 '工具|核查|workflow|检验' .agents/skills/01-university-compass/references/ai-judgment.md\"",
+          "exit_code": 0,
+          "output_chars": 2871
+        }
+      ],
+      "tool_call_count": 4
+    }
+  ],
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "bytes": 8042,
+      "sha256": "850f6bff89ea9caa4912c5f90883cca2bca480a64063aba44fc6c1a37ab553f8"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 378,
+      "sha256": "c06319902b634b1ff9f8397708d9e96be0fa174c80aba090a2436591bad31150"
+    },
+    {
+      "path": "references/01.md",
+      "bytes": 9216,
+      "sha256": "a56f20df1fd5ccee14ba30d9aee98a93b9d7c815abd3367b6e78f898510181f4"
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "bytes": 7004,
+      "sha256": "c46a019d3d5cdf78df12b45814b716b704c35f8eb4658966d4ebf259918f4481"
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "bytes": 12196,
+      "sha256": "9a0703399ba3fd1aefcdf77a220ef73447ffd99896fb6164efc1509feb644681"
+    },
+    {
+      "path": "references/ai-practice.md",
+      "bytes": 22162,
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c"
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "bytes": 5005,
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170"
+    },
+    {
+      "path": "references/dialogue.md",
+      "bytes": 9208,
+      "sha256": "f40e49193e6918a87b8af9f82a5b20ac725fcb752bd326a3f171346fbbd76675"
+    },
+    {
+      "path": "references/learning-action.md",
+      "bytes": 13064,
+      "sha256": "9bd666bb1de2069bf6e7be4428b46f84c04dbfa4ac42a46f70887f54031c8ffb"
+    },
+    {
+      "path": "references/sources.md",
+      "bytes": 42049,
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f"
+    },
+    {
+      "path": "references/thinking.md",
+      "bytes": 11938,
+      "sha256": "9960226710134f1d7d35f3e433c4a4a3fd69b859e8fd72c473868829b5294b86"
+    },
+    {
+      "path": "references/topic-map.md",
+      "bytes": 2945,
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622"
+    }
+  ],
+  "skill_digest": "61255da2b8c8ce56def2bbee44efb1de328e32ad24a69096ac83a56f596cdb2d",
+  "install_location": ".agents/skills/01-university-compass",
+  "elapsed_seconds": 165.6,
+  "has_final": true
+}

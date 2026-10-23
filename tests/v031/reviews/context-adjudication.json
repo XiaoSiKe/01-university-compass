@@ -1,0 +1,24 @@
+{
+  "version": "0.3.1",
+  "raw_independent_review": "initial-semantic-review.json",
+  "published_redactions": "Only project/user absolute paths replaced by placeholders; verdicts and quotes unchanged.",
+  "observations": [
+    {
+      "case": "G10",
+      "resolution": "The reviewer only received dialogue text. The actual common harness explicitly states that this is an offline dialogue with no external tools; the saved artifact lists zero tool calls. The offline capability statement is supported by test context, not a product defect.",
+      "evidence": [
+        "../behavior/initial/G10-skill/",
+        "../../run_behavior.py:HARNESS"
+      ]
+    },
+    {
+      "case": "D01-agent-gentle",
+      "resolution": "Self-report as extra confidence is a real wording error. Initial output is retained; entrypoint and AI judgment instructions are amended and affected cases rerun on a new digest.",
+      "initial_artifact": "../discovery/initial/D01-agent-gentle/result.json"
+    },
+    {
+      "case": "G01/G07",
+      "resolution": "Retain analogy and relative-date suggestions for trial feedback. No observed wrong factual decision on the supplied inputs; do not claim all examples improved."
+    }
+  ]
+}

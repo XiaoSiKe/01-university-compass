@@ -1,0 +1,10 @@
+{
+  "version": "0.3.1",
+  "location": "~/.agents/skills/01-university-compass",
+  "previous_matched_initial_v031": true,
+  "custom_changes": [],
+  "backup": "~/.codex/skill-backups/01-university-compass/20261023T160257Z",
+  "files_verified": 12,
+  "skill_digest": "7cf045b502d5f7c76fc60980f38e5efcd087593d7eb1a0eaf6c3563cef7f7307",
+  "status": "PASS (installed files match packaged source)"
+}
