@@ -1,41 +1,51 @@
-> 当前发布为0.2.1，命名与视觉验收见[0.2.1记录](v021/report.md)。以下保留0.2.0教学测试的原始范围与结论。
+# 0.3.0 验证设计与复跑方法
 
-# 0.2.0 验证设计与复跑方法
+状态：实施中，未完成的测试不得写成通过。历史范围与结论见 [0.2.0设计](test-plan-v020.md)、[0.2.0报告](test-report-v020.md) 和 [0.2.1记录](v021/report.md)。真实学生试用未开展。
 
-日期：2026-10-23。模型行为测试是合成情境，真实学生试用未开展；试用材料见 [pilot-guide.md](pilot-guide.md)。历史设计见 [test-plan-v010.md](test-plan-v010.md)。
+## 分开保存的三类证据
 
-## 三种证据
+1. **确定性工具链回归**：临时项目中检查构建失败保留旧包、双产物发布失败回滚、验收索引选择、防止证据覆盖，以及结构/来源/锚点/manifest/ZIP一致性。不需要模型或真实外部写入。
+2. **实际离线模型对话**：原38情境加V01—V10，共48个Skill情境；新10例中8例为3轮。原输入不改写，预期观察不发送给被测模型。每轮新进程回放本例此前真实回答，所有Skill Markdown显式加载，不能据此证明按需读取或安装发现。
+3. **原生发现与教学**：4个独立案例（显式、自然语言、无关代码、多轮教学）。只把Skill副本安装到隔离目录，由宿主发现；不注入正文。记录实际成功读取路径、文件哈希、每轮回答与工具证据。多轮输入回放此前真实回答，不带制作对话或评审结论。
 
-1. **结构与包装**：官方quick_validate及本项目scripts/validate_package.py。检查元数据、相对链接/锚点、来源ID、动态文件/卡片计数、manifest和ZIP。结构通过不代表教学有效。
-2. **离线实际模型对话**：原16情境加新增22情境；至少10新情境包含3–5轮。运行器每轮新进程传入同一案例此前实际回答，不带其他案例、制作聊天或预期答案。Skill条件显式展开全部Skill Markdown；不验证按需读取。两条件外部工具均禁用。
-3. **隔离安装发现**：临时安装副本中分别验证显式调用、自然语言新生需求、无关代码；保存实际读取文件证据。与全文注入的行为测试分开报告。
+行为案例见 [新增10例](cases-v030.json)、[原A组](cases-a.json)、[原B组](cases-b.json)、[0.2.0新增组](cases-v020.json)。原生案例见 [4例输入](v030/discovery-cases.json)。所有学生输入均为合成情境，不是学生试用。
 
-## 输入与输出
+## 四组条件隐藏对照
 
-- [原A组](cases-a.json)、[原B组](cases-b.json)、[新增22例](cases-v020.json)。预期观察与关键失败只供评审，不发送给模型。
-- `v020/behavior/<case>-<condition>/attempt-*.json`：原始回答、进程事件、工具调用、退出状态、被测文件哈希、前史长度和时间。失败尝试保留。
-- `v020/evaluation.json`：逐例语义评审，按条件贴合、可用帮助、学习检验、反馈调整记录具体证据和问题。
-- `v020/baseline-review.json`：六例盲评记录；比较时隐藏条件标签，揭盲后再映射，不将偏好伪装成统计效果。
-- `v020/discovery/`：原生发现与读取证据；`v020/structure-results.json`：结构/包装/排除标识检查。
+固定比较V01（核验无误）、V03（独立迁移）、V05（AI适用性）、V06（固定流程与Agent）。同一默认模型、用户输入和离线工具限制，仅改变是否提供Skill。后续历史分别使用各自真实回答，因此是多轮产品比较，后续上下文不保证逐字相同。
 
-新增情境包含无代码/代码/研究分流、手机与无预算、工具失败、错误输出、掌握错觉、需求不成立、目标和资源更正、连续不知道、只倾诉、现实支持、证书用途、学习环境和路径后悔。实际轮数以输入JSON及报告为准。
+评阅材料随机映射为A/B并去掉条件与路径，不提供映射给评阅者；完成四例评阅后再揭示映射。记录具体依据与局限，不用偏好评分推导统计效果；负向或无增益结果如实保留。评分关注条件贴合、当前可用帮助、掌握检查和反馈是否导致调整。
 
-## 语义验收
+## 语义验收与失败处理
 
-每例检查：是否利用并遵守已知条件；是否给出当前可用的帮助；有教学目标时是否用表现检查掌握；多轮反馈是否真正改变建议。明确的能力虚构、来源编造、隐含付费/设备要求、忽略更正、强迫路径、把AI代做当个人掌握、虚构已提醒/已求助等必须修复。没有检查机会的维度标为不适用，不强凑教学或行动。
+严重问题包括来源/能力编造、未核实承诺付费或平台条件、忽略用户更正、强迫路径、把有提示完成算独立掌握、强行给正确材料找错、将证据不足当证伪、虚构工具运行/提醒/保存等。不是每一轮都需要提问或练习；纯代码、倾诉等维度可不适用。
 
-六例对照固定为N01/N06/N09/N10/N14/N22，保持用户输入、模型配置和工具条件一致，仅改变是否提供Skill指导。每个条件使用自己的真实对话历史，因此后续上下文会随回答分化，这是多轮产品比较；不冒充逐token严格配对试验。每例一次运行不估计稳定可靠率。盲评若未发现增益，记录原因并调整受影响设计；不删除不利记录或凭数量宣称更优。
+进程退出0、回答非空只是运行完整性，不自动判语义通过。由独立评阅者核对实际输出，保存逐例证据。失败记录保留；修复后只重测受影响情境，记录前后版本与采用依据。未经评审的成功尝试或较新的失败尝试不得挤掉验收索引明确采用的回答。
 
-## 复跑
+## 复跑入口
 
 ```sh
+python3 -m unittest discover -s tests -p 'test_tooling.py'
 python3 scripts/validate_package.py
-python3 tests/run_behavior.py --group all --jobs 4 --output tests/v020/behavior
-python3 tests/run_behavior.py --group baseline --jobs 2 --output tests/v020/behavior
-python3 tests/run_behavior.py --case N06 --condition both --resume --output tests/v020/behavior
-python3 tests/v020/discovery/run_smoke.py --help
+python3 tests/run_behavior.py --group all --list
+python3 tests/run_behavior.py --group all --jobs 6 --output tests/v030/behavior/r0
+python3 tests/run_behavior.py --group baseline --jobs 4 --output tests/v030/behavior/r0
+python3 tests/run_discovery.py --cases-file tests/v030/discovery-cases.json --output tests/v030/discovery/r0
 ```
 
-运行器使用当前用户已配置的模型与认证，在临时目录隔离，不把凭证写入交付包。先看`--help`；模型、网络或宿主不可用时记录失败，不把未完成写成通过。仅内容哈希和运行配置相同的尝试可断点续跑。修改Skill后，重跑受影响情境与结构校验；完成后使用`python3 scripts/validate_package.py --build`重新生成安装包，再运行`python3 scripts/render_delivery.py`更新可读页面。
+行为运行器保留`--case`、`--condition`、`--resume`，新增`--case-file`和`--baseline-id`以显式复跑历史集合；只有输入、模型配置、被测文本和运行器指纹一致才复用已完成轮次。未指定输出目录时生成当前版本唯一run目录，原生发现的非空目标拒绝覆写。
 
-排除标识由维护者在进程环境变量中提供JSON字符串数组，然后通过`--exclude-env 变量名`调用结构检查；不要将标识硬编码在项目脚本或测试输入中。扫描包括交付文本、JSON解码值和ZIP内部文件，报告只记录匹配路径及索引。
+模型沿用本机已配置的默认模型与提供者，不硬编码模型、不改用户全局设置。认证只进入临时私有目录，不发布到仓库。保存时掩码项目/用户绝对路径及运行时指定的排除标识；模型回答其余内容保留，输出净化范围在完整性报告中说明。断网、超时、额度或宿主异常均记录实际失败，不补写结果。
+
+## 打包和展示
+
+内容冻结后先校验，再生成候选manifest与ZIP，复核候选后发布；校验失败不改变旧包，发布写入失败回滚两份产物。通过语义评审后写入当前验收索引：version、raw文件manifest的skill_digest、每例case/condition/artifact/status及artifact_sha256；artifact相对索引目录，Skill和基线都显式列出。
+
+```sh
+python3 scripts/validate_package.py --build
+python3 scripts/render_delivery.py --evaluation tests/v030/evaluation.json
+```
+
+排除标识由运行时JSON数组环境变量经`--exclude-env`传入，不写入脚本、案例或发布文件；扫描交付文件及ZIP内部。README与说明页中的版本和实际计数一起核对，历史数字须标明历史版本。
+
+本轮不验证真实联网能力、后台任务、真实学生长期学习结果或职业收益。学生自愿试用入口见 [pilot-guide.md](pilot-guide.md)。

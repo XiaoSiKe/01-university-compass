@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "version": "0.3.0",
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "case": "N12",
+  "title": "资源收藏替代学习",
+  "condition": "skill",
+  "fingerprint": "dd517d0c01f46dcdc458a5fbe200d6987cf2617f67ef8e20565cd102aaa58af1",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "tests/v030/behavior/r0/N12-skill/attempt-20261023T204314-b9f2801b.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+      "bytes": 6531
+    },
+    {
+      "path": "references/01.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "sha256": "342959e954c21d253e4975cee29250842d1be141dea0f19facb79f7c5a5d565d",
+      "bytes": 6249
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a",
+      "bytes": 12103
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+      "bytes": 22162
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "2670fe6e83bd551ebd1f89fac0c93972bc97fd7bf5c16711cd4aace31ea38e5e",
+      "bytes": 12600
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f",
+      "bytes": 42049
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622",
+      "bytes": 2945
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我收藏了二十个 AI 仓库，教程都很好但越看越乱。是不是应该全部刷完再做东西？我一周只有两小时，目前只想学会核验 AI 给出的读书摘要。",
+      "prompt_sha256": "8131e8397b62de0bed7aea275c12a581214b22427b2dd4551c98c9e1110959bb",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**不用全部刷完。你现在的目标已经很清楚：学会判断 AI 的读书摘要是否忠于原文。** 教程各自很好，也可能面向不同目标和基础；同时跟二十条路线，容易越学越乱。\n\n建议先把仓库留在收藏夹，遇到具体卡点时再找对应章节。这周只用一份主材料：**你正在读的书中一段相对完整的内容，加上针对这段内容的 AI 摘要。** 先从一两页开始，方便逐句核对。\n\n两小时可以这样用，也可以分两次完成：\n\n1. **15 分钟：先读原文。** 用自己的话写两三句：作者主张什么、用什么支持、有什么限制条件。这样能减少被摘要的说法带着走。\n2. **35 分钟：核对摘要中的三条关键主张。** 每条留下这份记录：  \n   **摘要原句 → 原文依据及页码／段落 → 当前判断 → 必要修改。**  \n   判断可以是“有依据”“与原文不符”“原文未提供”“仅凭这段无法判断”。\n3. **20 分钟：检查意思有没有被改动。** 特别看“可能”是否变成“必然”、“部分情况”是否变成“所有情况”，以及作者引用别人的观点是否被写成作者自己的立场。摘要会省略细节；需要关注的是，省略有没有改变原意。\n4. **30 分钟：换同一本书的另一短段试一次。** 先自己核对对应摘要，再接受反馈，看看哪些判断能独立完成、哪些还需要帮助。\n\n剩下 **20 分钟留作缓冲**；如果原文难懂，就用来理解原文，不必赶着完成第二次练习。\n\n这周先争取得到“一份有依据的核对记录＋一份核验后的摘要”。**检查后没有发现错误，也可以保留原摘要**，并写清检查了哪些内容。手里的片段只能支持片段内的判断，还不能据此认定整本书的摘要准确。\n\n下一步只需要选一段方便分享的原文和对应摘要，贴过来，我们就从一条主张开始核对。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 92.98,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168c9-6f99-7ee2-9d8f-99d7144f9101"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-fbvq4gnx/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按「零一大学指南针」，围绕你眼前的摘要核验目标来安排这两小时。"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**不用全部刷完。你现在的目标已经很清楚：学会判断 AI 的读书摘要是否忠于原文。** 教程各自很好，也可能面向不同目标和基础；同时跟二十条路线，容易越学越乱。\n\n建议先把仓库留在收藏夹，遇到具体卡点时再找对应章节。这周只用一份主材料：**你正在读的书中一段相对完整的内容，加上针对这段内容的 AI 摘要。** 先从一两页开始，方便逐句核对。\n\n两小时可以这样用，也可以分两次完成：\n\n1. **15 分钟：先读原文。** 用自己的话写两三句：作者主张什么、用什么支持、有什么限制条件。这样能减少被摘要的说法带着走。\n2. **35 分钟：核对摘要中的三条关键主张。** 每条留下这份记录：  \n   **摘要原句 → 原文依据及页码／段落 → 当前判断 → 必要修改。**  \n   判断可以是“有依据”“与原文不符”“原文未提供”“仅凭这段无法判断”。\n3. **20 分钟：检查意思有没有被改动。** 特别看“可能”是否变成“必然”、“部分情况”是否变成“所有情况”，以及作者引用别人的观点是否被写成作者自己的立场。摘要会省略细节；需要关注的是，省略有没有改变原意。\n4. **30 分钟：换同一本书的另一短段试一次。** 先自己核对对应摘要，再接受反馈，看看哪些判断能独立完成、哪些还需要帮助。\n\n剩下 **20 分钟留作缓冲**；如果原文难懂，就用来理解原文，不必赶着完成第二次练习。\n\n这周先争取得到“一份有依据的核对记录＋一份核验后的摘要”。**检查后没有发现错误，也可以保留原摘要**，并写清检查了哪些内容。手里的片段只能支持片段内的判断，还不能据此认定整本书的摘要准确。\n\n下一步只需要选一段方便分享的原文和对应摘要，贴过来，我们就从一条主张开始核对。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 51399,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2099,
+            "reasoning_output_tokens": 1552
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "还有人建议我买一个 AI 结课证书，说拿到就证明会了。另一方面，学校某个活动如果正式要求特定证书，我是不是也可以完全不管？请帮我分清。",
+      "prompt_sha256": "4c597c38f365e690e6b99e814381c7c89793fbd55403095d7d1b776d8d8f2676",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "**“能证明学会了什么”和“能否满足活动资格”，是两个问题。** 结课证书的证明力取决于考核方式；学校活动的正式要求则可能影响你能否参加。\n\n**1. “拿到结课证书就证明会了”，这个说法太满。**\n\n不同证书能支持的判断不同：\n\n| 获证方式 | 能提供什么证据 |\n|---|---|\n| 看完视频、完成签到 | 完成了规定的学习流程 |\n| 通过知识测验 | 在那次测验条件下答对了相应问题 |\n| 独立完成实际任务，并按明确标准考核 | 对相应实践能力提供更直接的证据，但仍有适用范围 |\n\n对你现在的目标，更直接的能力证据是：**面对一段没练过的原文和摘要，你能自行找到依据，判断摘要是否改变原意，说明哪些结论还无法核实。** 证书如果确实考这些能力，就有参考价值；仅凭“AI 课程结业”几个字，无法推出你已经会核验读书摘要。课程本身也可能提供有用的结构和反馈，要看具体内容。\n\n**2. 如果活动正式要求特定证书，想参加时就需要处理这个条件。**\n\n先核实本校该活动的正式通知，尤其看清：\n\n- 写的是“必须具备”，还是“优先考虑”“可选提交”；\n- 要求的证书全名、发证机构、有效期及提交时间；\n- 是否明确允许其他证明或替代方式。\n\n如果确实是必需条件，就需要满足它，或向主办方确认其他可行安排。不能自行推定“我实际会了，所以自动豁免”，也不能把另一个 AI 证书当成通用替代。我目前没有看到活动通知，无法判断它具体属于哪种要求。\n\n你仍然可以判断这项活动是否值得投入，选择参加、询问替代途径，或者放弃参加。**有权决定是否争取这个机会；报名资格是否满足，要按已确认的规则判断。**\n\n结合你每周只有两小时、目前只想学会核验摘要的情况，建议先继续原来的核验练习，暂不把买证列为必做。若那个活动确实是你想参加的，再核实指定证书，并比较它需要的总费用、时间和活动对你的价值。这样，是否买证就有具体依据了。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 70.36,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168ca-dabf-72d2-949a-60d475bc1a1f"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-fbvq4gnx/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按「零一大学指南针」的思路，结合你核验读书摘要的目标，区分证书能证明什么、活动要求又意味着什么。"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**“能证明学会了什么”和“能否满足活动资格”，是两个问题。** 结课证书的证明力取决于考核方式；学校活动的正式要求则可能影响你能否参加。\n\n**1. “拿到结课证书就证明会了”，这个说法太满。**\n\n不同证书能支持的判断不同：\n\n| 获证方式 | 能提供什么证据 |\n|---|---|\n| 看完视频、完成签到 | 完成了规定的学习流程 |\n| 通过知识测验 | 在那次测验条件下答对了相应问题 |\n| 独立完成实际任务，并按明确标准考核 | 对相应实践能力提供更直接的证据，但仍有适用范围 |\n\n对你现在的目标，更直接的能力证据是：**面对一段没练过的原文和摘要，你能自行找到依据，判断摘要是否改变原意，说明哪些结论还无法核实。** 证书如果确实考这些能力，就有参考价值；仅凭“AI 课程结业”几个字，无法推出你已经会核验读书摘要。课程本身也可能提供有用的结构和反馈，要看具体内容。\n\n**2. 如果活动正式要求特定证书，想参加时就需要处理这个条件。**\n\n先核实本校该活动的正式通知，尤其看清：\n\n- 写的是“必须具备”，还是“优先考虑”“可选提交”；\n- 要求的证书全名、发证机构、有效期及提交时间；\n- 是否明确允许其他证明或替代方式。\n\n如果确实是必需条件，就需要满足它，或向主办方确认其他可行安排。不能自行推定“我实际会了，所以自动豁免”，也不能把另一个 AI 证书当成通用替代。我目前没有看到活动通知，无法判断它具体属于哪种要求。\n\n你仍然可以判断这项活动是否值得投入，选择参加、询问替代途径，或者放弃参加。**有权决定是否争取这个机会；报名资格是否满足，要按已确认的规则判断。**\n\n结合你每周只有两小时、目前只想学会核验摘要的情况，建议先继续原来的核验练习，暂不把买证列为必做。若那个活动确实是你想参加的，再核实指定证书，并比较它需要的总费用、时间和活动对你的价值。这样，是否买证就有具体依据了。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 51996,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1637,
+            "reasoning_output_tokens": 1032
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T12:43:14Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 163.36,
+  "finished_at_utc": "2026-10-23T12:45:57Z"
+}

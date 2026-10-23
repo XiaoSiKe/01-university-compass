@@ -1,0 +1,32 @@
+{
+  "version": "0.3.0",
+  "method": "fresh_local_codex_user_skill_discovery",
+  "parent_history": false,
+  "skill_text_injected": false,
+  "temporary_project_skill_copy": false,
+  "model_override": false,
+  "exit_code": 0,
+  "has_final": true,
+  "elapsed_seconds": 68.32,
+  "read_commands": [
+    {
+      "command": "/bin/zsh -lc 'cat [USER_HOME]/.agents/skills/01-university-compass/SKILL.md'",
+      "exit_code": 0,
+      "output_chars": 2669
+    },
+    {
+      "command": "/bin/zsh -lc \"rg -n '\"'^#{1,4} |适用|Agent|普通|冲突|来源|核实|手机|预算'\"' [USER_HOME]/.agents/skills/01-university-compass/references/ai-judgment.md\"",
+      "exit_code": 0,
+      "output_chars": 1221
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,38p' [USER_HOME]/.agents/skills/01-university-compass/references/ai-judgment.md\"",
+      "exit_code": 0,
+      "output_chars": 1876
+    }
+  ],
+  "status": "PASS（真实用户级安装发现与当前请求语义检查）",
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "manual_observation": "普通表格统计、通知冲突由发布方确认，AI可帮助并列提取与起草核查；当前不需要Agent。实际读取已安装入口与新增ai-judgment，未联网或虚构外部执行。",
+  "files_verified": 12
+}

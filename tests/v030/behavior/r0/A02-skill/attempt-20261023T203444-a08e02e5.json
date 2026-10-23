@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "version": "0.3.0",
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "case": "A02",
+  "title": "A02",
+  "condition": "skill",
+  "fingerprint": "99495fd778abe594fa01bb80f5342f3b8b8bcd4b38e91ac7e19652f81bf4a5a1",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "tests/v030/behavior/r0/A02-skill/attempt-20261023T203444-a08e02e5.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+      "bytes": 6531
+    },
+    {
+      "path": "references/01.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "sha256": "342959e954c21d253e4975cee29250842d1be141dea0f19facb79f7c5a5d565d",
+      "bytes": 6249
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a",
+      "bytes": 12103
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+      "bytes": 22162
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "2670fe6e83bd551ebd1f89fac0c93972bc97fd7bf5c16711cd4aace31ea38e5e",
+      "bytes": 12600
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f",
+      "bytes": 42049
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622",
+      "bytes": 2945
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我大二护理专业，下周一有术语测验。今天周四，每天能留出25分钟。我看了三遍教材，合上就说不出来。请用零一大学指南针直接给我今晚能做的办法，不要先问一堆背景。",
+      "prompt_sha256": "01f5a911e952e586d523dd4dc6f822c74d5f8fea383860b6d48599c2110bf78c",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**今晚就做一轮25分钟的“合书回想—对照纠错—再次回想”。** 看教材时觉得熟悉，和合上书能说出来，是两种表现；你现在可以把时间转到后者。\n\n准备教材、纸和笔，按下面做：\n\n1. **0—3分钟：选6个测验范围内的术语。**  \n   优先选老师强调过、自己容易混淆的。纸上只写术语名，旁边留空，暂时不抄定义。\n\n2. **3—8分钟：逐个弄清含义。**  \n   每个词看一遍教材定义，用自己的话说一句“它是什么意思”，再找出定义中必须保留的专业关键词或限定条件。某个词看不懂，就标“含义不清”，这类需要先解释。\n\n3. **8—17分钟：盖住教材，逐个回答，再核对。**  \n   看着术语名，口述含义，再写下关键内容。每答一个就翻书核对：漏了什么、是否把另一个词的定义搬过来了？  \n   完全空白时，可以看一遍定义，再盖住重新说。这样完成的先标“看后能答”，与直接答出区分开。若老师要求按原定义作答，就按该要求校正措辞。\n\n4. **17—22分钟：只补刚才暴露的缺口。**  \n   优先处理漏词、混淆和空白项。容易混的两个术语放在一起，对照教材找出区别，然后盖住书分别解释。纠错只记关键差别，控制记录量。\n\n5. **22—25分钟：把6个词换个顺序，再合书测一次。**  \n   这一轮先答完，再统一看教材。给每个词标记：**独立答对／需要提示／仍有错误**。留下这张纸，今晚到点就停。\n\n接下来每晚的25分钟，可以先用**5分钟不看书复测旧词，15分钟处理错词和下一小组术语，最后5分钟混合自测**。如果旧词仍大量答不出，就减少新词，先处理具体缺口。\n\n今晚留下的成果是一张有真实答题记录和错误标记的小清单。今晚答对，只说明当时能回想；隔天没先看答案也能答出来，才多了一份记住的证据。\n\n日期提醒一下：当前日期是**2026年10月23日，周五**，下周一是**10月26日**。上面的办法可直接用于今晚，周六、周日继续复测。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 98.59,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168c1-a907-7261-953f-22b7d0dfcf31"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-hg15qqkt/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按零一大学指南针，直接给你今晚能用的25分钟办法，重点练习合上书后回想，再对照教材纠错。\n"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**今晚就做一轮25分钟的“合书回想—对照纠错—再次回想”。** 看教材时觉得熟悉，和合上书能说出来，是两种表现；你现在可以把时间转到后者。\n\n准备教材、纸和笔，按下面做：\n\n1. **0—3分钟：选6个测验范围内的术语。**  \n   优先选老师强调过、自己容易混淆的。纸上只写术语名，旁边留空，暂时不抄定义。\n\n2. **3—8分钟：逐个弄清含义。**  \n   每个词看一遍教材定义，用自己的话说一句“它是什么意思”，再找出定义中必须保留的专业关键词或限定条件。某个词看不懂，就标“含义不清”，这类需要先解释。\n\n3. **8—17分钟：盖住教材，逐个回答，再核对。**  \n   看着术语名，口述含义，再写下关键内容。每答一个就翻书核对：漏了什么、是否把另一个词的定义搬过来了？  \n   完全空白时，可以看一遍定义，再盖住重新说。这样完成的先标“看后能答”，与直接答出区分开。若老师要求按原定义作答，就按该要求校正措辞。\n\n4. **17—22分钟：只补刚才暴露的缺口。**  \n   优先处理漏词、混淆和空白项。容易混的两个术语放在一起，对照教材找出区别，然后盖住书分别解释。纠错只记关键差别，控制记录量。\n\n5. **22—25分钟：把6个词换个顺序，再合书测一次。**  \n   这一轮先答完，再统一看教材。给每个词标记：**独立答对／需要提示／仍有错误**。留下这张纸，今晚到点就停。\n\n接下来每晚的25分钟，可以先用**5分钟不看书复测旧词，15分钟处理错词和下一小组术语，最后5分钟混合自测**。如果旧词仍大量答不出，就减少新词，先处理具体缺口。\n\n今晚留下的成果是一张有真实答题记录和错误标记的小清单。今晚答对，只说明当时能回想；隔天没先看答案也能答出来，才多了一份记住的证据。\n\n日期提醒一下：当前日期是**2026年10月23日，周五**，下周一是**10月26日**。上面的办法可直接用于今晚，周六、周日继续复测。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 51409,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2185,
+            "reasoning_output_tokens": 1534
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T12:34:44Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 98.6,
+  "finished_at_utc": "2026-10-23T12:36:23Z"
+}

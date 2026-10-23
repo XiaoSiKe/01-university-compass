@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "version": "0.3.0",
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "case": "V06",
+  "title": "固定流程与Agent按证据选择",
+  "condition": "skill",
+  "fingerprint": "6e70e19589c7dc7957de603b9ef70e2f2cfb584784910865e3c671ce9c53d7ea",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "tests/v030/behavior/r0/V06-skill/attempt-20261023T204953-2dc378a8.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+      "bytes": 6531
+    },
+    {
+      "path": "references/01.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "sha256": "342959e954c21d253e4975cee29250842d1be141dea0f19facb79f7c5a5d565d",
+      "bytes": 6249
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a",
+      "bytes": 12103
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+      "bytes": 22162
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "2670fe6e83bd551ebd1f89fac0c93972bc97fd7bf5c16711cd4aace31ea38e5e",
+      "bytes": 12600
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f",
+      "bytes": 42049
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622",
+      "bytes": 2945
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我会一点Python，想做社团公开资料问答。只需查3份固定文档、给出处并回答。我是不是要先学多智能体框架？希望先做能验证的小版本。",
+      "prompt_sha256": "dfa9432a6fcab72181393f59fd9187e6b03e921a362ceb1efb677eaeb48f23ec",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**不用先学多智能体框架。**你这个任务的资料和步骤都比较固定，先做“找相关段落 → 依据段落回答 → 显示出处”的固定流程就够了。会一点 Python，已经可以开始。\n\n建议第一版做成一个**本地命令行问答原型**：只处理这三份文档，输出“简短回答＋原文摘录＋文件名和段落号”。先验证回答是否有依据。\n\n可以按这个顺序做，第一轮建议投入上限约 45 分钟，时间不够就停在已完成的一步：\n\n1. **整理三份资料。**先按能复制出的纯文本处理，每段保留编号，例如 `通知A，第3段`。第一版暂不处理扫描识别、复杂表格。\n2. **选少量真实问题。**先挑 6 个同学确实可能问的问题，手工记录对应依据。另留 2 个问题，等初版完成后再检查，避免程序只适应反复调过的例子。\n3. **用 Python 做关键词查找。**先为这几个常见问题设置检索词，返回命中的原段落和出处。这一步验证的是查找与来源展示；任意自然语言问法暂未覆盖。\n4. **再组织回答。**先用原文摘录回答也可以。确实需要更自然的表达时，再增加一次模型调用；没有可用接口时，可以把命中片段贴到当前对话里手动试，接口接入留待以后验证。\n\n第一版可以采用这样的输出格式：\n\n```text\n问题：……\n\n回答：……\n依据：〈原文摘录〉\n出处：通知A，第3段\n\n仍待核实：……（有缺失或冲突时填写）\n```\n\n验收至少覆盖下面几种情况：\n\n| 情况 | 怎样才算通过 |\n|---|---|\n| 资料明确写了答案 | 回答与原文一致，出处能定位到支持它的段落 |\n| 三份资料都没说明 | 明确说“这三份资料未说明”，不补猜 |\n| 两份资料规定不同 | 并列两版及出处；没有明确替代关系时，保留冲突 |\n| 原文有答案，程序却没找到 | 记录为检索失败，不能据此断言“资料未说明” |\n\n**最后一项很关键：没搜到和资料里没有，是两回事。**初版排错时，先看原文有没有，再看程序找没找到，最后看回答有没有歪曲依据。这样能知道该修哪一步。\n\n如果第一轮已经能稳定定位依据、正确处理缺失和冲突，就先保留这个版本；只有发现关键词检索经常漏掉不同问法时，再考虑改进检索。当前没有需要多智能体协作的证据。\n\n这三份文档目前是纯文本／Markdown，还是 PDF／Word？这会影响下一步怎样写最小读取代码。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 113.35,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168cf-8835-7672-9ecc-e130e9c68c6a"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-o9ok4_e5/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按“零一大学指南针”，把这个需求缩成一个能核对答案和出处的小版本。"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**不用先学多智能体框架。**你这个任务的资料和步骤都比较固定，先做“找相关段落 → 依据段落回答 → 显示出处”的固定流程就够了。会一点 Python，已经可以开始。\n\n建议第一版做成一个**本地命令行问答原型**：只处理这三份文档，输出“简短回答＋原文摘录＋文件名和段落号”。先验证回答是否有依据。\n\n可以按这个顺序做，第一轮建议投入上限约 45 分钟，时间不够就停在已完成的一步：\n\n1. **整理三份资料。**先按能复制出的纯文本处理，每段保留编号，例如 `通知A，第3段`。第一版暂不处理扫描识别、复杂表格。\n2. **选少量真实问题。**先挑 6 个同学确实可能问的问题，手工记录对应依据。另留 2 个问题，等初版完成后再检查，避免程序只适应反复调过的例子。\n3. **用 Python 做关键词查找。**先为这几个常见问题设置检索词，返回命中的原段落和出处。这一步验证的是查找与来源展示；任意自然语言问法暂未覆盖。\n4. **再组织回答。**先用原文摘录回答也可以。确实需要更自然的表达时，再增加一次模型调用；没有可用接口时，可以把命中片段贴到当前对话里手动试，接口接入留待以后验证。\n\n第一版可以采用这样的输出格式：\n\n```text\n问题：……\n\n回答：……\n依据：〈原文摘录〉\n出处：通知A，第3段\n\n仍待核实：……（有缺失或冲突时填写）\n```\n\n验收至少覆盖下面几种情况：\n\n| 情况 | 怎样才算通过 |\n|---|---|\n| 资料明确写了答案 | 回答与原文一致，出处能定位到支持它的段落 |\n| 三份资料都没说明 | 明确说“这三份资料未说明”，不补猜 |\n| 两份资料规定不同 | 并列两版及出处；没有明确替代关系时，保留冲突 |\n| 原文有答案，程序却没找到 | 记录为检索失败，不能据此断言“资料未说明” |\n\n**最后一项很关键：没搜到和资料里没有，是两回事。**初版排错时，先看原文有没有，再看程序找没找到，最后看回答有没有歪曲依据。这样能知道该修哪一步。\n\n如果第一轮已经能稳定定位依据、正确处理缺失和冲突，就先保留这个版本；只有发现关键词检索经常漏掉不同问法时，再考虑改进检索。当前没有需要多智能体协作的证据。\n\n这三份文档目前是纯文本／Markdown，还是 PDF／Word？这会影响下一步怎样写最小读取代码。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 51396,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2774,
+            "reasoning_output_tokens": 2072
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "我手动做了单次问答与先检索再回答的固定流程。五个样例：两个普通题，缺资料题、冲突题、超出范围题各一个。后者有四题能核对，缺资料题仍在猜。可以直接用Agent解决吗？",
+      "prompt_sha256": "fab9214b0f8747e000347fe527d02fdd5ff54686d38ef858822abb147b38492c",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "**先不用换成 Agent。**你已经发现了一个具体失败：依据不足时，固定流程仍会补猜。Agent 可以根据结果选择下一步查什么、调用什么工具，但它也可能继续猜；增加自主步骤本身不能保证回答有依据。\n\n沿用这三份文档和现有五题，先把这处失败定位清楚：\n\n1. **确认缺的是资料，还是检索结果。**如果你已人工核对三份全文，确实没有答案，就应保留未知；如果原文有答案、程序没找到，就修检索。不能用“没搜到”直接推出“文档没写”。\n\n2. **只增加一个“回答依据检查”步骤。**每个会影响行动的具体结论，都要对应到能支持它的原文。没有依据的结论删掉，并明确说明缺口。可以采用这样的输出：\n   > 当前检索到的内容不足以回答这个问题，暂不能确定。  \n   > 缺少的信息：……  \n   \n   只有确认完整核对过三份文档，才写“三份文档均未说明”。原文摘录真实存在，也还要检查它是否支持那句回答。\n\n3. **重查旧题，再检查一道新题。**其他条件尽量保持一致，先看这次修改是否修好了补猜、是否影响原来的普通题和冲突题，再用一道没参与修改的新问题检查。比较两种办法时，也记下人工核对用时和必要费用。\n\n你说的“四题能核对”是有用进展，但还要区分**有出处可查**和**核对后结论正确**。目前也还不知道单次问答的对应表现，因此暂时不能判断固定流程改善了多少。\n\n这轮可以设一个上限，例如 **20 分钟、最多两次主要修改**。如果仍反复补猜，就先让小版本返回“相关原文＋出处＋证据不足说明”，由人确认，保留失败记录。以后确实遇到需要根据结果动态选择资料或工具的任务，再考虑 Agent。\n\n把那道缺资料题、检索到的片段，以及它补猜的那句话贴出来就够了；我们可以直接判断该修检索，还是修回答与检查这一步。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 83.44,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168d1-42eb-74d3-a1ba-009c6a0ee1a6"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-o9ok4_e5/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "**先不用换成 Agent。**你已经发现了一个具体失败：依据不足时，固定流程仍会补猜。Agent 可以根据结果选择下一步查什么、调用什么工具，但它也可能继续猜；增加自主步骤本身不能保证回答有依据。\n\n沿用这三份文档和现有五题，先把这处失败定位清楚：\n\n1. **确认缺的是资料，还是检索结果。**如果你已人工核对三份全文，确实没有答案，就应保留未知；如果原文有答案、程序没找到，就修检索。不能用“没搜到”直接推出“文档没写”。\n\n2. **只增加一个“回答依据检查”步骤。**每个会影响行动的具体结论，都要对应到能支持它的原文。没有依据的结论删掉，并明确说明缺口。可以采用这样的输出：\n   > 当前检索到的内容不足以回答这个问题，暂不能确定。  \n   > 缺少的信息：……  \n   \n   只有确认完整核对过三份文档，才写“三份文档均未说明”。原文摘录真实存在，也还要检查它是否支持那句回答。\n\n3. **重查旧题，再检查一道新题。**其他条件尽量保持一致，先看这次修改是否修好了补猜、是否影响原来的普通题和冲突题，再用一道没参与修改的新问题检查。比较两种办法时，也记下人工核对用时和必要费用。\n\n你说的“四题能核对”是有用进展，但还要区分**有出处可查**和**核对后结论正确**。目前也还不知道单次问答的对应表现，因此暂时不能判断固定流程改善了多少。\n\n这轮可以设一个上限，例如 **20 分钟、最多两次主要修改**。如果仍反复补猜，就先让小版本返回“相关原文＋出处＋证据不足说明”，由人确认，保留失败记录。以后确实遇到需要根据结果动态选择资料或工具的任务，再考虑 Agent。\n\n把那道缺资料题、检索到的片段，以及它补猜的那句话贴出来就够了；我们可以直接判断该修检索，还是修回答与检查这一步。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 52190,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1925,
+            "reasoning_output_tokens": 1414
+          }
+        }
+      ],
+      "stderr": "2026-10-23T12:51:52.052295Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out\n",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 3,
+      "user": "我只剩30分钟，不想安装新框架。请按现有失败给我一个修改和停止标准；目前没有实际API可用，只能用我已有的输出比较。",
+      "prompt_sha256": "6e2671467ab8c56ca2268258b9339d74f1a2d9ca2efab5fa9289b58f9fe737d0",
+      "history_messages": 4,
+      "status": "completed",
+      "answer": "**这30分钟只加一个修改：回答生成后，逐项检查关键结论的依据；无法支持的结论改为明确的未知。**现在先对已有输出手工执行，以后有 API 时再验证它能否自动执行。\n\n检查规则可以直接写成：\n\n> 对日期、费用、资格、办理方式等会影响行动的结论，记录“结论—支持它的原文—出处”。引用必须确实支持这句话。缺少支持时，删除补猜，改写为“当前提供的资料片段不足以确定……”。\n\n针对那道缺资料题，可以改为：\n\n```text\n回答：根据当前提供的资料片段，暂不能确定［所问事项］。\n尚缺的信息：［明确缺哪项规定］。\n依据与出处：［有相关内容就列出；没有则说明未找到可支持结论的片段］。\n```\n\n只有完整核对过三份文档，才能写“三份文档均未说明”。冲突题则保留两版规定和出处，没有明确替代关系时不自行选一版。\n\n**30分钟这样分配：**\n\n- **前5分钟：**列出五题及每题需要核对的关键结论，固定上述判断规则。\n- **中间15分钟：**用同一规则核对单次问答与固定流程已有的输出，逐题记“有依据／缺依据／冲突未保留／超出范围／暂无法核对”。某一侧没有保留输出就记“未评”；原本正确的内容可以保留。\n- **最后10分钟：**手工修订缺资料题及其他发现的问题，保留原输出和修订版，并写清哪些地方仍未知。\n\n**停止标准有两个，满足任一个就结束：**\n\n1. 五题已核对完，修订版中每个保留的关键结论都有支持依据，缺失、冲突和范围限制都已说明，本轮完成。\n2. 30分钟到，或下一步必须依赖你手上没有的资料、API才能判断，就停在这里。对应题目只保留可核实的原文与出处，并注明暂不能确定，不继续补猜或追加框架。\n\n这轮可以得出“这两组已有输出，在这五题上各有什么问题”。**人工修订后的正确文本，不能计作修改后的流程已经答对。**新规则能否让模型少猜、是否优于单次问答，以及面对新题的表现，都留待有实际调用条件后验证。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 81.98,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168d2-88e0-76f3-9185-6781f1a74141"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-o9ok4_e5/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按“零一大学指南针”，把这轮限定为对已有输出的人工检查，并区分“修正了文本”和“验证了流程”。\n"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**这30分钟只加一个修改：回答生成后，逐项检查关键结论的依据；无法支持的结论改为明确的未知。**现在先对已有输出手工执行，以后有 API 时再验证它能否自动执行。\n\n检查规则可以直接写成：\n\n> 对日期、费用、资格、办理方式等会影响行动的结论，记录“结论—支持它的原文—出处”。引用必须确实支持这句话。缺少支持时，删除补猜，改写为“当前提供的资料片段不足以确定……”。\n\n针对那道缺资料题，可以改为：\n\n```text\n回答：根据当前提供的资料片段，暂不能确定［所问事项］。\n尚缺的信息：［明确缺哪项规定］。\n依据与出处：［有相关内容就列出；没有则说明未找到可支持结论的片段］。\n```\n\n只有完整核对过三份文档，才能写“三份文档均未说明”。冲突题则保留两版规定和出处，没有明确替代关系时不自行选一版。\n\n**30分钟这样分配：**\n\n- **前5分钟：**列出五题及每题需要核对的关键结论，固定上述判断规则。\n- **中间15分钟：**用同一规则核对单次问答与固定流程已有的输出，逐题记“有依据／缺依据／冲突未保留／超出范围／暂无法核对”。某一侧没有保留输出就记“未评”；原本正确的内容可以保留。\n- **最后10分钟：**手工修订缺资料题及其他发现的问题，保留原输出和修订版，并写清哪些地方仍未知。\n\n**停止标准有两个，满足任一个就结束：**\n\n1. 五题已核对完，修订版中每个保留的关键结论都有支持依据，缺失、冲突和范围限制都已说明，本轮完成。\n2. 30分钟到，或下一步必须依赖你手上没有的资料、API才能判断，就停在这里。对应题目只保留可核实的原文与出处，并注明暂不能确定，不继续补猜或追加框架。\n\n这轮可以得出“这两组已有输出，在这五题上各有什么问题”。**人工修订后的正确文本，不能计作修改后的流程已经答对。**新规则能否让模型少猜、是否优于单次问答，以及面对新题的表现，都留待有实际调用条件后验证。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 52780,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1799,
+            "reasoning_output_tokens": 1188
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T12:49:53Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 278.8,
+  "finished_at_utc": "2026-10-23T12:54:32Z"
+}

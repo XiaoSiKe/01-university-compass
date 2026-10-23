@@ -1,0 +1,68 @@
+{
+  "version": "0.3.0",
+  "frozen_on": "2026-10-23",
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "manifest": [
+    {
+      "path": "SKILL.md",
+      "bytes": 6531,
+      "sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 378,
+      "sha256": "c06319902b634b1ff9f8397708d9e96be0fa174c80aba090a2436591bad31150"
+    },
+    {
+      "path": "references/01.md",
+      "bytes": 9216,
+      "sha256": "a56f20df1fd5ccee14ba30d9aee98a93b9d7c815abd3367b6e78f898510181f4"
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "bytes": 6249,
+      "sha256": "342959e954c21d253e4975cee29250842d1be141dea0f19facb79f7c5a5d565d"
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "bytes": 12103,
+      "sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a"
+    },
+    {
+      "path": "references/ai-practice.md",
+      "bytes": 22162,
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c"
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "bytes": 5005,
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170"
+    },
+    {
+      "path": "references/dialogue.md",
+      "bytes": 6508,
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4"
+    },
+    {
+      "path": "references/learning-action.md",
+      "bytes": 12600,
+      "sha256": "2670fe6e83bd551ebd1f89fac0c93972bc97fd7bf5c16711cd4aace31ea38e5e"
+    },
+    {
+      "path": "references/sources.md",
+      "bytes": 42049,
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f"
+    },
+    {
+      "path": "references/thinking.md",
+      "bytes": 11938,
+      "sha256": "9960226710134f1d7d35f3e433c4a4a3fd69b859e8fd72c473868829b5294b86"
+    },
+    {
+      "path": "references/topic-map.md",
+      "bytes": 2945,
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622"
+    }
+  ],
+  "scope": "frozen_input_snapshot_not_a_test_verdict"
+}

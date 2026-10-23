@@ -1,0 +1,8 @@
+{
+  "runner_snapshot": "harness/run_behavior.r0.py.txt",
+  "sha256": "a671d9404cca75984053bcbb521a2299c2a0b5c88d9a65802f9874ade40ee845",
+  "purpose": "Exact R0 runner source snapshot; restore it to tests/run_behavior.py in an isolated checkout when reproducing this run. Not a standalone command.",
+  "resume_used": false,
+  "model_override": false,
+  "remaining_maintenance_issue": "Resume fingerprint needs explicit version and raw Skill digest; fresh R0 conversations do not reuse prior artifacts."
+}

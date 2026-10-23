@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "version": "0.3.0",
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "case": "N17",
+  "title": "普通院校与跨专业适配",
+  "condition": "skill",
+  "fingerprint": "9ecce9e693d1715f477fd1b4b7d9e0bd7317643b3cf5a3948c371e590ef9becf",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "tests/v030/behavior/r0/N17-skill/attempt-20261023T204557-a8f3c0a5.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+      "bytes": 6531
+    },
+    {
+      "path": "references/01.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "sha256": "342959e954c21d253e4975cee29250842d1be141dea0f19facb79f7c5a5d565d",
+      "bytes": 6249
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a",
+      "bytes": 12103
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+      "bytes": 22162
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "2670fe6e83bd551ebd1f89fac0c93972bc97fd7bf5c16711cd4aace31ea38e5e",
+      "bytes": 12600
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f",
+      "bytes": 42049
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622",
+      "bytes": 2945
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我大一护理，普通院校，不打算读研或转计算机。每周只有两小时，学 AI 有合适的起点吗？现在有两个学习环境：一个名气大，要求每周八小时、没有作业反馈；另一个小组每周一小时，会互相检查公开教学材料的笔记。请帮我比较。我不希望用某学校的规定或名校学长路线套我，也不想拿真实病人数据练习。",
+      "prompt_sha256": "467cc8c5732b21854dce38ddafcf6f3a5fde15595b956017f7e8a8ada85e9dd1",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "有。**你可以从“用 AI 辅助护理课程的理解、自测与核对”开始，先试每周一小时的小组。**这个建议依据的是你的目标、时间和反馈条件；学校层次不决定你的起点，也无需照搬别人的升学或转行路线。\n\n两个环境可以这样比较：\n\n| 比较项 | 名气大的环境 | 每周一小时的小组 |\n|---|---|---|\n| 时间是否合适 | 要求八小时，是你可用时间的四倍；若为硬性要求，目前无法容纳 | 一小时能放进安排，还剩一小时自己练习；需确认是否另有大量准备任务 |\n| 学习反馈 | 没有作业反馈，遇到误解时需要另找核对办法 | 互查笔记能帮助发现遗漏，也能练习解释；同伴的判断仍需回到原材料核对 |\n| 对护理学习的帮助 | 具体内容未知，单凭名气无法判断 | 检查公开教学材料与课程理解、信息核对较贴近；实际效果还要看材料和互查方式 |\n| 最值得确认的事 | 能否只参加与你有关、总投入不超过两小时的部分 | 互查时是否核对出处、说明修改理由，能否保留暂时无法解决的问题 |\n\n**目前小组更适合作为起点，但“有人互查”还不等于“反馈准确”。**例如，只说“笔记写得很好”帮助有限；能指出“这句话原文没有”“你把两个概念混在一起了”，再一起找依据，才更有学习价值。大环境以后若能提供适合你的低时长参与方式，也可以重新比较。\n\n建议先试两周，每周总投入封顶两小时：\n\n- **一小时参加小组。**用小组已有的一份公开教学材料作为主材料，检查一两个关键概念的笔记，避免另外堆课程和书单。\n- **剩下一小时做一次小练习。**选其中约150—300字，先自己写两三句话说明意思；再让 AI 依据材料出两道理解题，先不显示答案。你回答后，再请它反馈，并逐项回原文核对。最后不看笔记，解释一个关键关系。\n\n可以直接这样提问：\n\n> 下面是一段公开护理教学材料。我想理解其中的概念。请只依据材料出两道理解题，本轮不要给答案、解法或暗示。等我回答后再反馈；反馈时指出材料依据，材料没有说明的内容请保留未知。  \n> 【粘贴材料】\n\n练习只用**公开教学材料或明确标注的虚构情境**，无需真实病人数据。手机和当前对话就能完成这类练习，新增预算先按零元安排。\n\n两周后，用三个问题判断是否继续：总用时有没有超限？反馈是否帮你确认或修正了具体理解？换一个例子时，你能否少依赖提示地解释？AI生成了漂亮笔记，只说明有了一个成果；你能核对依据、自己解释并处理变化，才是个人掌握的证据。若没有发现错误，也可以如实记录检查了什么，不必为了练习硬找问题。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 84.54,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168cb-edc0-7633-b47f-4dcdb129ae6f"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-gp8knndx/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按“零一大学指南针”，结合你的护理学习目标、每周两小时的上限和不使用真实病人数据的要求来比较。"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "有。**你可以从“用 AI 辅助护理课程的理解、自测与核对”开始，先试每周一小时的小组。**这个建议依据的是你的目标、时间和反馈条件；学校层次不决定你的起点，也无需照搬别人的升学或转行路线。\n\n两个环境可以这样比较：\n\n| 比较项 | 名气大的环境 | 每周一小时的小组 |\n|---|---|---|\n| 时间是否合适 | 要求八小时，是你可用时间的四倍；若为硬性要求，目前无法容纳 | 一小时能放进安排，还剩一小时自己练习；需确认是否另有大量准备任务 |\n| 学习反馈 | 没有作业反馈，遇到误解时需要另找核对办法 | 互查笔记能帮助发现遗漏，也能练习解释；同伴的判断仍需回到原材料核对 |\n| 对护理学习的帮助 | 具体内容未知，单凭名气无法判断 | 检查公开教学材料与课程理解、信息核对较贴近；实际效果还要看材料和互查方式 |\n| 最值得确认的事 | 能否只参加与你有关、总投入不超过两小时的部分 | 互查时是否核对出处、说明修改理由，能否保留暂时无法解决的问题 |\n\n**目前小组更适合作为起点，但“有人互查”还不等于“反馈准确”。**例如，只说“笔记写得很好”帮助有限；能指出“这句话原文没有”“你把两个概念混在一起了”，再一起找依据，才更有学习价值。大环境以后若能提供适合你的低时长参与方式，也可以重新比较。\n\n建议先试两周，每周总投入封顶两小时：\n\n- **一小时参加小组。**用小组已有的一份公开教学材料作为主材料，检查一两个关键概念的笔记，避免另外堆课程和书单。\n- **剩下一小时做一次小练习。**选其中约150—300字，先自己写两三句话说明意思；再让 AI 依据材料出两道理解题，先不显示答案。你回答后，再请它反馈，并逐项回原文核对。最后不看笔记，解释一个关键关系。\n\n可以直接这样提问：\n\n> 下面是一段公开护理教学材料。我想理解其中的概念。请只依据材料出两道理解题，本轮不要给答案、解法或暗示。等我回答后再反馈；反馈时指出材料依据，材料没有说明的内容请保留未知。  \n> 【粘贴材料】\n\n练习只用**公开教学材料或明确标注的虚构情境**，无需真实病人数据。手机和当前对话就能完成这类练习，新增预算先按零元安排。\n\n两周后，用三个问题判断是否继续：总用时有没有超限？反馈是否帮你确认或修正了具体理解？换一个例子时，你能否少依赖提示地解释？AI生成了漂亮笔记，只说明有了一个成果；你能核对依据、自己解释并处理变化，才是个人掌握的证据。若没有发现错误，也可以如实记录检查了什么，不必为了练习硬找问题。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 51456,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1811,
+            "reasoning_output_tokens": 1036
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T12:45:57Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 84.56,
+  "finished_at_utc": "2026-10-23T12:47:22Z"
+}

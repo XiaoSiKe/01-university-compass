@@ -29,7 +29,7 @@ import time
 import uuid
 
 ROOT = Path(__file__).resolve().parent.parent
-BASELINE_IDS = {"N01", "N06", "N09", "N10", "N14", "N22"}
+BASELINE_IDS = {"V01", "V03", "V05", "V06"}
 DISABLED_FEATURES = (
     "apps", "plugins", "hooks", "multi_agent", "multi_agent_v2", "memories",
     "shell_tool", "unified_exec", "browser_use", "browser_use_external",
@@ -60,6 +60,7 @@ def exclusions():
 
 def scrub(value, tokens):
     if isinstance(value, str):
+        value = value.replace(str(ROOT), "[PROJECT_ROOT]").replace(str(Path.home()), "[USER_HOME]")
         for token in tokens:
             value = re.sub(re.escape(token), "[来源标识已省略]", value, flags=re.I)
         return value
@@ -124,10 +125,11 @@ def read_skill(path):
     return "\n\n".join(chunks), manifest
 
 
-def cases_all():
+def cases_all(files=None):
     result = []
-    for file in ["cases-a.json", "cases-b.json", "cases-v020.json"]:
-        for item in load_json(ROOT / "tests" / file):
+    for file in files or [ROOT / "tests" / name for name in
+                          ("cases-a.json", "cases-b.json", "cases-v020.json", "cases-v030.json")]:
+        for item in load_json(file):
             if "user_turns" not in item:
                 item = dict(item, title=item["id"], user_turns=[item["user"]] + ([item["followup"]] if item.get("followup") else []))
             result.append(item)
@@ -189,23 +191,35 @@ def run_case(case, condition, args, config, model, skill_text, manifest, tokens)
     identity = case["id"] + "-" + condition
     case_dir = args.output / identity
     fingerprint = sha(json.dumps({"input": case["user_turns"], "condition": condition,
+                                  "version": args.version, "skill_digest": args.skill_digest,
                                   "skill": manifest if condition == "skill" else [],
                                   "config_sha256": sha(config), "harness": HARNESS,
                                   "runner_sha256": sha(Path(__file__).read_bytes())}, sort_keys=True, ensure_ascii=False))
     prior = None
     if args.resume and case_dir.exists():
-        for path in sorted(case_dir.glob("attempt-*.json"), reverse=True):
+        candidates = []
+        for path in case_dir.glob("attempt-*.json"):
             value = load_json(path)
             if value.get("fingerprint") == fingerprint:
-                prior = value
-                break
+                created = value.get("attempt_created_ns", path.stat().st_mtime_ns)
+                candidates.append((created, value))
+        if candidates:
+            prior = max(candidates, key=lambda candidate: candidate[0])[1]
         if prior and prior.get("status") == "completed":
             return {"case": case["id"], "condition": condition, "status": "skipped_completed", "artifact": prior["artifact"]}
+        if prior and any(t.get("history_replay_safe") is not True for t in prior.get("turns", [])
+                         if t.get("status") == "completed"):
+            # A redacted public answer cannot reproduce the original private history.
+            # Preserve that attempt and start a new conversation instead of inventing a replay.
+            prior = None
     attempt = "attempt-" + time.strftime("%Y%m%dT%H%M%S") + "-" + uuid.uuid4().hex[:8] + ".json"
     artifact = case_dir / attempt
-    result = {"schema_version": 1, "case": case["id"], "title": case.get("title", case["id"]),
+    artifact_label = str(artifact.relative_to(ROOT)) if artifact.is_relative_to(ROOT) else str(artifact)
+    result = {"schema_version": 1, "version": args.version, "skill_digest": args.skill_digest,
+              "attempt_created_ns": time.time_ns(),
+              "case": case["id"], "title": case.get("title", case["id"]),
               "condition": condition, "fingerprint": fingerprint, "configured_model": model,
-              "evaluation_status": "requires_manual_review", "status": "running", "artifact": str(artifact),
+              "evaluation_status": "requires_manual_review", "status": "running", "artifact": artifact_label,
               "skill_manifest": manifest if condition == "skill" else [],
               "context_method": "fresh_process_per_turn_with_complete_actual_history",
               "tool_policy": "offline_no_external_tools_same_in_both_conditions",
@@ -264,6 +278,7 @@ def run_case(case, condition, args, config, model, skill_text, manifest, tokens)
             if calls:
                 status = "unexpected_tool_call"
             turn.update(status=status, answer=answer, returncode=returncode,
+                        history_replay_safe=(scrub(answer, tokens) == answer and scrub(user, tokens) == user),
                         elapsed_seconds=round(time.monotonic() - turn_start, 2),
                         events=events, stderr=stderr, tool_call_evidence=calls,
                         tool_call_count=len(calls))
@@ -280,7 +295,7 @@ def run_case(case, condition, args, config, model, skill_text, manifest, tokens)
     result["elapsed_seconds"] = round(time.monotonic() - start, 2)
     result["finished_at_utc"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     save_json(artifact, result, tokens)
-    return {"case": case["id"], "condition": condition, "status": result["status"], "artifact": str(artifact)}
+    return {"case": case["id"], "condition": condition, "status": result["status"], "artifact": artifact_label}
 
 
 def main():
@@ -288,7 +303,9 @@ def main():
     parser.add_argument("--group", choices=["new", "legacy", "baseline", "all"], default="new")
     parser.add_argument("--case", action="append", help="Case ID; can repeat")
     parser.add_argument("--condition", choices=["skill", "baseline", "both"], default="skill")
-    parser.add_argument("--output", type=Path, default=ROOT / "tests" / "v020")
+    parser.add_argument("--output", type=Path, help="New run directory; defaults to a unique directory for the current version")
+    parser.add_argument("--case-file", action="append", type=Path, help="Explicit case JSON file; repeat to combine historical sets")
+    parser.add_argument("--baseline-id", action="append", help="Override comparison case IDs; repeat as needed")
     parser.add_argument("--skill", type=Path, default=ROOT / "01-university-compass")
     parser.add_argument("--config-home", type=Path, default=Path(os.environ.get("CODEX_HOME", str(Path.home() / ".codex"))))
     parser.add_argument("--timeout", type=float, default=240, help="Seconds per actual model turn")
@@ -299,28 +316,44 @@ def main():
     args = parser.parse_args()
     if args.timeout <= 0 or args.jobs < 1:
         parser.error("timeout and jobs must be positive")
+    entry = (args.skill / "SKILL.md").read_text(encoding="utf-8")
+    version_match = re.search(r'^  version: "([0-9]+\.[0-9]+\.[0-9]+)"$', entry, re.M)
+    if not version_match:
+        parser.error("Skill metadata.version is missing or invalid")
+    args.version = version_match[1]
+    package_manifest = [{"path": str(p.relative_to(args.skill)), "bytes": p.stat().st_size,
+                         "sha256": sha(p.read_bytes())} for p in sorted(args.skill.rglob("*")) if p.is_file()]
+    args.skill_digest = sha(json.dumps(package_manifest, sort_keys=True).encode())
+    if args.output is None:
+        args.output = ROOT / "tests" / ("v" + args.version.replace(".", "")) / "behavior" / ("run-" + time.strftime("%Y%m%dT%H%M%S") + "-" + uuid.uuid4().hex[:8])
     args.output = args.output.resolve()
     tokens = exclusions()
     config, model = config_subset(args.config_home)
     skill_text, manifest = read_skill(args.skill)
-    selected = cases_all()
+    selected = cases_all(args.case_file)
+    baseline_ids = set(args.baseline_id or BASELINE_IDS)
+    ids = [case["id"] for case in selected]
+    if len(ids) != len(set(ids)):
+        parser.error("Case IDs must be unique")
     if args.case:
         unknown = set(args.case) - {case["id"] for case in selected}
         if unknown:
             parser.error("Unknown cases: " + ", ".join(sorted(unknown)))
         selected = [case for case in selected if case["id"] in args.case]
     elif args.group == "new":
-        selected = [case for case in selected if case["id"].startswith("N")]
+        selected = [case for case in selected if case["id"].startswith("V")]
     elif args.group == "legacy":
-        selected = [case for case in selected if not case["id"].startswith("N")]
+        selected = [case for case in selected if not case["id"].startswith("V")]
     elif args.group == "baseline":
-        selected = [case for case in selected if case["id"] in BASELINE_IDS]
+        selected = [case for case in selected if case["id"] in baseline_ids]
     conditions = ["skill", "baseline"] if args.condition == "both" else [args.condition]
     if args.group == "baseline" and not args.case:
         conditions = ["baseline"]
     if args.smoke:
         selected = [{"id": "SMOKE", "title": "CLI smoke", "user_turns": ["只回复：运行器烟雾测试成功"]}]
         conditions = ["baseline"]
+    if not selected:
+        parser.error("No cases selected; verify --case-file, --group and --baseline-id")
     tasks = [(case, condition) for case in selected for condition in conditions]
     if args.list:
         print(json.dumps({"configured_model": model, "cases": [{"id": c["id"], "turns": len(c["user_turns"]), "condition": k} for c, k in tasks]}, ensure_ascii=False, indent=2))
@@ -329,8 +362,9 @@ def main():
         parser.error("codex executable not found; no evaluations were run")
     args.output.mkdir(parents=True, exist_ok=True)
     summary_path = args.output / ("run-" + time.strftime("%Y%m%dT%H%M%S") + "-" + uuid.uuid4().hex[:8] + ".json")
-    summary = {"configured_model": model, "group": args.group, "smoke": args.smoke,
-               "baseline_ids": sorted(BASELINE_IDS), "semantic_verdict": "not_automatically_scored",
+    summary = {"version": args.version, "skill_digest": args.skill_digest,
+               "configured_model": model, "group": args.group, "smoke": args.smoke,
+               "baseline_ids": sorted(baseline_ids), "semantic_verdict": "not_automatically_scored",
                "limitations": ["Synthetic student conversations, not real student outcomes", "Full Skill Markdown explicitly loaded; does not test lazy loading or installation discovery", "All external tools disabled equally; live verification and real side effects are not tested", "Full actual history replayed per turn; not server-side resume"],
                "results": []}
     save_json(summary_path, summary, tokens)
@@ -344,7 +378,7 @@ def main():
                 result = {"case": case_id, "condition": condition, "status": "harness_failed", "error": str(exc)}
             summary["results"].append(result)
             save_json(summary_path, summary, tokens)
-    print(json.dumps({"summary": str(summary_path), "completed": sum(r["status"] in {"completed", "skipped_completed"} for r in summary["results"]), "total": len(tasks)}, ensure_ascii=False))
+    print(json.dumps(scrub({"summary": str(summary_path), "completed": sum(r["status"] in {"completed", "skipped_completed"} for r in summary["results"]), "total": len(tasks)}, tokens), ensure_ascii=False))
     return 0 if all(r["status"] in {"completed", "skipped_completed"} for r in summary["results"]) else 1
 
 

@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "version": "0.3.0",
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "case": "B05",
+  "title": "B05",
+  "condition": "skill",
+  "fingerprint": "ff35802e7b75b5e330dea2ef4e24a73901464f72ee62935ad508f190a0a50292",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "tests/v030/behavior/r0/B05-skill/attempt-20261023T203705-a566750c.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+      "bytes": 6531
+    },
+    {
+      "path": "references/01.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "sha256": "342959e954c21d253e4975cee29250842d1be141dea0f19facb79f7c5a5d565d",
+      "bytes": 6249
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a",
+      "bytes": 12103
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+      "bytes": 22162
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "2670fe6e83bd551ebd1f89fac0c93972bc97fd7bf5c16711cd4aace31ea38e5e",
+      "bytes": 12600
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f",
+      "bytes": 42049
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622",
+      "bytes": 2945
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "零一AI日新社和福州零一扬网络科技有限公司是不是一样的？加入社团是不是就算公司实习、能拿学校认可的证明？我大一想写简历。",
+      "prompt_sha256": "759a1bdf46073efb692329e30ca03231d364eca6dafc65dbf7d8d7205cb6de01",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**不能把两者当成一回事。加入社团本身不等于公司实习，也不保证能拿到学校认可的证明。**\n\n目前可见的《高校分社计划》把**零一 AI 日新社的学习交流、连接活动**与**福州零一扬网络科技有限公司的商业运营、项目交付**分开说明。这属于组织自述，尚未经独立核验；即使两边有相同的成员或负责人，也不能据此认定它们的承诺相同，或有学校背书。\n\n你想用于简历，可以把三个问题分开核实：\n\n| 你想确认的事 | 需要什么依据 |\n|---|---|\n| 是否属于你校正式认可的社团 | 本校正式社团名单、审批或登记信息 |\n| 参加后是否属于公司实习 | 公司明确安排的岗位、实际工作、起止时间、负责人，以及对经历的确认方式 |\n| 证明是否被学校认可 | 你所在学院当年度的实习或实践认定要求，并由负责老师确认 |\n\n“学校认可”还要问清具体用途：**认可社团活动、认定实习、计入实践学分，是不同的事。**公司愿意盖章，也不能单凭这一点推定学校会认定。\n\n你可以向招募方直接问：\n\n> 我想确认这次招募属于社团活动还是公司实习。若是实习，具体岗位、工作内容、期限和负责人是什么？最终证明由谁出具、写明什么经历？如果说学校认可，请提供对应学校、学院的正式依据。\n\n拿到说明后，再向你学院负责实习或实践认定的老师核实。现在我无法联网确认它们的最新安排，也不知道你学校的具体规则，所以不能替你保证证明有效。\n\n**大一简历完全可以先写真实的社团或项目经历。**只有入社、还没开展活动时，可以列为成员身份，但不要写成实习。做过具体事情后，就写清自己的贡献。例如，确实完成过才可以这样写：\n\n> 零一 AI 日新社｜活动成员  \n> 协助组织 AI 学习分享，负责报名信息整理、现场协调及活动资料汇总。\n\n如果以后确实进入公司岗位、完成相应工作，再按事实写公司实习。你现在最值得争取的是一项自己能讲清过程、展示成果的任务；证明可以作为佐证，经历本身也要经得起追问。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 75.09,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168c3-ce02-7621-8897-c74131feb08b"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-b4yvssxy/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按你提供的“零一大学指南针”，帮你分清社团、公司和学校各自能确认什么。\n"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**不能把两者当成一回事。加入社团本身不等于公司实习，也不保证能拿到学校认可的证明。**\n\n目前可见的《高校分社计划》把**零一 AI 日新社的学习交流、连接活动**与**福州零一扬网络科技有限公司的商业运营、项目交付**分开说明。这属于组织自述，尚未经独立核验；即使两边有相同的成员或负责人，也不能据此认定它们的承诺相同，或有学校背书。\n\n你想用于简历，可以把三个问题分开核实：\n\n| 你想确认的事 | 需要什么依据 |\n|---|---|\n| 是否属于你校正式认可的社团 | 本校正式社团名单、审批或登记信息 |\n| 参加后是否属于公司实习 | 公司明确安排的岗位、实际工作、起止时间、负责人，以及对经历的确认方式 |\n| 证明是否被学校认可 | 你所在学院当年度的实习或实践认定要求，并由负责老师确认 |\n\n“学校认可”还要问清具体用途：**认可社团活动、认定实习、计入实践学分，是不同的事。**公司愿意盖章，也不能单凭这一点推定学校会认定。\n\n你可以向招募方直接问：\n\n> 我想确认这次招募属于社团活动还是公司实习。若是实习，具体岗位、工作内容、期限和负责人是什么？最终证明由谁出具、写明什么经历？如果说学校认可，请提供对应学校、学院的正式依据。\n\n拿到说明后，再向你学院负责实习或实践认定的老师核实。现在我无法联网确认它们的最新安排，也不知道你学校的具体规则，所以不能替你保证证明有效。\n\n**大一简历完全可以先写真实的社团或项目经历。**只有入社、还没开展活动时，可以列为成员身份，但不要写成实习。做过具体事情后，就写清自己的贡献。例如，确实完成过才可以这样写：\n\n> 零一 AI 日新社｜活动成员  \n> 协助组织 AI 学习分享，负责报名信息整理、现场协调及活动资料汇总。\n\n如果以后确实进入公司岗位、完成相应工作，再按事实写公司实习。你现在最值得争取的是一项自己能讲清过程、展示成果的任务；证明可以作为佐证，经历本身也要经得起追问。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 51391,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1617,
+            "reasoning_output_tokens": 1024
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T12:37:05Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 75.11,
+  "finished_at_utc": "2026-10-23T12:38:20Z"
+}

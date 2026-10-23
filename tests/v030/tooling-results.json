@@ -1,0 +1,10 @@
+{
+  "version": "0.3.0",
+  "status": "PASS",
+  "command": "python3 -m unittest discover -s tests -p 'test_*.py' -v",
+  "tests": 23,
+  "real_model_calls": 0,
+  "log": "tooling-unittest.txt",
+  "runner_sha256": "6667ef698e1b0003473dbcf6a1cadc4cb0b6af064fa382dbcfbe01fc33091b36",
+  "scope": "临时副本和标准库mock中的确定性回归；stdout的FIXTURE失败是预设测试数据，不是真实模型失败。"
+}

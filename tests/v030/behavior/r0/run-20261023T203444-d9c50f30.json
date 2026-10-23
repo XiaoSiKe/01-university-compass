@@ -1,0 +1,46 @@
+{
+  "version": "0.3.0",
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "configured_model": "gpt-6.1-sol",
+  "group": "baseline",
+  "smoke": false,
+  "baseline_ids": [
+    "V01",
+    "V03",
+    "V05",
+    "V06"
+  ],
+  "semantic_verdict": "not_automatically_scored",
+  "limitations": [
+    "Synthetic student conversations, not real student outcomes",
+    "Full Skill Markdown explicitly loaded; does not test lazy loading or installation discovery",
+    "All external tools disabled equally; live verification and real side effects are not tested",
+    "Full actual history replayed per turn; not server-side resume"
+  ],
+  "results": [
+    {
+      "case": "V01",
+      "condition": "baseline",
+      "status": "completed",
+      "artifact": "tests/v030/behavior/r0/V01-baseline/attempt-20261023T203444-68cc002b.json"
+    },
+    {
+      "case": "V03",
+      "condition": "baseline",
+      "status": "completed",
+      "artifact": "tests/v030/behavior/r0/V03-baseline/attempt-20261023T203444-9442e1b0.json"
+    },
+    {
+      "case": "V05",
+      "condition": "baseline",
+      "status": "completed",
+      "artifact": "tests/v030/behavior/r0/V05-baseline/attempt-20261023T203627-ffb9d607.json"
+    },
+    {
+      "case": "V06",
+      "condition": "baseline",
+      "status": "completed",
+      "artifact": "tests/v030/behavior/r0/V06-baseline/attempt-20261023T203715-691e483b.json"
+    }
+  ]
+}

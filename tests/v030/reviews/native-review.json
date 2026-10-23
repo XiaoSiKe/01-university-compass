@@ -1,0 +1,702 @@
+{
+  "schema_version": 1,
+  "review_type": "independent_read_only_native_discovery_semantic_review",
+  "reviewer": "native_semantic_review subagent",
+  "reviewed_on": "2026-10-23",
+  "version": "0.3.0",
+  "scope": "Independent semantic review of the four specified native installation/discovery cases, their per-turn prompt/actual-response/events and the frozen manifest. This checks assistant behavior and evidence integrity, not student effectiveness.",
+  "independence": {
+    "read_author_plan": false,
+    "read_other_reviews": false,
+    "modified_skill_or_raw_records": false,
+    "made_model_calls_or_network_requests": false,
+    "report_is_only_written_artifact": "tests/v030/reviews/native-review.json"
+  },
+  "verdict": "pass",
+  "case_counts": {
+    "pass": 4,
+    "fail": 0
+  },
+  "verdict_basis": "Judgments use actual answers, completed read-event content, replay integrity and semantic behavior. completed/returncode=0 are only execution-state records, not semantic pass criteria.",
+  "frozen_content": {
+    "manifest_file": "tests/v030/content-freeze.json",
+    "declared_skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+    "all_12_current_skill_files_match_frozen_raw_bytes_and_sha256": true,
+    "current_skill_raw_file_checks": [
+      {
+        "path": "SKILL.md",
+        "bytes": 6531,
+        "sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+        "matches_frozen_bytes_and_sha256": true
+      },
+      {
+        "path": "agents/openai.yaml",
+        "bytes": 378,
+        "sha256": "c06319902b634b1ff9f8397708d9e96be0fa174c80aba090a2436591bad31150",
+        "matches_frozen_bytes_and_sha256": true
+      },
+      {
+        "path": "references/01.md",
+        "bytes": 9216,
+        "sha256": "a56f20df1fd5ccee14ba30d9aee98a93b9d7c815abd3367b6e78f898510181f4",
+        "matches_frozen_bytes_and_sha256": true
+      },
+      {
+        "path": "references/ai-judgment.md",
+        "bytes": 6249,
+        "sha256": "342959e954c21d253e4975cee29250842d1be141dea0f19facb79f7c5a5d565d",
+        "matches_frozen_bytes_and_sha256": true
+      },
+      {
+        "path": "references/ai-pathways.md",
+        "bytes": 12103,
+        "sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a",
+        "matches_frozen_bytes_and_sha256": true
+      },
+      {
+        "path": "references/ai-practice.md",
+        "bytes": 22162,
+        "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+        "matches_frozen_bytes_and_sha256": true
+      },
+      {
+        "path": "references/continuity-evidence.md",
+        "bytes": 5005,
+        "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+        "matches_frozen_bytes_and_sha256": true
+      },
+      {
+        "path": "references/dialogue.md",
+        "bytes": 6508,
+        "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+        "matches_frozen_bytes_and_sha256": true
+      },
+      {
+        "path": "references/learning-action.md",
+        "bytes": 12600,
+        "sha256": "2670fe6e83bd551ebd1f89fac0c93972bc97fd7bf5c16711cd4aace31ea38e5e",
+        "matches_frozen_bytes_and_sha256": true
+      },
+      {
+        "path": "references/sources.md",
+        "bytes": 42049,
+        "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f",
+        "matches_frozen_bytes_and_sha256": true
+      },
+      {
+        "path": "references/thinking.md",
+        "bytes": 11938,
+        "sha256": "9960226710134f1d7d35f3e433c4a4a3fd69b859e8fd72c473868829b5294b86",
+        "matches_frozen_bytes_and_sha256": true
+      },
+      {
+        "path": "references/topic-map.md",
+        "bytes": 2945,
+        "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622",
+        "matches_frozen_bytes_and_sha256": true
+      }
+    ],
+    "completed_cat_reads_checked": 10,
+    "all_completed_cat_raw_outputs_match_frozen_files": true,
+    "aggregate_digest_algorithm_independently_recomputed": "unknown",
+    "note": "Every current file SHA-256 was recomputed from raw bytes. Aggregate digest declarations and manifests agree with the freeze. Each completed cat event output was UTF-8 encoded and independently hashed against its frozen file, without trusting result.paths_observed alone."
+  },
+  "cases": [
+    {
+      "case": "D01-explicit",
+      "title": "显式调用与手机入门",
+      "verdict": "pass",
+      "judgment": "Explicit invocation is followed by actual reads of the installed main skill and relevant reference documents. The phone-only, zero-budget, 20-minute news-verification exercise is concrete and includes an understanding check.",
+      "criteria": [
+        {
+          "criterion": "explicit_installation_read",
+          "status": "pass",
+          "turns": [
+            1
+          ],
+          "evidence": "events item_2 lists the installed SKILL.md; item_3, item_4 and item_5 cat the main skill, ai-practice and ai-pathways. All raw output hashes match frozen files."
+        },
+        {
+          "criterion": "usable_learning_start",
+          "status": "pass",
+          "turns": [
+            1
+          ],
+          "evidence": "Provides two original simulated notices, a proposed summary to check, claim/evidence judgments and a 60-character news brief; allocates 5+10+5 minutes without requiring payment or programming. It does not give the answer."
+        },
+        {
+          "criterion": "actual_student_understanding",
+          "status": "unknown",
+          "turns": [
+            1
+          ],
+          "evidence": "No student response or later transfer-question answer is recorded."
+        }
+      ],
+      "limitations": [
+        "The 20-minute duration is an allocation, not an observed completion time.",
+        "This case demonstrates task initiation and planned checking, not student learning."
+      ],
+      "result_file": "tests/v030/discovery/r0/D01-explicit/result.json",
+      "declared_manifest_exactly_matches_freeze": true,
+      "declared_digest_matches_freeze": true,
+      "turns": [
+        {
+          "number": 1,
+          "prompt_file": "tests/v030/discovery/r0/D01-explicit/turn-01.prompt.txt",
+          "answer_file": "tests/v030/discovery/r0/D01-explicit/turn-01.actual-response.txt",
+          "events_file": "tests/v030/discovery/r0/D01-explicit/turn-01.events.json",
+          "user_matches_case_definition": true,
+          "prompt_raw_sha256": "0dd8ddfc3bd92e556613235744014c307d1470b09319335cf602bd44ea1fd8d7",
+          "prompt_hash_matches_result": true,
+          "history_messages_observed": 0,
+          "history_exactly_matches_prior_actual_turns": true,
+          "answer_exactly_matches_result": true,
+          "answer_exactly_matches_final_event_agent_message": true,
+          "completed_document_reads": [
+            {
+              "event_file": "tests/v030/discovery/r0/D01-explicit/turn-01.events.json",
+              "event_item_id": "item_3",
+              "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/SKILL.md'",
+              "exit_code": 0,
+              "status": "completed",
+              "installed_path": ".agents/skills/01-university-compass/SKILL.md",
+              "relative_path": "SKILL.md",
+              "raw_output_bytes": 6531,
+              "raw_output_sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+              "raw_output_matches_frozen_file": true
+            },
+            {
+              "event_file": "tests/v030/discovery/r0/D01-explicit/turn-01.events.json",
+              "event_item_id": "item_4",
+              "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/references/ai-practice.md'",
+              "exit_code": 0,
+              "status": "completed",
+              "installed_path": ".agents/skills/01-university-compass/references/ai-practice.md",
+              "relative_path": "references/ai-practice.md",
+              "raw_output_bytes": 22162,
+              "raw_output_sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+              "raw_output_matches_frozen_file": true
+            },
+            {
+              "event_file": "tests/v030/discovery/r0/D01-explicit/turn-01.events.json",
+              "event_item_id": "item_5",
+              "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/references/ai-pathways.md'",
+              "exit_code": 0,
+              "status": "completed",
+              "installed_path": ".agents/skills/01-university-compass/references/ai-pathways.md",
+              "relative_path": "references/ai-pathways.md",
+              "raw_output_bytes": 12103,
+              "raw_output_sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a",
+              "raw_output_matches_frozen_file": true
+            }
+          ],
+          "other_completed_commands": [
+            {
+              "event_file": "tests/v030/discovery/r0/D01-explicit/turn-01.events.json",
+              "event_item_id": "item_2",
+              "command": "/bin/zsh -lc \"pwd; rg --files -g 'AGENTS.md' -g 'SKILL.md' -g '*compass*' .agents . 2>/dev/null\"",
+              "exit_code": 0,
+              "status": "completed",
+              "output": "[TEST_ROOT]/workspace\n.agents/skills/01-university-compass/SKILL.md\n"
+            }
+          ],
+          "observed_command_execution_count": 4,
+          "observed_agent_message_count": 2,
+          "returncode_recorded": 0,
+          "returncode_used_as_semantic_verdict": false
+        }
+      ]
+    },
+    {
+      "case": "D02-natural",
+      "title": "自然语言发现",
+      "verdict": "pass",
+      "judgment": "The natural-language user message contains no skill name or skill content. The assistant selects the compass method and actually reads the installed main file plus three relevant references. The advice respects phone access, two hours per week and zero added budget.",
+      "criteria": [
+        {
+          "criterion": "natural_language_selection_and_installation_read",
+          "status": "pass",
+          "turns": [
+            1
+          ],
+          "evidence": "The prompt only supplies the natural-language request and local read-only constraints. events item_1 names the skill without a user invocation; items_2 through item_5 cat SKILL.md, learning-action, ai-pathways and ai-practice from the installation. All raw hashes match the freeze."
+        },
+        {
+          "criterion": "concrete_low_resource_next_step",
+          "status": "pass",
+          "turns": [
+            1
+          ],
+          "evidence": "Proposes a 20-minute task using a short professional-course passage: state an initial interpretation, request source-grounded explanation, answer questions without answers/hints and retain remaining uncertainty. Two weekly hours are treated as an upper bound."
+        },
+        {
+          "criterion": "actual_student_understanding",
+          "status": "unknown",
+          "turns": [
+            1
+          ],
+          "evidence": "No actual course passage, student answer or later outcome is recorded."
+        }
+      ],
+      "limitations": [
+        "Automatic selection is judged from visible prompt and events; the full runtime system prompt and discovery implementation were not independently audited.",
+        "The stated task product is a proposed target, not evidence that the student already understands."
+      ],
+      "result_file": "tests/v030/discovery/r0/D02-natural/result.json",
+      "declared_manifest_exactly_matches_freeze": true,
+      "declared_digest_matches_freeze": true,
+      "turns": [
+        {
+          "number": 1,
+          "prompt_file": "tests/v030/discovery/r0/D02-natural/turn-01.prompt.txt",
+          "answer_file": "tests/v030/discovery/r0/D02-natural/turn-01.actual-response.txt",
+          "events_file": "tests/v030/discovery/r0/D02-natural/turn-01.events.json",
+          "user_matches_case_definition": true,
+          "prompt_raw_sha256": "f85c137e15fdf422b38630fa032fae76de1f48abc2d79389e30d32e687697d2b",
+          "prompt_hash_matches_result": true,
+          "history_messages_observed": 0,
+          "history_exactly_matches_prior_actual_turns": true,
+          "answer_exactly_matches_result": true,
+          "answer_exactly_matches_final_event_agent_message": true,
+          "completed_document_reads": [
+            {
+              "event_file": "tests/v030/discovery/r0/D02-natural/turn-01.events.json",
+              "event_item_id": "item_2",
+              "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/SKILL.md'",
+              "exit_code": 0,
+              "status": "completed",
+              "installed_path": ".agents/skills/01-university-compass/SKILL.md",
+              "relative_path": "SKILL.md",
+              "raw_output_bytes": 6531,
+              "raw_output_sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+              "raw_output_matches_frozen_file": true
+            },
+            {
+              "event_file": "tests/v030/discovery/r0/D02-natural/turn-01.events.json",
+              "event_item_id": "item_4",
+              "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/references/ai-pathways.md'",
+              "exit_code": 0,
+              "status": "completed",
+              "installed_path": ".agents/skills/01-university-compass/references/ai-pathways.md",
+              "relative_path": "references/ai-pathways.md",
+              "raw_output_bytes": 12103,
+              "raw_output_sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a",
+              "raw_output_matches_frozen_file": true
+            },
+            {
+              "event_file": "tests/v030/discovery/r0/D02-natural/turn-01.events.json",
+              "event_item_id": "item_3",
+              "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/references/learning-action.md'",
+              "exit_code": 0,
+              "status": "completed",
+              "installed_path": ".agents/skills/01-university-compass/references/learning-action.md",
+              "relative_path": "references/learning-action.md",
+              "raw_output_bytes": 12600,
+              "raw_output_sha256": "2670fe6e83bd551ebd1f89fac0c93972bc97fd7bf5c16711cd4aace31ea38e5e",
+              "raw_output_matches_frozen_file": true
+            },
+            {
+              "event_file": "tests/v030/discovery/r0/D02-natural/turn-01.events.json",
+              "event_item_id": "item_5",
+              "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/references/ai-practice.md'",
+              "exit_code": 0,
+              "status": "completed",
+              "installed_path": ".agents/skills/01-university-compass/references/ai-practice.md",
+              "relative_path": "references/ai-practice.md",
+              "raw_output_bytes": 22162,
+              "raw_output_sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+              "raw_output_matches_frozen_file": true
+            }
+          ],
+          "other_completed_commands": [],
+          "observed_command_execution_count": 4,
+          "observed_agent_message_count": 2,
+          "returncode_recorded": 0,
+          "returncode_used_as_semantic_verdict": false
+        }
+      ]
+    },
+    {
+      "case": "D03-unrelated-code",
+      "title": "无关代码不误触发",
+      "verdict": "pass",
+      "judgment": "The response contains only the requested Python stable_unique code. The events contain no skill read, command execution, growth interview or extra assistant explanation.",
+      "criteria": [
+        {
+          "criterion": "only_requested_code",
+          "status": "pass",
+          "turns": [
+            1
+          ],
+          "evidence": "The actual response and the sole event agent_message are a Python code fence containing def stable_unique(items): return list(dict.fromkeys(items))."
+        },
+        {
+          "criterion": "no_observed_skill_misfire",
+          "status": "pass",
+          "turns": [
+            1
+          ],
+          "evidence": "There are zero command_execution events; result records zero tool calls and an empty read-evidence array. No compass name or growth-planning content appears in the answer."
+        },
+        {
+          "criterion": "stable_order_for_hashable_elements",
+          "status": "pass",
+          "turns": [
+            1
+          ],
+          "evidence": "By insertion-ordered Python dictionary semantics, dict.fromkeys preserves the first occurrence order of each equal key and the function returns those keys as a list."
+        }
+      ],
+      "limitations": [
+        "The code was inspected semantically, not executed in this review.",
+        "No-misfire covers observable assistant messages and tools; hidden reasoning is unknown."
+      ],
+      "result_file": "tests/v030/discovery/r0/D03-unrelated-code/result.json",
+      "declared_manifest_exactly_matches_freeze": true,
+      "declared_digest_matches_freeze": true,
+      "turns": [
+        {
+          "number": 1,
+          "prompt_file": "tests/v030/discovery/r0/D03-unrelated-code/turn-01.prompt.txt",
+          "answer_file": "tests/v030/discovery/r0/D03-unrelated-code/turn-01.actual-response.txt",
+          "events_file": "tests/v030/discovery/r0/D03-unrelated-code/turn-01.events.json",
+          "user_matches_case_definition": true,
+          "prompt_raw_sha256": "ace3d6ee8c4bdd5c28bc8e6e24aaab13dfb2e1f64afbaa21006f2a33268a9f68",
+          "prompt_hash_matches_result": true,
+          "history_messages_observed": 0,
+          "history_exactly_matches_prior_actual_turns": true,
+          "answer_exactly_matches_result": true,
+          "answer_exactly_matches_final_event_agent_message": true,
+          "completed_document_reads": [],
+          "other_completed_commands": [],
+          "observed_command_execution_count": 0,
+          "observed_agent_message_count": 1,
+          "returncode_recorded": 0,
+          "returncode_used_as_semantic_verdict": false
+        }
+      ]
+    },
+    {
+      "case": "D04-learning-multiturn",
+      "title": "原生读取中的独立检查与反馈调整",
+      "verdict": "pass",
+      "judgment": "Later prompts accurately replay the actual prior messages. The assistant corrects the specific misconception that test-based model selection is harmless when examples are not added to training, then offers a different video-frame split problem without a solution or mastery claim.",
+      "criteria": [
+        {
+          "criterion": "real_prior_history_replayed",
+          "status": "pass",
+          "turns": [
+            2,
+            3
+          ],
+          "evidence": "The second prompt contains exactly the prior user/assistant messages (2); the third contains exactly the prior two turns (4). Each replayed assistant answer equals its actual-response file and final event message."
+        },
+        {
+          "criterion": "installation_read_in_each_turn",
+          "status": "pass",
+          "turns": [
+            1,
+            2,
+            3
+          ],
+          "evidence": "events item_2, item_4 and item_2 respectively cat the installed SKILL.md. Each raw output is 6531 bytes and matches the frozen main file hash."
+        },
+        {
+          "criterion": "recall_and_new_question_without_answer",
+          "status": "pass",
+          "turns": [
+            1
+          ],
+          "evidence": "Gives the requested one-sentence recap, then asks whether adding the former test examples to training and retesting proves better new-data performance. It does not state the conclusion or solution."
+        },
+        {
+          "criterion": "responds_to_actual_misconception",
+          "status": "pass",
+          "turns": [
+            2
+          ],
+          "evidence": "Distinguishes absence from training from independence of evaluation; explains test-score-based choice among ten models, identifies the validation role and recommends a fresh final test. It does not ignore the student-proposed scenario or merely praise it."
+        },
+        {
+          "criterion": "different_independent_question_and_no_mastery_claim",
+          "status": "pass",
+          "turns": [
+            3
+          ],
+          "evidence": "Following the student restatement, gives only the original cat/dog video-frame shuffling problem and asks about performance on newly filmed videos. It does not supply the grouped-data-leakage explanation or claim mastery."
+        },
+        {
+          "criterion": "turn_2_followup_is_independent_mastery_evidence",
+          "status": "unknown",
+          "turns": [
+            2
+          ],
+          "evidence": "The followup about repeatedly tuning settings follows an explanation of the same principle in the same answer. It is supported practice, not independent-mastery evidence; no student answer to it is recorded."
+        },
+        {
+          "criterion": "student_independent_mastery_transfer_or_retention",
+          "status": "unknown",
+          "turns": [
+            1,
+            2,
+            3
+          ],
+          "evidence": "The student does not answer the first question or second-turn followup. Turn 3 is a restatement followed by an unanswered new question. No independent answer or delayed check is present."
+        }
+      ],
+      "limitations": [
+        "Actual history is replayed into fresh per-turn calls, not demonstrated as one persistent model session.",
+        "The turn-2 followup has explanation support and must only count as practice.",
+        "The turn-3 distinct question creates an independent-check opportunity; an unanswered question does not demonstrate independent mastery, successful transfer or retention."
+      ],
+      "result_file": "tests/v030/discovery/r0/D04-learning-multiturn/result.json",
+      "declared_manifest_exactly_matches_freeze": true,
+      "declared_digest_matches_freeze": true,
+      "turns": [
+        {
+          "number": 1,
+          "prompt_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-01.prompt.txt",
+          "answer_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-01.actual-response.txt",
+          "events_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-01.events.json",
+          "user_matches_case_definition": true,
+          "prompt_raw_sha256": "2dd0140884ae6a3c8e545f0bb4a084393a2f8e6942e8a03a792d59b0c84aa627",
+          "prompt_hash_matches_result": true,
+          "history_messages_observed": 0,
+          "history_exactly_matches_prior_actual_turns": true,
+          "answer_exactly_matches_result": true,
+          "answer_exactly_matches_final_event_agent_message": true,
+          "completed_document_reads": [
+            {
+              "event_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-01.events.json",
+              "event_item_id": "item_2",
+              "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/SKILL.md'",
+              "exit_code": 0,
+              "status": "completed",
+              "installed_path": ".agents/skills/01-university-compass/SKILL.md",
+              "relative_path": "SKILL.md",
+              "raw_output_bytes": 6531,
+              "raw_output_sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+              "raw_output_matches_frozen_file": true
+            }
+          ],
+          "other_completed_commands": [],
+          "observed_command_execution_count": 1,
+          "observed_agent_message_count": 2,
+          "returncode_recorded": 0,
+          "returncode_used_as_semantic_verdict": false
+        },
+        {
+          "number": 2,
+          "prompt_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-02.prompt.txt",
+          "answer_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-02.actual-response.txt",
+          "events_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-02.events.json",
+          "user_matches_case_definition": true,
+          "prompt_raw_sha256": "54383f7ccf884ffe3d2ce6a280f43d68e968f1dd552c63aa2c212f4f6202f9e9",
+          "prompt_hash_matches_result": true,
+          "history_messages_observed": 2,
+          "history_exactly_matches_prior_actual_turns": true,
+          "answer_exactly_matches_result": true,
+          "answer_exactly_matches_final_event_agent_message": true,
+          "completed_document_reads": [
+            {
+              "event_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-02.events.json",
+              "event_item_id": "item_4",
+              "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/SKILL.md'",
+              "exit_code": 0,
+              "status": "completed",
+              "installed_path": ".agents/skills/01-university-compass/SKILL.md",
+              "relative_path": "SKILL.md",
+              "raw_output_bytes": 6531,
+              "raw_output_sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+              "raw_output_matches_frozen_file": true
+            }
+          ],
+          "other_completed_commands": [
+            {
+              "event_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-02.events.json",
+              "event_item_id": "item_2",
+              "command": "/bin/zsh -lc pwd",
+              "exit_code": 0,
+              "status": "completed",
+              "output": "[TEST_ROOT]/workspace\n"
+            },
+            {
+              "event_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-02.events.json",
+              "event_item_id": "item_3",
+              "command": "/bin/zsh -lc \"rg --files -g AGENTS.md -g SKILL.md -g '*compass*' -g '\"'!node_modules'\"' -g '\"'!vendor'\"' .agents . 2>/dev/null\"",
+              "exit_code": 0,
+              "status": "completed",
+              "output": ".agents/skills/01-university-compass/SKILL.md\n"
+            }
+          ],
+          "observed_command_execution_count": 3,
+          "observed_agent_message_count": 2,
+          "returncode_recorded": 0,
+          "returncode_used_as_semantic_verdict": false
+        },
+        {
+          "number": 3,
+          "prompt_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-03.prompt.txt",
+          "answer_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-03.actual-response.txt",
+          "events_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-03.events.json",
+          "user_matches_case_definition": true,
+          "prompt_raw_sha256": "3fd191583c2128495b1fc0adad7234973ea1f93a62690b18cb5a9a5b1b1d3f85",
+          "prompt_hash_matches_result": true,
+          "history_messages_observed": 4,
+          "history_exactly_matches_prior_actual_turns": true,
+          "answer_exactly_matches_result": true,
+          "answer_exactly_matches_final_event_agent_message": true,
+          "completed_document_reads": [
+            {
+              "event_file": "tests/v030/discovery/r0/D04-learning-multiturn/turn-03.events.json",
+              "event_item_id": "item_2",
+              "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/SKILL.md'",
+              "exit_code": 0,
+              "status": "completed",
+              "installed_path": ".agents/skills/01-university-compass/SKILL.md",
+              "relative_path": "SKILL.md",
+              "raw_output_bytes": 6531,
+              "raw_output_sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+              "raw_output_matches_frozen_file": true
+            }
+          ],
+          "other_completed_commands": [],
+          "observed_command_execution_count": 1,
+          "observed_agent_message_count": 2,
+          "returncode_recorded": 0,
+          "returncode_used_as_semantic_verdict": false
+        }
+      ]
+    }
+  ],
+  "global_limitations": [
+    "These are four cases from one recorded run on one frozen version. They do not estimate discovery reliability, general teaching effectiveness or causal improvement over another version.",
+    "The [TEST_ROOT] path is a redaction placeholder. This review verifies serialized commands and raw outputs, without reconstructing the prior processes or auditing the full CLI system prompt.",
+    "Visible prompts do not inject skill contents. Hidden runtime context and every environmental detail behind the fresh_cli/native method declaration are unknown.",
+    "Every events file includes the skip_host_skill_discovery development-feature warning. Actual project-installation reads and their complete content are observable; behavior across all host versions is unknown.",
+    "There are no real student participants or later independent answers. Mastery, retention and learning-transfer effectiveness are unknown."
+  ],
+  "source_artifacts": [
+    {
+      "path": "tests/v030/discovery-cases.json",
+      "bytes": 1498,
+      "sha256": "3c72a9e55af6f3a0d6bab198634da33bda0e080565fa38b14d179ecd27f249c0"
+    },
+    {
+      "path": "tests/v030/content-freeze.json",
+      "bytes": 2106,
+      "sha256": "cec19dd6e192ef5bf792cc9b876f54db7f095b1f78350ad05b0fb3d664ae3658"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D01-explicit/result.json",
+      "bytes": 6257,
+      "sha256": "72fa16207f752805594e7152e624593bd872d07f68f08c66323fcb0a5892035f"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D01-explicit/turn-01.prompt.txt",
+      "bytes": 383,
+      "sha256": "0dd8ddfc3bd92e556613235744014c307d1470b09319335cf602bd44ea1fd8d7"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D01-explicit/turn-01.actual-response.txt",
+      "bytes": 1551,
+      "sha256": "93beeee3b1274527d4a4547990eb089d7ce7e0eb3784e705588e629d8ce02e56"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D01-explicit/turn-01.events.json",
+      "bytes": 46382,
+      "sha256": "30d8f5dd50c58a94dcde60f8452cedc437ff6c2329dab51fa39e69c334a90592"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D02-natural/result.json",
+      "bytes": 6928,
+      "sha256": "27c42f11e2281c5eb7041443e1b1d898c980c63f75efa2ac047a26f699d3b01d"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D02-natural/turn-01.prompt.txt",
+      "bytes": 381,
+      "sha256": "f85c137e15fdf422b38630fa032fae76de1f48abc2d79389e30d32e687697d2b"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D02-natural/turn-01.actual-response.txt",
+      "bytes": 2066,
+      "sha256": "3d177ee5f2113ce0e3b906cdd49126e959a03a7d343eaace0782837c2cf26baa"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D02-natural/turn-01.events.json",
+      "bytes": 59518,
+      "sha256": "607e3aa5deeef6e7227eba762014ac8319de4bec336fc269eb037a5696cfdd96"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D03-unrelated-code/result.json",
+      "bytes": 3412,
+      "sha256": "22a639275618bd046d094627411409c70446fd52d86a504018b32bb6c301b56a"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D03-unrelated-code/turn-01.prompt.txt",
+      "bytes": 307,
+      "sha256": "ace3d6ee8c4bdd5c28bc8e6e24aaab13dfb2e1f64afbaa21006f2a33268a9f68"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D03-unrelated-code/turn-01.actual-response.txt",
+      "bytes": 77,
+      "sha256": "7d858a4a66b14fed5c99b526000a971671029c36a8aeae69b8f6d62c4e2c7b5f"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D03-unrelated-code/turn-01.events.json",
+      "bytes": 934,
+      "sha256": "c862c718aea77bfee4c116625030789a4ded1dcce42c80a6ad6bd29a810f89d0"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D04-learning-multiturn/result.json",
+      "bytes": 7598,
+      "sha256": "f4c28a70085b583acdbb539d48160dffb0ed6a27e373bdb5f21c053452ad1ee8"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D04-learning-multiturn/turn-01.prompt.txt",
+      "bytes": 405,
+      "sha256": "2dd0140884ae6a3c8e545f0bb4a084393a2f8e6942e8a03a792d59b0c84aa627"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D04-learning-multiturn/turn-01.actual-response.txt",
+      "bytes": 333,
+      "sha256": "644260935c43b9ce8cfc468f4a2de5a800c0655b17b5ab990922f8631c2c4038"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D04-learning-multiturn/turn-01.events.json",
+      "bytes": 8594,
+      "sha256": "844236079e9082f4165e0640c5a1c1c14bdb11a841d2fbb5f3652c35ce68ee45"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D04-learning-multiturn/turn-02.prompt.txt",
+      "bytes": 1122,
+      "sha256": "54383f7ccf884ffe3d2ce6a280f43d68e968f1dd552c63aa2c212f4f6202f9e9"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D04-learning-multiturn/turn-02.actual-response.txt",
+      "bytes": 927,
+      "sha256": "05bff628cc1de2b5c5ece90fddc591dcf1fad3ab323fde9b74dc37648e098143"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D04-learning-multiturn/turn-02.events.json",
+      "bytes": 10446,
+      "sha256": "cb03f85f46db7836d8242adeebdae5e6c14c9ee993c465722bbed8e03cfe4aa8"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D04-learning-multiturn/turn-03.prompt.txt",
+      "bytes": 2285,
+      "sha256": "3fd191583c2128495b1fc0adad7234973ea1f93a62690b18cb5a9a5b1b1d3f85"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D04-learning-multiturn/turn-03.actual-response.txt",
+      "bytes": 369,
+      "sha256": "91ae823321e943f320b5a45e7010937cbf6672fb4a362c7e6ce36598cf863838"
+    },
+    {
+      "path": "tests/v030/discovery/r0/D04-learning-multiturn/turn-03.events.json",
+      "bytes": 8605,
+      "sha256": "1f2657c22b9f48e9a36f3bfadb83b44adfaf7a4a57cc3e4a4cee3cc180cdde95"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": "0.3.0",
+  "location": "~/.agents/skills/01-university-compass",
+  "previous_matched_repository_v021": true,
+  "custom_changes": [],
+  "backup": "~/.codex/skill-backups/01-university-compass/20261023T130515Z",
+  "files_verified": 12,
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "status": "PASS（12文件一致且新会话读取已验证）"
+}

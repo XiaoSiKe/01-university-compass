@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "version": "0.3.0",
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "case": "N22",
+  "title": "学习检验与失败后有针对性降阶",
+  "condition": "skill",
+  "fingerprint": "a083464413e50e7fd588ece0a85497153d8f3feb9653c970ef463543def39622",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "tests/v030/behavior/r0/N22-skill/attempt-20261023T204753-fa0c6a8a.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+      "bytes": 6531
+    },
+    {
+      "path": "references/01.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "sha256": "342959e954c21d253e4975cee29250842d1be141dea0f19facb79f7c5a5d565d",
+      "bytes": 6249
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a",
+      "bytes": 12103
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+      "bytes": 22162
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "2670fe6e83bd551ebd1f89fac0c93972bc97fd7bf5c16711cd4aace31ea38e5e",
+      "bytes": 12600
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f",
+      "bytes": 42049
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622",
+      "bytes": 2945
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我大一，让 AI 解释了训练集和测试集，看的时候都懂。请用一道简短的新情境检查我是否真懂，先别直接给答案。",
+      "prompt_sha256": "fa6fb72fcc32dd39a86a81353f715b64802c5f02eeb57ceb979f8acb3fdbb022",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "你有 **1000 张已标注的猫狗照片**。一位同学用全部照片训练模型，再从里面随机抽出 200 张测试，正确率达到 99%。他说：“这说明模型以后遇到其他猫狗照片，也能认得很准。”\n\n**你认为这个结论可靠吗？请用两三句话说明理由，并说说你会怎样安排这 1000 张照片来训练和测试。**",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 35.76,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168cd-b130-72e2-b618-1d85add57bf0"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-os9f5ac1/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按零一大学指南针的独立检验方式出题，等你作答后再反馈。\n"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "你有 **1000 张已标注的猫狗照片**。一位同学用全部照片训练模型，再从里面随机抽出 200 张测试，正确率达到 99%。他说：“这说明模型以后遇到其他猫狗照片，也能认得很准。”\n\n**你认为这个结论可靠吗？请用两三句话说明理由，并说说你会怎样安排这 1000 张照片来训练和测试。**"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 51389,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 821,
+            "reasoning_output_tokens": 689
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "我的理解是：为了让分数更高，可以反复看测试集，把做错的样本放回训练集，再用同一个测试集报成绩。这个想法哪里有问题？",
+      "prompt_sha256": "137ce687ac73c8ae7988ab3c9d3ba33b9d48db760cac6756ad30ece81426925c",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "问题在于：**你把用来检验模型的测试集，也用来改进模型了。** 分数可能更高，却难以据此判断模型面对新照片的表现。\n\n把测试中做错的照片加入训练集后，再测试这些照片，它们已经是模型训练时见过的内容。模型可能学到了有用规律，也可能记住了具体样本；同一份测试集的高分无法分清这两种情况。\n\n用错误样本帮助训练可以有用，但这批数据一旦参与改进，就不能继续充当独立的最终测试。通常这样分工：\n\n- **训练集**：让模型学习规律。\n- **验证集**：开发过程中比较方案、调整设置，可以反复使用。\n- **测试集**：方案确定后，用未参与训练和调整的数据做最终检查。\n\n所以，目标应当是提高模型对新数据的能力；最终成绩需要由独立的数据来检验。\n\n换一个情境再检查一下：**一位同学训练了甲、乙两个模型，用同一份测试集比较后选了甲，再把甲在这份测试集上的分数作为最终成绩。他从未把测试样本加入训练集。这样的最终评估是否仍有问题？请说明理由。**",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 58.97,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168ce-3cce-7aa3-adbf-8ec329f11f34"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-os9f5ac1/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "问题在于：**你把用来检验模型的测试集，也用来改进模型了。** 分数可能更高，却难以据此判断模型面对新照片的表现。\n\n把测试中做错的照片加入训练集后，再测试这些照片，它们已经是模型训练时见过的内容。模型可能学到了有用规律，也可能记住了具体样本；同一份测试集的高分无法分清这两种情况。\n\n用错误样本帮助训练可以有用，但这批数据一旦参与改进，就不能继续充当独立的最终测试。通常这样分工：\n\n- **训练集**：让模型学习规律。\n- **验证集**：开发过程中比较方案、调整设置，可以反复使用。\n- **测试集**：方案确定后，用未参与训练和调整的数据做最终检查。\n\n所以，目标应当是提高模型对新数据的能力；最终成绩需要由独立的数据来检验。\n\n换一个情境再检查一下：**一位同学训练了甲、乙两个模型，用同一份测试集比较后选了甲，再把甲在这份测试集上的分数作为最终成绩。他从未把测试样本加入训练集。这样的最终评估是否仍有问题？请说明理由。**"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 51551,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1274,
+            "reasoning_output_tokens": 989
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 3,
+      "user": "我明白不能偷看最终测试结果反复调，但验证集又是什么？请先给一个不需要公式的小例子，再让我尝试判断，而不是一下讲完所有术语。",
+      "prompt_sha256": "88691180fb826fab793f75472275e204157b304a899def9814009f7955135093",
+      "history_messages": 4,
+      "status": "completed",
+      "answer": "比如，你在做一个**识别垃圾短信的模型**：\n\n先用一批短信让模型学习。你做出了两个版本，想知道该保留哪个，就拿**另外留出的一小批短信**分别检查，比较表现，再作选择。\n\n**这另外留出的一小批短信，就是验证集。它帮你在开发过程中挑选、改进方案。** 即使没把这些短信放进训练，它们的检查结果也影响了你选择哪个版本。\n\n换个情境，你来判断：\n\n一个预测食堂客流的模型，有一批历史记录始终被单独封存，训练和挑选版本时都没用过。等版本完全确定后，才用这批记录检查表现、报告成绩。\n\n**这批记录起的是验证集的作用吗？请用一两句话说明理由。**",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 79.72,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168cf-2327-7c41-82bc-d2ad328b14e8"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-os9f5ac1/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按“零一大学指南针”的方式，先讲一个小例子，再给你一道不附答案的判断题。\n"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "比如，你在做一个**识别垃圾短信的模型**：\n\n先用一批短信让模型学习。你做出了两个版本，想知道该保留哪个，就拿**另外留出的一小批短信**分别检查，比较表现，再作选择。\n\n**这另外留出的一小批短信，就是验证集。它帮你在开发过程中挑选、改进方案。** 即使没把这些短信放进训练，它们的检查结果也影响了你选择哪个版本。\n\n换个情境，你来判断：\n\n一个预测食堂客流的模型，有一批历史记录始终被单独封存，训练和挑选版本时都没用过。等版本完全确定后，才用这批记录检查表现、报告成绩。\n\n**这批记录起的是验证集的作用吗？请用一两句话说明理由。**"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 51907,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1742,
+            "reasoning_output_tokens": 1518
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T12:47:53Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 174.47,
+  "finished_at_utc": "2026-10-23T12:50:47Z"
+}

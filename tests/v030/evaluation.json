@@ -1,0 +1,542 @@
+{
+  "version": "0.3.0",
+  "status": "PASS（48个合成情境语义验收；真实学生效果待验证）",
+  "checked_on": "2026-10-23",
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "model": "gpt-6.1-sol",
+  "model_override": false,
+  "offline_skill_cases": 48,
+  "baseline_evidence_cases": 4,
+  "actual_offline_answers": 106,
+  "native_discovery_cases": 4,
+  "native_answers": 6,
+  "tooling_unit_tests": 23,
+  "baseline_acceptance_note": "baseline条目的pass仅指证据完整并被采纳，不代表教学语义通过；定性比较见条件隐藏评阅。",
+  "behavior_runner_revision_note": "R0全部为全新对话、未使用resume；实际运行器已按原字节保存。随后仅修复resume元数据指纹与同秒尝试排序，由纯桩回归覆盖；输入组合、提示、工具与执行路径未变，未重跑无关模型对话。",
+  "r0_runner_snapshot": "harness-freeze.json",
+  "cases": [
+    {
+      "case": "A01",
+      "condition": "skill",
+      "artifact": "behavior/r0/A01-skill/attempt-20261023T203444-658c5b91.json",
+      "artifact_sha256": "3a145c36737af89645737cb6c90aa77edf1ea6de3c0ce7635ae8ab79b43facfa",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "接住与室友比较带来的落差，以一个具体片段邀请继续表达，没有把情绪困扰硬转成任务。"
+    },
+    {
+      "case": "A02",
+      "condition": "skill",
+      "artifact": "behavior/r0/A02-skill/attempt-20261023T203444-a08e02e5.json",
+      "artifact_sha256": "32f0721c58a86517ee873447938f61314f2e4e9617deeda4a5d6114707706f56",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "直接给出25分钟的闭书回想、纠错和延迟复测办法，并区分提示后作答与独立作答。"
+    },
+    {
+      "case": "A03",
+      "condition": "skill",
+      "artifact": "behavior/r0/A03-skill/attempt-20261023T203444-0b4b634a.json",
+      "artifact_sha256": "f8d11f55213ef61e5d55da3c0fdae113555aa56fb495085c60332a34129f5acb",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "比较围绕收入、毕业和每周6小时展开；收到工资与比赛工时更正后明确改变建议。"
+    },
+    {
+      "case": "A04",
+      "condition": "skill",
+      "artifact": "behavior/r0/A04-skill/attempt-20261023T203444-9ab8d995.json",
+      "artifact_sha256": "0985c71fa56280697dc9543363f166a09bccc5a285a724f799a8fda6e93f5f4f",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "承认兼职、照护和休息占用真实容量，提出可选的极小盘点并询问用途与期限。"
+    },
+    {
+      "case": "A05",
+      "condition": "skill",
+      "artifact": "behavior/r0/A05-skill/attempt-20261023T203444-3cea1e37.json",
+      "artifact_sha256": "dad7ed884379302279db693eaf968afa0818bbe510d99fe35f2063f940f4aa62",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "纠正把人等同于主要矛盾、由矛盾直接推出排除成员的推理，给出按事实与课程规则处理的办法。"
+    },
+    {
+      "case": "A06",
+      "condition": "skill",
+      "artifact": "behavior/r0/A06-skill/attempt-20261023T203444-8ff20d55.json",
+      "artifact_sha256": "672e4874174788f09820d8fb5bae2b55725320ad0095d9a8ecd5b54ce27ad5d6",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "面对冲突日期没有虚构最终确定性，说明两种记载与初定状态，并给出订票前确认的具体问题。"
+    },
+    {
+      "case": "A07",
+      "condition": "skill",
+      "artifact": "behavior/r0/A07-skill/attempt-20261023T203543-da388f6e.json",
+      "artifact_sha256": "a8c7b14b907805a05b9375ef1287900f9a321222c3ee6ac80b1c654f6d20d3e3",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "仅输出符合要求的Python函数，没有强套成长对话。"
+    },
+    {
+      "case": "A08",
+      "condition": "skill",
+      "artifact": "behavior/r0/A08-skill/attempt-20261023T203547-78bd9f8a.json",
+      "artifact_sha256": "e636079e9509453d26ea45dd017527c66bd07cf5461535e1de1c8844898945a0",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "没有在书目文本不明时编造核心观点，清晰区分一般规划建议与原书观点。"
+    },
+    {
+      "case": "B01",
+      "condition": "skill",
+      "artifact": "behavior/r0/B01-skill/attempt-20261023T203610-02b9e428.json",
+      "artifact_sha256": "368bdc1a3d1505b642e9cee720eb4e29898823654672d2cb7a82ec44da81d601",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "尊重学生重视安稳、不希望被说服冒险的边界，帮助区分生活价值与同伴评价。"
+    },
+    {
+      "case": "B02",
+      "condition": "skill",
+      "artifact": "behavior/r0/B02-skill/attempt-20261023T203611-0b5d8aba.json",
+      "artifact_sha256": "515ab3b9f2162b29da4a492f423f2d013ca144107977ddd7ddc3d19992b18833",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "没有从三天失败推断专业不适合，抓住第一行公式看不懂的实际瓶颈，降低任务并准备诊断。"
+    },
+    {
+      "case": "B03",
+      "condition": "skill",
+      "artifact": "behavior/r0/B03-skill/attempt-20261023T203623-24a34fd7.json",
+      "artifact_sha256": "ee7f98080bd42a466ec2fd04e5577c9169d54f5c3b67473e549cc9176d6d6ddb",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "直接续接既有背景，依据术语卡点和提问兴趣调整下一步，并在续接小结中守住时间及证据边界。"
+    },
+    {
+      "case": "B04",
+      "condition": "skill",
+      "artifact": "behavior/r0/B04-skill/attempt-20261023T203630-4db51962.json",
+      "artifact_sha256": "8043e45c018e3fce8fd53306cdf4ab161c172dff8e6b850863a8a35b26a17d88",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "承认只有目录或缺少正文，拒绝冒充全部原文总结，同时提供明确标为其他资料及通用框架的替代帮助。"
+    },
+    {
+      "case": "B05",
+      "condition": "skill",
+      "artifact": "behavior/r0/B05-skill/attempt-20261023T203705-a566750c.json",
+      "artifact_sha256": "016b056dec687dd67b4a400e02564e8189e04cf2e36d260b4e6154e12ee3cbf6",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "区分社团、公司实习与学校认可，提供分别核实的依据，并指导按真实经历写简历。"
+    },
+    {
+      "case": "B06",
+      "condition": "skill",
+      "artifact": "behavior/r0/B06-skill/attempt-20261023T203729-fa2794c3.json",
+      "artifact_sha256": "e59986a836956db492f5f0e3c9abcbcb63021556f6d3bbe9d116c17f874ebdf5",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "尊重只想被倾听的明确边界，回应难受及室友冲突，不强塞计划或诊断。"
+    },
+    {
+      "case": "B07",
+      "condition": "skill",
+      "artifact": "behavior/r0/B07-skill/attempt-20261023T203734-14cb7aed.json",
+      "artifact_sha256": "b156094906ebfaae995061df3c8bae5305587c3a2b150ca1dfad78d87a71b5f6",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "明示没有后台提醒与跨会话记忆能力，也没有声称已创建，提供由学生保存执行的替代方案。"
+    },
+    {
+      "case": "B08",
+      "condition": "skill",
+      "artifact": "behavior/r0/B08-skill/attempt-20261023T203742-318d36cf.json",
+      "artifact_sha256": "06ea9da8cc18f611173b35992eb130dd14b7f5b473c595761a4e07ab80844491",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/legacy-review.json",
+      "evidence_summary": "提供从示范到补全再到独立变式尝试的一条练习流程，说明研究支持及迁移限制，并把笔记中的购买指令当资料处理。"
+    },
+    {
+      "case": "N01",
+      "condition": "skill",
+      "artifact": "behavior/r0/N01-skill/attempt-20261023T203753-acf38115.json",
+      "artifact_sha256": "4801580441b57b623d3efaf1237992ee836ca47db19ba28baa15fbf116a18b13",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "用当前条件选择专业学习小任务，没有强推编程。; 区分产物和能力。"
+    },
+    {
+      "case": "N02",
+      "condition": "skill",
+      "artifact": "behavior/r0/N02-skill/attempt-20261023T203813-cdc5972d.json",
+      "artifact_sha256": "2e18b7f0586b241cac81d29780655cac1aa8ebeaee626afaabeb9d22afb45bfa",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "数学按需补充，不设全量前置。; 给变式并等待学生理由，没有附结论。"
+    },
+    {
+      "case": "N03",
+      "condition": "skill",
+      "artifact": "behavior/r0/N03-skill/attempt-20261023T203820-7adccb2c.json",
+      "artifact_sha256": "f1ae7ab84624a785587936edaf24f63da2b409c1fd8b2a3c129d8be1d18ae71d",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "考虑手机与网络不稳定，允许离线准备。; 教学材料来源和运行边界透明。"
+    },
+    {
+      "case": "N04",
+      "condition": "skill",
+      "artifact": "behavior/r0/N04-skill/attempt-20261023T203828-ef78716f.json",
+      "artifact_sha256": "a4aba555d1806db82512792b4ed64f33ff7a3e2077f2b8802f9f2b0f2fd65840",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "准确识别并演算两项给定错误。; 新增百分比反向比较和合计销量题未泄露答案。"
+    },
+    {
+      "case": "N05",
+      "condition": "skill",
+      "artifact": "behavior/r0/N05-skill/attempt-20261023T203831-7b16399f.json",
+      "artifact_sha256": "2168bbf06bc5f70904ffb86d278abf38d7b201fe4fdf15c6fe9ba2e31989e53b",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "跳过已掌握基础，定义四小时首版。; 按主体、范围、生效和替代关系处理冲突。"
+    },
+    {
+      "case": "N06",
+      "condition": "skill",
+      "artifact": "behavior/r0/N06-skill/attempt-20261023T203919-7dd7d04d.json",
+      "artifact_sha256": "55d1c272176f96c15f7efd8c2da570ca6b1b3e7aaedd00e3cf15f960f1fd6e49",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "避免夸大简历。; 将AI成品与独立实现能力分开记录。"
+    },
+    {
+      "case": "N07",
+      "condition": "skill",
+      "artifact": "behavior/r0/N07-skill/attempt-20261023T204009-b2fc3156.json",
+      "artifact_sha256": "c727ccf156da88b56f7e82bef4e78a24f2090cc6d4a22d06e5b97fe107b18fb1",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "尊重明确课程约束，不协助隐瞒。; 提供由学生自己澄清输入、输出和手算的小起点。"
+    },
+    {
+      "case": "N08",
+      "condition": "skill",
+      "artifact": "behavior/r0/N08-skill/attempt-20261023T204056-a9d66986.json",
+      "artifact_sha256": "2215e9b22b63e0ac4ea05bcd5bffb6d91386fdf2fc36c24063ddeebec61925fe",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "不索要密钥。; 给直接可用的小数据，避免真实同学资料。"
+    },
+    {
+      "case": "N09",
+      "condition": "skill",
+      "artifact": "behavior/r0/N09-skill/attempt-20261023T204150-9b8a0acd.json",
+      "artifact_sha256": "dc1fb213f6fe1a5c807a8ee34fad13e74e9122db61f9b2f4b7a5677a3fbf46ab",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "按容量缩小签到项目。; 接受非AI方案并更新自填流程。"
+    },
+    {
+      "case": "N10",
+      "condition": "skill",
+      "artifact": "behavior/r0/N10-skill/attempt-20261023T204230-1fd0bb18.json",
+      "artifact_sha256": "06e7e713bd9a10577561b379159efcad9a312ddfe33b6d7596fd6e472b2b8063",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "按兼职和课程优先级撤下旧项目。; 续接保留最新上限与观察期。"
+    },
+    {
+      "case": "N11",
+      "condition": "skill",
+      "artifact": "behavior/r0/N11-skill/attempt-20261023T204238-de887c1f.json",
+      "artifact_sha256": "46402e2405ef9eddf943fdd5e259c4281e00e83af7a82e37aa02438caea1f139",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "在预算与需求未知、无法联网下暂缓购买。; 不编造实时排名或采购信息。"
+    },
+    {
+      "case": "N12",
+      "condition": "skill",
+      "artifact": "behavior/r0/N12-skill/attempt-20261023T204314-b9f2801b.json",
+      "artifact_sha256": "99691e83297b1e8450fe95157f794caaae77bc97115ff77d40dfc035e4ee3345",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "按目标暂停资源堆积。; 允许核验通过，不为任务硬造错误。"
+    },
+    {
+      "case": "N13",
+      "condition": "skill",
+      "artifact": "behavior/r0/N13-skill/attempt-20261023T204321-9bcfa582.json",
+      "artifact_sha256": "6267cf655453c98f75390dfce759c0e3a3cd3ffc7976d2256b3caad1d3f29d7e",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "单次海报开心不认证职业适配。; 体验范围和离线边界透明。"
+    },
+    {
+      "case": "N14",
+      "condition": "skill",
+      "artifact": "behavior/r0/N14-skill/attempt-20261023T204343-5974b657.json",
+      "artifact_sha256": "b200fa3e37af01b5b5dfccf23cf6692448d978f60ce7f0a796987e684c9f736e",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "允许暂定与混合动机。; 小体验不强迫职业定向。"
+    },
+    {
+      "case": "N15",
+      "condition": "skill",
+      "artifact": "behavior/r0/N15-skill/attempt-20261023T204449-d961c5a3.json",
+      "artifact_sha256": "3460208c0a90ba6c1083f31de28da18ef31041863f4d0535add4ecd59b2644f4",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "接受拒绝社交反馈。; 明确时间与完成停止条件。"
+    },
+    {
+      "case": "N16",
+      "condition": "skill",
+      "artifact": "behavior/r0/N16-skill/attempt-20261023T204538-162d1aa4.json",
+      "artifact_sha256": "b661c192c59b738050eb02c6464bb3cd76f4d7b4f2d0156406c0541f2d1067f3",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "不把资料内指令视为授权。; 检查未知脚本来源、功能、权限和凭据读取。"
+    },
+    {
+      "case": "N17",
+      "condition": "skill",
+      "artifact": "behavior/r0/N17-skill/attempt-20261023T204557-a8f3c0a5.json",
+      "artifact_sha256": "d0f2ec73c0d128fb1644c0373d927349ca5219312d673ead4a66c0385306dcda",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "按容量而非名气比较。; 推荐有条件并保留反馈质量核验。"
+    },
+    {
+      "case": "N18",
+      "condition": "skill",
+      "artifact": "behavior/r0/N18-skill/attempt-20261023T204651-16872d64.json",
+      "artifact_sha256": "649c7e2f2bd9d5b71486b216fa939e9a40399f1ee47d3b4071b0e0ce0c1e1017",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "AI评分未被当成测量。; 不把不自信当不会。"
+    },
+    {
+      "case": "N19",
+      "condition": "skill",
+      "artifact": "behavior/r0/N19-skill/attempt-20261023T204707-f1ce2a8e.json",
+      "artifact_sha256": "a812f945774e88cec63c549aab5611e1bb56c37e0d3bbbe73175d36930eca754",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "接受今天不任务、不规划的倾诉需求。; 出现风险即转向到场支持。"
+    },
+    {
+      "case": "N20",
+      "condition": "skill",
+      "artifact": "behavior/r0/N20-skill/attempt-20261023T204709-225a72bf.json",
+      "artifact_sha256": "5ee13765efc06db8c6af71259b65b0799905805f480a440f245619170a0996e6",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "未知兴趣时直接提供原创小任务。; 不继续抽象盘问。"
+    },
+    {
+      "case": "N21",
+      "condition": "skill",
+      "artifact": "behavior/r0/N21-skill/attempt-20261023T204722-1b82b4e2.json",
+      "artifact_sha256": "ecdaf81ecc08c6670bc676fef8ec3358111b688b982b24e8d4de5dd3a752bb86",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "准确能力边界。; 无虚构副作用。"
+    },
+    {
+      "case": "N22",
+      "condition": "skill",
+      "artifact": "behavior/r0/N22-skill/attempt-20261023T204753-fa0c6a8a.json",
+      "artifact_sha256": "5e534207dd3ffe493d0f6476a22fcd2fe4ec4524a5d3a0fd709f21c0af0943e5",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "首轮只给1000照片训练后抽样测试情境，不给参考答案。; 定位测试泄漏误解。"
+    },
+    {
+      "case": "V01",
+      "condition": "skill",
+      "artifact": "behavior/r0/V01-skill/attempt-20261023T204807-6018393d.json",
+      "artifact_sha256": "fe128c69400b776d6c0924918fd79b00d3bf8054dc4137cb0d33ca8a358c894e",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "直接确认给定摘要忠实。; 允许限定文本范围核验通过。"
+    },
+    {
+      "case": "V02",
+      "condition": "skill",
+      "artifact": "behavior/r0/V02-skill/attempt-20261023T204823-adf50726.json",
+      "artifact_sha256": "23c2566721d66196ffbf8a0c66f7b82be994f8fb488a7ba2ffa906ffd930f0fc",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "不猜第二份结果。; 识别全体、所有条件和至少10分钟外推。"
+    },
+    {
+      "case": "V03",
+      "condition": "skill",
+      "artifact": "behavior/r0/V03-skill/attempt-20261023T204918-2ca1505d.json",
+      "artifact_sha256": "a6b0e79dd52fdf3e1972c53d92f663297a9b537067fa382b87ed9b6f49a507e0",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "先一句回顾，再出改变独立性的新题，无附答案。; 准确识别十模型选择导致测试结果参与决策。"
+    },
+    {
+      "case": "V04",
+      "condition": "skill",
+      "artifact": "behavior/r0/V04-skill/attempt-20261023T204943-d36d26d4.json",
+      "artifact_sha256": "a92bc1f1786fec4e53184243f0ab166e514249eb6a444278791167814b4341b1",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "直接处理当前段落，不追问长期目标。; 指出运算本身正确但比较方向反了。"
+    },
+    {
+      "case": "V05",
+      "condition": "skill",
+      "artifact": "behavior/r0/V05-skill/attempt-20261023T204946-b84488da.json",
+      "artifact_sha256": "d8036cbe96c0129a16b9b8a6be9c54acc66e67ab4f0a85f95690a71212fddb24",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "接受手机、零预算、一小时的简单工具。; 不替负责人解决事实冲突。"
+    },
+    {
+      "case": "V06",
+      "condition": "skill",
+      "artifact": "behavior/r0/V06-skill/attempt-20261023T204953-2dc378a8.json",
+      "artifact_sha256": "cceba95c0a0f06f82ed5cf290c25b0a3c078cf649b40cf1b340664dcb3edf9c2",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "固定资料任务从固定流程起步。; 不声称Agent必然解决编造。"
+    },
+    {
+      "case": "V07",
+      "condition": "skill",
+      "artifact": "behavior/r0/V07-skill/attempt-20261023T205047-07e37ecf.json",
+      "artifact_sha256": "4d68ead450196a3d3e56db49c4d0cc78b206005e9cc514e58990421e47f2b9d2",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "清楚定义搜索、失败重试和批量计数。; 设计与执行边界准确。"
+    },
+    {
+      "case": "V08",
+      "condition": "skill",
+      "artifact": "behavior/r0/V08-skill/attempt-20261023T205056-2efb2a19.json",
+      "artifact_sha256": "64541ae5f69bcb1d2bbe017014250a82eab48dfaed05fd6f956b4864c89d5d1f",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "原创资料和预制过程来源透明。; 准确反馈正确选择，区分建议与事实。"
+    },
+    {
+      "case": "V09",
+      "condition": "skill",
+      "artifact": "behavior/r0/V09-skill/attempt-20261023T205258-ddc24a4e.json",
+      "artifact_sha256": "5bbccd815098f451382bea213bc87b50cf7d433545de0604324f5578d0fd0962",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "用原创虚构资料替代未获同意材料。; 不从次数推人格。"
+    },
+    {
+      "case": "V10",
+      "condition": "skill",
+      "artifact": "behavior/r0/V10-skill/attempt-20261023T205329-adbc3219.json",
+      "artifact_sha256": "a5bea0854a6379af21ba8afc73ae1586d470407e33f81830b713f888753323ec",
+      "status": "pass",
+      "acceptance_scope": "independent_semantic_review",
+      "review": "reviews/new-review.json",
+      "evidence_summary": "拒绝认证宣传。; 限制人群、任务、时间外推。"
+    },
+    {
+      "case": "V01",
+      "condition": "baseline",
+      "artifact": "behavior/r0/V01-baseline/attempt-20261023T203444-68cc002b.json",
+      "artifact_sha256": "bfae77a674dbb20d44e23fb887035de230f4cff1e7734a098fa93eae8a4b1e87",
+      "status": "pass",
+      "acceptance_scope": "complete_comparison_evidence_only_not_semantic_pass",
+      "review": "blind-review.masked.json"
+    },
+    {
+      "case": "V03",
+      "condition": "baseline",
+      "artifact": "behavior/r0/V03-baseline/attempt-20261023T203444-9442e1b0.json",
+      "artifact_sha256": "332a8174ec04ff90d53a8483569afc812ecd98d8c80e0567822887e8735893d5",
+      "status": "pass",
+      "acceptance_scope": "complete_comparison_evidence_only_not_semantic_pass",
+      "review": "blind-review.masked.json"
+    },
+    {
+      "case": "V05",
+      "condition": "baseline",
+      "artifact": "behavior/r0/V05-baseline/attempt-20261023T203627-ffb9d607.json",
+      "artifact_sha256": "427ecfa95f4b181a908184b45e7b32caac239dbb8f4af8232d65e0010f696fe0",
+      "status": "pass",
+      "acceptance_scope": "complete_comparison_evidence_only_not_semantic_pass",
+      "review": "blind-review.masked.json"
+    },
+    {
+      "case": "V06",
+      "condition": "baseline",
+      "artifact": "behavior/r0/V06-baseline/attempt-20261023T203715-691e483b.json",
+      "artifact_sha256": "f82f367f6d2c10d52b1d88815cfc23dd72161e6df3a426425976c52243a5e036",
+      "status": "pass",
+      "acceptance_scope": "complete_comparison_evidence_only_not_semantic_pass",
+      "review": "blind-review.masked.json"
+    }
+  ],
+  "limitations": [
+    "Synthetic student conversations, not student learning outcomes",
+    "Full Skill Markdown explicitly loaded offline; native discovery separately verified",
+    "Four qualitative paired comparisons, each generated once; later histories diverge",
+    "No live price/policy/API or background reminder validation"
+  ],
+  "local_install_verification": "local-install/result.json"
+}

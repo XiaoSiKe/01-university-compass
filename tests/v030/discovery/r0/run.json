@@ -1,0 +1,36 @@
+{
+  "version": "0.3.0",
+  "method": "native_discovery_no_skill_text_injection",
+  "configured_model": "gpt-6.1-sol",
+  "semantic_status": "requires_manual_review",
+  "results": [
+    {
+      "case": "D02-natural",
+      "status": "completed",
+      "turns": 1,
+      "has_final": true,
+      "artifact": "D02-natural/result.json"
+    },
+    {
+      "case": "D01-explicit",
+      "status": "completed",
+      "turns": 1,
+      "has_final": true,
+      "artifact": "D01-explicit/result.json"
+    },
+    {
+      "case": "D03-unrelated-code",
+      "status": "completed",
+      "turns": 1,
+      "has_final": true,
+      "artifact": "D03-unrelated-code/result.json"
+    },
+    {
+      "case": "D04-learning-multiturn",
+      "status": "completed",
+      "turns": 3,
+      "has_final": true,
+      "artifact": "D04-learning-multiturn/result.json"
+    }
+  ]
+}

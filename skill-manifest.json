@@ -1,8 +1,8 @@
 [
   {
     "path": "SKILL.md",
-    "bytes": 5748,
-    "sha256": "5689dcc3ac47c14f13d58a21d7c6d71e03bc1563a2409a938a941d7833edca0b"
+    "bytes": 6531,
+    "sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136"
   },
   {
     "path": "agents/openai.yaml",
@@ -15,14 +15,19 @@
     "sha256": "a56f20df1fd5ccee14ba30d9aee98a93b9d7c815abd3367b6e78f898510181f4"
   },
   {
+    "path": "references/ai-judgment.md",
+    "bytes": 6249,
+    "sha256": "342959e954c21d253e4975cee29250842d1be141dea0f19facb79f7c5a5d565d"
+  },
+  {
     "path": "references/ai-pathways.md",
-    "bytes": 10948,
-    "sha256": "f3a1c1c5e442fc685cc8de7768c7ff3addbd5d003508705591bce79d672f3868"
+    "bytes": 12103,
+    "sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a"
   },
   {
     "path": "references/ai-practice.md",
-    "bytes": 19829,
-    "sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61"
+    "bytes": 22162,
+    "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c"
   },
   {
     "path": "references/continuity-evidence.md",
@@ -36,13 +41,13 @@
   },
   {
     "path": "references/learning-action.md",
-    "bytes": 11379,
-    "sha256": "47d146aabda2fd669ce41f7f54bb5eeb6e297ea8469b08819e11903321d249eb"
+    "bytes": 12600,
+    "sha256": "2670fe6e83bd551ebd1f89fac0c93972bc97fd7bf5c16711cd4aace31ea38e5e"
   },
   {
     "path": "references/sources.md",
-    "bytes": 36308,
-    "sha256": "2d0f42088aff64a5c2f518c3e5340fcafff9f07a8c93f66d2496d10f8fbc843c"
+    "bytes": 42049,
+    "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f"
   },
   {
     "path": "references/thinking.md",

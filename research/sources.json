@@ -753,5 +753,159 @@
     "archive_status": "仅保存原创阅读笔记及链接；未归档上游正文或代码",
     "reading_note": "archive/research/R24.reading-note.md",
     "verification_method": "本次会话通过已连接 GitHub 插件读取指定原文件"
+  },
+  {
+    "retrieved_on": "2026-10-23",
+    "distilled": true,
+    "adoption_mode": "只做概念级原创概述并设计本项目练习；不搬运上游正文、图表、代码、实验题或提示",
+    "archive_status": "仅保存原创阅读笔记与来源链接；未缓存上游全文",
+    "verification_method": "通过agent-reach网页路由读取官方正文；许可必要处核对官方PDF版权页或原始HTML",
+    "id": "R25",
+    "title": "AI competency framework for students",
+    "author": "Fengchun Miao；Kelly Shiohira；Natalie Lao / UNESCO",
+    "year": "2024",
+    "evidence_type": "学生AI能力与课程框架（非效果实验）",
+    "url": "https://unesdoc.unesco.org/ark:/48223/pf0000391105",
+    "final_url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_be395de4-719f-49fa-94f9-b0381426f8c5?_=391105eng.pdf",
+    "doi": "10.54675/JKJB9835",
+    "read_scope": "官方介绍、出版物版权页、1.2目标与受众、2.1—2.5关键原则、3.1—3.2框架与进阶层次；4.2应用层部分段落",
+    "reading_status": "已读取所列章节与部分段落；未逐页精读全部80页",
+    "version": {
+      "kind": "出版物年份与官方介绍页日期",
+      "value": "内页2024；介绍页发布2024-08-08、更新2026-01-16；不将更新时间作出版年"
+    },
+    "license": "CC BY-SA 3.0 IGO；标星图片排除",
+    "license_locator": "官方PDF版权页，ISBN及DOI之后的Open Access许可段；不是网站页脚或第三方摘要",
+    "read_files": [
+      {
+        "label": "官方介绍",
+        "url": "https://www.unesco.org/en/articles/ai-competency-framework-students"
+      },
+      {
+        "label": "正式出版物",
+        "url": "https://unesdoc.unesco.org/ark:/48223/pf0000391105"
+      },
+      {
+        "label": "正文与版权页",
+        "url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_be395de4-719f-49fa-94f9-b0381426f8c5?_=391105eng.pdf"
+      }
+    ],
+    "prerequisites": "主要面向教育系统、课程开发者和教师；本项目按学生基础、时间与资源转化为当前任务判断，不要求编程",
+    "access_cost": "本次官方介绍与PDF可读；原创比较可用手机或纸面完成，无需新增API或支出，未验证实际工具使用",
+    "adopted_mechanisms": [
+      "先判断AI是否适合当前目的及谁保留关键决定",
+      "把人本、包容性与可迁移能力接到实际材料和任务",
+      "理解、应用、创造作为可选择进阶，不要求人人开发模型"
+    ],
+    "excluded_or_limited": [
+      "不声称UNESCO认证或已实现全部框架",
+      "不把学校课程参考当作大学新生效果实验或个人测评量表",
+      "不复制框架表图、正文及标星图片"
+    ],
+    "adoption_locations": [
+      "01-university-compass/references/ai-judgment.md",
+      "01-university-compass/references/ai-pathways.md",
+      "01-university-compass/references/ai-practice.md"
+    ],
+    "knowledge_entries": "AI判断fit/AI路径/T03/T05",
+    "reading_note": "archive/research/R25.reading-note.md"
+  },
+  {
+    "retrieved_on": "2026-10-23",
+    "distilled": true,
+    "adoption_mode": "只做概念级原创概述并设计本项目练习；不搬运上游正文、图表、代码、实验题或提示",
+    "archive_status": "仅保存原创阅读笔记与来源链接；未缓存上游全文",
+    "verification_method": "通过agent-reach网页路由读取官方正文；许可必要处核对官方PDF版权页或原始HTML",
+    "id": "R26",
+    "title": "Building effective agents",
+    "author": "Anthropic",
+    "year": "页面标注2024-12-19；2026-10-23当前网页读取版",
+    "evidence_type": "官方工程实践经验（非教学效果实验）",
+    "url": "https://www.anthropic.com/engineering/building-effective-agents",
+    "read_scope": "全文；重点为What are agents、When (and when not) to use agents、Prompt chaining、Evaluator-optimizer、Agents、Combining and customizing、工具设计附录",
+    "reading_status": "已读官方文章；未运行示例、未检验SDK或工具兼容性",
+    "version": {
+      "kind": "当前网页读取版",
+      "value": "没有固定提交号；页面提示2024年以来工具生态已变，正文包含后续更新的框架和型号"
+    },
+    "license": "正文未见明确开放再利用许可；仅原创概念提炼与链接",
+    "license_locator": "已读官方工程文章正文和工具附录；未发现开放许可声明，不据公开可读推断可复制",
+    "read_files": [
+      {
+        "label": "官方工程文章",
+        "url": "https://www.anthropic.com/engineering/building-effective-agents"
+      }
+    ],
+    "prerequisites": "原文面向开发者；新生先用已有任务理解固定流程与动态工具选择，不必先学框架",
+    "access_cost": "文章可读；本项目的手动比较无需API，真实Agent所需模型、工具、权限与费用需按实际条件核实",
+    "adopted_mechanisms": [
+      "优先简单可测方案，区分工作流与Agent",
+      "从环境反馈核对进展，按质量、用时和费用决定是否增加复杂度",
+      "自主循环设置检查点和结束条件"
+    ],
+    "excluded_or_limited": [
+      "不把Agent或多Agent当作所有人的入门门槛",
+      "不沿用网页中型号、SDK和历史工具能力作当前事实",
+      "不将工程经验视作教学效果或可靠性保证"
+    ],
+    "adoption_locations": [
+      "01-university-compass/references/ai-judgment.md",
+      "01-university-compass/references/ai-practice.md",
+      "01-university-compass/references/ai-pathways.md"
+    ],
+    "knowledge_entries": "AI判断workflow/T03/T04/T05",
+    "reading_note": "archive/research/R26.reading-note.md"
+  },
+  {
+    "retrieved_on": "2026-10-23",
+    "distilled": true,
+    "adoption_mode": "只做概念级原创概述并设计本项目练习；不搬运上游正文、图表、代码、实验题或提示",
+    "archive_status": "仅保存原创阅读笔记与来源链接；未缓存上游全文",
+    "verification_method": "通过agent-reach网页路由读取官方正文；许可必要处核对官方PDF版权页或原始HTML",
+    "id": "R27",
+    "title": "Generative AI without guardrails can harm learning: Evidence from high school mathematics",
+    "author": "Hamsa Bastani等",
+    "year": "2025",
+    "evidence_type": "真实学生随机对照现场试验",
+    "url": "https://doi.org/10.1073/pnas.2422633122",
+    "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12232635/",
+    "doi": "10.1073/pnas.2422633122",
+    "read_scope": "摘要、Experimental Design、Main Results含Student Perception、Potential Mechanism、Discussion、数据说明及相关脚注；原始HTML版权/许可面板",
+    "reading_status": "已读主文所列部分；未完整读取补充材料，未重跑统计或核查全部数据",
+    "version": {
+      "kind": "PNAS已发表主文",
+      "value": "122(26): e2422633122；正文元数据2025-06-25在线发表，期号日期2025-07-01"
+    },
+    "license": "CC BY-NC-ND 4.0；Copyright and License information明确声明",
+    "license_locator": "PMC全文原始HTML的Copyright and License information面板（id=clp_a）；不是Jina摘要中的推断",
+    "read_files": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1073/pnas.2422633122"
+      },
+      {
+        "label": "主文、讨论与许可面板",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12232635/"
+      }
+    ],
+    "prerequisites": "研究结论参考，无需学生复现实验或购买工具；使用研究结果时必须保留特定学校、学科、设计与短期边界",
+    "access_cost": "本次主文可读；原创独立任务可在当前对话或纸面完成，不需要复现GPT-4实验",
+    "adopted_mechanisms": [
+      "分别检查受助练习表现和撤去辅助后的独立表现",
+      "主观学习感受不能代替实际任务证据",
+      "根据帮助程度记录表现，完整示范后另选合适新任务检验"
+    ],
+    "excluded_or_limited": [
+      "土耳其单一高中、数学、2023年GPT-4与特定辅导设计、短期考试结果",
+      "定制Tutor缓解负面影响，不能说独立考试显著优于无AI组",
+      "不直接推广大学、其他学科、当前所有模型或长期效果，不证明本Skill有效",
+      "不复制/改编原题、提示、图表或整篇文章，不诊断个人AI依赖"
+    ],
+    "adoption_locations": [
+      "01-university-compass/references/learning-action.md",
+      "01-university-compass/references/ai-judgment.md"
+    ],
+    "knowledge_entries": "L05/教学执行约定/AI判断check",
+    "reading_note": "archive/research/R27.reading-note.md"
   }
 ]

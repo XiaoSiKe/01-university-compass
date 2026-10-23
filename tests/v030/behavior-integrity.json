@@ -1,0 +1,324 @@
+{
+  "version": "0.3.0",
+  "status": "PASS",
+  "scope": "run_integrity_only_not_semantic_or_student_effectiveness",
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "model": "gpt-6.1-sol",
+  "adopted_cases": 52,
+  "actual_answers": 106,
+  "records": [
+    {
+      "case": "A01",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "A02",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "A03",
+      "condition": "skill",
+      "turns": 2,
+      "status": "PASS"
+    },
+    {
+      "case": "A04",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "A05",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "A06",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "A07",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "A08",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "B01",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "B02",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "B03",
+      "condition": "skill",
+      "turns": 2,
+      "status": "PASS"
+    },
+    {
+      "case": "B04",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "B05",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "B06",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "B07",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "B08",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "N01",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "N02",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "N03",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "N04",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "N05",
+      "condition": "skill",
+      "turns": 4,
+      "status": "PASS"
+    },
+    {
+      "case": "N06",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "N07",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "N08",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "N09",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "N10",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "N11",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "N12",
+      "condition": "skill",
+      "turns": 2,
+      "status": "PASS"
+    },
+    {
+      "case": "N13",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "N14",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "N15",
+      "condition": "skill",
+      "turns": 4,
+      "status": "PASS"
+    },
+    {
+      "case": "N16",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "N17",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "N18",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "N19",
+      "condition": "skill",
+      "turns": 2,
+      "status": "PASS"
+    },
+    {
+      "case": "N20",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "N21",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "N22",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "V01",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "V02",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "V03",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "V04",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "V05",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "V06",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "V07",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "V08",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "V09",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "V10",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "V01",
+      "condition": "baseline",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "V03",
+      "condition": "baseline",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "V05",
+      "condition": "baseline",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "V06",
+      "condition": "baseline",
+      "turns": 3,
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

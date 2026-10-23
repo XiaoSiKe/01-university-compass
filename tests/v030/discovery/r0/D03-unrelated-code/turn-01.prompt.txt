@@ -1,0 +1,5 @@
+本轮只进行对话；需要时仅可只读查看当前项目内相关资料。不联网、不修改文件、不读取项目外文件、不创建提醒。
+
+<current_user_message>
+用Python写 stable_unique(items)，对可哈希元素保留第一次出现的顺序。只给代码。
+</current_user_message>

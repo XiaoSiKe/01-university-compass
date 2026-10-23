@@ -1,0 +1,83 @@
+{
+  "method": "independent_random_label_per_pair",
+  "pairs": [
+    {
+      "pair_id": "C1",
+      "case": "V01",
+      "labels": {
+        "A": "skill",
+        "B": "baseline"
+      },
+      "artifacts": {
+        "A": {
+          "artifact": "behavior/r0/V01-skill/attempt-20261023T204807-6018393d.json",
+          "sha256": "fe128c69400b776d6c0924918fd79b00d3bf8054dc4137cb0d33ca8a358c894e"
+        },
+        "B": {
+          "artifact": "behavior/r0/V01-baseline/attempt-20261023T203444-68cc002b.json",
+          "sha256": "bfae77a674dbb20d44e23fb887035de230f4cff1e7734a098fa93eae8a4b1e87"
+        }
+      },
+      "blinded_input_sha256": "15f3d295660ead82c05999aa9c69262d0954723eb1dd924fdce69aaa9c072e84"
+    },
+    {
+      "pair_id": "C2",
+      "case": "V03",
+      "labels": {
+        "A": "skill",
+        "B": "baseline"
+      },
+      "artifacts": {
+        "A": {
+          "artifact": "behavior/r0/V03-skill/attempt-20261023T204918-2ca1505d.json",
+          "sha256": "a6b0e79dd52fdf3e1972c53d92f663297a9b537067fa382b87ed9b6f49a507e0"
+        },
+        "B": {
+          "artifact": "behavior/r0/V03-baseline/attempt-20261023T203444-9442e1b0.json",
+          "sha256": "332a8174ec04ff90d53a8483569afc812ecd98d8c80e0567822887e8735893d5"
+        }
+      },
+      "blinded_input_sha256": "2fff5e5d6cb346d6d03ec56f0d76cd2b185abbd84023164c57f8f9611a06c822"
+    },
+    {
+      "pair_id": "C3",
+      "case": "V05",
+      "labels": {
+        "A": "baseline",
+        "B": "skill"
+      },
+      "artifacts": {
+        "A": {
+          "artifact": "behavior/r0/V05-baseline/attempt-20261023T203627-ffb9d607.json",
+          "sha256": "427ecfa95f4b181a908184b45e7b32caac239dbb8f4af8232d65e0010f696fe0"
+        },
+        "B": {
+          "artifact": "behavior/r0/V05-skill/attempt-20261023T204946-b84488da.json",
+          "sha256": "d8036cbe96c0129a16b9b8a6be9c54acc66e67ab4f0a85f95690a71212fddb24"
+        }
+      },
+      "blinded_input_sha256": "54e31feb8713d5fe174c607150f28a959c0da5b8a8200e0113daf0907ee15dce"
+    },
+    {
+      "pair_id": "C4",
+      "case": "V06",
+      "labels": {
+        "A": "skill",
+        "B": "baseline"
+      },
+      "artifacts": {
+        "A": {
+          "artifact": "behavior/r0/V06-skill/attempt-20261023T204953-2dc378a8.json",
+          "sha256": "cceba95c0a0f06f82ed5cf290c25b0a3c078cf649b40cf1b340664dcb3edf9c2"
+        },
+        "B": {
+          "artifact": "behavior/r0/V06-baseline/attempt-20261023T203715-691e483b.json",
+          "sha256": "f82f367f6d2c10d52b1d88815cfc23dd72161e6df3a426425976c52243a5e036"
+        }
+      },
+      "blinded_input_sha256": "b8e2e7a6d9f2d0e476e677cecc1b9eb31394a761c400983d65679d3c429f02c1"
+    }
+  ],
+  "revealed_after_completed_review_sha256": "6253d614c4d354179720fced30005f13c4be48be95f0717ed5010df3a011e5ea",
+  "revealed_on": "2026-10-23"
+}

@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "version": "0.3.0",
+  "skill_digest": "3314c43275315de52a0d4d50a6df5e5122c152c656451d23598fc21e3b82643a",
+  "case": "V07",
+  "title": "自动化的成本和停止条件",
+  "condition": "skill",
+  "fingerprint": "8c568c5dbf5b687bdb9f87f26544dce49085f41991476a181aa087cf040bd6c2",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "tests/v030/behavior/r0/V07-skill/attempt-20261023T205047-07e37ecf.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "35d4bcdd9cbba916a6d8a54d8a76d41fa37a0b59d7e71a7f5c67beac5b177136",
+      "bytes": 6531
+    },
+    {
+      "path": "references/01.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "sha256": "342959e954c21d253e4975cee29250842d1be141dea0f19facb79f7c5a5d565d",
+      "bytes": 6249
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "efa061620b1a3b118d4d3ef84b2e322dba58a3c89d11f9212bc7f4daed6f179a",
+      "bytes": 12103
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+      "bytes": 22162
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "2670fe6e83bd551ebd1f89fac0c93972bc97fd7bf5c16711cd4aace31ea38e5e",
+      "bytes": 12600
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f",
+      "bytes": 42049
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622",
+      "bytes": 2945
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我做自动查公开资料的学习实验，最多15分钟、最多3次搜索、零新增预算。模型可以不断重试直到答案正确吗？先帮我设边界。",
+      "prompt_sha256": "c61e429a05c555e3630f7d1fa5a71b42b852d9e4814401dcdf2fe3c07e2e01c5",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**不能让模型“不断重试直到答案正确”。** 这次应设成：在预算内寻找能核对的答案，证据不足就保留未知。“正确”要靠资料核验，不能由模型自己宣布。\n\n按你给的条件，可以先用这份执行规则：\n\n| 边界 | 具体规则 |\n|---|---|\n| **任务范围** | 每次只查一个明确问题。模型不能自行扩成相关话题或追加任务。 |\n| **时间上限** | 从实际启动实验开始，共 **15分钟**，包含搜索、读页面、重试、核验和整理。建议最后3分钟留给核验与记录；到时立即结束。 |\n| **搜索上限** | 最多 **3次检索查询**。改关键词、重试、失败请求都计数；批量提交几个查询就算几次，换工具不重置。打开已找到的页面不另计搜索次数，但占用时间。 |\n| **费用上限** | **零新增支出**。只用已经可用、且确认不会产生额外费用的功能。遇到收费、额度耗尽或费用不明，就停止该途径。 |\n| **操作权限** | 只检索和阅读公开资料；需要登录、付费或额外授权才能继续时，记录限制。此次实验不包含注册、联系他人或对外提交。 |\n| **答案验收** | 会影响结论的关键事实要能对应到来源和具体依据；时效性问题还要检查发布主体、日期与适用范围。来源冲突就并列保留，不能擅选一个。 |\n\n**重试必须有理由，并消耗上述额度：**\n\n- 没搜到相关资料：说明关键词哪里可能不合适，再改一次。\n- 已找到资料但回答出错：先回到原文修正，不自动追加搜索。\n- 资料本身缺失：标记未知；只有明确知道下一次搜索要补什么，才继续。\n- 连续两次出现同类失败，且没有新的改进依据：提前停止，记录卡点。\n\n用满3次后停止搜索，可在剩余时间内核验已有资料；15分钟到则结束全部实验。证据已经足够时，也可以提前完成。\n\n若做成自动程序，**时间、查询次数和费用限制要由程序控制，每次操作前检查；模型无权自行放宽。** 只在提示词里写“最多3次”，还不足以保证执行。\n\n最后留下一份短记录即可：\n\n> 当前结论及依据：  \n> 仍未知或冲突的内容：  \n> 实际耗时、查询次数及停止原因：\n\n允许结果是“部分查到”或“尚无法确认”。这份结果能检验流程是否守边界、证据是否够用，不必为了得到完整答案把实验拖下去。以上是边界设计，本次离线对话尚未实际搜索或启动计时。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 84.22,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168d0-5abe-7600-985a-7a722c33b330"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-l0v6z06v/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按“零一大学指南针”，把时间、搜索次数和可核对结果设成这次实验的边界。"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**不能让模型“不断重试直到答案正确”。** 这次应设成：在预算内寻找能核对的答案，证据不足就保留未知。“正确”要靠资料核验，不能由模型自己宣布。\n\n按你给的条件，可以先用这份执行规则：\n\n| 边界 | 具体规则 |\n|---|---|\n| **任务范围** | 每次只查一个明确问题。模型不能自行扩成相关话题或追加任务。 |\n| **时间上限** | 从实际启动实验开始，共 **15分钟**，包含搜索、读页面、重试、核验和整理。建议最后3分钟留给核验与记录；到时立即结束。 |\n| **搜索上限** | 最多 **3次检索查询**。改关键词、重试、失败请求都计数；批量提交几个查询就算几次，换工具不重置。打开已找到的页面不另计搜索次数，但占用时间。 |\n| **费用上限** | **零新增支出**。只用已经可用、且确认不会产生额外费用的功能。遇到收费、额度耗尽或费用不明，就停止该途径。 |\n| **操作权限** | 只检索和阅读公开资料；需要登录、付费或额外授权才能继续时，记录限制。此次实验不包含注册、联系他人或对外提交。 |\n| **答案验收** | 会影响结论的关键事实要能对应到来源和具体依据；时效性问题还要检查发布主体、日期与适用范围。来源冲突就并列保留，不能擅选一个。 |\n\n**重试必须有理由，并消耗上述额度：**\n\n- 没搜到相关资料：说明关键词哪里可能不合适，再改一次。\n- 已找到资料但回答出错：先回到原文修正，不自动追加搜索。\n- 资料本身缺失：标记未知；只有明确知道下一次搜索要补什么，才继续。\n- 连续两次出现同类失败，且没有新的改进依据：提前停止，记录卡点。\n\n用满3次后停止搜索，可在剩余时间内核验已有资料；15分钟到则结束全部实验。证据已经足够时，也可以提前完成。\n\n若做成自动程序，**时间、查询次数和费用限制要由程序控制，每次操作前检查；模型无权自行放宽。** 只在提示词里写“最多3次”，还不足以保证执行。\n\n最后留下一份短记录即可：\n\n> 当前结论及依据：  \n> 仍未知或冲突的内容：  \n> 实际耗时、查询次数及停止原因：\n\n允许结果是“部分查到”或“尚无法确认”。这份结果能检验流程是否守边界、证据是否够用，不必为了得到完整答案把实验拖下去。以上是边界设计，本次离线对话尚未实际搜索或启动计时。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 51393,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1732,
+            "reasoning_output_tokens": 1036
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "现在3次都没找到正式通知，却找到了两个转载。AI想自行再查20次然后直接发群。这里哪些应停止，哪些还能由我手动处理？",
+      "prompt_sha256": "f1167e582c7718c9ebea5dd767991f4f4a44b32889ab15d94ac495c23a6e87a2",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "**应立即停止追加搜索和 AI 自行发群。** 3次搜索额度已经用完，“正式通知尚未找到”可以成为这轮实验的结果。\n\n要停下的是：\n\n- **再查20次：**超出已定上限。同一轮里，换工具、换平台或改成你手动搜索，都不能重置次数。\n- **AI直接发群：**这次授权只有检索和阅读，发群超出范围。即使之后找到正式通知，也不能由模型自行决定发布。\n\n**如果15分钟还没到，你可以用剩余时间手动处理现有材料：**\n\n| 可以做什么 | 边界是什么 |\n|---|---|\n| 阅读两个转载，核对发布者、日期、原文出处及关键说法 | 只能判断已看到的内容；两篇转载可能来自同一个来源，不能直接算两份独立确认 |\n| 打开转载里已经给出的明确原文链接 | 属于阅读，占用剩余时间；重新提交关键词或使用站内搜索寻找通知，属于追加搜索，应停止 |\n| 把关键内容标成“有依据”“冲突”“待核实” | 转载内容一致，也不等于已经获得发布方正式确认；找不到正式通知，也不等于通知不存在 |\n| 整理一份供你审阅的草稿 | 草稿不自动发送，不能把待核实的信息写成正式安排 |\n\n如果你另行决定手动向群里说明查找进展，可以使用这样的表述；**这是你审阅后自行决定的对外动作，不属于本轮自动检索的授权：**\n\n> 目前找到了两份转载，尚未找到发布方的正式通知。转载中的相关安排仍待核实，现阶段无法据此确认最终要求。\n\n**若15分钟已经到了，这轮核查也应结束。** 保留“搜索3次、找到2份转载、正式通知未确认、因达到搜索／时间上限停止”的记录即可。之后是否开展新一轮，由你重新确定目标和限额；模型不能把“还没答出来”当作自行扩权的理由。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 66.32,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168d1-a3ae-75b1-b9b0-3201ce2cfef6"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-l0v6z06v/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "**应立即停止追加搜索和 AI 自行发群。** 3次搜索额度已经用完，“正式通知尚未找到”可以成为这轮实验的结果。\n\n要停下的是：\n\n- **再查20次：**超出已定上限。同一轮里，换工具、换平台或改成你手动搜索，都不能重置次数。\n- **AI直接发群：**这次授权只有检索和阅读，发群超出范围。即使之后找到正式通知，也不能由模型自行决定发布。\n\n**如果15分钟还没到，你可以用剩余时间手动处理现有材料：**\n\n| 可以做什么 | 边界是什么 |\n|---|---|\n| 阅读两个转载，核对发布者、日期、原文出处及关键说法 | 只能判断已看到的内容；两篇转载可能来自同一个来源，不能直接算两份独立确认 |\n| 打开转载里已经给出的明确原文链接 | 属于阅读，占用剩余时间；重新提交关键词或使用站内搜索寻找通知，属于追加搜索，应停止 |\n| 把关键内容标成“有依据”“冲突”“待核实” | 转载内容一致，也不等于已经获得发布方正式确认；找不到正式通知，也不等于通知不存在 |\n| 整理一份供你审阅的草稿 | 草稿不自动发送，不能把待核实的信息写成正式安排 |\n\n如果你另行决定手动向群里说明查找进展，可以使用这样的表述；**这是你审阅后自行决定的对外动作，不属于本轮自动检索的授权：**\n\n> 目前找到了两份转载，尚未找到发布方的正式通知。转载中的相关安排仍待核实，现阶段无法据此确认最终要求。\n\n**若15分钟已经到了，这轮核查也应结束。** 保留“搜索3次、找到2份转载、正式通知未确认、因达到搜索／时间上限停止”的记录即可。之后是否开展新一轮，由你重新确定目标和限额；模型不能把“还没答出来”当作自行扩权的理由。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 52146,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1509,
+            "reasoning_output_tokens": 1034
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 3,
+      "user": "我同意把未确认的项记下来，今天到此为止。请给一句可复制的续接记录，明确哪些没验证，不要真的发送消息或安排后台继续。",
+      "prompt_sha256": "19598505ae5b9bed4b9e32e3e981a21f1fb7a46cbe53eddd090edf99e0f574d4",
+      "history_messages": 4,
+      "status": "completed",
+      "answer": "> 本轮今天已结束：3次搜索已用完，找到2份转载但尚未找到正式通知，转载内容的准确性、时效性、来源独立性及最终安排均未验证，实际耗时未确认；不发送消息、不安排后台继续，如需续查，由我另行确定目标与限额。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 35.0,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a168d2-a6c4-77e2-83e1-6260d459ee9f"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-l0v6z06v/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "> 本轮今天已结束：3次搜索已用完，找到2份转载但尚未找到正式通知，转载内容的准确性、时效性、来源独立性及最终安排均未验证，实际耗时未确认；不发送消息、不安排后台继续，如需续查，由我另行确定目标与限额。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 52700,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 595,
+            "reasoning_output_tokens": 516
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T12:50:47Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 185.56,
+  "finished_at_utc": "2026-10-23T12:53:53Z"
+}
