@@ -1,0 +1,40 @@
+{
+  "configured_model": "gpt-6.1-sol",
+  "group": "new",
+  "smoke": false,
+  "baseline_ids": [
+    "N01",
+    "N06",
+    "N09",
+    "N10",
+    "N14",
+    "N22"
+  ],
+  "semantic_verdict": "not_automatically_scored",
+  "limitations": [
+    "Synthetic student conversations, not real student outcomes",
+    "Full Skill Markdown explicitly loaded; does not test lazy loading or installation discovery",
+    "All external tools disabled equally; live verification and real side effects are not tested",
+    "Full actual history replayed per turn; not server-side resume"
+  ],
+  "results": [
+    {
+      "case": "N11",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N11-skill/attempt-20261023T163445-7d6ecfe8.json"
+    },
+    {
+      "case": "N12",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N12-skill/attempt-20261023T163445-88c43971.json"
+    },
+    {
+      "case": "N04",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N04-skill/attempt-20261023T163445-41c19c66.json"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Preserve the exact bytes of versioned evidence and packaged Skill files.
+* -text
+
+# Newly authored repository presentation and scripts use LF.
+README.md text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+assets/readme/*.svg text eol=lf
+scripts/*.py text eol=lf

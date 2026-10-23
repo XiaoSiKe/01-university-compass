@@ -1,0 +1,30 @@
+{
+  "feishu_discovered": 59,
+  "feishu_core": 42,
+  "feishu_other": 17,
+  "core_reading_counts": {
+    "部分读取": 29,
+    "目录或占位": 8,
+    "完整读取": 5
+  },
+  "core_text_reviewed": 32,
+  "core_text_distilled": 24,
+  "core_fully_distilled": 5,
+  "external_discovered": 296,
+  "external_acquisition_counts": {
+    "无法访问": 182,
+    "目录或占位": 9,
+    "正文候选已归档待审读": 105
+  },
+  "external_distilled": 0,
+  "research_sources": 24,
+  "research_archive_full": 9,
+  "knowledge_cards": 28,
+  "version": "0.2.0",
+  "teaching_checked_on": "2026-10-23",
+  "feishu_snapshot": "2026-10-22",
+  "original_research_sources": 15,
+  "ai_teaching_sources": 9,
+  "skill_files": 11,
+  "research_archive_scope": "原15项研究来源的历史工作区归档统计；本分享包只附阅读笔记"
+}

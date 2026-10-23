@@ -1,0 +1,27 @@
+# Local operating-system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Local Python / Node environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.pytest_cache/
+
+# Local credentials and runtime state
+.env
+.env.*
+!.env.example
+auth.json
+.codex/
+.agents/
+*.pem
+*.p12
+
+# Incomplete generated files
+*.tmp

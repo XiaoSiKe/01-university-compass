@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "case": "B05",
+  "title": "B05",
+  "condition": "skill",
+  "fingerprint": "1df412f3144e06fef7831d6ca3540b16b9bba7d90d98c96aa9e2b5e8b5eba019",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "/private/tmp/compass-v020-formal/behavior/B05-skill/attempt-20261023T161650-483b0a2d.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "61ebbfa3c6c9ad210c3bc1b0cb004c30b63d5b7516fb979586688b7ea0f9e264",
+      "bytes": 5758
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "08612b37301e1c7738fd249b41918a96634cd10b4d3d75567c319a6db25f188e",
+      "bytes": 9903
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61",
+      "bytes": 19829
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "87cdf52ad727220e7c258ab5f39a9219732ebb055e501478f1d005e1ed572be5",
+      "bytes": 10474
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "2391f448d3287ebd64350471d4e663ebaec5450580e59e82467c4d4fbf478c7e",
+      "bytes": 36478
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "8fde755d004a70837cae757474129f3e68be81d4f8561bee2513ee9a4090844f",
+      "bytes": 2965
+    },
+    {
+      "path": "references/zeroone.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "零一AI日新社和福州零一扬网络科技有限公司是不是一样的？加入社团是不是就算公司实习、能拿学校认可的证明？我大一想写简历。",
+      "prompt_sha256": "ae7471827727bb9f3853b4ae67dccd33b0f803b6678712630b674235856c32ad",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**不能直接画等号。加入零一 AI 日新社，不会自动成为福州零一扬网络科技有限公司的实习生，也不自动获得学校认可的实习证明。**\n\n现有的《高校分社计划》等资料，把社团的学习交流、成员连接，与公司的商业运营、项目交付作了区分。这是组织自身的介绍；即使人员重合，也不能据此认定社团、公司和学校承担同样的责任。\n\n你关心的三件事，需要分别确认：\n\n| 你想确认的事 | 需要什么依据 |\n|---|---|\n| 是否属于社团成员 | 社团的入社确认及参与记录 |\n| 是否属于公司实习 | 公司明确确认的实习身份，以及实际岗位、任务、起止时间、指导安排等 |\n| 能否获得学校认可 | 你所在学校、学院本学年的正式认定要求，以及负责认定的部门确认 |\n\n**公司愿意盖章，也不等于学校一定认可。**“社团参与证明”“项目参与证明”“公司实习证明”证明的内容不同，不能只看有没有章。当前没有你所在学校的认定材料，我无法确认它能否用于实习学分、评奖或其他校内用途。\n\n报名之前，建议分别向两方核实。给组织方可以这样问：\n\n> 我想确认，加入后获得的是社团成员身份，还是另需申请公司实习？如果有实习，请说明岗位、实际任务、时间投入，以及证明由哪个主体、以什么名义出具。能否提供隐去个人信息的证明样本？\n\n再拿具体安排和样本，向学院负责实习认定的老师确认：\n\n> 这类实习是否符合本院本学年的认定要求？需要哪些手续和材料？\n\n至于简历，大一完全可以从真实的社团、课程和项目经历写起：\n\n- **仅加入社团时**：可以在社团经历中写“零一 AI 日新社｜成员”，但不要因此写成“公司实习生”。\n- **实际参与项目后**：写清你负责什么、完成什么、怎样检查成果。例如：  \n  “参与［项目名称］，负责［本人实际任务］，产出［可展示成果］，通过［核对或测试方式］检查结果。”\n- **公司实习得到确认后**：再按实际情况写公司、岗位、时间和工作内容。\n\n真实的社团项目可以成为简历经历，无需先取得学校认定；学校认定则要另外核实。你现在选择机会时，可以重点看：**进去以后具体能做什么，以及最后能否讲清、展示自己的贡献。**",
+      "returncode": 0,
+      "elapsed_seconds": 77.34,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167d5-8a8f-7241-869c-a117b47c550a"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-00aek5_k/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按“零一大学指南针”，分别看社团、公司和学校各自能确认什么，帮你判断简历可以怎么写。\n"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**不能直接画等号。加入零一 AI 日新社，不会自动成为福州零一扬网络科技有限公司的实习生，也不自动获得学校认可的实习证明。**\n\n现有的《高校分社计划》等资料，把社团的学习交流、成员连接，与公司的商业运营、项目交付作了区分。这是组织自身的介绍；即使人员重合，也不能据此认定社团、公司和学校承担同样的责任。\n\n你关心的三件事，需要分别确认：\n\n| 你想确认的事 | 需要什么依据 |\n|---|---|\n| 是否属于社团成员 | 社团的入社确认及参与记录 |\n| 是否属于公司实习 | 公司明确确认的实习身份，以及实际岗位、任务、起止时间、指导安排等 |\n| 能否获得学校认可 | 你所在学校、学院本学年的正式认定要求，以及负责认定的部门确认 |\n\n**公司愿意盖章，也不等于学校一定认可。**“社团参与证明”“项目参与证明”“公司实习证明”证明的内容不同，不能只看有没有章。当前没有你所在学校的认定材料，我无法确认它能否用于实习学分、评奖或其他校内用途。\n\n报名之前，建议分别向两方核实。给组织方可以这样问：\n\n> 我想确认，加入后获得的是社团成员身份，还是另需申请公司实习？如果有实习，请说明岗位、实际任务、时间投入，以及证明由哪个主体、以什么名义出具。能否提供隐去个人信息的证明样本？\n\n再拿具体安排和样本，向学院负责实习认定的老师确认：\n\n> 这类实习是否符合本院本学年的认定要求？需要哪些手续和材料？\n\n至于简历，大一完全可以从真实的社团、课程和项目经历写起：\n\n- **仅加入社团时**：可以在社团经历中写“零一 AI 日新社｜成员”，但不要因此写成“公司实习生”。\n- **实际参与项目后**：写清你负责什么、完成什么、怎样检查成果。例如：  \n  “参与［项目名称］，负责［本人实际任务］，产出［可展示成果］，通过［核对或测试方式］检查结果。”\n- **公司实习得到确认后**：再按实际情况写公司、岗位、时间和工作内容。\n\n真实的社团项目可以成为简历经历，无需先取得学校认定；学校认定则要另外核实。你现在选择机会时，可以重点看：**进去以后具体能做什么，以及最后能否讲清、展示自己的贡献。**"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 46338,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2151,
+            "reasoning_output_tokens": 1517
+          }
+        }
+      ],
+      "stderr": "2026-10-23T08:16:55.319786Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out\n",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T08:16:50Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 77.36,
+  "finished_at_utc": "2026-10-23T08:18:07Z"
+}

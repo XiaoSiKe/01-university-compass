@@ -1,0 +1,416 @@
+{
+  "kind": "run_integrity_only_not_semantic_evaluation",
+  "audited_at_utc": "2026-10-23T08:35:22.186228+00:00",
+  "status": "completed_with_nonfatal_cli_warnings",
+  "model": "gpt-6.1-sol",
+  "case_counts": {
+    "skill": 38,
+    "baseline": 6
+  },
+  "turn_counts": {
+    "skill": 68,
+    "baseline": 18
+  },
+  "total_turns": 86,
+  "run_statuses": {
+    "completed": 44
+  },
+  "unique_process_conversations": 86,
+  "tool_calls": 0,
+  "warnings": {
+    "skip_host_skill_discovery_experimental_feature": 86,
+    "model_catalog_refresh_timeout": 23,
+    "telemetry_send_failure": 4,
+    "websocket_tls_connection_error": 3,
+    "websocket_prewarm_warning": 2,
+    "internal_sampling_retry": 1
+  },
+  "event_item_types": {
+    "error": 86,
+    "agent_message": 123
+  },
+  "config_sha256": "ae8371ac985b45dcd7a135bcddcac4a1f8813b74a2dd7a9e7be69a11f58a14a5",
+  "cases_v020_sha256": "4da05ed3c721b39318f210fcb168581ff5d038184e7619a9e851ddffd58ea1ac",
+  "runner_sha256": "c1a38982bb726d21ad5fc0643cd696c39f590487a4919347a99a17a8d07c5abd",
+  "skill_manifest_sha256": "5cc668a2abefa3ebefe48f7c7c125b5931a7470ab070acc130f735f52f3afd69",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "61ebbfa3c6c9ad210c3bc1b0cb004c30b63d5b7516fb979586688b7ea0f9e264",
+      "bytes": 5758
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "08612b37301e1c7738fd249b41918a96634cd10b4d3d75567c319a6db25f188e",
+      "bytes": 9903
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61",
+      "bytes": 19829
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "87cdf52ad727220e7c258ab5f39a9219732ebb055e501478f1d005e1ed572be5",
+      "bytes": 10474
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "2391f448d3287ebd64350471d4e663ebaec5450580e59e82467c4d4fbf478c7e",
+      "bytes": 36478
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "8fde755d004a70837cae757474129f3e68be81d4f8561bee2513ee9a4090844f",
+      "bytes": 2965
+    },
+    {
+      "path": "references/zeroone.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    }
+  ],
+  "wall_seconds": 1247.0,
+  "model_turn_seconds_sum": 5838.8,
+  "min_turn_seconds": 21.31,
+  "max_turn_seconds": 127.47,
+  "usage_reported_by_cli": {
+    "input_tokens": 3421151,
+    "cached_input_tokens": 570752,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 141317,
+    "reasoning_output_tokens": 99529
+  },
+  "results": [
+    {
+      "case": "A01",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "A01-skill/attempt-20261023T161344-48666bc6.json",
+      "sha256": "130025da55b8ad1a46456068d493e9e21ee1c6c57c2b6b81fedfa47a61adc497"
+    },
+    {
+      "case": "A02",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "A02-skill/attempt-20261023T161344-6e1b94ef.json",
+      "sha256": "e9134a1cc53c2877ac11e1d0e57a80c8f53d1d00682975c57200c995b3f21011"
+    },
+    {
+      "case": "A03",
+      "condition": "skill",
+      "turns": 2,
+      "artifact": "A03-skill/attempt-20261023T161344-f4794265.json",
+      "sha256": "dac3e4877b911832d740cb50d98222163b787e0e3f580f5adbb230f77308471c"
+    },
+    {
+      "case": "A04",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "A04-skill/attempt-20261023T161344-c6826a57.json",
+      "sha256": "1ada24f9c05fff5ef53e47bb04596031065a5d3525088e22cd63fd5ffb9fc4f7"
+    },
+    {
+      "case": "A05",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "A05-skill/attempt-20261023T161431-d35fc68e.json",
+      "sha256": "627e505c0efbdf15f3e09ee15a593c1dbbbfcc73d430ab4650449b7be32a8365"
+    },
+    {
+      "case": "A06",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "A06-skill/attempt-20261023T161504-0235b95a.json",
+      "sha256": "19105248d8e175b2e978d72a8613673ad9c0d56d49c441615667206573d9ca48"
+    },
+    {
+      "case": "A07",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "A07-skill/attempt-20261023T161510-74478a77.json",
+      "sha256": "e3a924da40f0f91d6df12b777ecef6b9b774f8bbdea63f963c1c068b1ea2fbe5"
+    },
+    {
+      "case": "A08",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "A08-skill/attempt-20261023T161532-df0e65c9.json",
+      "sha256": "2f30231adcc97aaaca3d3dcf2823dd0d7c4da4d656f163f6d6f4fea739ed4b19"
+    },
+    {
+      "case": "B01",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "B01-skill/attempt-20261023T161534-f7ed9dfe.json",
+      "sha256": "1e7977ba96802af3e3dffc0fecab55fe792ee16d7d8cd183724e399cc85e0355"
+    },
+    {
+      "case": "B02",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "B02-skill/attempt-20261023T161553-59d2d169.json",
+      "sha256": "8b1cc1e32af9c1498b63c4416a1403ac8b6e18ef49695d6035baa9e4ff9abbbd"
+    },
+    {
+      "case": "B03",
+      "condition": "skill",
+      "turns": 2,
+      "artifact": "B03-skill/attempt-20261023T161622-d7ffbe50.json",
+      "sha256": "46a7ffc417d6e15c7cff4206a4ba9cf1860075efb2a1054f03c9e17025eceda9"
+    },
+    {
+      "case": "B04",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "B04-skill/attempt-20261023T161627-dae507da.json",
+      "sha256": "e64bae21ef6476506d9824e8836aca19f0da1756a4f469c862e5a0c2c8f42f8e"
+    },
+    {
+      "case": "B05",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "B05-skill/attempt-20261023T161650-483b0a2d.json",
+      "sha256": "8cb89d779e3a987f1a0ef646f9a9fbdd4addda9f605fdd11d7ae11943912fdae"
+    },
+    {
+      "case": "B06",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "B06-skill/attempt-20261023T161654-7cd4d55e.json",
+      "sha256": "36e10a77f5adff6770cfa22c3798c37445963b922d9ce2cbcb5bc1759cdf74ff"
+    },
+    {
+      "case": "B07",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "B07-skill/attempt-20261023T161736-9a169ecd.json",
+      "sha256": "a89a5a47085b25b7370a57736824d7876a383eb4ff5fb5e05920f0bba9ce25ee"
+    },
+    {
+      "case": "B08",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "B08-skill/attempt-20261023T161746-56a82fba.json",
+      "sha256": "47a48596547fd59de26f82d726bbf1bc21ffc930a2023fd8877cf68fde6c3b63"
+    },
+    {
+      "case": "N01",
+      "condition": "baseline",
+      "turns": 3,
+      "artifact": "N01-baseline/attempt-20261023T161551-664c9a0a.json",
+      "sha256": "c05d3cf3004e140690af1f37d00e14c757ab58571ea6c0a7d7df0bce0b93678f"
+    },
+    {
+      "case": "N01",
+      "condition": "skill",
+      "turns": 3,
+      "artifact": "N01-skill/attempt-20261023T161807-77de8031.json",
+      "sha256": "d6337f5eb549917fa9fd210ad8a6dceaa56a28bad454cd8780c9bd7c4dffb29f"
+    },
+    {
+      "case": "N02",
+      "condition": "skill",
+      "turns": 3,
+      "artifact": "N02-skill/attempt-20261023T161822-b135faac.json",
+      "sha256": "8736b9f487963603fcd2026c28e6ba9bb1d1967c0e8f871f18d2881b09b3c8c8"
+    },
+    {
+      "case": "N03",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "N03-skill/attempt-20261023T161823-33ffc113.json",
+      "sha256": "1894a3f2d3e9f98d3fabe64ec571326d60cfd790ccda79750a7e831cdc7ceed9"
+    },
+    {
+      "case": "N04",
+      "condition": "skill",
+      "turns": 3,
+      "artifact": "N04-skill/attempt-20261023T161855-350642de.json",
+      "sha256": "f6a77fb1fc5efc5ab50982c0f526f4cb17d220742ac5e7c9c63b75f1091d4901"
+    },
+    {
+      "case": "N05",
+      "condition": "skill",
+      "turns": 4,
+      "artifact": "N05-skill/attempt-20261023T161931-1f24884a.json",
+      "sha256": "e41f57071f6639b2ce8dbafb4586a75c1e1d57ff2721af147315292fad2d09b8"
+    },
+    {
+      "case": "N06",
+      "condition": "baseline",
+      "turns": 3,
+      "artifact": "N06-baseline/attempt-20261023T161551-d26db157.json",
+      "sha256": "08f14396c4e888e80a448c241ea52ff8d67bfb98693e2fee3ace3ae707244416"
+    },
+    {
+      "case": "N06",
+      "condition": "skill",
+      "turns": 3,
+      "artifact": "N06-skill/attempt-20261023T162147-962b442a.json",
+      "sha256": "271445314bfa9ea3fdf78eb5bb5efe59a69c9632d6f6ec87c453a03155031ae7"
+    },
+    {
+      "case": "N07",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "N07-skill/attempt-20261023T162218-ce6855f6.json",
+      "sha256": "fc686ecb1a5d3919d39a330fe4176c87c768ab2df5e8c91583d56ed0d7d84982"
+    },
+    {
+      "case": "N08",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "N08-skill/attempt-20261023T162234-1bfc1041.json",
+      "sha256": "09abf90f02f926bfa38b9d1430109797f78ccf8213e72286d9d11e167615c110"
+    },
+    {
+      "case": "N09",
+      "condition": "baseline",
+      "turns": 3,
+      "artifact": "N09-baseline/attempt-20261023T161848-c77c2610.json",
+      "sha256": "30a5be936c52986942fbb9b2e270490d6d898f9a077668262a7d195d61ed30b6"
+    },
+    {
+      "case": "N09",
+      "condition": "skill",
+      "turns": 3,
+      "artifact": "N09-skill/attempt-20261023T162318-b2309333.json",
+      "sha256": "07b7cee4212812990e6e0db32ebb88f9a1d75922d539f3faab4ac510f5bb8109"
+    },
+    {
+      "case": "N10",
+      "condition": "baseline",
+      "turns": 3,
+      "artifact": "N10-baseline/attempt-20261023T161932-69fb9ca7.json",
+      "sha256": "801e0d053754b6a24709ffbacfd03122157b2cee4a47e688d94eb84af5b17b37"
+    },
+    {
+      "case": "N10",
+      "condition": "skill",
+      "turns": 3,
+      "artifact": "N10-skill/attempt-20261023T162400-29efb31e.json",
+      "sha256": "bbf5c9da87bb3713c6e6d580bcd617ea29936baa9fdcff13375390fa4bfe870c"
+    },
+    {
+      "case": "N11",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "N11-skill/attempt-20261023T162530-331bd502.json",
+      "sha256": "879f26220413ef1186958a46392c71963b8d8c3945fd0d4194aa961586bf4ce2"
+    },
+    {
+      "case": "N12",
+      "condition": "skill",
+      "turns": 2,
+      "artifact": "N12-skill/attempt-20261023T162536-93ebd8bf.json",
+      "sha256": "b715000a013e9c83c938bc491c162cbfbf31dabf3e35fbc749e088eb0e98189d"
+    },
+    {
+      "case": "N13",
+      "condition": "skill",
+      "turns": 3,
+      "artifact": "N13-skill/attempt-20261023T162634-4fa7045b.json",
+      "sha256": "f09551afbc0fc18dcaa9b04987be113093b03ef066585e1d2673efdb7ffda4cd"
+    },
+    {
+      "case": "N14",
+      "condition": "baseline",
+      "turns": 3,
+      "artifact": "N14-baseline/attempt-20261023T162206-492cafa1.json",
+      "sha256": "7b61ec39f6cd502339237cf13945d147b3114cf4c22b2f2ffcfb60c2f2572ecd"
+    },
+    {
+      "case": "N14",
+      "condition": "skill",
+      "turns": 3,
+      "artifact": "N14-skill/attempt-20261023T162637-b66bb07e.json",
+      "sha256": "e1f10ad9552488bf1606e138ac7c4c1e0a6b312d817d9df3fe3a509dd98e80de"
+    },
+    {
+      "case": "N15",
+      "condition": "skill",
+      "turns": 4,
+      "artifact": "N15-skill/attempt-20261023T162711-b907358e.json",
+      "sha256": "008e05fe6db40979bf258ada778e8300fb0e9974b1fa1bfba66faf167c317b39"
+    },
+    {
+      "case": "N16",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "N16-skill/attempt-20261023T162756-27e39e8e.json",
+      "sha256": "1f58c8003c6ae16da312618475addcc0b6ff9ea01f87fc65cc5fe11229c760ec"
+    },
+    {
+      "case": "N17",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "N17-skill/attempt-20261023T162908-6627eedb.json",
+      "sha256": "a8d99069fdf4d2cfdd388ed2bb40dadc28a4e7cfc3834d9f44a2c3e95934a019"
+    },
+    {
+      "case": "N18",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "N18-skill/attempt-20261023T162958-e9b6b751.json",
+      "sha256": "d91e5a0e8d5b4c1689d19bdc6df550ea0ff940dae3c8fb99d0fcdc1529927282"
+    },
+    {
+      "case": "N19",
+      "condition": "skill",
+      "turns": 2,
+      "artifact": "N19-skill/attempt-20261023T163037-b5f2bea2.json",
+      "sha256": "4dea4f38d3b50b35f08953709dc346e8daab83edf154719f26b6b50cfdacc07b"
+    },
+    {
+      "case": "N20",
+      "condition": "skill",
+      "turns": 3,
+      "artifact": "N20-skill/attempt-20261023T163043-9213a8f4.json",
+      "sha256": "63402ddc314040a6f89c501aa1004211322c0674202d24203651e52d1bf795f2"
+    },
+    {
+      "case": "N21",
+      "condition": "skill",
+      "turns": 1,
+      "artifact": "N21-skill/attempt-20261023T163108-3a856444.json",
+      "sha256": "ae3a2a08ee78e1d428f518171392f1f3b01424893ffb426be12df284e6f5c9c9"
+    },
+    {
+      "case": "N22",
+      "condition": "baseline",
+      "turns": 3,
+      "artifact": "N22-baseline/attempt-20261023T162212-d393da9c.json",
+      "sha256": "9f9965b145e8e48a08738339a2272fcd39d6660c3db12672c85383c958f9d803"
+    },
+    {
+      "case": "N22",
+      "condition": "skill",
+      "turns": 3,
+      "artifact": "N22-skill/attempt-20261023T163155-29bdd590.json",
+      "sha256": "4cf09ed18013f6fed8f380683e30733bc7a32de1ea57cd613a121df9dbd8ddd9"
+    }
+  ],
+  "issues": [],
+  "limitations": [
+    "Synthetic scenarios, not real student trials",
+    "All Skill Markdown explicitly loaded; installation discovery and lazy loading are tested separately",
+    "Offline, zero external tools in both conditions; live browsing and real side effects untested",
+    "Each turn starts a fresh process with actual prior answers replayed; no parent chat or expected observations are passed"
+  ]
+}

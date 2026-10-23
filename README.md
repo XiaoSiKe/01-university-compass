@@ -1,0 +1,203 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/cover-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/readme/cover-light.svg">
+    <img src="assets/readme/cover-light.svg" alt="零一大学指南针：找到方向，从一次实践开始。AI时代的大学学习与成长导航。" width="1400">
+  </picture>
+</p>
+
+<h1 align="center">零一大学指南针</h1>
+
+<p align="center">
+  陪大学新生与 AI 初学者，明确需要、选择路径、完成真实任务。<br>
+  <strong>让每一次使用 AI，都留下自己的理解、判断与实践。</strong>
+</p>
+
+<p align="center">
+  <a href="#quick-start">开始使用</a> &nbsp; / &nbsp;
+  <a href="#pathways">选择路径</a> &nbsp; / &nbsp;
+  <a href="zeroone-university-compass/references/ai-practice.md">查看任务</a> &nbsp; / &nbsp;
+  <a href="tests/test-report.md">验证记录</a>
+</p>
+
+<p align="center"><sub>0.2.0 &nbsp; · &nbsp; 中文优先 &nbsp; · &nbsp; 普通设备友好 &nbsp; · &nbsp; 支持零新增预算</sub></p>
+
+---
+
+## 从一个真实问题开始
+
+刚进入大学，你可能还没想好未来，也可能已经收藏了很多教程，却不知道从哪里动手。**指南针从你眼前的一件事开始：学懂一段材料、核对一个结论，或做出一个有用的小成果。**
+
+这是一套可安装到 AI 助手中的 **Skill**，包含对话方法、学习路径、任务与参考资料。它根据你的基础、专业和现实条件提供帮助，并检查哪些是 AI 完成的、哪些已经成为你自己的能力。
+
+> 可以暂时不知道方向，也可以从已有经验继续。一次尝试之后，再决定下一段投入。
+
+<a id="quick-start"></a>
+
+## 开始使用
+
+### 01 / 安装指南针
+
+**直接下载安装包**
+
+[下载 0.2.0 轻量安装包](https://github.com/XiaoSiKe/zeroone-university-compass/releases/download/v0.2.0/zeroone-university-compass.zip) · [仓库内安装包](zeroone-university-compass.zip)
+
+解压后，将整个 `zeroone-university-compass` 文件夹放入 Codex 的用户级 `skills` 目录，保留内部结构。已有同名版本时，先备份并比对本地改动。
+
+| 使用环境 | 安装位置 |
+| :--- | :--- |
+| macOS / Linux | `~/.codex/skills/` |
+| Windows | `%USERPROFILE%\.codex\skills\` |
+| 已配置 `CODEX_HOME` | 该目录下的 `skills/` |
+
+<details>
+<summary><strong>习惯命令行？使用 Skills CLI 安装</strong></summary>
+
+需要 Node.js 22.20 或更新版本。运行后选择要安装到的 AI 助手：
+
+```sh
+npx skills add XiaoSiKe/zeroone-university-compass --skill zeroone-university-compass
+```
+
+默认安装到当前项目。需要跨项目使用时，添加 `-g`；具体选项以 [Skills CLI 官方说明](https://github.com/vercel-labs/skills#install-a-skill)为准。本项目的原生调用验证使用 Codex，其他宿主的行为以实际能力为准。
+
+</details>
+
+### 02 / 带着一个问题，打开新聊天
+
+```text
+使用 $zeroone-university-compass。
+我刚上大学，没有编程基础，今晚有20分钟，
+想试一次AI帮助课程学习。
+```
+
+如果技能清单尚未刷新，重启应用后再开新聊天。你可以直接说明需要，无需先准备完整的背景介绍。
+
+<details>
+<summary><strong>已经有基础，或需要另一种帮助？</strong></summary>
+
+**做一个有限的小项目**
+
+```text
+我会一点Python，想做一个公开资料问答小成果，
+每周两小时，没有API预算。
+```
+
+**检查自己究竟学会了什么**
+
+```text
+我用了AI做出作品，却讲不清关键部分。
+请帮我检查，哪些我能独立完成，哪些还需要帮助。
+```
+
+**先理清大学生活与选择**
+
+```text
+我暂时不想学AI，只想理清大学里的方向和压力。
+```
+
+</details>
+
+### 03 / 做一次，带着反馈继续
+
+完成任务后，带回结果、卡点或变化了的条件。指南针会据此调整下一步；需要换聊天时，可以生成可复制的续接小结。
+
+提醒、文件保存和跨会话能力取决于实际宿主。本 Skill 不要求额外购买课程、API 或算力；AI 助手自身的账号、费用和可用性以实际环境为准。
+
+<a id="pathways"></a>
+
+## 三条路径，按自己的需要选择
+
+共通基础帮助你表达任务、核实输出、理解工具边界。随后可以进入不同路径，已有能力可以跳过，新的体验也可以改变方向。
+
+|  | 专业应用 | 应用开发 | 模型与研究 |
+| :--- | :--- | :--- | :--- |
+| **你想做什么** | 用 AI 帮助课程理解、资料核对和表达 | 处理数据、改变功能、制作小工具 | 理解方法、比较结果、解释局限 |
+| **从哪里开始** | 一段读得懂的材料和一个明确问题 | 一个输入输出清楚的小功能 | 一个可比较的问题和评价标准 |
+| **留下什么证据** | 能解释依据，能发现无根据的补充 | 能运行样例，能亲手修改关键部分 | 能区分观察与解释，能指出反例 |
+
+[阅读完整学习路径 →](zeroone-university-compass/references/ai-pathways.md)
+
+## 把学习落到六类任务里
+
+| 任务 | 一次练习留下什么 |
+| :--- | :--- |
+| **01 · 学懂一段材料** | 理解题、自己的答案和一次核对，再用变化题检验 |
+| **02 · 核实一个结论** | 主张、出处与判断，保留仍然未知的部分 |
+| **03 · 做有限问答** | 基于公开资料的小成果，检查有答案、无答案与冲突情况 |
+| **04 · 修改一个小功能** | 从真实需求出发，运行样例并依据反馈改变行为 |
+| **05 · 体验不同路线** | 用同一主题体验应用、开发与研究，记录兴趣和困难 |
+| **06 · 比较专业方向** | 把目的、日常任务、前置能力、投入代价和自身体验连起来 |
+
+[打开六类任务与三条多轮示范 →](zeroone-university-compass/references/ai-practice.md)
+
+手机、普通电脑、暂时没有 API 或遇到访问限制时，都可以选择相应的练习形式。使用预制输出或纸面推演时，会明确哪些能力已经练习、哪些实际操作仍待验证。
+
+## 几个贯穿始终的原则
+
+**先理解你想获得什么。** 学 AI、拿证、参加比赛都可以是路径。选择时一起查看收益成立的条件、日常投入与现实代价，也允许兴趣和生活平衡成为目标。
+
+**把成果与掌握分开。** 作品能用之后，再看看自己能否说明依据、发现错误、改变条件或独立完成关键步骤。需要提示和示范时如实记录。
+
+**根据反馈修改判断。** 没完成、做完却没用、发现不喜欢、时间突然减少，都能改变下一步。可以缩小任务、暂停或换方向。
+
+**从当下处境继续。** 大学适应、比较压力、路径取舍和启动困难，也能直接进入对话。只想倾诉时，可以先把事情说出来。
+
+## 内容与验证，都有可查的依据
+
+| 方法与任务卡 | 原创多轮示范 | 研究与教学参考 |
+| :---: | :---: | :---: |
+| **28 张** | **3 条** | **24 项** |
+
+当前版本包含 11 个安装文件。来源覆盖学习研究、哲学与思考方法，以及经过筛选的 AI 课程和教学 Skill；记录具体章节、实际阅读范围与采用边界。
+
+验证覆盖 **38 个 Skill 情境、6 组同模型对照**，并针对发现进行两轮定向修改与复测，保留 **101 条实际模型回答**。原始结果与修订前记录均可查阅。
+
+对照呈现局部优势与差异。当前验证说明这些输入下的实际表现，**真实学生的长期使用效果仍待试用验证**；三条教学示范是编写的练习，不冒充真实学生经历。
+
+| 你想了解 | 从这里查看 |
+| :--- | :--- |
+| 测了哪些情境，发现了什么 | [验证报告](tests/test-report.md) · [测试设计](tests/test-plan.md) |
+| 来源读到了哪里，还有哪些缺口 | [资料覆盖报告](coverage-report.md) · [来源与许可记录](zeroone-university-compass/references/sources.md) |
+| 想组织一次自愿试用 | [任务、反馈表与复盘模板](tests/pilot-guide.md) |
+
+## 给维护者
+
+<details>
+<summary><strong>仓库结构、检查与重新打包</strong></summary>
+
+```text
+zeroone-university-compass/
+├── SKILL.md           # 入口与对话规则
+├── agents/            # 展示信息
+└── references/        # 路径、任务、方法卡和来源
+research/              # 资料清单与阅读状态
+archive/research/      # 阅读笔记
+tests/                 # 行为测试、评审与试用材料
+scripts/               # 检查、打包与说明页面生成
+```
+
+完整仓库用于维护。实际安装只需要 `zeroone-university-compass/` 文件夹。
+
+在仓库根目录使用 Python 3 检查：
+
+```sh
+python3 scripts/validate_package.py
+```
+
+修改 Skill 后重新生成安装包和本地说明页面：
+
+```sh
+python3 scripts/validate_package.py --build
+python3 scripts/render_delivery.py
+```
+
+行为测试的模型、运行条件、复跑命令和局限见[测试设计](tests/test-plan.md)。文献原文、作者经验、研究结论与本项目教学设计分别记录，使用相关资料时遵守各自许可。
+
+下载仓库后，还可以用浏览器打开 `00_先读说明.html` 与 `tests/实际对话记录.html`，阅读本地排版版本。
+
+</details>
+
+---
+
+<p align="center"><strong>从你真正关心的一个问题开始。</strong><br><sub>零一大学指南针 · 0.2.0</sub></p>

@@ -1,0 +1,58 @@
+{
+  "configured_model": "gpt-6.1-sol",
+  "group": "baseline",
+  "smoke": false,
+  "baseline_ids": [
+    "N01",
+    "N06",
+    "N09",
+    "N10",
+    "N14",
+    "N22"
+  ],
+  "semantic_verdict": "not_automatically_scored",
+  "limitations": [
+    "Synthetic student conversations, not real student outcomes",
+    "Full Skill Markdown explicitly loaded; does not test lazy loading or installation discovery",
+    "All external tools disabled equally; live verification and real side effects are not tested",
+    "Full actual history replayed per turn; not server-side resume"
+  ],
+  "results": [
+    {
+      "case": "N06",
+      "condition": "baseline",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N06-baseline/attempt-20261023T161551-d26db157.json"
+    },
+    {
+      "case": "N01",
+      "condition": "baseline",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N01-baseline/attempt-20261023T161551-664c9a0a.json"
+    },
+    {
+      "case": "N10",
+      "condition": "baseline",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N10-baseline/attempt-20261023T161932-69fb9ca7.json"
+    },
+    {
+      "case": "N09",
+      "condition": "baseline",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N09-baseline/attempt-20261023T161848-c77c2610.json"
+    },
+    {
+      "case": "N14",
+      "condition": "baseline",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N14-baseline/attempt-20261023T162206-492cafa1.json"
+    },
+    {
+      "case": "N22",
+      "condition": "baseline",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N22-baseline/attempt-20261023T162212-d393da9c.json"
+    }
+  ]
+}

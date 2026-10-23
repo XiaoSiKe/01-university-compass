@@ -1,0 +1,16 @@
+{
+  "revision": "R2",
+  "reason": "六组对照中N22普通对话在独立检验上更好：Skill回答先解释了测题结论再问同构题。明确讲解/检验区分，减少答案线索泄露，如实记录提示程度。",
+  "changed_file": "references/learning-action.md",
+  "before_sha256": "87cdf52ad727220e7c258ab5f39a9219732ebb055e501478f1d005e1ed572be5",
+  "after_sha256": "47d146aabda2fd669ce41f7f54bb5eeb6e297ea8469b08819e11903321d249eb",
+  "affected_cases": [
+    "N02",
+    "N06",
+    "N22"
+  ],
+  "comparison_recheck": [
+    "N22"
+  ],
+  "scope": "保留R0六组盲评；仅重跑相关教学情境，再对N22使用原基线做新的条件隐藏复评"
+}

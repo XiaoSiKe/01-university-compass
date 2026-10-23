@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": [
+    "frontmatter, UI metadata, implicit invocation and default prompt",
+    "77 relative links exist and stay inside skill",
+    "20 unique knowledge cards; all research IDs resolve",
+    "all project helper Python scripts parse",
+    "16 actual case transcripts, 18 generated replies present; semantic grading separate",
+    "installed copy SHA256 matches portable skill"
+  ],
+  "issues": [],
+  "skill_files": 9,
+  "main_lines": 51,
+  "skill_bytes": 65247
+}

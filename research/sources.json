@@ -1,0 +1,757 @@
+[
+  {
+    "id": "R01",
+    "title": "实践论",
+    "author": "毛泽东",
+    "year": "1937-07",
+    "evidence_type": "哲学原著",
+    "url": "https://news.12371.cn/2017/08/29/ARTI1504001411770206.shtml",
+    "read_scope": "认识阶段、直接/间接经验、实践检验及认识循环相关段落",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "final_url": "https://news.12371.cn/2017/08/29/ARTI1504001411770206.shtml",
+    "archive": "archive/research/R01.html",
+    "sha256": "07103646c169a4d3c610e607880b46f69eeb1de459f6230acea5f1ebf90f46bf",
+    "text_chars": 15397,
+    "archive_status": "正文已归档",
+    "knowledge_entries": "P01",
+    "reading_note": "archive/research/R01.reading-note.md"
+  },
+  {
+    "id": "R02",
+    "title": "矛盾论",
+    "author": "毛泽东",
+    "year": "1937-08",
+    "evidence_type": "哲学原著",
+    "url": "https://www.marxists.org/chinese/maozedong/marxist.org-chinese-mao-193708.htm",
+    "read_scope": "第三、四、六节相关段落：具体条件、主要矛盾、对抗形式",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "final_url": "https://www.marxists.org/chinese/maozedong/marxist.org-chinese-mao-193708.htm",
+    "archive": "archive/research/R02.html",
+    "sha256": "56568edf2048732dba89069d950a36ca403a583c5941d6d8a20c661270dfa9ef",
+    "text_chars": 27392,
+    "archive_status": "正文已归档",
+    "knowledge_entries": "P02",
+    "reading_note": "archive/research/R02.reading-note.md"
+  },
+  {
+    "id": "R03",
+    "title": "反对本本主义",
+    "author": "毛泽东",
+    "year": "1930-05",
+    "evidence_type": "政治实践方法原文",
+    "url": "https://www.12371.cn/2012/08/10/ARTI1344592797863461.shtml",
+    "read_scope": "调查与判断、反对脱离实际、调查技术；保留革命历史背景",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "final_url": "https://www.12371.cn/2012/08/10/ARTI1344592797863461.shtml",
+    "archive": "archive/research/R03.html",
+    "sha256": "f37d8c557034353e290de6e85c490a643c5f7d12e478f00e2c9d8f41a21dafc1",
+    "text_chars": 9832,
+    "archive_status": "正文已归档",
+    "knowledge_entries": "P03",
+    "reading_note": "archive/research/R03.reading-note.md"
+  },
+  {
+    "id": "R04",
+    "title": "How We Think, Chapter VI: The Analysis of a Complete Act of Thought",
+    "author": "John Dewey",
+    "year": "1910",
+    "evidence_type": "哲学/教育原著",
+    "url": "https://brocku.ca/MeadProject/Dewey/Dewey_1910a/Dewey_1910_f.html",
+    "read_scope": "第六章pp.68–78中的反思五环节与观察检验段落",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "archive_status": "归档失败，保留网页读取记录",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "knowledge_entries": "P03",
+    "reading_note": "archive/research/R04.reading-note.md"
+  },
+  {
+    "id": "R05",
+    "title": "On Liberty, Chapter III: Of Individuality, as One of the Elements of Well-Being",
+    "author": "John Stuart Mill",
+    "year": "1859",
+    "evidence_type": "哲学原著",
+    "url": "https://www.econlib.org/library/Mill/mlLbty.html?chapter_num=3",
+    "read_scope": "第三章生活试验、个性与他人利益边界；注意原文时代与欧洲中心偏见",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "archive_status": "归档失败，保留网页读取记录",
+    "error": "HTTP Error 403: Forbidden",
+    "knowledge_entries": "P04",
+    "reading_note": "archive/research/R05.reading-note.md"
+  },
+  {
+    "id": "R06",
+    "title": "The Enchiridion, section 1",
+    "author": "Epictetus; translated by Elizabeth Carter",
+    "year": "约公元2世纪；英译1758",
+    "evidence_type": "哲学原著译本",
+    "url": "https://classics.mit.edu/Epictetus/epicench.html",
+    "read_scope": "第1节可控制与不可控制的区分",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "archive_status": "归档失败，保留网页读取记录",
+    "error": "<urlopen error Tunnel connection failed: 502 Bad Gateway>",
+    "knowledge_entries": "P05",
+    "reading_note": "archive/research/R06.reading-note.md"
+  },
+  {
+    "id": "R07",
+    "title": "Self-Determination Theory and the Facilitation of Intrinsic Motivation, Social Development, and Well-Being",
+    "author": "Richard M. Ryan; Edward L. Deci",
+    "year": "2000",
+    "evidence_type": "理论与研究综述",
+    "url": "https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf",
+    "read_scope": "摘要、需求、动机内化及p.74自主不等于独立段落；DOI 10.1037/0003-066X.55.1.68",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "final_url": "https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf",
+    "archive": "archive/research/R07.pdf",
+    "sha256": "e14779081a999b49dfdde8fe7078fcef65a282d4e6374a037269083d063a1ec3",
+    "text_chars": 66566,
+    "archive_status": "正文已归档",
+    "knowledge_entries": "P06",
+    "reading_note": "archive/research/R07.reading-note.md"
+  },
+  {
+    "id": "R08",
+    "title": "Improving Students’ Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology",
+    "author": "John Dunlosky; Katherine A. Rawson; Elizabeth J. Marsh; Mitchell J. Nathan; Daniel T. Willingham",
+    "year": "2013",
+    "evidence_type": "比较性研究综述",
+    "url": "https://acs.ist.psu.edu/ist521/dunloskyRMNW13.pdf",
+    "read_scope": "摘要、PDF第41–43页Closing Remarks/Table4；非55页逐页精读",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "final_url": "https://acs.ist.psu.edu/ist521/dunloskyRMNW13.pdf",
+    "archive": "archive/research/R08.pdf",
+    "sha256": "bd6a87faefa16eb3991d03c6487fd0b71b3e8f6676e48eede95dd1009ebd8501",
+    "text_chars": 328936,
+    "archive_status": "正文已归档",
+    "knowledge_entries": "L01/L02",
+    "reading_note": "archive/research/R08.reading-note.md"
+  },
+  {
+    "id": "R09",
+    "title": "The Use of Worked Examples as a Substitute for Problem Solving in Learning Algebra",
+    "author": "John Sweller; Graham A. Cooper",
+    "year": "1985",
+    "evidence_type": "实验论文",
+    "url": "https://onderwijs.felienne.nl/vakdidactiek/materiaal/sweller_worked_examples.pdf",
+    "read_scope": "摘要、pp.86–87一般讨论与推广限制；Cognition and Instruction 2(1),59–89",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "final_url": "https://onderwijs.felienne.nl/vakdidactiek/materiaal/sweller_worked_examples.pdf",
+    "archive": "archive/research/R09.pdf",
+    "sha256": "1b7a8e3761a5fbe75abe9c242ac612edb44ac02f36f61aa4bdd3b9d2d6d17ae5",
+    "text_chars": 85259,
+    "archive_status": "正文已归档",
+    "knowledge_entries": "L03",
+    "reading_note": "archive/research/R09.reading-note.md"
+  },
+  {
+    "id": "R10",
+    "title": "Problem-Based Learning: What and How Do Students Learn?",
+    "author": "Cindy E. Hmelo-Silver",
+    "year": "2004",
+    "evidence_type": "研究综述",
+    "url": "https://med.uniroma2.it/wp-content/uploads/2024/07/002-Problem-Based-Learning-What-and-How-Do-Students-Learn_.pdf",
+    "read_scope": "摘要、辅导者支持机制与研究局限；DOI 10.1023/B:EDPR.0000034022.16470.f3",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "archive_status": "归档失败，保留网页读取记录",
+    "error": "<urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>",
+    "knowledge_entries": "L04",
+    "reading_note": "archive/research/R10.reading-note.md"
+  },
+  {
+    "id": "R11",
+    "title": "Becoming a Self-Regulated Learner: An Overview",
+    "author": "Barry J. Zimmerman",
+    "year": "2002",
+    "evidence_type": "理论与研究综述",
+    "url": "https://www.normanjackson.co.uk/uploads/1/0/8/4/10842717/zimmerman_-_2002_-_becoming_a_self-regulated_learner_an_overview__1_.pdf",
+    "read_scope": "pp.67–69三阶段、自我评估、适应性调整；DOI 10.1207/s15430421tip4102_2",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "final_url": "https://www.normanjackson.co.uk/uploads/1/0/8/4/10842717/zimmerman_-_2002_-_becoming_a_self-regulated_learner_an_overview__1_.pdf",
+    "archive": "archive/research/R11.pdf",
+    "sha256": "ae4a081adf72aa0fa956347ddf8aca5cfab60d6805a4020af05a7c5c934894e0",
+    "text_chars": 29849,
+    "archive_status": "正文已归档",
+    "knowledge_entries": "L05/L08",
+    "reading_note": "archive/research/R11.reading-note.md"
+  },
+  {
+    "id": "R12",
+    "title": "Overconfidence Produces Underachievement: Inaccurate Self Evaluations Undermine Students’ Learning and Retention",
+    "author": "John Dunlosky; Katherine A. Rawson",
+    "year": "2012",
+    "evidence_type": "实验论文作者摘要",
+    "url": "https://eric.ed.gov/?id=EJ964388",
+    "read_scope": "仅ERIC作者摘要，未阅读全文；Learning and Instruction 22(4),271–280",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "仅作者摘要读取",
+    "distilled": true,
+    "archive_status": "归档失败，保留网页读取记录",
+    "error": "Remote end closed connection without response",
+    "knowledge_entries": "L05",
+    "reading_note": "archive/research/R12.reading-note.md"
+  },
+  {
+    "id": "R13",
+    "title": "Does time management work? A meta-analysis",
+    "author": "Brad Aeon; Aïda Faber; Alexandra Panaccio",
+    "year": "2021",
+    "evidence_type": "元分析",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0245066",
+    "read_scope": "摘要、讨论、Future research and limitations；DOI 10.1371/journal.pone.0245066",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "final_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0245066",
+    "archive": "archive/research/R13.html",
+    "sha256": "cf846e2d4edba8079175978173909ca5b399ed1bcbe280f054a627097e2bf633",
+    "text_chars": 75316,
+    "archive_status": "正文已归档",
+    "knowledge_entries": "L06",
+    "reading_note": "archive/research/R13.reading-note.md"
+  },
+  {
+    "id": "R14",
+    "title": "Implementation Intentions and Goal Achievement: A Meta-analysis of Effects and Processes",
+    "author": "Peter M. Gollwitzer; Paschal Sheeran",
+    "year": "2006",
+    "evidence_type": "元分析",
+    "url": "https://www.socmot.uni-konstanz.de/sites/default/files/06_Gollwitzer_Sheeran_Implementation_Intentions_And_Goal.pdf",
+    "read_scope": "元分析摘要和作者NCI解释材料第1–4节；原大学PDF未成功提取正文",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "摘要及作者说明读取",
+    "distilled": true,
+    "archive_status": "归档失败，保留网页读取记录",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+    "knowledge_entries": "L07",
+    "supporting_url": "https://cancercontrol.cancer.gov/brp/research/constructs/implementation-intentions",
+    "supporting_archive": "archive/research/R14-author-primer.html",
+    "reading_note": "archive/research/R14.reading-note.md"
+  },
+  {
+    "id": "R15",
+    "title": "Test Enhanced Learning",
+    "author": "Henry L. Roediger III; Mark McDaniel; Kathleen McDermott",
+    "year": "2006-03-01",
+    "evidence_type": "研究者面向教育者的研究介绍",
+    "url": "https://www.psychologicalscience.org/observer/test-enhanced-learning-2",
+    "read_scope": "文章前半：提取练习、延迟测验、反馈；不是Roediger/Karpicke原论文全文",
+    "retrieved_on": "2026-10-22",
+    "reading_status": "相关章节读取",
+    "distilled": true,
+    "final_url": "https://www.psychologicalscience.org/observer/test-enhanced-learning-2",
+    "archive": "archive/research/R15.html",
+    "sha256": "cc52f7cc5fa5f14d53590022dbf5994ac6f61d27b608f222e3dbc76b361d679b",
+    "text_chars": 15407,
+    "archive_status": "正文已归档",
+    "knowledge_entries": "L01",
+    "reading_note": "archive/research/R15.reading-note.md"
+  },
+  {
+    "id": "R16",
+    "title": "Generative AI for Beginners",
+    "author": "Microsoft Cloud Advocates",
+    "year": "持续维护；2026-10-23核查快照",
+    "evidence_type": "课程/开源教学方法参考（非效果实验）",
+    "url": "https://github.com/microsoft/generative-ai-for-beginners",
+    "read_scope": "README、00-course-setup/README.md、04-prompt-engineering-fundamentals/README.md、LICENSE；只读课程目标、环境、提示实验/作业与知识检查，未运行Notebook",
+    "retrieved_on": "2026-10-23",
+    "reading_status": "已读取所列范围；未全库精读、未运行配套代码",
+    "distilled": true,
+    "version": {
+      "kind": "核查时main HEAD",
+      "value": "8e470a863deb9ed9e7cb9bd5e6938e5bf3e0c967"
+    },
+    "license": "MIT；根目录 LICENSE 已读",
+    "read_files": [
+      {
+        "label": "README",
+        "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/README.md"
+      },
+      {
+        "label": "课程环境",
+        "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/00-course-setup/README.md"
+      },
+      {
+        "label": "提示基础与作业",
+        "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/04-prompt-engineering-fundamentals/README.md"
+      },
+      {
+        "label": "许可",
+        "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/main/LICENSE"
+      }
+    ],
+    "prerequisites": "概念阅读可用于无代码初学者；代码实践有基础Python或TypeScript更合适",
+    "access_cost": "课程可阅读；已读搭建环境要求Azure订阅及API Key，实际API/云资源费用与地区可用性需用时核实。可以只看说明与输出，不假设课程全部免费运行",
+    "adopted_mechanisms": [
+      "按理解概念/动手制作分流",
+      "为练习写清学习目标",
+      "比较不同输入的输出并检查改动效果"
+    ],
+    "excluded_or_limited": [
+      "不把Azure账号作为所有人的入门门槛",
+      "不搬示例代码/整套课程",
+      "模型特定提示技巧须按任务验证，非通用成功保证"
+    ],
+    "adoption_mode": "以通用教学机制为参考，原创设计任务与表述；不搬运正文、图表或代码",
+    "adoption_locations": [
+      "zeroone-university-compass/references/ai-pathways.md",
+      "zeroone-university-compass/references/ai-practice.md"
+    ],
+    "knowledge_entries": "AI路径/AI实践",
+    "archive_status": "仅保存原创阅读笔记及链接；未归档上游正文或代码",
+    "reading_note": "archive/research/R16.reading-note.md",
+    "verification_method": "本次会话通过已连接 GitHub 插件读取指定原文件"
+  },
+  {
+    "id": "R17",
+    "title": "AI for Beginners",
+    "author": "Microsoft",
+    "year": "持续维护；2026-10-23核查快照",
+    "evidence_type": "课程/开源教学方法参考（非效果实验）",
+    "url": "https://github.com/microsoft/AI-For-Beginners",
+    "read_scope": "README、examples/README.md、lessons/0-course-setup/setup.md、LICENSE；课程结构、新手例子的前置与自学流程；未逐课精读",
+    "retrieved_on": "2026-10-23",
+    "reading_status": "已读取所列范围；未全库精读、未运行配套代码",
+    "distilled": true,
+    "version": {
+      "kind": "核查时main HEAD",
+      "value": "392d0df1b2647cbee104942390551f1ed9e072c8"
+    },
+    "license": "MIT；根目录 LICENSE 已读",
+    "read_files": [
+      {
+        "label": "README",
+        "url": "https://github.com/microsoft/AI-For-Beginners/blob/main/README.md"
+      },
+      {
+        "label": "新手例子与前置",
+        "url": "https://github.com/microsoft/AI-For-Beginners/blob/main/examples/README.md"
+      },
+      {
+        "label": "自学流程",
+        "url": "https://github.com/microsoft/AI-For-Beginners/blob/main/lessons/0-course-setup/setup.md"
+      },
+      {
+        "label": "许可",
+        "url": "https://github.com/microsoft/AI-For-Beginners/blob/main/LICENSE"
+      }
+    ],
+    "prerequisites": "新手例子仍需Python；神经网络例子需基础数学，图像例子需NumPy。零代码学生先阅读/预测示例，再按兴趣进入编程",
+    "access_cost": "已读例子说明使用本地Python、NumPy等，未列必须的付费模型API；完整课程各项算力、网络和云资源条件未逐项运行验证",
+    "adopted_mechanisms": [
+      "前测—阅读—运行/修改—后测—独立实验",
+      "让学生选择一种框架",
+      "通过变更输入/参数检验理解"
+    ],
+    "excluded_or_limited": [
+      "不把12周24课当所有新生必修",
+      "不要求同时学两种框架",
+      "章节作者的教学理由不能当本Skill已获效果验证"
+    ],
+    "adoption_mode": "以通用教学机制为参考，原创设计任务与表述；不搬运正文、图表或代码",
+    "adoption_locations": [
+      "zeroone-university-compass/references/ai-pathways.md",
+      "zeroone-university-compass/references/ai-practice.md"
+    ],
+    "knowledge_entries": "AI路径/AI实践",
+    "archive_status": "仅保存原创阅读笔记及链接；未归档上游正文或代码",
+    "reading_note": "archive/research/R17.reading-note.md",
+    "verification_method": "本次会话通过已连接 GitHub 插件读取指定原文件"
+  },
+  {
+    "id": "R18",
+    "title": "AI Fluency for Students",
+    "author": "Rick Dakan、Joseph Feller与Anthropic",
+    "year": "2025（课程页面）",
+    "evidence_type": "官方学生AI素养课程（非效果实验）",
+    "url": "https://academy.claude.com/courses/ai-fluency-for-students",
+    "read_scope": "课程入口与AI as a learning partner、AI in career planning、Being the human in the loop三页文字；视频只读取页面摘要，未读取逐字稿/完整观看",
+    "version": {
+      "kind": "网页核查日期",
+      "value": "2026-10-23；未取得版本号或commit"
+    },
+    "license": "CC BY-NC-SA 4.0；课程页面声明，由主代理核查",
+    "read_files": [
+      {
+        "label": "课程入口",
+        "url": "https://academy.claude.com/courses/ai-fluency-for-students"
+      },
+      {
+        "label": "AI作为学习伙伴",
+        "url": "https://academy.claude.com/courses/ai-fluency-for-students/ai-as-a-learning-partner"
+      },
+      {
+        "label": "AI与职业规划",
+        "url": "https://academy.claude.com/courses/ai-fluency-for-students/ai-in-career-planning"
+      },
+      {
+        "label": "人参与判断与责任",
+        "url": "https://academy.claude.com/courses/ai-fluency-for-students/being-the-human-in-the-loop"
+      }
+    ],
+    "prerequisites": "面向学生的概念与实践指导，所读页面未列编程前置；可用通用聊天工具进行原创练习",
+    "access_cost": "页面文字可访问；本次未核实完整课程注册、视频访问及使用具体AI产品的费用，不将其课程内容访问等同全部工具免费",
+    "adopted_mechanisms": [
+      "先判断任务适合交给AI的部分",
+      "把AI用于学习练习与反馈",
+      "由学生核查事实、承担判断并说明自己的贡献"
+    ],
+    "excluded_or_limited": [
+      "不转载四D图表或课程正文",
+      "不采用雇主能立即识别AI简历的泛化说法",
+      "视频内容不能根据摘要假装已读；课程方法不等于学生效果实验"
+    ],
+    "retrieved_on": "2026-10-23",
+    "reading_status": "已读取所列页面/文件范围；未全库或全课程精读、未运行",
+    "distilled": true,
+    "adoption_mode": "概念级归纳与链接；本项目原创任务和表述，不搬运正文、图表或代码",
+    "adoption_locations": [
+      "zeroone-university-compass/references/ai-pathways.md",
+      "zeroone-university-compass/references/ai-practice.md"
+    ],
+    "knowledge_entries": "AI路径/AI实践",
+    "archive_status": "仅保存原创阅读笔记及链接；未归档上游正文或代码",
+    "reading_note": "archive/research/R18.reading-note.md",
+    "verification_method": "同一会话主代理实际读取原页面/文件并传递核查记录；本笔记据该记录整理"
+  },
+  {
+    "id": "R19",
+    "title": "TuTor",
+    "author": "Kevin Perez（许可证署名）",
+    "year": "2026（许可证署名）",
+    "evidence_type": "开源AI教学Skill（非效果实验）",
+    "url": "https://github.com/kevinnio/tutor",
+    "read_scope": "master分支README.md、SKILL.md、LICENSE；读取教学提示与说明，不代表真实学生效果或全库运行验证",
+    "version": {
+      "kind": "文件版本与blob（不是仓库commit）",
+      "value": "SKILL metadata.version 0.6",
+      "skill_blob": "cdda160c6036d06e11bd81f13d39baa4764262e4",
+      "readme_blob": "976709cd970bee33e4d44d5c3e0196ea5014b3e2"
+    },
+    "license": "MIT；LICENSE已由主代理读取；Copyright (c) 2026 Kevin Perez",
+    "read_files": [
+      {
+        "label": "README",
+        "url": "https://github.com/kevinnio/tutor/blob/master/README.md"
+      },
+      {
+        "label": "SKILL",
+        "url": "https://github.com/kevinnio/tutor/blob/master/SKILL.md"
+      },
+      {
+        "label": "许可",
+        "url": "https://github.com/kevinnio/tutor/blob/master/LICENSE"
+      }
+    ],
+    "prerequisites": "本项目仅参考其教学交互机制；使用上游Skill需兼容宿主，本次未验证各宿主安装/触发条件",
+    "access_cost": "阅读仓库不需调用模型；运行需要可用AI宿主，具体账号、订阅或API费用随宿主而变，本次未运行",
+    "adopted_mechanisms": [
+      "给操作命令时解释用途、组成和成功表现",
+      "在关键阶段检查理解与当前进度",
+      "遇到卡点根据证据调节帮助量"
+    ],
+    "excluded_or_limited": [
+      "不继承永远一次只给一步的限制",
+      "不拒绝学生明确需要的完整示范",
+      "不把宿主可执行性或教学效果宣称为本次已验证"
+    ],
+    "retrieved_on": "2026-10-23",
+    "reading_status": "已读取所列页面/文件范围；未全库或全课程精读、未运行",
+    "distilled": true,
+    "adoption_mode": "概念级归纳与链接；本项目原创任务和表述，不搬运正文、图表或代码",
+    "adoption_locations": [
+      "zeroone-university-compass/references/ai-pathways.md",
+      "zeroone-university-compass/references/ai-practice.md"
+    ],
+    "knowledge_entries": "AI路径/AI实践",
+    "archive_status": "仅保存原创阅读笔记及链接；未归档上游正文或代码",
+    "reading_note": "archive/research/R19.reading-note.md",
+    "verification_method": "同一会话主代理实际读取原页面/文件并传递核查记录；本笔记据该记录整理"
+  },
+  {
+    "id": "R20",
+    "title": "AI Tutor Skill",
+    "author": "Shawhin Talebi / ShawhinT",
+    "year": "持续维护；2026-10-23核查快照",
+    "evidence_type": "开源AI教学Skill（非效果实验）",
+    "url": "https://github.com/ShawhinT/ai-tutor-skill",
+    "read_scope": "main分支README.md、SKILL.md、LICENSE开头；读取教学解释次序与工具结构，未运行其视频/uv依赖",
+    "version": {
+      "kind": "已读SKILL文件blob（不是仓库commit）",
+      "value": "54c5c4b5d6ca22f247b414a69f480c245a29b6c9；未取得仓库commit"
+    },
+    "license": "Apache-2.0；由主代理核查LICENSE开头，未把其他依赖自动视为同许可",
+    "read_files": [
+      {
+        "label": "README",
+        "url": "https://github.com/ShawhinT/ai-tutor-skill/blob/main/README.md"
+      },
+      {
+        "label": "SKILL",
+        "url": "https://github.com/ShawhinT/ai-tutor-skill/blob/main/SKILL.md"
+      },
+      {
+        "label": "许可",
+        "url": "https://github.com/ShawhinT/ai-tutor-skill/blob/main/LICENSE"
+      }
+    ],
+    "prerequisites": "通用解释与具体例子的次序可用于零基础学生；使用上游工具时需另行核查宿主与工具依赖",
+    "access_cost": "阅读仓库不需模型API；实际运行依赖宿主和工具条件，未核实订阅/API/视频平台访问费用",
+    "adopted_mechanisms": [
+      "先用直白语言说明概念再给具体例子",
+      "按学生当前问题控制解释长度",
+      "仅在有帮助时使用类比并检查类比边界"
+    ],
+    "excluded_or_limited": [
+      "不移入YouTube和uv工具依赖",
+      "不把类比当证明",
+      "未检验上游Skill在本地宿主中的兼容性或真实教学效果"
+    ],
+    "retrieved_on": "2026-10-23",
+    "reading_status": "已读取所列页面/文件范围；未全库或全课程精读、未运行",
+    "distilled": true,
+    "adoption_mode": "概念级归纳与链接；本项目原创任务和表述，不搬运正文、图表或代码",
+    "adoption_locations": [
+      "zeroone-university-compass/references/ai-pathways.md",
+      "zeroone-university-compass/references/ai-practice.md"
+    ],
+    "knowledge_entries": "AI路径/AI实践",
+    "archive_status": "仅保存原创阅读笔记及链接；未归档上游正文或代码",
+    "reading_note": "archive/research/R20.reading-note.md",
+    "verification_method": "同一会话主代理实际读取原页面/文件并传递核查记录；本笔记据该记录整理"
+  },
+  {
+    "id": "R21",
+    "title": "LLM Universe｜动手学大模型应用开发",
+    "author": "Datawhale",
+    "year": "持续维护；2026-10-23核查快照",
+    "evidence_type": "课程/开源教学方法参考（非效果实验）",
+    "url": "https://github.com/datawhalechina/llm-universe",
+    "read_scope": "README、根目录列表、notebook/C2 使用 LLM API 开发应用/C2.ipynb与C5 系统评估与优化/C5.ipynb的Markdown单元；未执行Notebook",
+    "retrieved_on": "2026-10-23",
+    "reading_status": "已读取所列范围；未全库精读、未运行配套代码",
+    "distilled": true,
+    "version": {
+      "kind": "核查时main HEAD",
+      "value": "77beb748047e8a0d8ff708716606a8e0b132dc45"
+    },
+    "license": "未确认：已检查根目录及README，未找到明确许可文件或声明；不推断可自由复制",
+    "read_files": [
+      {
+        "label": "README",
+        "url": "https://github.com/datawhalechina/llm-universe/blob/main/README.md"
+      },
+      {
+        "label": "API章节",
+        "url": "https://github.com/datawhalechina/llm-universe/blob/main/notebook/C2%20%E4%BD%BF%E7%94%A8%20LLM%20API%20%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A8/C2.ipynb"
+      },
+      {
+        "label": "评估与迭代章节",
+        "url": "https://github.com/datawhalechina/llm-universe/blob/main/notebook/C5%20%E7%B3%BB%E7%BB%9F%E8%AF%84%E4%BC%B0%E4%B8%8E%E4%BC%98%E5%8C%96/C5.ipynb"
+      }
+    ],
+    "prerequisites": "明确需要基础Python，未要求算法/AI基础；主要为调用API的小应用开发路线",
+    "access_cost": "README说明无需本地GPU；模型API可能收费，C2历史赠送额度/旧模型不作为当前推荐依据；无可用API时用固定资料与记录输出学习检验流程",
+    "adopted_mechanisms": [
+      "围绕一件知识库任务组织知识",
+      "从少量问题开始积累失败例",
+      "分清资料缺失、检索失败和生成失败"
+    ],
+    "excluded_or_limited": [
+      "不复制原文/代码，许可待确认",
+      "不沿用历史模型、旧SDK或固定免费额度",
+      "不采用BLEU等同事实质量、检索错误直接等同幻觉的简化判断"
+    ],
+    "adoption_mode": "以通用教学机制为参考，原创设计任务与表述；不搬运正文、图表或代码",
+    "adoption_locations": [
+      "zeroone-university-compass/references/ai-pathways.md",
+      "zeroone-university-compass/references/ai-practice.md"
+    ],
+    "knowledge_entries": "AI路径/AI实践",
+    "archive_status": "仅保存原创阅读笔记及链接；未归档上游正文或代码",
+    "reading_note": "archive/research/R21.reading-note.md",
+    "verification_method": "本次会话通过已连接 GitHub 插件读取指定原文件"
+  },
+  {
+    "id": "R22",
+    "title": "Happy-LLM",
+    "author": "Datawhale",
+    "year": "持续维护；2026-10-23核查快照",
+    "evidence_type": "课程/开源教学方法参考（非效果实验）",
+    "url": "https://github.com/datawhalechina/happy-llm",
+    "read_scope": "README、docs/学习与环境准备.md、LICENSE.txt；了解分章路径、软硬件和费用要求，未全章阅读原理或运行训练",
+    "retrieved_on": "2026-10-23",
+    "reading_status": "已读取所列范围；未全库精读、未运行配套代码",
+    "distilled": true,
+    "version": {
+      "kind": "核查时main HEAD",
+      "value": "1e0b3a1e6f8936b8ba4bbd0673e8e2227d196c96"
+    },
+    "license": "CC BY-NC-SA 4.0；README与LICENSE.txt已核查",
+    "read_files": [
+      {
+        "label": "README",
+        "url": "https://github.com/datawhalechina/happy-llm/blob/main/README.md"
+      },
+      {
+        "label": "学习与环境准备",
+        "url": "https://github.com/datawhalechina/happy-llm/blob/main/docs/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87.md"
+      },
+      {
+        "label": "许可",
+        "url": "https://github.com/datawhalechina/happy-llm/blob/main/LICENSE.txt"
+      }
+    ],
+    "prerequisites": "需要编程/Python经验，最好已有深度学习与NLP基础；适合原理和研究分流",
+    "access_cost": "阅读材料免费；第2章CPU或GPU，第5章建议单GPU，第6章建议多GPU但可小样本调试；第8章远端TRIO训练需账号和可用额度并按使用量收费，实际条件用时再核查",
+    "adopted_mechanisms": [
+      "概念、手写实现、训练框架分层",
+      "先小样本确认流程再扩大",
+      "资源有限时保留阅读与部分实践路线"
+    ],
+    "excluded_or_limited": [
+      "不作为零基础新生的默认整套课程",
+      "不要求人人训练、微调或学强化学习",
+      "仅概念级归纳及链接，不改编搬运受限教材"
+    ],
+    "adoption_mode": "以通用教学机制为参考，原创设计任务与表述；不搬运正文、图表或代码",
+    "adoption_locations": [
+      "zeroone-university-compass/references/ai-pathways.md",
+      "zeroone-university-compass/references/ai-practice.md"
+    ],
+    "knowledge_entries": "AI路径/AI实践",
+    "archive_status": "仅保存原创阅读笔记及链接；未归档上游正文或代码",
+    "reading_note": "archive/research/R22.reading-note.md",
+    "verification_method": "本次会话通过已连接 GitHub 插件读取指定原文件"
+  },
+  {
+    "id": "R23",
+    "title": "Hugging Face LLM Course",
+    "author": "Hugging Face及课程作者",
+    "year": "持续维护；2026-10-23核查快照",
+    "evidence_type": "课程/开源教学方法参考（非效果实验）",
+    "url": "https://github.com/huggingface/course",
+    "read_scope": "README、chapters/en/chapter1/1.mdx、LICENSE；课程范围、Python/深度学习前置、阶段成果及许可；未逐章读取和训练",
+    "retrieved_on": "2026-10-23",
+    "reading_status": "已读取所列范围；未全库精读、未运行配套代码",
+    "distilled": true,
+    "version": {
+      "kind": "核查时main HEAD",
+      "value": "8b893f0ede6c781045692a7f892f25a0c92b4805"
+    },
+    "license": "Apache-2.0；根目录LICENSE及课程导论许可说明已读",
+    "read_files": [
+      {
+        "label": "README与语言入口",
+        "url": "https://github.com/huggingface/course/blob/main/README.md"
+      },
+      {
+        "label": "导论与前置",
+        "url": "https://github.com/huggingface/course/blob/main/chapters/en/chapter1/1.mdx"
+      },
+      {
+        "label": "许可",
+        "url": "https://github.com/huggingface/course/blob/main/LICENSE"
+      }
+    ],
+    "prerequisites": "明确要求较好Python，建议先修入门深度学习；不要求事先精通PyTorch或TensorFlow",
+    "access_cost": "课程免费且有简体中文入口；免费课程不代表全部训练算力/模型托管免费，网络、下载及GPU条件需按所选章节核实",
+    "adopted_mechanisms": [
+      "使用现成模型后再进入数据、分词、训练",
+      "用阶段可完成任务展示理解",
+      "把可复现演示与学习成果联系"
+    ],
+    "excluded_or_limited": [
+      "放入模型/数据进阶路线，不给零基础整库必修",
+      "不把课程免费扩展为算力免费",
+      "不承诺课程证书或职业结果"
+    ],
+    "adoption_mode": "以通用教学机制为参考，原创设计任务与表述；不搬运正文、图表或代码",
+    "adoption_locations": [
+      "zeroone-university-compass/references/ai-pathways.md",
+      "zeroone-university-compass/references/ai-practice.md"
+    ],
+    "knowledge_entries": "AI路径/AI实践",
+    "archive_status": "仅保存原创阅读笔记及链接；未归档上游正文或代码",
+    "reading_note": "archive/research/R23.reading-note.md",
+    "verification_method": "本次会话通过已连接 GitHub 插件读取指定原文件"
+  },
+  {
+    "id": "R24",
+    "title": "Hello-Agents",
+    "author": "Datawhale",
+    "year": "持续维护；2026-10-23核查快照",
+    "evidence_type": "课程/开源教学方法参考（非效果实验）",
+    "url": "https://github.com/datawhalechina/hello-agents",
+    "read_scope": "README、docs/chapter16/第十六章 毕业设计.md、Extra-Chapter/Extra07-环境配置.md、LICENSE.txt；项目交付要求/环境，未精读其全部智能体原理章节",
+    "retrieved_on": "2026-10-23",
+    "reading_status": "已读取所列范围；未全库精读、未运行配套代码",
+    "distilled": true,
+    "version": {
+      "kind": "核查时main HEAD",
+      "value": "36f583c233ea5cee4537ef93455702b55053af18"
+    },
+    "license": "CC BY-NC-SA 4.0；README与LICENSE.txt已核查",
+    "read_files": [
+      {
+        "label": "README",
+        "url": "https://github.com/datawhalechina/hello-agents/blob/main/README.md"
+      },
+      {
+        "label": "毕业设计",
+        "url": "https://github.com/datawhalechina/hello-agents/blob/main/docs/chapter16/%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0%20%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1.md"
+      },
+      {
+        "label": "环境配置",
+        "url": "https://github.com/datawhalechina/hello-agents/blob/main/Extra-Chapter/Extra07-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.md"
+      },
+      {
+        "label": "许可",
+        "url": "https://github.com/datawhalechina/hello-agents/blob/main/LICENSE.txt"
+      }
+    ],
+    "prerequisites": "基础Python及LLM API概念；适合完成基础小应用后进入智能体开发",
+    "access_cost": "环境示例需要LLM API、搜索API与网络服务；不继承第三方推广、固定免费额度或普遍免费承诺；以实际官方条件核查",
+    "adopted_mechanisms": [
+      "用真实问题限定项目规模",
+      "交付可运行成果、依赖与使用说明",
+      "用失败例和同伴反馈修改作品"
+    ],
+    "excluded_or_limited": [
+      "首个项目不强求多智能体、自研框架",
+      "不继承打印API Key等排障示例",
+      "不搬运原文、图表或代码；不把示例项目README的MIT误认成教材许可"
+    ],
+    "adoption_mode": "以通用教学机制为参考，原创设计任务与表述；不搬运正文、图表或代码",
+    "adoption_locations": [
+      "zeroone-university-compass/references/ai-pathways.md",
+      "zeroone-university-compass/references/ai-practice.md"
+    ],
+    "knowledge_entries": "AI路径/AI实践",
+    "archive_status": "仅保存原创阅读笔记及链接；未归档上游正文或代码",
+    "reading_note": "archive/research/R24.reading-note.md",
+    "verification_method": "本次会话通过已连接 GitHub 插件读取指定原文件"
+  }
+]

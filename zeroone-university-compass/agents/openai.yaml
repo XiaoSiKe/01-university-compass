@@ -1,0 +1,4 @@
+interface:
+  display_name: "零一大学指南针"
+  short_description: "陪大学新生与 AI 初学者明确目标、选择路径，通过真实任务形成独立判断和实践能力"
+  default_prompt: "使用 $zeroone-university-compass。我想入门 AI，请根据我的需要和现有条件，帮我开始一个能学到东西的小任务，再一起判断适合的方向。"

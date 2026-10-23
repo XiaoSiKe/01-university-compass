@@ -1,0 +1,84 @@
+{
+  "checked_on": "2026-10-23",
+  "configured_model": "gpt-6.1-sol",
+  "model_override": false,
+  "test_type": "isolated_native_installation_discovery_smoke",
+  "cases": [
+    {
+      "case": "D01-explicit",
+      "process_exit_code": 0,
+      "semantic_verdict": "pass_for_this_single_run",
+      "native_skill_read_observed": true,
+      "expected_skill_read": true,
+      "manifest_matches_current_package": true,
+      "successful_read_commands": [
+        {
+          "command": "/bin/zsh -lc 'cat .agents/skills/zeroone-university-compass/SKILL.md .agents/skills/zeroone-university-compass/references/ai-pathways.md .agents/skills/zeroone-university-compass/references/ai-practice.md'",
+          "exit_code": 0,
+          "output_chars": 14017
+        },
+        {
+          "command": "/bin/zsh -lc 'pwd; rg --files -g AGENTS.md -g SKILL.md -g ai-pathways.md -g ai-practice.md .agents . 2>/dev/null'",
+          "exit_code": 0,
+          "output_chars": 237
+        }
+      ],
+      "nonfatal_events": [
+        "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in [TEST_ROOT]/runtime/config.toml."
+      ],
+      "stderr_present": false,
+      "observation": "首次显式调用实际读取SKILL、AI路径与AI实践，直接给出原创材料与核对练习；未要求付费或重新做成长访谈。"
+    },
+    {
+      "case": "D02-natural",
+      "process_exit_code": 0,
+      "semantic_verdict": "pass_for_this_single_run",
+      "native_skill_read_observed": true,
+      "expected_skill_read": true,
+      "manifest_matches_current_package": true,
+      "successful_read_commands": [
+        {
+          "command": "/bin/zsh -lc \"sed -n '1,260p' .agents/skills/zeroone-university-compass/SKILL.md\"",
+          "exit_code": 0,
+          "output_chars": 2380
+        },
+        {
+          "command": "/bin/zsh -lc \"sed -n '1,260p' .agents/skills/zeroone-university-compass/references/ai-pathways.md\"",
+          "exit_code": 0,
+          "output_chars": 4121
+        },
+        {
+          "command": "/bin/zsh -lc \"sed -n '1,260p' .agents/skills/zeroone-university-compass/references/ai-practice.md\"",
+          "exit_code": 0,
+          "output_chars": 7516
+        }
+      ],
+      "nonfatal_events": [
+        "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in [TEST_ROOT]/runtime/config.toml."
+      ],
+      "stderr_present": true,
+      "observation": "用户未写Skill名称，仍实际读取入口与两份AI参考；给予手机可做的20分钟任务与理解检查。目录枚举两次exit1后继续读正确文件，未中断。"
+    },
+    {
+      "case": "D03-unrelated-code",
+      "process_exit_code": 0,
+      "semantic_verdict": "pass_for_this_single_run",
+      "native_skill_read_observed": false,
+      "expected_skill_read": false,
+      "manifest_matches_current_package": true,
+      "successful_read_commands": [],
+      "nonfatal_events": [
+        "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in [TEST_ROOT]/runtime/config.toml."
+      ],
+      "stderr_present": false,
+      "observation": "无技能文件读取；最终仅为Python函数，保序去重与空列表检查通过，无成长规划内容。"
+    }
+  ],
+  "process_retries": 0,
+  "limits": [
+    "每种触发只有一次新进程观察，不能保证所有措辞、宿主或模型都稳定触发。",
+    "仅检查当前CLI与项目.agents/skills安装，不代表其他宿主的安装行为。",
+    "零工具训练式行为测试与原生文件发现测试是不同证据，未混为真实学生试用。",
+    "三个进程均出现skip_host_skill_discovery开发中功能警告；D02模型清单刷新超时但实际推理成功，原始事件和stderr已保留。"
+  ]
+}

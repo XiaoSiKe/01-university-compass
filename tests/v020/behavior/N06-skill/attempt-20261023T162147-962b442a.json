@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "case": "N06",
+  "title": "AI 代做后的掌握错觉",
+  "condition": "skill",
+  "fingerprint": "d62067491bac2f8a0764ae1abaf738c4c9a2996b8264f1cb1983c2a2ff5f03e8",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "/private/tmp/compass-v020-formal/behavior/N06-skill/attempt-20261023T162147-962b442a.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "61ebbfa3c6c9ad210c3bc1b0cb004c30b63d5b7516fb979586688b7ea0f9e264",
+      "bytes": 5758
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "08612b37301e1c7738fd249b41918a96634cd10b4d3d75567c319a6db25f188e",
+      "bytes": 9903
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61",
+      "bytes": 19829
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "87cdf52ad727220e7c258ab5f39a9219732ebb055e501478f1d005e1ed572be5",
+      "bytes": 10474
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "2391f448d3287ebd64350471d4e663ebaec5450580e59e82467c4d4fbf478c7e",
+      "bytes": 36478
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "8fde755d004a70837cae757474129f3e68be81d4f8561bee2513ee9a4090844f",
+      "bytes": 2965
+    },
+    {
+      "path": "references/zeroone.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我大一，AI 帮我写出了一个小网页，按钮都能用。我可以在简历里写熟练掌握前端开发了吗？其实很多代码我还看不懂。",
+      "prompt_sha256": "bc50b0d2026eb3c44c8267609b8624f16a6d95a5c0e7c4fafe9c131cbf17680f",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**这个网页可以写进简历，但目前不适合写“熟练掌握前端开发”。** 按钮能用，说明作品已有可用的交互；很多代码还看不懂，说明你对实现的掌握仍需要检查。这两件事可以同时成立。\n\n“熟练掌握”通常会让面试官期待你能解释关键代码、按新需求修改功能，并排查常见问题。你现在可以把它放在**项目经历**里，写得具体一些：\n\n> **个人网页练习（AI 辅助）**：借助 AI 生成代码，完成包含［具体功能，例如点击按钮切换内容］的小网页。\n\n如果你亲手做过需求设计、样式调整或错误修复，可以补上对应贡献。例如，“调整页面配色与间距”“修复重复点击后内容重复的问题”，都需要是你实际做过的。面试时也可以坦诚说：“初版代码主要由 AI 生成，我能解释和修改的是……，其他部分还在学习。”\n\n想判断自己到底学到了多少，可以先花 **15—20 分钟，只研究一个按钮**：\n\n1. 找到按钮和它触发的代码，用自己的话解释“点击后，哪段代码改变了什么”。\n2. 看懂后收起参考，自己改一个小行为，例如让点击后显示的文案发生变化；卡住时再求助，并记下卡点。\n3. 刷新页面、连续点击几次，检查结果是否符合你的预期。\n\n如果能完成，你就有了“能解释并修改这项交互”的具体证据。一次局部修改还不足以证明熟练，但能帮助你决定下一步该补什么，也让简历里的每一句更经得起追问。",
+      "returncode": 0,
+      "elapsed_seconds": 82.38,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167da-1575-7332-a510-db725ad0ce97"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-ds_1060x/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按“零一大学指南针”的方法，把作品完成度和你能独立做的部分分开判断。\n"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**这个网页可以写进简历，但目前不适合写“熟练掌握前端开发”。** 按钮能用，说明作品已有可用的交互；很多代码还看不懂，说明你对实现的掌握仍需要检查。这两件事可以同时成立。\n\n“熟练掌握”通常会让面试官期待你能解释关键代码、按新需求修改功能，并排查常见问题。你现在可以把它放在**项目经历**里，写得具体一些：\n\n> **个人网页练习（AI 辅助）**：借助 AI 生成代码，完成包含［具体功能，例如点击按钮切换内容］的小网页。\n\n如果你亲手做过需求设计、样式调整或错误修复，可以补上对应贡献。例如，“调整页面配色与间距”“修复重复点击后内容重复的问题”，都需要是你实际做过的。面试时也可以坦诚说：“初版代码主要由 AI 生成，我能解释和修改的是……，其他部分还在学习。”\n\n想判断自己到底学到了多少，可以先花 **15—20 分钟，只研究一个按钮**：\n\n1. 找到按钮和它触发的代码，用自己的话解释“点击后，哪段代码改变了什么”。\n2. 看懂后收起参考，自己改一个小行为，例如让点击后显示的文案发生变化；卡住时再求助，并记下卡点。\n3. 刷新页面、连续点击几次，检查结果是否符合你的预期。\n\n如果能完成，你就有了“能解释并修改这项交互”的具体证据。一次局部修改还不足以证明熟练，但能帮助你决定下一步该补什么，也让简历里的每一句更经得起追问。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 46337,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2203,
+            "reasoning_output_tokens": 1773
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "如果现在让我独立改成另一个主题，我会让 AI 再生成一遍。我该怎么检查到底哪些是我会的？",
+      "prompt_sha256": "9d426c50566b9e0ec16be61f3e990497723048fb193fc8b4710006a4c22bb3e8",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "**把“会不会前端”拆成几个小动作，分别检查你需要多少帮助。** 你现在想到让 AI 重新生成，说明这是你熟悉的做法；具体哪些部分已经会了，还要看你在原网页上能解释和修改什么。\n\n先给自己 **20 分钟，只检查一个按钮**。可以看原代码，第一轮先不让 AI 写修改方案；到时间就停，卡在哪里也是有用的结果。\n\n| 检查什么 | 具体怎么做 | 留下什么证据 |\n|---|---|---|\n| 能否找到相关代码 | 找到按钮本身、决定它外观的样式、处理点击的代码 | 能指出各部分的位置和用途 |\n| 能否解释与预测 | 用自己的话说“点击后发生什么，哪段代码让它发生”；先预测连续点击两次的结果 | 解释能与实际表现对应 |\n| 能否局部修改 | 自己改按钮颜色，再改点击后显示的一句话 | 能说明每一处修改为什么有效 |\n| 能否检查结果 | 修改前写下预期，修改后点击、重复点击、刷新，比较实际与预期 | 能发现是否符合要求，而不只是“页面还能打开” |\n\n如果连相关代码都找不到，可以直接求助。**把帮助逐步加上去，并记录在哪一级才做出来：**\n\n- **独立完成**：自己找到位置、决定怎么改，并检查结果。忘了某个语法、查了语法说明，可以单独注明。\n- **提示后完成**：别人指出位置或思路后，你能自己改。\n- **跟着示范完成**：需要看到完整写法才能跟做；收起示范后能否再做，仍待检查。\n- **尚未完成或未检查**：如实保留，不急着判断“不适合”。\n\n向 AI 求助时可以直接说：\n\n> 先不要给我完整代码。我想修改这个按钮的颜色和点击后文案。请先看我的解释，指出哪里理解错了；我卡住时，每次只给一个必要提示。\n\n做完以后，**收起刚才的修改答案，换一个相近要求再试一次**，例如换另一种颜色、另一句点击文案。这样能检查你是否已经能复用这个方法。即使通过，也只说明你会这项局部修改；页面布局、适配手机、处理其他交互还要分别检查。\n\n记录不用复杂，一项一行就够：\n\n> 我检查了什么｜自己完成到哪一步｜用了什么帮助｜换条件后能否再做\n\n假如结果是“样式能自己改，点击逻辑需要提示”，下一步就有依据了：先补这一小段点击逻辑。简历也可以准确写成“能独立调整基础样式，交互实现仍需 AI 辅助”。\n\n你可以先贴出**一个按钮的 HTML 和相关点击代码**，再写一句你猜它怎么工作；看不懂的地方直接标出来，我们就从那里检查。",
+      "returncode": 0,
+      "elapsed_seconds": 77.12,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167db-573b-73b3-ada8-5f9cf0645b6d"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-ds_1060x/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "**把“会不会前端”拆成几个小动作，分别检查你需要多少帮助。** 你现在想到让 AI 重新生成，说明这是你熟悉的做法；具体哪些部分已经会了，还要看你在原网页上能解释和修改什么。\n\n先给自己 **20 分钟，只检查一个按钮**。可以看原代码，第一轮先不让 AI 写修改方案；到时间就停，卡在哪里也是有用的结果。\n\n| 检查什么 | 具体怎么做 | 留下什么证据 |\n|---|---|---|\n| 能否找到相关代码 | 找到按钮本身、决定它外观的样式、处理点击的代码 | 能指出各部分的位置和用途 |\n| 能否解释与预测 | 用自己的话说“点击后发生什么，哪段代码让它发生”；先预测连续点击两次的结果 | 解释能与实际表现对应 |\n| 能否局部修改 | 自己改按钮颜色，再改点击后显示的一句话 | 能说明每一处修改为什么有效 |\n| 能否检查结果 | 修改前写下预期，修改后点击、重复点击、刷新，比较实际与预期 | 能发现是否符合要求，而不只是“页面还能打开” |\n\n如果连相关代码都找不到，可以直接求助。**把帮助逐步加上去，并记录在哪一级才做出来：**\n\n- **独立完成**：自己找到位置、决定怎么改，并检查结果。忘了某个语法、查了语法说明，可以单独注明。\n- **提示后完成**：别人指出位置或思路后，你能自己改。\n- **跟着示范完成**：需要看到完整写法才能跟做；收起示范后能否再做，仍待检查。\n- **尚未完成或未检查**：如实保留，不急着判断“不适合”。\n\n向 AI 求助时可以直接说：\n\n> 先不要给我完整代码。我想修改这个按钮的颜色和点击后文案。请先看我的解释，指出哪里理解错了；我卡住时，每次只给一个必要提示。\n\n做完以后，**收起刚才的修改答案，换一个相近要求再试一次**，例如换另一种颜色、另一句点击文案。这样能检查你是否已经能复用这个方法。即使通过，也只说明你会这项局部修改；页面布局、适配手机、处理其他交互还要分别检查。\n\n记录不用复杂，一项一行就够：\n\n> 我检查了什么｜自己完成到哪一步｜用了什么帮助｜换条件后能否再做\n\n假如结果是“样式能自己改，点击逻辑需要提示”，下一步就有依据了：先补这一小段点击逻辑。简历也可以准确写成“能独立调整基础样式，交互实现仍需 AI 辅助”。\n\n你可以先贴出**一个按钮的 HTML 和相关点击代码**，再写一句你猜它怎么工作；看不懂的地方直接标出来，我们就从那里检查。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 46796,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2088,
+            "reasoning_output_tokens": 1410
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 3,
+      "user": "我试着改了一个按钮文字，能成功；改数据保存逻辑就报错。我不想因此从头学完全部前端，有更合适的下一步吗？",
+      "prompt_sha256": "4faa9777ee4d56080fece9afce8ad2075ad257d82aa6dd40a335ee68b494b918",
+      "history_messages": 4,
+      "status": "completed",
+      "answer": "**有。更合适的下一步，是围绕这次保存报错补一小块知识，再检查能否自己修改。** 不需要先学完整套前端。\n\n目前可以记录的是“成功改过按钮文字”；“能独立修改数据保存逻辑”还没验证。保存通常牵涉数据从哪里来、用什么方式写入、之后怎样读取，比改文字多了几层。一次报错还不能说明具体缺在哪层。\n\n我建议这次给自己 **20—30 分钟上限，只处理一条保存流程**：\n\n1. **把预期说清楚。** 例如：“输入一段文字，点击保存，刷新后还能看到。”这只是例子，以你网页实际需要的行为为准。保存到当前浏览器和保存到服务器，需要检查的地方也不同。\n2. **找到最早出错的位置。** 保留改动前的代码，对照自己改了哪几行、执行到哪里报错。让 AI 解释相关代码里“保存什么、存到哪里、怎样读回来”，先围绕这部分排查。\n3. **缺什么就补什么，并马上用一次。** 如果卡在数据格式，就学这一种格式转换；如果卡在异步请求，就解释这一次请求怎样返回结果。修好后，再自己改变一个小条件，例如换一段保存内容，预测结果并检查。看不懂时可以先看完整示范，再收起示范重试。\n\n这里要分别验收两件事：\n\n- **功能修好了：** 按原来的操作，结果符合预期；如果要求刷新后保留，也要实际刷新检查。\n- **你学到了：** 能说清报错原因、修改为什么有效，并完成一次相近修改。若仍需照着 AI 的代码做，就记录为“在示范帮助下完成”，之后再检查独立完成的程度。\n\n到时间还没解决，也可以停在一个明确卡点，比如“知道数据要转成字符串，但不明白读取后为什么报错”。这已经足够决定下一次补什么。\n\n**把报错原文和你改过的那一小段保存代码贴出来即可**，有密钥或个人数据先删去。我们就从这次错误定位，不另开一整套课程。",
+      "returncode": 0,
+      "elapsed_seconds": 69.09,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167dc-8485-7a61-b1ad-15b13351bae7"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-ds_1060x/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "**有。更合适的下一步，是围绕这次保存报错补一小块知识，再检查能否自己修改。** 不需要先学完整套前端。\n\n目前可以记录的是“成功改过按钮文字”；“能独立修改数据保存逻辑”还没验证。保存通常牵涉数据从哪里来、用什么方式写入、之后怎样读取，比改文字多了几层。一次报错还不能说明具体缺在哪层。\n\n我建议这次给自己 **20—30 分钟上限，只处理一条保存流程**：\n\n1. **把预期说清楚。** 例如：“输入一段文字，点击保存，刷新后还能看到。”这只是例子，以你网页实际需要的行为为准。保存到当前浏览器和保存到服务器，需要检查的地方也不同。\n2. **找到最早出错的位置。** 保留改动前的代码，对照自己改了哪几行、执行到哪里报错。让 AI 解释相关代码里“保存什么、存到哪里、怎样读回来”，先围绕这部分排查。\n3. **缺什么就补什么，并马上用一次。** 如果卡在数据格式，就学这一种格式转换；如果卡在异步请求，就解释这一次请求怎样返回结果。修好后，再自己改变一个小条件，例如换一段保存内容，预测结果并检查。看不懂时可以先看完整示范，再收起示范重试。\n\n这里要分别验收两件事：\n\n- **功能修好了：** 按原来的操作，结果符合预期；如果要求刷新后保留，也要实际刷新检查。\n- **你学到了：** 能说清报错原因、修改为什么有效，并完成一次相近修改。若仍需照着 AI 的代码做，就记录为“在示范帮助下完成”，之后再检查独立完成的程度。\n\n到时间还没解决，也可以停在一个明确卡点，比如“知道数据要转成字符串，但不明白读取后为什么报错”。这已经足够决定下一次补什么。\n\n**把报错原文和你改过的那一小段保存代码贴出来即可**，有密钥或个人数据先删去。我们就从这次错误定位，不另开一整套课程。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 47563,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1509,
+            "reasoning_output_tokens": 1002
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T08:21:47Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 228.62,
+  "finished_at_utc": "2026-10-23T08:25:36Z"
+}

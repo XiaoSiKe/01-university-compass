@@ -1,0 +1,13 @@
+{
+  "revision": "R1",
+  "reason": "N11语义评审发现离线工具选择回复缺少可选极短任务验证；补充默认0新增支出及按任务验证，不要求编造价格或强迫长比较",
+  "changed_file": "references/ai-pathways.md",
+  "before_sha256": "08612b37301e1c7738fd249b41918a96634cd10b4d3d75567c319a6db25f188e",
+  "after_sha256": "f3a1c1c5e442fc685cc8de7768c7ff3addbd5d003508705591bce79d672f3868",
+  "affected_cases": [
+    "N04",
+    "N11",
+    "N12"
+  ],
+  "unaffected_behavior": "既有课程内容、任务卡、成长流程与来源均未改；R0实际记录保留，R1仅重测工具/资源相关情境"
+}

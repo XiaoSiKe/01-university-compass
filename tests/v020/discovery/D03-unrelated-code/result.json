@@ -1,0 +1,62 @@
+{
+  "case": "D03-unrelated-code",
+  "configured_model": "gpt-6.1-sol",
+  "exit_code": 0,
+  "status": "completed",
+  "elapsed_seconds": 18.72,
+  "has_final": true,
+  "method": "fresh_cli_native_project_skill_discovery",
+  "install_location": ".agents/skills/zeroone-university-compass",
+  "isolation": "only_current_skill_copy; temporary_model_config_and_auth; no_parent_chat_or_test_expectations",
+  "tool_policy": "read_only_local_skill_documents; external_tools_disabled",
+  "semantic_status": "requires_manual_review",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "61ebbfa3c6c9ad210c3bc1b0cb004c30b63d5b7516fb979586688b7ea0f9e264"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "56bfbffc2a144e187312f79ef46977a4e03e52676bf52ff2c26dacebf23680f9"
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "f3a1c1c5e442fc685cc8de7768c7ff3addbd5d003508705591bce79d672f3868"
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61"
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170"
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4"
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "47d146aabda2fd669ce41f7f54bb5eeb6e297ea8469b08819e11903321d249eb"
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "2391f448d3287ebd64350471d4e663ebaec5450580e59e82467c4d4fbf478c7e"
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "9960226710134f1d7d35f3e433c4a4a3fd69b859e8fd72c473868829b5294b86"
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "8fde755d004a70837cae757474129f3e68be81d4f8561bee2513ee9a4090844f"
+    },
+    {
+      "path": "references/zeroone.md",
+      "sha256": "a56f20df1fd5ccee14ba30d9aee98a93b9d7c815abd3367b6e78f898510181f4"
+    }
+  ],
+  "read_command_evidence": [],
+  "paths_observed_in_successful_read_commands": [],
+  "tool_call_count": 0
+}

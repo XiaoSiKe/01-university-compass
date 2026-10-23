@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "case": "N22",
+  "title": "学习检验与失败后有针对性降阶",
+  "condition": "baseline",
+  "fingerprint": "2f2b0c33181282ce7f277c7688d1a0814ae51d7c4d36655381391493b3ebcfd9",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "/private/tmp/compass-v020-formal/behavior/N22-baseline/attempt-20261023T162212-d393da9c.json",
+  "skill_manifest": [],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我大一，让 AI 解释了训练集和测试集，看的时候都懂。请用一道简短的新情境检查我是否真懂，先别直接给答案。",
+      "prompt_sha256": "99c23c1012da6e12e66b51742730fa3f920cdb4aaa705ea15061902586bba976",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "你做了一个识别校园树木的 AI：用 800 张带标签的树叶照片让它学习，另留 200 张做测试。\n\n室友建议：“测试前，把这 200 张也给它学习一遍，分数肯定更高！”\n\n**你会采纳这个建议吗？为什么？** 用自己的话回答，1～2 句话就行。",
+      "returncode": 0,
+      "elapsed_seconds": 42.38,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167da-7447-7083-be7d-f76af1951abc"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-ijog1tb7/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "你做了一个识别校园树木的 AI：用 800 张带标签的树叶照片让它学习，另留 200 张做测试。\n\n室友建议：“测试前，把这 200 张也给它学习一遍，分数肯定更高！”\n\n**你会采纳这个建议吗？为什么？** 用自己的话回答，1～2 句话就行。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 13029,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 508,
+            "reasoning_output_tokens": 418
+          }
+        }
+      ],
+      "stderr": "2026-10-23T08:22:17.297256Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out\n",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "我的理解是：为了让分数更高，可以反复看测试集，把做错的样本放回训练集，再用同一个测试集报成绩。这个想法哪里有问题？",
+      "prompt_sha256": "200c175cf8549cc7303ad11e7393ba8f561bbb8aaab06eb51a2e20a13527ecf4",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "问题出在：**测试集已经参与了模型的学习和调整，你却仍用它来衡量模型面对新照片的能力。**\n\n把做错的测试样本放进训练集后，模型再答这些题，可能既有真正进步，也有记住具体样本的效果。就像刷过一套试卷再考原题：分数提高了，但仅凭这个成绩，分不清你掌握了方法，还是记住了答案。这属于**测试数据泄漏**。\n\n利用错例继续训练是可以的，但之后需要换一组从未参与训练或调整的照片来做最终测试。通常的分工是：\n\n- **训练集**：让模型学习。\n- **验证集**：供你反复检查、调整模型。\n- **测试集**：留到最后，检验它处理新数据的能力。\n\n再检查一个细节：**如果不把测试照片放回训练集，只根据同一测试集的分数反复调整模型，最后还用它报成绩，会有类似的问题吗？** 说说你的理由。",
+      "returncode": 0,
+      "elapsed_seconds": 56.57,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167db-19bc-7203-b608-c6780971a26b"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-ijog1tb7/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "问题出在：**测试集已经参与了模型的学习和调整，你却仍用它来衡量模型面对新照片的能力。**\n\n把做错的测试样本放进训练集后，模型再答这些题，可能既有真正进步，也有记住具体样本的效果。就像刷过一套试卷再考原题：分数提高了，但仅凭这个成绩，分不清你掌握了方法，还是记住了答案。这属于**测试数据泄漏**。\n\n利用错例继续训练是可以的，但之后需要换一组从未参与训练或调整的照片来做最终测试。通常的分工是：\n\n- **训练集**：让模型学习。\n- **验证集**：供你反复检查、调整模型。\n- **测试集**：留到最后，检验它处理新数据的能力。\n\n再检查一个细节：**如果不把测试照片放回训练集，只根据同一测试集的分数反复调整模型，最后还用它报成绩，会有类似的问题吗？** 说说你的理由。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 13183,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1278,
+            "reasoning_output_tokens": 1034
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 3,
+      "user": "我明白不能偷看最终测试结果反复调，但验证集又是什么？请先给一个不需要公式的小例子，再让我尝试判断，而不是一下讲完所有术语。",
+      "prompt_sha256": "3e4015699c678ede136ad5b0ba72dee5c991e647ada7694636eeecde4ff9d156",
+      "history_messages": 4,
+      "status": "completed",
+      "answer": "比如你在准备英语考试：平时用课本和习题学习，每周做一套小测，发现听力较弱，就调整下一周的复习安排。\n\n**这套用来检查效果、帮助调整的小测，就相当于验证集。** 它是学习过程中供你参考的反馈。\n\n轮到你判断：\n\n你做了两个认树叶的模型，拿出 100 张没用于训练的照片，比较哪个模型更好，再决定留下哪个。室友说：“这 100 张照片没拿去训练，所以选好模型后，也可以直接用它们的分数作为最终成绩。”\n\n**这 100 张照片更像每周小测，还是最后的正式考试？你同意室友的建议吗？** 用一两句话说说理由就好。",
+      "returncode": 0,
+      "elapsed_seconds": 68.36,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167db-f6bf-7d11-8677-aaed8e047ad7"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-ijog1tb7/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "比如你在准备英语考试：平时用课本和习题学习，每周做一套小测，发现听力较弱，就调整下一周的复习安排。\n\n**这套用来检查效果、帮助调整的小测，就相当于验证集。** 它是学习过程中供你参考的反馈。\n\n轮到你判断：\n\n你做了两个认树叶的模型，拿出 100 张没用于训练的照片，比较哪个模型更好，再决定留下哪个。室友说：“这 100 张照片没拿去训练，所以选好模型后，也可以直接用它们的分数作为最终成绩。”\n\n**这 100 张照片更像每周小测，还是最后的正式考试？你同意室友的建议吗？** 用一两句话说说理由就好。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 13497,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1416,
+            "reasoning_output_tokens": 1235
+          }
+        }
+      ],
+      "stderr": "2026-10-23T08:23:58.557076Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: tls handshake eof, url: wss://chatgpt.com/backend-api/codex/responses\n2026-10-23T08:23:58.560402Z  WARN codex_core::session::startup_prewarm: startup websocket prewarm setup failed: stream disconnected before completion: tls handshake eof\n2026-10-23T08:24:05.253430Z ERROR codex_api::endpoint::responses_websocket: failed to connect to websocket: IO error: tls handshake eof, url: wss://chatgpt.com/backend-api/codex/responses\n2026-10-23T08:24:05.253604Z  WARN codex_core::responses_retry: stream disconnected - retrying sampling request (1/5 in 211ms)... turn_id=01a167db-ffd0-7ed3-a8c5-d8e0356334de retries=1 max_retries=5 sampling_error=stream disconnected before completion: tls handshake eof\n",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T08:22:12Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 167.32,
+  "finished_at_utc": "2026-10-23T08:24:59Z"
+}

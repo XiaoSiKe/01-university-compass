@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "case": "N22",
+  "title": "学习检验与失败后有针对性降阶",
+  "condition": "skill",
+  "fingerprint": "aa7d924a2b972ed92a3528a0f2dded38e25532963d4b7ba7527ce5be86619a2a",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "/private/tmp/compass-v020-formal/behavior/N22-skill/attempt-20261023T164153-51bc480a.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "61ebbfa3c6c9ad210c3bc1b0cb004c30b63d5b7516fb979586688b7ea0f9e264",
+      "bytes": 5758
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "f3a1c1c5e442fc685cc8de7768c7ff3addbd5d003508705591bce79d672f3868",
+      "bytes": 10948
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61",
+      "bytes": 19829
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "47d146aabda2fd669ce41f7f54bb5eeb6e297ea8469b08819e11903321d249eb",
+      "bytes": 11379
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "2391f448d3287ebd64350471d4e663ebaec5450580e59e82467c4d4fbf478c7e",
+      "bytes": 36478
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "8fde755d004a70837cae757474129f3e68be81d4f8561bee2513ee9a4090844f",
+      "bytes": 2965
+    },
+    {
+      "path": "references/zeroone.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我大一，让 AI 解释了训练集和测试集，看的时候都懂。请用一道简短的新情境检查我是否真懂，先别直接给答案。",
+      "prompt_sha256": "c4b087647fee4b5aa4281afc10a273f789663d92a11a5c4994f1f7ddaa5f162d",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "一名同学做垃圾分类 AI：用 800 张图片训练，再用另外 200 张图片测试。每次测试后，他都根据这 200 张图片上的错误修改模型，然后用同样的 200 张重新测试，最后准确率达到 98%。\n\n**这个 98% 能可靠地说明模型识别全新图片的水平吗？为什么？**\n\n用自己的话回答两三句即可，不必用专业术语。",
+      "returncode": 0,
+      "elapsed_seconds": 42.46,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167ec-7ba4-7102-8230-a540cdca8cb8"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-vk_30lqx/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按「零一大学指南针」的方式，用一个新情境检查你的理解，先不揭示答案。\n"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "一名同学做垃圾分类 AI：用 800 张图片训练，再用另外 200 张图片测试。每次测试后，他都根据这 200 张图片上的错误修改模型，然后用同样的 200 张重新测试，最后准确率达到 98%。\n\n**这个 98% 能可靠地说明模型识别全新图片的水平吗？为什么？**\n\n用自己的话回答两三句即可，不必用专业术语。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 46801,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 755,
+            "reasoning_output_tokens": 620
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "我的理解是：为了让分数更高，可以反复看测试集，把做错的样本放回训练集，再用同一个测试集报成绩。这个想法哪里有问题？",
+      "prompt_sha256": "23e25dc7f675cc98e079672dbf4948d24be1e0152fe9daf10fe4a33a1a9db8c4",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "问题在于：**你用测试题指导了学习，最后又用同一套题的成绩，判断模型遇到新题会怎样。**\n\n测试集的作用，是检查模型对**未参与训练和调整的数据**表现如何。你的做法有两处问题：\n\n- **把做错的测试样本放进训练集，再用它们测试**：这些图片已经参与训练，答对它们就不能算识别新图片的证据。\n- **反复看同一个测试集的错误，据此修改模型**：即使不把图片放进训练集，调整过程也已经利用了这份测试集的信息，模型可能逐渐适应这套题。\n\n所以，98% 可以描述模型在这 200 张图片上的成绩，但不足以可靠估计它识别全新图片的水平。这也不说明模型遇到新图片一定很差，只是还缺一次可信的检查。\n\n**旧测试样本可以转作训练材料，但之后需要另用一份未参与调整的数据做最终测试。**通常会用训练集学习、验证集反复调试，再把测试集留到方案确定后评估。\n\n再换一个情况，检查你能否用上这个区别：\n\n> 团队把原来参与过训练或调试的 1000 张图片重新打乱，随机抽出 200 张，命名为“新测试集”，模型保持不变。这样能恢复一次可靠的最终测试吗？为什么？\n\n这次先由你判断，重点说出依据。",
+      "returncode": 0,
+      "elapsed_seconds": 63.03,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167ed-2157-78a1-9ac1-125f5e820b4e"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-vk_30lqx/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "问题在于：**你用测试题指导了学习，最后又用同一套题的成绩，判断模型遇到新题会怎样。**\n\n测试集的作用，是检查模型对**未参与训练和调整的数据**表现如何。你的做法有两处问题：\n\n- **把做错的测试样本放进训练集，再用它们测试**：这些图片已经参与训练，答对它们就不能算识别新图片的证据。\n- **反复看同一个测试集的错误，据此修改模型**：即使不把图片放进训练集，调整过程也已经利用了这份测试集的信息，模型可能逐渐适应这套题。\n\n所以，98% 可以描述模型在这 200 张图片上的成绩，但不足以可靠估计它识别全新图片的水平。这也不说明模型遇到新图片一定很差，只是还缺一次可信的检查。\n\n**旧测试样本可以转作训练材料，但之后需要另用一份未参与调整的数据做最终测试。**通常会用训练集学习、验证集反复调试，再把测试集留到方案确定后评估。\n\n再换一个情况，检查你能否用上这个区别：\n\n> 团队把原来参与过训练或调试的 1000 张图片重新打乱，随机抽出 200 张，命名为“新测试集”，模型保持不变。这样能恢复一次可靠的最终测试吗？为什么？\n\n这次先由你判断，重点说出依据。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 46967,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1372,
+            "reasoning_output_tokens": 1034
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 3,
+      "user": "我明白不能偷看最终测试结果反复调，但验证集又是什么？请先给一个不需要公式的小例子，再让我尝试判断，而不是一下讲完所有术语。",
+      "prompt_sha256": "3e81e8d2c0c591eea2ab2748e06b5784bd3040a32b5cf090a9e3dfd3262d583e",
+      "history_messages": 4,
+      "status": "completed",
+      "answer": "**验证集可以先理解为：开发过程中专门留出来、用来检查问题和改进方案的一批数据。**\n\n比如，你做一个垃圾分类 AI：\n\n- 先让模型用一批图片学习。\n- 再拿**另一批没用于训练的图片**检查，发现它经常把塑料盒认错。\n- 你据此调整训练办法，用原来的训练图片重新训练，再看看这批检查图片上的表现有没有改善。\n\n这批反复帮助你检查、改进的图片，就是**验证集**。它参与了方案调整；最终测试集则留到方案确定后，用来做最后的检查。\n\n现在换个情况，请你判断：\n\n> 另一个团队拿一批留出的图片，比较三个已经训练好的模型，选出得分最高的那个。整个过程中，他们没有重新训练任何模型。\n>\n> 他们说：“既然没有再训练，就可以把这个最高分当作可靠的最终测试成绩。”\n\n**你同意吗？为什么？** 用一两句话解释即可，先不用记专业术语。",
+      "returncode": 0,
+      "elapsed_seconds": 72.88,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167ee-1778-7c22-8d1e-bbc0a81b88c5"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-vk_30lqx/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "**验证集可以先理解为：开发过程中专门留出来、用来检查问题和改进方案的一批数据。**\n\n比如，你做一个垃圾分类 AI：\n\n- 先让模型用一批图片学习。\n- 再拿**另一批没用于训练的图片**检查，发现它经常把塑料盒认错。\n- 你据此调整训练办法，用原来的训练图片重新训练，再看看这批检查图片上的表现有没有改善。\n\n这批反复帮助你检查、改进的图片，就是**验证集**。它参与了方案调整；最终测试集则留到方案确定后，用来做最后的检查。\n\n现在换个情况，请你判断：\n\n> 另一个团队拿一批留出的图片，比较三个已经训练好的模型，选出得分最高的那个。整个过程中，他们没有重新训练任何模型。\n>\n> 他们说：“既然没有再训练，就可以把这个最高分当作可靠的最终测试成绩。”\n\n**你同意吗？为什么？** 用一两句话解释即可，先不用记专业术语。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 47382,
+            "cached_input_tokens": 11904,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1497,
+            "reasoning_output_tokens": 1260
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T08:41:53Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 178.39,
+  "finished_at_utc": "2026-10-23T08:44:52Z"
+}

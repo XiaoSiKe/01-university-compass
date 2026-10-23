@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "case": "N06",
+  "title": "AI 代做后的掌握错觉",
+  "condition": "skill",
+  "fingerprint": "9a216cf106225a4e2e86eab5f6351563da0d8583cf0da750a6708f9b5d13a6b6",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "/private/tmp/compass-v020-formal/behavior/N06-skill/attempt-20261023T164153-5027d0b2.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "61ebbfa3c6c9ad210c3bc1b0cb004c30b63d5b7516fb979586688b7ea0f9e264",
+      "bytes": 5758
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "f3a1c1c5e442fc685cc8de7768c7ff3addbd5d003508705591bce79d672f3868",
+      "bytes": 10948
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61",
+      "bytes": 19829
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "47d146aabda2fd669ce41f7f54bb5eeb6e297ea8469b08819e11903321d249eb",
+      "bytes": 11379
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "2391f448d3287ebd64350471d4e663ebaec5450580e59e82467c4d4fbf478c7e",
+      "bytes": 36478
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "8fde755d004a70837cae757474129f3e68be81d4f8561bee2513ee9a4090844f",
+      "bytes": 2965
+    },
+    {
+      "path": "references/zeroone.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我大一，AI 帮我写出了一个小网页，按钮都能用。我可以在简历里写熟练掌握前端开发了吗？其实很多代码我还看不懂。",
+      "prompt_sha256": "b64de7bb5c64448047109a9919dc0ef07bee6dc101df536ab9578787181ecf8e",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**这个网页可以写进项目经历，但目前不建议写“熟练掌握前端开发”。** 按钮能用，说明你借助 AI 做出了一个可交互的成果；你也提到很多代码还看不懂，因此还不足以证明你能独立开发、修改和排查问题。\n\n可以先这样写，括号里的内容按实际情况填写：\n\n> **［项目名称］｜AI 辅助网页实践**  \n> 使用 AI 辅助生成代码，制作［网页用途］网页，实现［已确认可用的具体功能］。\n\n如果你确实做过需求设计、代码修改或交互检查，也可以补上自己完成的部分。暂时别把 AI 生成的技术栈全部列成自己“熟练掌握”的技能。面试时也可以直接说：“这个项目借助了 AI，我目前能解释和修改的是……，其他部分还在学习。”\n\n下一步可以拿其中**一个按钮**做一次约 20 分钟的小检查：\n\n1. 找出它对应的代码，让 AI 解释“点击后执行什么、页面为什么会变化”。\n2. 合上解释，用自己的话讲一遍；说不清的地方就是当前要补的内容。\n3. 自己尝试增加一个小规则，例如首次点击显示内容、再次点击收起，再检查两种状态是否符合预期。需要提示就记录下来。\n\n这能帮助你判断自己已经会到哪一步。能独立完成一次修改，可以成为一项具体能力的证据；“熟练”还需要在不同任务里反复表现出来。**简历写清做出了什么、自己负责什么，比一个容易被追问住的“熟练”更有说服力。**",
+      "returncode": 0,
+      "elapsed_seconds": 58.08,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167ec-7ba4-7fa3-9e2b-5292441bfa4b"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-ofq4qp42/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按「零一大学指南针」的方式，把作品完成情况和你自己掌握的能力分开判断。\n"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**这个网页可以写进项目经历，但目前不建议写“熟练掌握前端开发”。** 按钮能用，说明你借助 AI 做出了一个可交互的成果；你也提到很多代码还看不懂，因此还不足以证明你能独立开发、修改和排查问题。\n\n可以先这样写，括号里的内容按实际情况填写：\n\n> **［项目名称］｜AI 辅助网页实践**  \n> 使用 AI 辅助生成代码，制作［网页用途］网页，实现［已确认可用的具体功能］。\n\n如果你确实做过需求设计、代码修改或交互检查，也可以补上自己完成的部分。暂时别把 AI 生成的技术栈全部列成自己“熟练掌握”的技能。面试时也可以直接说：“这个项目借助了 AI，我目前能解释和修改的是……，其他部分还在学习。”\n\n下一步可以拿其中**一个按钮**做一次约 20 分钟的小检查：\n\n1. 找出它对应的代码，让 AI 解释“点击后执行什么、页面为什么会变化”。\n2. 合上解释，用自己的话讲一遍；说不清的地方就是当前要补的内容。\n3. 自己尝试增加一个小规则，例如首次点击显示内容、再次点击收起，再检查两种状态是否符合预期。需要提示就记录下来。\n\n这能帮助你判断自己已经会到哪一步。能独立完成一次修改，可以成为一项具体能力的证据；“熟练”还需要在不同任务里反复表现出来。**简历写清做出了什么、自己负责什么，比一个容易被追问住的“熟练”更有说服力。**"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 46802,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1452,
+            "reasoning_output_tokens": 1034
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "如果现在让我独立改成另一个主题，我会让 AI 再生成一遍。我该怎么检查到底哪些是我会的？",
+      "prompt_sha256": "be5c875bc219708989bd993975af445a07d99997e715970f5b0c92df2951d51f",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "**“让 AI 再生成一遍”说明你会借助 AI 得到新版本，但还看不出你能独立修改哪些部分。** 你可能已经会改文字和样式，交互逻辑还需要帮助；这些要分开检查。\n\n建议用现有网页做一次 **20 分钟左右的小检查**。先保留原版本，在副本上尝试。第一轮先自己做，可以查语法资料，并记下查了什么；卡住就记录具体位置，再获得帮助。\n\n| 检查什么 | 具体做什么 | 留下什么证据 |\n|---|---|---|\n| 能否读懂一小段 | 选一个按钮，找到相关代码，用自己的话解释“点击后执行什么、页面哪里会变化” | 指出对应代码，并用实际点击核对解释 |\n| 能否自己修改 | 先写下目标，例如把网页改成读书主题：更换标题、背景色和按钮颜色，再自己修改 | 保留改动的几行，说明每处为什么改 |\n| 能否处理一个新要求 | 给现有功能加一个小规则，例如网页有输入框，就要求“空着提交时显示提示” | 先写预期，再分别检查空输入和正常输入的结果 |\n\n第三项不会很正常。**检查的目的就是找到你最早卡住的那一步**：找不到代码、看不懂语句、知道改哪里却不会写，还是改完后不知道为什么没生效。它们对应的学习内容不同。\n\n每项用下面四种描述记录，不用给自己打总分：\n\n- **独立完成**：没有 AI 提示，能解释改动，也检查了结果。\n- **查资料完成**：查了语法或用法，能自己选择、修改并解释。\n- **提示下完成**：AI 指出了位置或思路，之后由你完成。\n- **跟着完成**：主要使用 AI 给出的代码，自己还解释不了关键部分。\n\n“查资料完成”也是有价值的能力。需要如实区分的是：哪些决定由你作出，哪些帮助来自 AI。\n\n获得讲解后，**另换一个小要求复测**。例如 AI 教你改了按钮样式，下次尝试给一组卡片设置样式；先自己判断该改哪里，再检查结果。刚照着改成功，可以记录为“在帮助下完成”；能处理变化后的任务，才增加了独立使用的证据。\n\n最后，你会得到比“我会前端”更准确的描述，例如：\n\n> 能独立修改页面文字和局部样式，能解释一个按钮的执行过程；新增交互规则仍需 AI 提示。\n\n这只是记录示例，目前还不能替你确认。你可以先试“更换标题和一个按钮的颜色”，把改动的几行代码、你的解释和实际结果贴过来；没改出来也可以，我们就从具体卡点判断下一步。",
+      "returncode": 0,
+      "elapsed_seconds": 84.82,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167ed-5e56-7093-967c-61559a7b635f"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-ofq4qp42/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按「零一大学指南针」的方法，把检查拆成几个小任务，分别看你能完成什么、需要多少帮助。"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**“让 AI 再生成一遍”说明你会借助 AI 得到新版本，但还看不出你能独立修改哪些部分。** 你可能已经会改文字和样式，交互逻辑还需要帮助；这些要分开检查。\n\n建议用现有网页做一次 **20 分钟左右的小检查**。先保留原版本，在副本上尝试。第一轮先自己做，可以查语法资料，并记下查了什么；卡住就记录具体位置，再获得帮助。\n\n| 检查什么 | 具体做什么 | 留下什么证据 |\n|---|---|---|\n| 能否读懂一小段 | 选一个按钮，找到相关代码，用自己的话解释“点击后执行什么、页面哪里会变化” | 指出对应代码，并用实际点击核对解释 |\n| 能否自己修改 | 先写下目标，例如把网页改成读书主题：更换标题、背景色和按钮颜色，再自己修改 | 保留改动的几行，说明每处为什么改 |\n| 能否处理一个新要求 | 给现有功能加一个小规则，例如网页有输入框，就要求“空着提交时显示提示” | 先写预期，再分别检查空输入和正常输入的结果 |\n\n第三项不会很正常。**检查的目的就是找到你最早卡住的那一步**：找不到代码、看不懂语句、知道改哪里却不会写，还是改完后不知道为什么没生效。它们对应的学习内容不同。\n\n每项用下面四种描述记录，不用给自己打总分：\n\n- **独立完成**：没有 AI 提示，能解释改动，也检查了结果。\n- **查资料完成**：查了语法或用法，能自己选择、修改并解释。\n- **提示下完成**：AI 指出了位置或思路，之后由你完成。\n- **跟着完成**：主要使用 AI 给出的代码，自己还解释不了关键部分。\n\n“查资料完成”也是有价值的能力。需要如实区分的是：哪些决定由你作出，哪些帮助来自 AI。\n\n获得讲解后，**另换一个小要求复测**。例如 AI 教你改了按钮样式，下次尝试给一组卡片设置样式；先自己判断该改哪里，再检查结果。刚照着改成功，可以记录为“在帮助下完成”；能处理变化后的任务，才增加了独立使用的证据。\n\n最后，你会得到比“我会前端”更准确的描述，例如：\n\n> 能独立修改页面文字和局部样式，能解释一个按钮的执行过程；新增交互规则仍需 AI 提示。\n\n这只是记录示例，目前还不能替你确认。你可以先试“更换标题和一个按钮的颜色”，把改动的几行代码、你的解释和实际结果贴过来；没改出来也可以，我们就从具体卡点判断下一步。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 47251,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2244,
+            "reasoning_output_tokens": 1552
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 3,
+      "user": "我试着改了一个按钮文字，能成功；改数据保存逻辑就报错。我不想因此从头学完全部前端，有更合适的下一步吗？",
+      "prompt_sha256": "cea439cb8207ae634076c2e30a51d890a128687eae8b9c1e283321e3471d6950",
+      "history_messages": 4,
+      "status": "completed",
+      "answer": "有。**下一步就围绕这次报错，修通一个最小的保存功能，补它实际需要的知识。** 先不用安排整套前端课程。\n\n这次已经有一条具体证据：你成功改了按钮文字。保存逻辑在哪一步卡住，还要看报错和代码；目前不能据此判断你缺的是语法、数据格式，还是存储方式的知识。\n\n建议这轮最多用 **20–30 分钟**，只处理下面三件事：\n\n1. **说清预期。** 用一句话描述，例如：“点击保存后，记录应该留在浏览器里，刷新后还能看到。”这只是例子，按你网页原本的需求写。\n2. **定位第一个失败点。** 看报错指向哪一行，对照你改过的地方。需要哪个概念就补哪个，并在原代码上做小范围修复。比如涉及对象格式，就先解释当前这个对象怎样组织数据。\n3. **实际核对结果。** 保存一条内容，再按需求读取，检查内容是否一致。页面没有报错，还需要进一步确认数据确实存下来了。\n\n可以直接这样向 AI 求助：\n\n> 我正在学这段保存逻辑。请根据报错定位原因，解释相关代码为什么出错，给出最小修改，并说明怎样验证。暂时不要重写整个网页。  \n> 我的预期是：……  \n> 报错是：……  \n> 相关代码和我的改动是：……\n\n**修好功能和检查自己学会了什么，分两步做。** 跟着讲解修好，可以记为“在帮助下完成”；之后尝试一个难度接近的新要求，例如原来只保存标题，再尝试同时保存一条备注。看你能否自己找到修改位置、解释改动并核对结果，需要提示的地方如实留下。\n\n先把**报错原文和你改过的保存代码片段**贴出来，标明改动位置。我可以据此帮你缩小问题，修复后的运行结果由你在网页里实际确认。",
+      "returncode": 0,
+      "elapsed_seconds": 63.29,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167ee-a9af-70f0-b6cc-961bd03c27ff"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-ofq4qp42/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "有。**下一步就围绕这次报错，修通一个最小的保存功能，补它实际需要的知识。** 先不用安排整套前端课程。\n\n这次已经有一条具体证据：你成功改了按钮文字。保存逻辑在哪一步卡住，还要看报错和代码；目前不能据此判断你缺的是语法、数据格式，还是存储方式的知识。\n\n建议这轮最多用 **20–30 分钟**，只处理下面三件事：\n\n1. **说清预期。** 用一句话描述，例如：“点击保存后，记录应该留在浏览器里，刷新后还能看到。”这只是例子，按你网页原本的需求写。\n2. **定位第一个失败点。** 看报错指向哪一行，对照你改过的地方。需要哪个概念就补哪个，并在原代码上做小范围修复。比如涉及对象格式，就先解释当前这个对象怎样组织数据。\n3. **实际核对结果。** 保存一条内容，再按需求读取，检查内容是否一致。页面没有报错，还需要进一步确认数据确实存下来了。\n\n可以直接这样向 AI 求助：\n\n> 我正在学这段保存逻辑。请根据报错定位原因，解释相关代码为什么出错，给出最小修改，并说明怎样验证。暂时不要重写整个网页。  \n> 我的预期是：……  \n> 报错是：……  \n> 相关代码和我的改动是：……\n\n**修好功能和检查自己学会了什么，分两步做。** 跟着讲解修好，可以记为“在帮助下完成”；之后尝试一个难度接近的新要求，例如原来只保存标题，再尝试同时保存一条备注。看你能否自己找到修改位置、解释改动并核对结果，需要提示的地方如实留下。\n\n先把**报错原文和你改过的保存代码片段**贴出来，标明改动位置。我可以据此帮你缩小问题，修复后的运行结果由你在网页里实际确认。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 47990,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1504,
+            "reasoning_output_tokens": 1034
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T08:41:53Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 206.2,
+  "finished_at_utc": "2026-10-23T08:45:19Z"
+}

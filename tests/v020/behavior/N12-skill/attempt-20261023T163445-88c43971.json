@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "case": "N12",
+  "title": "资源收藏替代学习",
+  "condition": "skill",
+  "fingerprint": "37512a76cf78c4a4aa60a49d6f6a6ec710f4e271b5fa37f50243bb2a64ed1a2d",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "/private/tmp/compass-v020-formal/behavior/N12-skill/attempt-20261023T163445-88c43971.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "61ebbfa3c6c9ad210c3bc1b0cb004c30b63d5b7516fb979586688b7ea0f9e264",
+      "bytes": 5758
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "f3a1c1c5e442fc685cc8de7768c7ff3addbd5d003508705591bce79d672f3868",
+      "bytes": 10948
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61",
+      "bytes": 19829
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "87cdf52ad727220e7c258ab5f39a9219732ebb055e501478f1d005e1ed572be5",
+      "bytes": 10474
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "2391f448d3287ebd64350471d4e663ebaec5450580e59e82467c4d4fbf478c7e",
+      "bytes": 36478
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "8fde755d004a70837cae757474129f3e68be81d4f8561bee2513ee9a4090844f",
+      "bytes": 2965
+    },
+    {
+      "path": "references/zeroone.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我收藏了二十个 AI 仓库，教程都很好但越看越乱。是不是应该全部刷完再做东西？我一周只有两小时，目前只想学会核验 AI 给出的读书摘要。",
+      "prompt_sha256": "eefe86cc8ef854499ff1144c9195fb57ec54a376ddc8a11dfbe1b0ae6e3b0ff9",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**不用全部刷完。**你目前想学的是“核验 AI 的读书摘要”，可以直接从原文和摘要开始练。二十个仓库可能各自服务不同目标，放在一起看，很容易把学习范围越扩越大。\n\n建议先把收藏当作备用资料；遇到具体卡点，再找相关教程中的一小节。眼下的主材料，就选一段你正在读、自己基本能看懂的原文。\n\n你每周有两小时，可以先用下面这个安排，给临时卡点留些余量：\n\n1. **第一次约 40 分钟：核验一段摘要。**选约 500—1000 字原文，先用自己的话写一句“作者主要在说什么”，再看 AI 摘要。圈出摘要里三条关键主张，逐条找到对应原句，标为“有依据”“与原文冲突”或“这段材料无法确认”。\n2. **用约 15 分钟：修改一处实质错误。**优先处理会改变理解的地方，例如把“可能”写成“一定”、把个人经验写成研究结论，或漏掉重要条件。留下“原摘要—依据—修改理由”三行即可。\n3. **隔几天用约 30 分钟：换一段独立试。**先不看之前的检查步骤，自己找出一句需要核对的话，并说明为什么。卡在哪里，下次就补哪里。\n\n核验时，尤其留意：**原文是否支持这句话、语气有没有被加强、适用范围有没有被扩大、有没有遗漏会改变结论的条件。**\n\n比如，下面是我编的练习：\n\n> 原文：“作者认为，固定阅读时间可能帮助部分人坚持阅读，但尚未比较不同安排的效果。”  \n> 摘要：“研究证实，固定时间阅读能提高所有人的学习效率。”\n\n这句摘要把“作者认为”变成了“研究证实”，把“部分人”扩大为“所有人”，还把“坚持阅读”换成了“提高学习效率”。文字很顺，意思已经变了。\n\n也要保留核验范围：**某句话在所给片段里找不到依据，只能说“这段材料无法支持”，不能直接断言整本书都没说过。**即使摘要里的每句话都有依据，也还要检查它是否漏掉了原文主旨或关键限制。\n\n这周先以“能独立指出一处问题、给出原文依据并解释修改”为完成标准。你可以直接贴一小段有权分享的原文和对应摘要，我们就从其中一句开始核对。",
+      "returncode": 0,
+      "elapsed_seconds": 63.67,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167e5-f317-7ce3-a968-8c9eadd54f25"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-9una42sh/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按「零一大学指南针」来帮你缩小范围，把学习安排对准“核验读书摘要”这个目标。"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**不用全部刷完。**你目前想学的是“核验 AI 的读书摘要”，可以直接从原文和摘要开始练。二十个仓库可能各自服务不同目标，放在一起看，很容易把学习范围越扩越大。\n\n建议先把收藏当作备用资料；遇到具体卡点，再找相关教程中的一小节。眼下的主材料，就选一段你正在读、自己基本能看懂的原文。\n\n你每周有两小时，可以先用下面这个安排，给临时卡点留些余量：\n\n1. **第一次约 40 分钟：核验一段摘要。**选约 500—1000 字原文，先用自己的话写一句“作者主要在说什么”，再看 AI 摘要。圈出摘要里三条关键主张，逐条找到对应原句，标为“有依据”“与原文冲突”或“这段材料无法确认”。\n2. **用约 15 分钟：修改一处实质错误。**优先处理会改变理解的地方，例如把“可能”写成“一定”、把个人经验写成研究结论，或漏掉重要条件。留下“原摘要—依据—修改理由”三行即可。\n3. **隔几天用约 30 分钟：换一段独立试。**先不看之前的检查步骤，自己找出一句需要核对的话，并说明为什么。卡在哪里，下次就补哪里。\n\n核验时，尤其留意：**原文是否支持这句话、语气有没有被加强、适用范围有没有被扩大、有没有遗漏会改变结论的条件。**\n\n比如，下面是我编的练习：\n\n> 原文：“作者认为，固定阅读时间可能帮助部分人坚持阅读，但尚未比较不同安排的效果。”  \n> 摘要：“研究证实，固定时间阅读能提高所有人的学习效率。”\n\n这句摘要把“作者认为”变成了“研究证实”，把“部分人”扩大为“所有人”，还把“坚持阅读”换成了“提高学习效率”。文字很顺，意思已经变了。\n\n也要保留核验范围：**某句话在所给片段里找不到依据，只能说“这段材料无法支持”，不能直接断言整本书都没说过。**即使摘要里的每句话都有依据，也还要检查它是否漏掉了原文主旨或关键限制。\n\n这周先以“能独立指出一处问题、给出原文依据并解释修改”为完成标准。你可以直接贴一小段有权分享的原文和对应摘要，我们就从其中一句开始核对。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 46582,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1665,
+            "reasoning_output_tokens": 1034
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "还有人建议我买一个 AI 结课证书，说拿到就证明会了。另一方面，学校某个活动如果正式要求特定证书，我是不是也可以完全不管？请帮我分清。",
+      "prompt_sha256": "ecdb7974a6d2bc253c28243f2b4ddf7dabf014eaa2705a9bdf9fd8cd0ee302ff",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "**证书能否满足活动资格，和它能否证明你掌握了能力，是两个问题。**“拿到就证明会了”说得太满；学校活动若确有正式要求，也不能因为证书的能力证明有限，就认定要求不存在。\n\n可以分成三种用途来看：\n\n| 证书的用途 | 应该看什么 |\n|---|---|\n| **满足正式资格** | 该活动当前适用的正式规则，是否明确要求这一种证书 |\n| **提供能力证据** | 获证需要完成什么考核，是否独立完成，考核内容与你要学的能力是否相关 |\n| **帮助自己学习** | 课程和考核是否提供有效练习、纠错与反馈，是否值得投入时间和钱 |\n\n**对“拿到就证明会了”：要看它考了什么。**如果只要付费、签到或看完视频就能获证，它主要证明你满足了这些颁发条件。若有相关、严格的独立考核，证书可以提供一定能力证据，但证据仍限于考核覆盖的范围。付费本身既不保证教学有效，也不能单凭这一点判断证书没有价值。\n\n对你目前的目标，更直接的能力证据是：拿到一段新的原文和 AI 摘要，你能独立指出摘要中的无依据补充、语气加强或关键遗漏，找到原文依据，并说明怎样修改。**一张泛泛的“AI 结课证书”，未必检查过这些能力。**\n\n**对“学校正式要求特定证书”：如果你想参加，就需要把它当作实际条件。**先核对本校该活动、当前年度的正式通知，确认要求的证书名称、颁发机构和提交期限。有人转述“最好有一个”，与正式通知写“必须提交”，影响不同。目前没有具体通知，我无法判断你说的活动属于哪一种。\n\n如果正式规则确实要求，而你没有证书，可能影响报名或资格认定。你可以向主办方核实是否接受其他能力证明、是否允许补交或有豁免；得到确认前，不能假定这些替代方式一定可行。你也可以比较成本后选择不参加这项活动，无需为了所有活动都去考证。\n\n按你现在**每周两小时、只想学会核验读书摘要**的目标，建议先沿用原文核验练习，暂不因为“有证就代表会了”而购买。只有当某个你确实重视的活动有明确要求，或课程本身能提供你需要的训练时，再比较它的费用、总耗时和替代方案。**资格是否满足、技能是否掌握，分别核实。**",
+      "returncode": 0,
+      "elapsed_seconds": 58.85,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167e6-ebb9-7a33-8f27-a39f55d41494"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-9una42sh/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按你提供的「零一大学指南针」，把证书的资格用途和能力证明分开来看。\n"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**证书能否满足活动资格，和它能否证明你掌握了能力，是两个问题。**“拿到就证明会了”说得太满；学校活动若确有正式要求，也不能因为证书的能力证明有限，就认定要求不存在。\n\n可以分成三种用途来看：\n\n| 证书的用途 | 应该看什么 |\n|---|---|\n| **满足正式资格** | 该活动当前适用的正式规则，是否明确要求这一种证书 |\n| **提供能力证据** | 获证需要完成什么考核，是否独立完成，考核内容与你要学的能力是否相关 |\n| **帮助自己学习** | 课程和考核是否提供有效练习、纠错与反馈，是否值得投入时间和钱 |\n\n**对“拿到就证明会了”：要看它考了什么。**如果只要付费、签到或看完视频就能获证，它主要证明你满足了这些颁发条件。若有相关、严格的独立考核，证书可以提供一定能力证据，但证据仍限于考核覆盖的范围。付费本身既不保证教学有效，也不能单凭这一点判断证书没有价值。\n\n对你目前的目标，更直接的能力证据是：拿到一段新的原文和 AI 摘要，你能独立指出摘要中的无依据补充、语气加强或关键遗漏，找到原文依据，并说明怎样修改。**一张泛泛的“AI 结课证书”，未必检查过这些能力。**\n\n**对“学校正式要求特定证书”：如果你想参加，就需要把它当作实际条件。**先核对本校该活动、当前年度的正式通知，确认要求的证书名称、颁发机构和提交期限。有人转述“最好有一个”，与正式通知写“必须提交”，影响不同。目前没有具体通知，我无法判断你说的活动属于哪一种。\n\n如果正式规则确实要求，而你没有证书，可能影响报名或资格认定。你可以向主办方核实是否接受其他能力证明、是否允许补交或有豁免；得到确认前，不能假定这些替代方式一定可行。你也可以比较成本后选择不参加这项活动，无需为了所有活动都去考证。\n\n按你现在**每周两小时、只想学会核验读书摘要**的目标，建议先沿用原文核验练习，暂不因为“有证就代表会了”而购买。只有当某个你确实重视的活动有明确要求，或课程本身能提供你需要的训练时，再比较它的费用、总耗时和替代方案。**资格是否满足、技能是否掌握，分别核实。**"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 47264,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1612,
+            "reasoning_output_tokens": 959
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T08:34:45Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 122.54,
+  "finished_at_utc": "2026-10-23T08:36:48Z"
+}

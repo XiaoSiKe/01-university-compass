@@ -1,0 +1,8 @@
+{
+  "validator": "skill-creator/scripts/quick_validate.py",
+  "version": "0.2.0",
+  "revision": "R2",
+  "exit_code": 0,
+  "stdout": "Skill is valid!",
+  "stderr": ""
+}

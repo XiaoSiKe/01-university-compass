@@ -1,0 +1,506 @@
+{
+  "artifacts": {
+    "A01-skill/attempt-20261023T161344-48666bc6.json": {
+      "case": "A01",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/A01-skill/attempt-20261023T161344-48666bc6.json",
+      "original_sha256": "130025da55b8ad1a46456068d493e9e21ee1c6c57c2b6b81fedfa47a61adc497",
+      "exported_sha256": "130025da55b8ad1a46456068d493e9e21ee1c6c57c2b6b81fedfa47a61adc497",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "A02-skill/attempt-20261023T161344-6e1b94ef.json": {
+      "case": "A02",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/A02-skill/attempt-20261023T161344-6e1b94ef.json",
+      "original_sha256": "e9134a1cc53c2877ac11e1d0e57a80c8f53d1d00682975c57200c995b3f21011",
+      "exported_sha256": "e9134a1cc53c2877ac11e1d0e57a80c8f53d1d00682975c57200c995b3f21011",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "A03-skill/attempt-20261023T161344-f4794265.json": {
+      "case": "A03",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/A03-skill/attempt-20261023T161344-f4794265.json",
+      "original_sha256": "dac3e4877b911832d740cb50d98222163b787e0e3f580f5adbb230f77308471c",
+      "exported_sha256": "dac3e4877b911832d740cb50d98222163b787e0e3f580f5adbb230f77308471c",
+      "changed_fields": [],
+      "turns": 2
+    },
+    "A04-skill/attempt-20261023T161344-c6826a57.json": {
+      "case": "A04",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/A04-skill/attempt-20261023T161344-c6826a57.json",
+      "original_sha256": "1ada24f9c05fff5ef53e47bb04596031065a5d3525088e22cd63fd5ffb9fc4f7",
+      "exported_sha256": "1ada24f9c05fff5ef53e47bb04596031065a5d3525088e22cd63fd5ffb9fc4f7",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "A05-skill/attempt-20261023T161431-d35fc68e.json": {
+      "case": "A05",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/A05-skill/attempt-20261023T161431-d35fc68e.json",
+      "original_sha256": "627e505c0efbdf15f3e09ee15a593c1dbbbfcc73d430ab4650449b7be32a8365",
+      "exported_sha256": "627e505c0efbdf15f3e09ee15a593c1dbbbfcc73d430ab4650449b7be32a8365",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "A06-skill/attempt-20261023T161504-0235b95a.json": {
+      "case": "A06",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/A06-skill/attempt-20261023T161504-0235b95a.json",
+      "original_sha256": "19105248d8e175b2e978d72a8613673ad9c0d56d49c441615667206573d9ca48",
+      "exported_sha256": "19105248d8e175b2e978d72a8613673ad9c0d56d49c441615667206573d9ca48",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "A07-skill/attempt-20261023T161510-74478a77.json": {
+      "case": "A07",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/A07-skill/attempt-20261023T161510-74478a77.json",
+      "original_sha256": "e3a924da40f0f91d6df12b777ecef6b9b774f8bbdea63f963c1c068b1ea2fbe5",
+      "exported_sha256": "e3a924da40f0f91d6df12b777ecef6b9b774f8bbdea63f963c1c068b1ea2fbe5",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "A08-skill/attempt-20261023T161532-df0e65c9.json": {
+      "case": "A08",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/A08-skill/attempt-20261023T161532-df0e65c9.json",
+      "original_sha256": "2f30231adcc97aaaca3d3dcf2823dd0d7c4da4d656f163f6d6f4fea739ed4b19",
+      "exported_sha256": "2f30231adcc97aaaca3d3dcf2823dd0d7c4da4d656f163f6d6f4fea739ed4b19",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "B01-skill/attempt-20261023T161534-f7ed9dfe.json": {
+      "case": "B01",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/B01-skill/attempt-20261023T161534-f7ed9dfe.json",
+      "original_sha256": "1e7977ba96802af3e3dffc0fecab55fe792ee16d7d8cd183724e399cc85e0355",
+      "exported_sha256": "1e7977ba96802af3e3dffc0fecab55fe792ee16d7d8cd183724e399cc85e0355",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "B02-skill/attempt-20261023T161553-59d2d169.json": {
+      "case": "B02",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/B02-skill/attempt-20261023T161553-59d2d169.json",
+      "original_sha256": "8b1cc1e32af9c1498b63c4416a1403ac8b6e18ef49695d6035baa9e4ff9abbbd",
+      "exported_sha256": "8b1cc1e32af9c1498b63c4416a1403ac8b6e18ef49695d6035baa9e4ff9abbbd",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "B03-skill/attempt-20261023T161622-d7ffbe50.json": {
+      "case": "B03",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/B03-skill/attempt-20261023T161622-d7ffbe50.json",
+      "original_sha256": "46a7ffc417d6e15c7cff4206a4ba9cf1860075efb2a1054f03c9e17025eceda9",
+      "exported_sha256": "46a7ffc417d6e15c7cff4206a4ba9cf1860075efb2a1054f03c9e17025eceda9",
+      "changed_fields": [],
+      "turns": 2
+    },
+    "B04-skill/attempt-20261023T161627-dae507da.json": {
+      "case": "B04",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/B04-skill/attempt-20261023T161627-dae507da.json",
+      "original_sha256": "e64bae21ef6476506d9824e8836aca19f0da1756a4f469c862e5a0c2c8f42f8e",
+      "exported_sha256": "e64bae21ef6476506d9824e8836aca19f0da1756a4f469c862e5a0c2c8f42f8e",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "B05-skill/attempt-20261023T161650-483b0a2d.json": {
+      "case": "B05",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/B05-skill/attempt-20261023T161650-483b0a2d.json",
+      "original_sha256": "8cb89d779e3a987f1a0ef646f9a9fbdd4addda9f605fdd11d7ae11943912fdae",
+      "exported_sha256": "8cb89d779e3a987f1a0ef646f9a9fbdd4addda9f605fdd11d7ae11943912fdae",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "B06-skill/attempt-20261023T161654-7cd4d55e.json": {
+      "case": "B06",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/B06-skill/attempt-20261023T161654-7cd4d55e.json",
+      "original_sha256": "36e10a77f5adff6770cfa22c3798c37445963b922d9ce2cbcb5bc1759cdf74ff",
+      "exported_sha256": "36e10a77f5adff6770cfa22c3798c37445963b922d9ce2cbcb5bc1759cdf74ff",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "B07-skill/attempt-20261023T161736-9a169ecd.json": {
+      "case": "B07",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/B07-skill/attempt-20261023T161736-9a169ecd.json",
+      "original_sha256": "a89a5a47085b25b7370a57736824d7876a383eb4ff5fb5e05920f0bba9ce25ee",
+      "exported_sha256": "a89a5a47085b25b7370a57736824d7876a383eb4ff5fb5e05920f0bba9ce25ee",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "B08-skill/attempt-20261023T161746-56a82fba.json": {
+      "case": "B08",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/B08-skill/attempt-20261023T161746-56a82fba.json",
+      "original_sha256": "47a48596547fd59de26f82d726bbf1bc21ffc930a2023fd8877cf68fde6c3b63",
+      "exported_sha256": "47a48596547fd59de26f82d726bbf1bc21ffc930a2023fd8877cf68fde6c3b63",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "N01-baseline/attempt-20261023T161551-664c9a0a.json": {
+      "case": "N01",
+      "condition": "baseline",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N01-baseline/attempt-20261023T161551-664c9a0a.json",
+      "original_sha256": "c05d3cf3004e140690af1f37d00e14c757ab58571ea6c0a7d7df0bce0b93678f",
+      "exported_sha256": "c05d3cf3004e140690af1f37d00e14c757ab58571ea6c0a7d7df0bce0b93678f",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N03-skill/attempt-20261023T161823-33ffc113.json": {
+      "case": "N03",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N03-skill/attempt-20261023T161823-33ffc113.json",
+      "original_sha256": "1894a3f2d3e9f98d3fabe64ec571326d60cfd790ccda79750a7e831cdc7ceed9",
+      "exported_sha256": "1894a3f2d3e9f98d3fabe64ec571326d60cfd790ccda79750a7e831cdc7ceed9",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "N06-baseline/attempt-20261023T161551-d26db157.json": {
+      "case": "N06",
+      "condition": "baseline",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N06-baseline/attempt-20261023T161551-d26db157.json",
+      "original_sha256": "08f14396c4e888e80a448c241ea52ff8d67bfb98693e2fee3ace3ae707244416",
+      "exported_sha256": "08f14396c4e888e80a448c241ea52ff8d67bfb98693e2fee3ace3ae707244416",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N01-skill/attempt-20261023T161807-77de8031.json": {
+      "case": "N01",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N01-skill/attempt-20261023T161807-77de8031.json",
+      "original_sha256": "d6337f5eb549917fa9fd210ad8a6dceaa56a28bad454cd8780c9bd7c4dffb29f",
+      "exported_sha256": "d6337f5eb549917fa9fd210ad8a6dceaa56a28bad454cd8780c9bd7c4dffb29f",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N02-skill/attempt-20261023T161822-b135faac.json": {
+      "case": "N02",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N02-skill/attempt-20261023T161822-b135faac.json",
+      "original_sha256": "8736b9f487963603fcd2026c28e6ba9bb1d1967c0e8f871f18d2881b09b3c8c8",
+      "exported_sha256": "8736b9f487963603fcd2026c28e6ba9bb1d1967c0e8f871f18d2881b09b3c8c8",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N04-skill/attempt-20261023T161855-350642de.json": {
+      "case": "N04",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N04-skill/attempt-20261023T161855-350642de.json",
+      "original_sha256": "f6a77fb1fc5efc5ab50982c0f526f4cb17d220742ac5e7c9c63b75f1091d4901",
+      "exported_sha256": "f6a77fb1fc5efc5ab50982c0f526f4cb17d220742ac5e7c9c63b75f1091d4901",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N09-baseline/attempt-20261023T161848-c77c2610.json": {
+      "case": "N09",
+      "condition": "baseline",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N09-baseline/attempt-20261023T161848-c77c2610.json",
+      "original_sha256": "30a5be936c52986942fbb9b2e270490d6d898f9a077668262a7d195d61ed30b6",
+      "exported_sha256": "30a5be936c52986942fbb9b2e270490d6d898f9a077668262a7d195d61ed30b6",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N10-baseline/attempt-20261023T161932-69fb9ca7.json": {
+      "case": "N10",
+      "condition": "baseline",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N10-baseline/attempt-20261023T161932-69fb9ca7.json",
+      "original_sha256": "801e0d053754b6a24709ffbacfd03122157b2cee4a47e688d94eb84af5b17b37",
+      "exported_sha256": "801e0d053754b6a24709ffbacfd03122157b2cee4a47e688d94eb84af5b17b37",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N07-skill/attempt-20261023T162218-ce6855f6.json": {
+      "case": "N07",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N07-skill/attempt-20261023T162218-ce6855f6.json",
+      "original_sha256": "fc686ecb1a5d3919d39a330fe4176c87c768ab2df5e8c91583d56ed0d7d84982",
+      "exported_sha256": "fc686ecb1a5d3919d39a330fe4176c87c768ab2df5e8c91583d56ed0d7d84982",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "N08-skill/attempt-20261023T162234-1bfc1041.json": {
+      "case": "N08",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N08-skill/attempt-20261023T162234-1bfc1041.json",
+      "original_sha256": "09abf90f02f926bfa38b9d1430109797f78ccf8213e72286d9d11e167615c110",
+      "exported_sha256": "09abf90f02f926bfa38b9d1430109797f78ccf8213e72286d9d11e167615c110",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "N14-baseline/attempt-20261023T162206-492cafa1.json": {
+      "case": "N14",
+      "condition": "baseline",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N14-baseline/attempt-20261023T162206-492cafa1.json",
+      "original_sha256": "7b61ec39f6cd502339237cf13945d147b3114cf4c22b2f2ffcfb60c2f2572ecd",
+      "exported_sha256": "7b61ec39f6cd502339237cf13945d147b3114cf4c22b2f2ffcfb60c2f2572ecd",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N22-baseline/attempt-20261023T162212-d393da9c.json": {
+      "case": "N22",
+      "condition": "baseline",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N22-baseline/attempt-20261023T162212-d393da9c.json",
+      "original_sha256": "9f9965b145e8e48a08738339a2272fcd39d6660c3db12672c85383c958f9d803",
+      "exported_sha256": "9f9965b145e8e48a08738339a2272fcd39d6660c3db12672c85383c958f9d803",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N05-skill/attempt-20261023T161931-1f24884a.json": {
+      "case": "N05",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N05-skill/attempt-20261023T161931-1f24884a.json",
+      "original_sha256": "e41f57071f6639b2ce8dbafb4586a75c1e1d57ff2721af147315292fad2d09b8",
+      "exported_sha256": "e41f57071f6639b2ce8dbafb4586a75c1e1d57ff2721af147315292fad2d09b8",
+      "changed_fields": [],
+      "turns": 4
+    },
+    "N06-skill/attempt-20261023T162147-962b442a.json": {
+      "case": "N06",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N06-skill/attempt-20261023T162147-962b442a.json",
+      "original_sha256": "271445314bfa9ea3fdf78eb5bb5efe59a69c9632d6f6ec87c453a03155031ae7",
+      "exported_sha256": "271445314bfa9ea3fdf78eb5bb5efe59a69c9632d6f6ec87c453a03155031ae7",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N09-skill/attempt-20261023T162318-b2309333.json": {
+      "case": "N09",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N09-skill/attempt-20261023T162318-b2309333.json",
+      "original_sha256": "07b7cee4212812990e6e0db32ebb88f9a1d75922d539f3faab4ac510f5bb8109",
+      "exported_sha256": "07b7cee4212812990e6e0db32ebb88f9a1d75922d539f3faab4ac510f5bb8109",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N10-skill/attempt-20261023T162400-29efb31e.json": {
+      "case": "N10",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N10-skill/attempt-20261023T162400-29efb31e.json",
+      "original_sha256": "bbf5c9da87bb3713c6e6d580bcd617ea29936baa9fdcff13375390fa4bfe870c",
+      "exported_sha256": "bbf5c9da87bb3713c6e6d580bcd617ea29936baa9fdcff13375390fa4bfe870c",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N11-skill/attempt-20261023T162530-331bd502.json": {
+      "case": "N11",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N11-skill/attempt-20261023T162530-331bd502.json",
+      "original_sha256": "879f26220413ef1186958a46392c71963b8d8c3945fd0d4194aa961586bf4ce2",
+      "exported_sha256": "879f26220413ef1186958a46392c71963b8d8c3945fd0d4194aa961586bf4ce2",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "N12-skill/attempt-20261023T162536-93ebd8bf.json": {
+      "case": "N12",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N12-skill/attempt-20261023T162536-93ebd8bf.json",
+      "original_sha256": "b715000a013e9c83c938bc491c162cbfbf31dabf3e35fbc749e088eb0e98189d",
+      "exported_sha256": "b715000a013e9c83c938bc491c162cbfbf31dabf3e35fbc749e088eb0e98189d",
+      "changed_fields": [],
+      "turns": 2
+    },
+    "N14-skill/attempt-20261023T162637-b66bb07e.json": {
+      "case": "N14",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N14-skill/attempt-20261023T162637-b66bb07e.json",
+      "original_sha256": "e1f10ad9552488bf1606e138ac7c4c1e0a6b312d817d9df3fe3a509dd98e80de",
+      "exported_sha256": "e1f10ad9552488bf1606e138ac7c4c1e0a6b312d817d9df3fe3a509dd98e80de",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N16-skill/attempt-20261023T162756-27e39e8e.json": {
+      "case": "N16",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N16-skill/attempt-20261023T162756-27e39e8e.json",
+      "original_sha256": "1f58c8003c6ae16da312618475addcc0b6ff9ea01f87fc65cc5fe11229c760ec",
+      "exported_sha256": "1f58c8003c6ae16da312618475addcc0b6ff9ea01f87fc65cc5fe11229c760ec",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "N13-skill/attempt-20261023T162634-4fa7045b.json": {
+      "case": "N13",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N13-skill/attempt-20261023T162634-4fa7045b.json",
+      "original_sha256": "f09551afbc0fc18dcaa9b04987be113093b03ef066585e1d2673efdb7ffda4cd",
+      "exported_sha256": "f09551afbc0fc18dcaa9b04987be113093b03ef066585e1d2673efdb7ffda4cd",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N17-skill/attempt-20261023T162908-6627eedb.json": {
+      "case": "N17",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N17-skill/attempt-20261023T162908-6627eedb.json",
+      "original_sha256": "a8d99069fdf4d2cfdd388ed2bb40dadc28a4e7cfc3834d9f44a2c3e95934a019",
+      "exported_sha256": "a8d99069fdf4d2cfdd388ed2bb40dadc28a4e7cfc3834d9f44a2c3e95934a019",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "N18-skill/attempt-20261023T162958-e9b6b751.json": {
+      "case": "N18",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N18-skill/attempt-20261023T162958-e9b6b751.json",
+      "original_sha256": "d91e5a0e8d5b4c1689d19bdc6df550ea0ff940dae3c8fb99d0fcdc1529927282",
+      "exported_sha256": "d91e5a0e8d5b4c1689d19bdc6df550ea0ff940dae3c8fb99d0fcdc1529927282",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "N15-skill/attempt-20261023T162711-b907358e.json": {
+      "case": "N15",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N15-skill/attempt-20261023T162711-b907358e.json",
+      "original_sha256": "008e05fe6db40979bf258ada778e8300fb0e9974b1fa1bfba66faf167c317b39",
+      "exported_sha256": "008e05fe6db40979bf258ada778e8300fb0e9974b1fa1bfba66faf167c317b39",
+      "changed_fields": [],
+      "turns": 4
+    },
+    "N19-skill/attempt-20261023T163037-b5f2bea2.json": {
+      "case": "N19",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N19-skill/attempt-20261023T163037-b5f2bea2.json",
+      "original_sha256": "4dea4f38d3b50b35f08953709dc346e8daab83edf154719f26b6b50cfdacc07b",
+      "exported_sha256": "4dea4f38d3b50b35f08953709dc346e8daab83edf154719f26b6b50cfdacc07b",
+      "changed_fields": [],
+      "turns": 2
+    },
+    "N21-skill/attempt-20261023T163108-3a856444.json": {
+      "case": "N21",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N21-skill/attempt-20261023T163108-3a856444.json",
+      "original_sha256": "ae3a2a08ee78e1d428f518171392f1f3b01424893ffb426be12df284e6f5c9c9",
+      "exported_sha256": "ae3a2a08ee78e1d428f518171392f1f3b01424893ffb426be12df284e6f5c9c9",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "N20-skill/attempt-20261023T163043-9213a8f4.json": {
+      "case": "N20",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N20-skill/attempt-20261023T163043-9213a8f4.json",
+      "original_sha256": "63402ddc314040a6f89c501aa1004211322c0674202d24203651e52d1bf795f2",
+      "exported_sha256": "63402ddc314040a6f89c501aa1004211322c0674202d24203651e52d1bf795f2",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N22-skill/attempt-20261023T163155-29bdd590.json": {
+      "case": "N22",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N22-skill/attempt-20261023T163155-29bdd590.json",
+      "original_sha256": "4cf09ed18013f6fed8f380683e30733bc7a32de1ea57cd613a121df9dbd8ddd9",
+      "exported_sha256": "4cf09ed18013f6fed8f380683e30733bc7a32de1ea57cd613a121df9dbd8ddd9",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N11-skill/attempt-20261023T163445-7d6ecfe8.json": {
+      "case": "N11",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N11-skill/attempt-20261023T163445-7d6ecfe8.json",
+      "original_sha256": "d9e44ab5ad140ee0c674a31d1acb6b5745188c38d7c343deb5e43b718f49ddc6",
+      "exported_sha256": "d9e44ab5ad140ee0c674a31d1acb6b5745188c38d7c343deb5e43b718f49ddc6",
+      "changed_fields": [],
+      "turns": 1
+    },
+    "N12-skill/attempt-20261023T163445-88c43971.json": {
+      "case": "N12",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N12-skill/attempt-20261023T163445-88c43971.json",
+      "original_sha256": "25aa051321c9139f819f12c0b38edd1f96a7445ef86dc7b634708087795b0556",
+      "exported_sha256": "25aa051321c9139f819f12c0b38edd1f96a7445ef86dc7b634708087795b0556",
+      "changed_fields": [],
+      "turns": 2
+    },
+    "N04-skill/attempt-20261023T163445-41c19c66.json": {
+      "case": "N04",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N04-skill/attempt-20261023T163445-41c19c66.json",
+      "original_sha256": "dfb40eefa009cdc719cee9082782e38be51455f8ff3b276e865f282a122de5dc",
+      "exported_sha256": "dfb40eefa009cdc719cee9082782e38be51455f8ff3b276e865f282a122de5dc",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N22-skill/attempt-20261023T164153-51bc480a.json": {
+      "case": "N22",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N22-skill/attempt-20261023T164153-51bc480a.json",
+      "original_sha256": "4abc2903f6f0a65d2dbbab8368231d252cae4c8ed7b0cdc52cf5d515825f4dbf",
+      "exported_sha256": "4abc2903f6f0a65d2dbbab8368231d252cae4c8ed7b0cdc52cf5d515825f4dbf",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N06-skill/attempt-20261023T164153-5027d0b2.json": {
+      "case": "N06",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N06-skill/attempt-20261023T164153-5027d0b2.json",
+      "original_sha256": "2cbc457174cb2ae05320839d914fe772c8354847201da8e1e4bde6d41363da2b",
+      "exported_sha256": "2cbc457174cb2ae05320839d914fe772c8354847201da8e1e4bde6d41363da2b",
+      "changed_fields": [],
+      "turns": 3
+    },
+    "N02-skill/attempt-20261023T164153-4e62b70e.json": {
+      "case": "N02",
+      "condition": "skill",
+      "status": "completed",
+      "source_path": "/tmp/compass-v020-formal/behavior/N02-skill/attempt-20261023T164153-4e62b70e.json",
+      "original_sha256": "23a4497d14ff4de23fbea31de4f94fc9158b7f2fe405cb350e24941a655ac5ac",
+      "exported_sha256": "23a4497d14ff4de23fbea31de4f94fc9158b7f2fe405cb350e24941a655ac5ac",
+      "changed_fields": [],
+      "turns": 3
+    }
+  },
+  "note": "Each exported file is byte-identical to its temporary original unless changed_fields records a redaction. Temporary originals remain available.",
+  "updated_at_utc": "2026-10-23T08:47:41.651004+00:00"
+}

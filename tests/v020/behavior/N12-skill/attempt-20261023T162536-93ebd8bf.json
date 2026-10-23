@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "case": "N12",
+  "title": "资源收藏替代学习",
+  "condition": "skill",
+  "fingerprint": "846440ee28238859d27c09f65009198c44c0687e5fc44ff89ff6b4989d068f0b",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "/private/tmp/compass-v020-formal/behavior/N12-skill/attempt-20261023T162536-93ebd8bf.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "61ebbfa3c6c9ad210c3bc1b0cb004c30b63d5b7516fb979586688b7ea0f9e264",
+      "bytes": 5758
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "08612b37301e1c7738fd249b41918a96634cd10b4d3d75567c319a6db25f188e",
+      "bytes": 9903
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61",
+      "bytes": 19829
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "87cdf52ad727220e7c258ab5f39a9219732ebb055e501478f1d005e1ed572be5",
+      "bytes": 10474
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "2391f448d3287ebd64350471d4e663ebaec5450580e59e82467c4d4fbf478c7e",
+      "bytes": 36478
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "8fde755d004a70837cae757474129f3e68be81d4f8561bee2513ee9a4090844f",
+      "bytes": 2965
+    },
+    {
+      "path": "references/zeroone.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我收藏了二十个 AI 仓库，教程都很好但越看越乱。是不是应该全部刷完再做东西？我一周只有两小时，目前只想学会核验 AI 给出的读书摘要。",
+      "prompt_sha256": "a476247c34febaa96e280e549bc92b4a7a2e0e424d3adb49fe4e61c0a99d26d0",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**不用把二十个仓库全部刷完，可以直接开始核验练习。**你目前的目标很明确：判断 AI 的读书摘要是否忠实于原文。这可以在当前对话里练，不需要先学编程或搭环境。\n\n先把收藏夹当作备用资料，遇到一个具体卡点，再选一份相关教程看对应部分。这样每次阅读都有一个要解决的问题。\n\n本周建议先做一次 **40 分钟的小练习**，不用填满两小时：\n\n1. **选材料，5 分钟。**选你正在读的书中一段能看懂的原文，约 300—800 字，配一份针对这段文字的 AI 摘要。先自己写一句“这段主要说什么”，再看摘要。\n2. **拆主张，10 分钟。**从摘要里挑出两三句可以核对的话。例如“作者认为……”“造成这个结果的原因是……”。一句包含多个判断，就拆开检查。\n3. **找依据，15 分钟。**给每项主张标上“原文支持／与原文冲突／给定片段不足以判断”，并记下对应原句。尤其留意：有没有把“可能”写成“一定”、把别人的观点算到作者头上、漏掉重要条件。\n4. **修订并解释，10 分钟。**改好一处有问题的表述，再用自己的话说明：原摘要哪里变了意思，你为什么这样改。\n\n你的成果只需要几行：\n\n> 摘要主张：……  \n> 原文依据：……  \n> 当前判断：……  \n> 修改后：……\n\n比如原文说“在部分情况下，阅读摘要可以帮助回顾”，AI 写成“读摘要能替代阅读原书”，就扩大了适用范围，也增加了原文没有的结论。**找不到依据时先保留未知；只看过一个片段，也只能核验这个片段对应的摘要。**\n\n判断自己是否开始掌握，可以看：换一段材料、少一点提示后，你能否独立找到依据，解释一处失真，以及指出哪些内容还不能判断。先从手头的一段原文和对应摘要开始就够了。",
+      "returncode": 0,
+      "elapsed_seconds": 66.85,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167dd-9294-78f1-9632-6c08bea8b9a5"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-n9ew3l1b/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "**不用把二十个仓库全部刷完，可以直接开始核验练习。**你目前的目标很明确：判断 AI 的读书摘要是否忠实于原文。这可以在当前对话里练，不需要先学编程或搭环境。\n\n先把收藏夹当作备用资料，遇到一个具体卡点，再选一份相关教程看对应部分。这样每次阅读都有一个要解决的问题。\n\n本周建议先做一次 **40 分钟的小练习**，不用填满两小时：\n\n1. **选材料，5 分钟。**选你正在读的书中一段能看懂的原文，约 300—800 字，配一份针对这段文字的 AI 摘要。先自己写一句“这段主要说什么”，再看摘要。\n2. **拆主张，10 分钟。**从摘要里挑出两三句可以核对的话。例如“作者认为……”“造成这个结果的原因是……”。一句包含多个判断，就拆开检查。\n3. **找依据，15 分钟。**给每项主张标上“原文支持／与原文冲突／给定片段不足以判断”，并记下对应原句。尤其留意：有没有把“可能”写成“一定”、把别人的观点算到作者头上、漏掉重要条件。\n4. **修订并解释，10 分钟。**改好一处有问题的表述，再用自己的话说明：原摘要哪里变了意思，你为什么这样改。\n\n你的成果只需要几行：\n\n> 摘要主张：……  \n> 原文依据：……  \n> 当前判断：……  \n> 修改后：……\n\n比如原文说“在部分情况下，阅读摘要可以帮助回顾”，AI 写成“读摘要能替代阅读原书”，就扩大了适用范围，也增加了原文没有的结论。**找不到依据时先保留未知；只看过一个片段，也只能核验这个片段对应的摘要。**\n\n判断自己是否开始掌握，可以看：换一段材料、少一点提示后，你能否独立找到依据，解释一处失真，以及指出哪些内容还不能判断。先从手头的一段原文和对应摘要开始就够了。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 46346,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1536,
+            "reasoning_output_tokens": 1034
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "还有人建议我买一个 AI 结课证书，说拿到就证明会了。另一方面，学校某个活动如果正式要求特定证书，我是不是也可以完全不管？请帮我分清。",
+      "prompt_sha256": "745d91540fe1f35058b6a07c4c25174ccfa756f2780af6521d7f204a4dac1241",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "**证书能否证明能力，和它是否是某项活动的资格条件，是两个问题。**一张证书可能不足以证明你会核验摘要，同时又是某个活动明确要求的报名材料。\n\n**1. “拿到证书就证明会了”，要看证书怎么考。**\n\n有的结课证书只证明完成了课程、观看或签到；有的需要通过测验；有的要求独立完成实际任务。它们提供的能力证据强弱不同。付费本身也不能说明证书质量，关键是考核内容、完成方式以及能否核验。\n\n对你来说，如果考核只让你记 AI 术语，就很难据此判断你是否会核验读书摘要。更直接的证据是：面对一段没练过的原文和对应摘要，你能否独立找到依据、识别意思被扩大或条件被遗漏的地方，并说明哪些判断还缺材料。即使做到了，也先说明你在这类任务中的表现，不能扩大成“所有 AI 技能都会了”。\n\n**2. 学校活动正式要求特定证书时，想参加就需要认真处理。**\n\n先确认要求来自本次活动有权发布规则的主体，适用于你，并看清是“必须具备”还是“优先考虑”，认可哪一种证书、提交期限是什么。我没有看到该活动的正式通知，目前不能判断它具体要求什么。\n\n如果确实是适用的必要条件，你可以：\n\n- 按要求取得证书；\n- 核实是否有正式认可的替代考核或豁免；\n- 比较活动价值与取证所需的钱、时间，再决定是否参加。\n\n**自己觉得已经会了，不等于自动满足报名条件；有报名条件，也不等于你必须为参加这个活动去取证。**你可以选择不参加，但要知道这样选择的实际后果。\n\n**3. 放回你现在的目标，买证不必成为学习的前置步骤。**\n\n你每周只有两小时，目前只想学会核验 AI 读书摘要。我建议先把时间用于原文与摘要的实际核对。若之后有一个你确实想参加、且正式要求证书的活动，再单独判断取证是否值得。\n\n这样你就能分别回答：“我拿到了什么资格？”以及“我已经展示了什么能力？”两项都可以有价值，但需要各自的依据。",
+      "returncode": 0,
+      "elapsed_seconds": 73.2,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167de-979f-71b3-a337-f0d6124d8254"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-n9ew3l1b/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按「零一大学指南针」，把证书对能力的证明作用、活动的资格要求和你当前的学习目标分开看。"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**证书能否证明能力，和它是否是某项活动的资格条件，是两个问题。**一张证书可能不足以证明你会核验摘要，同时又是某个活动明确要求的报名材料。\n\n**1. “拿到证书就证明会了”，要看证书怎么考。**\n\n有的结课证书只证明完成了课程、观看或签到；有的需要通过测验；有的要求独立完成实际任务。它们提供的能力证据强弱不同。付费本身也不能说明证书质量，关键是考核内容、完成方式以及能否核验。\n\n对你来说，如果考核只让你记 AI 术语，就很难据此判断你是否会核验读书摘要。更直接的证据是：面对一段没练过的原文和对应摘要，你能否独立找到依据、识别意思被扩大或条件被遗漏的地方，并说明哪些判断还缺材料。即使做到了，也先说明你在这类任务中的表现，不能扩大成“所有 AI 技能都会了”。\n\n**2. 学校活动正式要求特定证书时，想参加就需要认真处理。**\n\n先确认要求来自本次活动有权发布规则的主体，适用于你，并看清是“必须具备”还是“优先考虑”，认可哪一种证书、提交期限是什么。我没有看到该活动的正式通知，目前不能判断它具体要求什么。\n\n如果确实是适用的必要条件，你可以：\n\n- 按要求取得证书；\n- 核实是否有正式认可的替代考核或豁免；\n- 比较活动价值与取证所需的钱、时间，再决定是否参加。\n\n**自己觉得已经会了，不等于自动满足报名条件；有报名条件，也不等于你必须为参加这个活动去取证。**你可以选择不参加，但要知道这样选择的实际后果。\n\n**3. 放回你现在的目标，买证不必成为学习的前置步骤。**\n\n你每周只有两小时，目前只想学会核验 AI 读书摘要。我建议先把时间用于原文与摘要的实际核对。若之后有一个你确实想参加、且正式要求证书的活动，再单独判断取证是否值得。\n\n这样你就能分别回答：“我拿到了什么资格？”以及“我已经展示了什么能力？”两项都可以有价值，但需要各自的依据。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 46938,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1599,
+            "reasoning_output_tokens": 1017
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T08:25:36Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 140.06,
+  "finished_at_utc": "2026-10-23T08:27:56Z"
+}

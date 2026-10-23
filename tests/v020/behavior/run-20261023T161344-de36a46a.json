@@ -1,0 +1,250 @@
+{
+  "configured_model": "gpt-6.1-sol",
+  "group": "all",
+  "smoke": false,
+  "baseline_ids": [
+    "N01",
+    "N06",
+    "N09",
+    "N10",
+    "N14",
+    "N22"
+  ],
+  "semantic_verdict": "not_automatically_scored",
+  "limitations": [
+    "Synthetic student conversations, not real student outcomes",
+    "Full Skill Markdown explicitly loaded; does not test lazy loading or installation discovery",
+    "All external tools disabled equally; live verification and real side effects are not tested",
+    "Full actual history replayed per turn; not server-side resume"
+  ],
+  "results": [
+    {
+      "case": "A01",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/A01-skill/attempt-20261023T161344-48666bc6.json"
+    },
+    {
+      "case": "A04",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/A04-skill/attempt-20261023T161344-c6826a57.json"
+    },
+    {
+      "case": "A02",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/A02-skill/attempt-20261023T161344-6e1b94ef.json"
+    },
+    {
+      "case": "A07",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/A07-skill/attempt-20261023T161510-74478a77.json"
+    },
+    {
+      "case": "A03",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/A03-skill/attempt-20261023T161344-f4794265.json"
+    },
+    {
+      "case": "A06",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/A06-skill/attempt-20261023T161504-0235b95a.json"
+    },
+    {
+      "case": "A05",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/A05-skill/attempt-20261023T161431-d35fc68e.json"
+    },
+    {
+      "case": "A08",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/A08-skill/attempt-20261023T161532-df0e65c9.json"
+    },
+    {
+      "case": "B01",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/B01-skill/attempt-20261023T161534-f7ed9dfe.json"
+    },
+    {
+      "case": "B02",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/B02-skill/attempt-20261023T161553-59d2d169.json"
+    },
+    {
+      "case": "B04",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/B04-skill/attempt-20261023T161627-dae507da.json"
+    },
+    {
+      "case": "B06",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/B06-skill/attempt-20261023T161654-7cd4d55e.json"
+    },
+    {
+      "case": "B05",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/B05-skill/attempt-20261023T161650-483b0a2d.json"
+    },
+    {
+      "case": "B03",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/B03-skill/attempt-20261023T161622-d7ffbe50.json"
+    },
+    {
+      "case": "B07",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/B07-skill/attempt-20261023T161736-9a169ecd.json"
+    },
+    {
+      "case": "B08",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/B08-skill/attempt-20261023T161746-56a82fba.json"
+    },
+    {
+      "case": "N03",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N03-skill/attempt-20261023T161823-33ffc113.json"
+    },
+    {
+      "case": "N01",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N01-skill/attempt-20261023T161807-77de8031.json"
+    },
+    {
+      "case": "N02",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N02-skill/attempt-20261023T161822-b135faac.json"
+    },
+    {
+      "case": "N04",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N04-skill/attempt-20261023T161855-350642de.json"
+    },
+    {
+      "case": "N07",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N07-skill/attempt-20261023T162218-ce6855f6.json"
+    },
+    {
+      "case": "N08",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N08-skill/attempt-20261023T162234-1bfc1041.json"
+    },
+    {
+      "case": "N05",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N05-skill/attempt-20261023T161931-1f24884a.json"
+    },
+    {
+      "case": "N06",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N06-skill/attempt-20261023T162147-962b442a.json"
+    },
+    {
+      "case": "N11",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N11-skill/attempt-20261023T162530-331bd502.json"
+    },
+    {
+      "case": "N10",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N10-skill/attempt-20261023T162400-29efb31e.json"
+    },
+    {
+      "case": "N09",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N09-skill/attempt-20261023T162318-b2309333.json"
+    },
+    {
+      "case": "N12",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N12-skill/attempt-20261023T162536-93ebd8bf.json"
+    },
+    {
+      "case": "N16",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N16-skill/attempt-20261023T162756-27e39e8e.json"
+    },
+    {
+      "case": "N14",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N14-skill/attempt-20261023T162637-b66bb07e.json"
+    },
+    {
+      "case": "N13",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N13-skill/attempt-20261023T162634-4fa7045b.json"
+    },
+    {
+      "case": "N17",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N17-skill/attempt-20261023T162908-6627eedb.json"
+    },
+    {
+      "case": "N18",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N18-skill/attempt-20261023T162958-e9b6b751.json"
+    },
+    {
+      "case": "N15",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N15-skill/attempt-20261023T162711-b907358e.json"
+    },
+    {
+      "case": "N21",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N21-skill/attempt-20261023T163108-3a856444.json"
+    },
+    {
+      "case": "N19",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N19-skill/attempt-20261023T163037-b5f2bea2.json"
+    },
+    {
+      "case": "N20",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N20-skill/attempt-20261023T163043-9213a8f4.json"
+    },
+    {
+      "case": "N22",
+      "condition": "skill",
+      "status": "completed",
+      "artifact": "/private/tmp/compass-v020-formal/behavior/N22-skill/attempt-20261023T163155-29bdd590.json"
+    }
+  ]
+}

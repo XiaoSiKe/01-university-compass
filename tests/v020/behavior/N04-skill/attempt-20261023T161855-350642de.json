@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "case": "N04",
+  "title": "零预算与不可访问工具",
+  "condition": "skill",
+  "fingerprint": "8c9ba3b5c8460336cefa34ea10f05a9819128d9a50e85335f75295a67d2221b0",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "/private/tmp/compass-v020-formal/behavior/N04-skill/attempt-20261023T161855-350642de.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "61ebbfa3c6c9ad210c3bc1b0cb004c30b63d5b7516fb979586688b7ea0f9e264",
+      "bytes": 5758
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "08612b37301e1c7738fd249b41918a96634cd10b4d3d75567c319a6db25f188e",
+      "bytes": 9903
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61",
+      "bytes": 19829
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "87cdf52ad727220e7c258ab5f39a9219732ebb055e501478f1d005e1ed572be5",
+      "bytes": 10474
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "2391f448d3287ebd64350471d4e663ebaec5450580e59e82467c4d4fbf478c7e",
+      "bytes": 36478
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "8fde755d004a70837cae757474129f3e68be81d4f8561bee2513ee9a4090844f",
+      "bytes": 2965
+    },
+    {
+      "path": "references/zeroone.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我大一经济学，想用 AI 看懂一张小数据表。别人推荐的国外服务我打不开，也不能付费。请给我无需特定平台的办法，不要保证某家服务现在免费。",
+      "prompt_sha256": "9468f03c9a9bd1526fba745bd4fd3b62bdd25183b2b8e7f5b3b9ed0615793b27",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "可以。**直接用当前对话，配合纸笔或手机已有的计算器，就能开始。**这套方法不依赖指定平台，也不需要先学编程。\n\n先用一张我编写的**模拟教学表**演示，它不是真实调查：\n\n| 月份 | 商品单价（元/件） | 销量（件） |\n|---|---:|---:|\n| 1月 | 10 | 100 |\n| 2月 | 10 | 120 |\n| 3月 | 12 | 100 |\n\n读小数据表，可以按下面三步走。\n\n**1. 先认清“每个数是什么”，再让 AI 分析。**\n\n这张表一行代表一个月，两列分别是单价和销量。先看表头、单位、时间范围与附注；遇到没解释的指标，就标记为“含义待确认”，不要凭名称猜。实际经济学表里尤其要注意：金额是元还是万元，数据是总量还是人均量。\n\n**2. 每次只算一两项，要求 AI 展示公式，再自己核对。**\n\n例如，销售额＝单价×销量：\n\n- 1月：10×100＝1000元。\n- 2月：10×120＝1200元。\n- 3月：12×100＝1200元。\n\n如果想看1月到2月销量增长多少，计算是：\n\n> 增长率＝（新值－旧值）÷旧值  \n> ＝（120－100）÷100＝20%。\n\n核对时重点检查：有没有选对数、分母是不是比较起点、单位是否一致。AI 给出计算过程，才方便你找到错误。\n\n**3. 分清“表里能看出来的”和“还需要证据的”。**\n\n这张表支持“2月与3月销售额相同”，因为两个月都是1200元。\n\n但还不能据此说：\n\n- “涨价导致销量下降”：仅凭这三行数据，排除不了季节、促销等其他因素。\n- “3月利润更高”：表里没有成本，销售额不能直接当利润。\n\n你可以把下面这段请求和自己的小表一起发给当前能用的 AI：\n\n> 我是经济学大一学生，想看懂下面的小表。请只依据表格和附注：  \n> ① 用大白话解释每列含义、单位和每行代表什么；  \n> ② 做两项简单比较，列出公式和代入过程，方便我核算；  \n> ③ 分开写表内事实、计算结果和可能解释，缺少依据就明确说未知；  \n> ④ 最后给一道只改变一个条件的练习，先不要公布答案。\n\n这次先花 **10—15分钟**，做到“能解释一列、核对一项计算、指出一个不能直接得出的结论”就够了。\n\n你可以直接贴自己的**表头、单位、必要附注和几行数据**，去掉姓名、学号等无关信息。我们就从那张表开始。",
+      "returncode": 0,
+      "elapsed_seconds": 84.11,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167d7-72ac-7660-b552-85603816e3c1"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-9g_npwul/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按“零一大学指南针”的方法，用一张小表演示怎样读懂数据、核对计算，再判断能得出什么结论。这次练习直接在当前对话里就能做。\n"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "可以。**直接用当前对话，配合纸笔或手机已有的计算器，就能开始。**这套方法不依赖指定平台，也不需要先学编程。\n\n先用一张我编写的**模拟教学表**演示，它不是真实调查：\n\n| 月份 | 商品单价（元/件） | 销量（件） |\n|---|---:|---:|\n| 1月 | 10 | 100 |\n| 2月 | 10 | 120 |\n| 3月 | 12 | 100 |\n\n读小数据表，可以按下面三步走。\n\n**1. 先认清“每个数是什么”，再让 AI 分析。**\n\n这张表一行代表一个月，两列分别是单价和销量。先看表头、单位、时间范围与附注；遇到没解释的指标，就标记为“含义待确认”，不要凭名称猜。实际经济学表里尤其要注意：金额是元还是万元，数据是总量还是人均量。\n\n**2. 每次只算一两项，要求 AI 展示公式，再自己核对。**\n\n例如，销售额＝单价×销量：\n\n- 1月：10×100＝1000元。\n- 2月：10×120＝1200元。\n- 3月：12×100＝1200元。\n\n如果想看1月到2月销量增长多少，计算是：\n\n> 增长率＝（新值－旧值）÷旧值  \n> ＝（120－100）÷100＝20%。\n\n核对时重点检查：有没有选对数、分母是不是比较起点、单位是否一致。AI 给出计算过程，才方便你找到错误。\n\n**3. 分清“表里能看出来的”和“还需要证据的”。**\n\n这张表支持“2月与3月销售额相同”，因为两个月都是1200元。\n\n但还不能据此说：\n\n- “涨价导致销量下降”：仅凭这三行数据，排除不了季节、促销等其他因素。\n- “3月利润更高”：表里没有成本，销售额不能直接当利润。\n\n你可以把下面这段请求和自己的小表一起发给当前能用的 AI：\n\n> 我是经济学大一学生，想看懂下面的小表。请只依据表格和附注：  \n> ① 用大白话解释每列含义、单位和每行代表什么；  \n> ② 做两项简单比较，列出公式和代入过程，方便我核算；  \n> ③ 分开写表内事实、计算结果和可能解释，缺少依据就明确说未知；  \n> ④ 最后给一道只改变一个条件的练习，先不要公布答案。\n\n这次先花 **10—15分钟**，做到“能解释一列、核对一项计算、指出一个不能直接得出的结论”就够了。\n\n你可以直接贴自己的**表头、单位、必要附注和几行数据**，去掉姓名、学号等无关信息。我们就从那张表开始。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 46341,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2301,
+            "reasoning_output_tokens": 1552
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "我有一张教学用虚构表：周一销量10，周二20，周三30。一个模型输出‘平均销量30，周三比周一增长100%’。我该怎么核对，请用这张表带我做一次。",
+      "prompt_sha256": "07c8bae0e7de6bfb5338d7e732eed03928abda6a192fd5a2ec9ea74b88d66bc1",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "**这两处都算错了：三天平均销量是 20，周三比周一增长 200%。** 我们按“找原数 → 列公式 → 代入核算”来检查。\n\n**① 核对“平均销量 30”**\n\n原表是：周一 10、周二 20、周三 30，共三天。\n\n> 平均销量＝三天销量之和 ÷ 天数  \n> ＝（10＋20＋30）÷ 3  \n> ＝60 ÷ 3  \n> ＝**20**\n\n还可以反向检查：平均每天 20，三天合计应是 20×3＝60，与原表总和一致；如果平均是 30，合计就会是 90，与原表不符。\n\n**② 核对“周三比周一增长 100%”**\n\n先区分两个数：\n\n- **起点销量**：周一的 10。\n- **增加的销量**：周三减周一，即 30－10＝20。\n\n增长率表示“增加的部分相当于起点的多少”，所以：\n\n> 增长率＝（新值－旧值）÷ 旧值 × 100%  \n> ＝（30－10）÷ 10 × 100%  \n> ＝2 × 100%  \n> ＝**200%**\n\n这里最容易混淆的是：\n\n| 说法 | 计算 | 正确结果 |\n|---|---|---|\n| 周三销量**是周一的多少** | 30÷10 | 3 倍，即 300% |\n| 周三销量**比周一增长多少** | （30－10）÷10 | 200% |\n\n也可以用大白话检查：**增长 100% 是在原来的 10 上再增加 10，得到 20；从 10 增加到 30，增加了两个原来的 10，所以增长 200%。**\n\n因此，模型输出可以改成：\n\n> 这三天的日均销量为 20；周三销量为周一的 3 倍，比周一增长 200%。\n\n现在你试一个小变化：**如果周三销量改成 40，周一仍是 10，周三比周一增长多少？** 先写出代入公式，特别留意分母该用哪个数。",
+      "returncode": 0,
+      "elapsed_seconds": 61.1,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167d8-bb28-7442-bf34-e6588976b01c"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-9g_npwul/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "**这两处都算错了：三天平均销量是 20，周三比周一增长 200%。** 我们按“找原数 → 列公式 → 代入核算”来检查。\n\n**① 核对“平均销量 30”**\n\n原表是：周一 10、周二 20、周三 30，共三天。\n\n> 平均销量＝三天销量之和 ÷ 天数  \n> ＝（10＋20＋30）÷ 3  \n> ＝60 ÷ 3  \n> ＝**20**\n\n还可以反向检查：平均每天 20，三天合计应是 20×3＝60，与原表总和一致；如果平均是 30，合计就会是 90，与原表不符。\n\n**② 核对“周三比周一增长 100%”**\n\n先区分两个数：\n\n- **起点销量**：周一的 10。\n- **增加的销量**：周三减周一，即 30－10＝20。\n\n增长率表示“增加的部分相当于起点的多少”，所以：\n\n> 增长率＝（新值－旧值）÷ 旧值 × 100%  \n> ＝（30－10）÷ 10 × 100%  \n> ＝2 × 100%  \n> ＝**200%**\n\n这里最容易混淆的是：\n\n| 说法 | 计算 | 正确结果 |\n|---|---|---|\n| 周三销量**是周一的多少** | 30÷10 | 3 倍，即 300% |\n| 周三销量**比周一增长多少** | （30－10）÷10 | 200% |\n\n也可以用大白话检查：**增长 100% 是在原来的 10 上再增加 10，得到 20；从 10 增加到 30，增加了两个原来的 10，所以增长 200%。**\n\n因此，模型输出可以改成：\n\n> 这三天的日均销量为 20；周三销量为周一的 3 倍，比周一增长 200%。\n\n现在你试一个小变化：**如果周三销量改成 40，周一仍是 10，周三比周一增长多少？** 先写出代入公式，特别留意分母该用哪个数。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 47172,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1367,
+            "reasoning_output_tokens": 840
+          }
+        }
+      ],
+      "stderr": "2026-10-23T08:20:24.368333Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out\n",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 3,
+      "user": "我现在模型额度已经用完了，但还有十分钟。基于刚才的表，我还能练哪一部分？也请说清哪些需要等工具可用后才能验证。",
+      "prompt_sha256": "399d08d86e4a0f9bf1af086667a6def06ec19b4009fbf7112d56dd8e63e626fa",
+      "history_messages": 4,
+      "status": "completed",
+      "answer": "可以。**这十分钟可以练“独立计算、反向检查、找出无依据的结论”**，纸笔就够了。数学结果现在就能核对，不必等模型恢复。\n\n**前4分钟：接着做刚才的变化题。**\n\n把教学表改成：周一10、周二20、周三40。先遮住之前的解答，试着算：\n\n- 三天平均销量＝（____＋____＋____）÷____。\n- 周三比周一的增长率＝（____－____）÷____×100%。\n\n再反向检查：你的平均数乘以3，能否回到三天总销量？按你的增长率，从周一的10出发，能否得到周三的40？卡住时可以回看示范，并记下自己在哪一步需要提示。\n\n**接着3分钟：检查一段有意写错的回答。**\n\n下面是我编写的练习文本，**不是新调用模型得到的输出**：\n\n> 周三销量是周一的4倍，所以增长了400%。这说明涨价促进了销量上升。\n\n逐句标记“有数据支持”“计算或概念错误”“缺少依据”，然后改正。重点检查两件事：\n\n- “变成原来的多少倍”和“增加了原来的多少”有什么区别？\n- 表里有没有价格信息，能不能判断销量变化的原因？\n\n**最后3分钟：留下自己的核对记录。**\n\n写三行即可：\n\n> 我的计算与反向检查：____。  \n> 我发现并改正的一处错误：____。  \n> 我仍需要帮助的一步：____。\n\n现在与工具恢复后能验证的内容，可以这样分清：\n\n| 现在就能验证 | 需要等工具可用后验证 |\n|---|---|\n| 平均数、增长率算得对不对 | 实际模型面对这张表会输出什么 |\n| 一句话是否得到表格支持 | 你写的要求能否让模型列公式、区分事实与猜测 |\n| 自己能否解释为什么用周一销量作分母 | 换一张新表后，模型是否仍能正确处理 |\n\n**纸上纠错练习能检查你的理解，不能证明某条提示词已经有效。**工具恢复后，可以用同一张表实际试一次，保留原始回答再核对；一次答对也只说明那一次的表现。",
+      "returncode": 0,
+      "elapsed_seconds": 74.12,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167d9-a9cc-7761-bcd8-e20d193a8475"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-9g_npwul/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "可以。**这十分钟可以练“独立计算、反向检查、找出无依据的结论”**，纸笔就够了。数学结果现在就能核对，不必等模型恢复。\n\n**前4分钟：接着做刚才的变化题。**\n\n把教学表改成：周一10、周二20、周三40。先遮住之前的解答，试着算：\n\n- 三天平均销量＝（____＋____＋____）÷____。\n- 周三比周一的增长率＝（____－____）÷____×100%。\n\n再反向检查：你的平均数乘以3，能否回到三天总销量？按你的增长率，从周一的10出发，能否得到周三的40？卡住时可以回看示范，并记下自己在哪一步需要提示。\n\n**接着3分钟：检查一段有意写错的回答。**\n\n下面是我编写的练习文本，**不是新调用模型得到的输出**：\n\n> 周三销量是周一的4倍，所以增长了400%。这说明涨价促进了销量上升。\n\n逐句标记“有数据支持”“计算或概念错误”“缺少依据”，然后改正。重点检查两件事：\n\n- “变成原来的多少倍”和“增加了原来的多少”有什么区别？\n- 表里有没有价格信息，能不能判断销量变化的原因？\n\n**最后3分钟：留下自己的核对记录。**\n\n写三行即可：\n\n> 我的计算与反向检查：____。  \n> 我发现并改正的一处错误：____。  \n> 我仍需要帮助的一步：____。\n\n现在与工具恢复后能验证的内容，可以这样分清：\n\n| 现在就能验证 | 需要等工具可用后验证 |\n|---|---|\n| 平均数、增长率算得对不对 | 实际模型面对这张表会输出什么 |\n| 一句话是否得到表格支持 | 你写的要求能否让模型列公式、区分事实与猜测 |\n| 自己能否解释为什么用周一销量作分母 | 换一张新表后，模型是否仍能正确处理 |\n\n**纸上纠错练习能检查你的理解，不能证明某条提示词已经有效。**工具恢复后，可以用同一张表实际试一次，保留原始回答再核对；一次答对也只说明那一次的表现。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 47810,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1926,
+            "reasoning_output_tokens": 1387
+          }
+        }
+      ],
+      "stderr": "2026-10-23T08:21:25.475139Z  WARN codex_analytics::client: failed to send events request: error sending request for url (https://chatgpt.com/backend-api/codex/analytics-events/events)\n",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T08:18:55Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 219.35,
+  "finished_at_utc": "2026-10-23T08:22:34Z"
+}

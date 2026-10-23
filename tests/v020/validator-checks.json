@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "case": "valid_package",
+      "expected_exit_zero": true,
+      "actual_exit": 0,
+      "passed": true,
+      "reported_errors": []
+    },
+    {
+      "case": "missing_reference_rejected",
+      "expected_exit_zero": false,
+      "actual_exit": 1,
+      "passed": true,
+      "reported_errors": [
+        "Missing link SKILL.md: references/not-present.md",
+        "Manifest differs from current Skill; use --build after checks",
+        "ZIP differs from current Skill"
+      ]
+    },
+    {
+      "case": "corrupt_zip_rejected",
+      "expected_exit_zero": false,
+      "actual_exit": 1,
+      "passed": true,
+      "reported_errors": [
+        "BadZipFile: package check failed"
+      ]
+    },
+    {
+      "case": "rebuild_restores_valid_package",
+      "expected_exit_zero": true,
+      "actual_exit": 0,
+      "passed": true,
+      "reported_errors": []
+    },
+    {
+      "case": "stale_manifest_rejected",
+      "expected_exit_zero": false,
+      "actual_exit": 1,
+      "passed": true,
+      "reported_errors": [
+        "Manifest differs from current Skill; use --build after checks",
+        "ZIP differs from current Skill"
+      ]
+    }
+  ],
+  "scope": "isolated temporary copies; production Skill unchanged"
+}

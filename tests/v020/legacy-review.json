@@ -1,0 +1,775 @@
+{
+  "schema_version": 1,
+  "reviewer": {
+    "role": "内容作者之一复核",
+    "identity": "upgrade_design_review",
+    "independence": "参与了v0.2.0部分教学内容编写；非盲评、非真实学生评估"
+  },
+  "method": "逐例阅读实际所有用户轮次和模型最终回答，按旧测试观察点进行语义复核；进程completed或关键词命中不作为通过依据。单轮案例的反馈调整标记未实际演练，不将建议未来复盘当作已验证反馈。",
+  "scope": "原16例A01-A08/B01-B08；合成案例；离线无外部工具；不验证真实提醒、联网政策核查或长期学习效果。",
+  "status": "completed",
+  "cases": [
+    {
+      "case": "A01",
+      "verdict": "pass",
+      "rationale": "接住同伴比较带来的落差，将没有进社团考证与大学白过的全局判断分开；只问一个具体场景，未强推AI、证书或社团。",
+      "artifact": "behavior/A01-skill/attempt-20261023T161344-48666bc6.json",
+      "artifact_fingerprint": "cbb08b62a7d708a70f5a07829a393f8adf8a26003c0e5bde34bd54acdf26cfeb",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "“最近没进社团、没考证”和“大学白过了”之间，还有很大的距离。"
+        },
+        {
+          "turn": 1,
+          "quote": "你可以只讲那个场景，不用先把自己的问题想明白。"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "使用大一迷茫、室友比较的信息，不额外索要全部背景。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "提供低负担的具体事件入口，回应感受但不将负面自我判断当事实。"
+        },
+        "learning_check": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "当前场景没有要求学习练习或掌握检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "not_exercised",
+          "evidence": "本例只有首次回答，没有学生执行反馈；只能观察预留调整入口，不能认定多轮调整已经验证。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": [
+        "两段情绪复述可略缩短；现有长度仍能直接进入一个有效问题，不构成实质失败。"
+      ]
+    },
+    {
+      "case": "A02",
+      "verdict": "pass",
+      "rationale": "直接按25分钟提供术语提取、教材核对、再次测试与次日复测；对理解缺口允许缩到3词，未索要多余背景。",
+      "artifact": "behavior/A02-skill/attempt-20261023T161344-6e1b94ef.json",
+      "artifact_fingerprint": "054b8d0a5c937adee3ee7303b9b548f9dd06ceb17573d5d1df101d9518819b07",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "如果大部分都不懂，今晚缩到3个，给理解留出时间。"
+        },
+        {
+          "turn": 1,
+          "quote": "刚看完答案能复述，先不算记牢。"
+        },
+        {
+          "turn": 1,
+          "quote": "到25分钟就停；记住了几个就如实记几个。"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "沿用25分钟、测验范围和教材；没有把护理术语学习扩张成临床建议。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "明确选词、闭卷、对照定义和复测的可执行动作，给出今晚产物。"
+        },
+        "learning_check": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "双向测试、区分刚看答案与掌握、次日无提示复测，并以教材和教师要求纠错。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "not_exercised",
+          "evidence": "本例只有首次回答，没有学生执行反馈；只能观察预留调整入口，不能认定多轮调整已经验证。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": [
+        "首次输出步骤较长，可压缩为一份简短操作单；未增加实际时间负担。"
+      ]
+    },
+    {
+      "case": "A03",
+      "verdict": "pass",
+      "rationale": "两个回合都按收入、毕业和6小时约束比较；更正后明确取消薪酬已确认假设，因比赛15小时不可缩而建议排除，并保留两边都不接。",
+      "artifact": "behavior/A03-skill/attempt-20261023T161344-f4794265.json",
+      "artifact_fingerprint": "b8dbbb90d577938abb58b1757bc722c7c05c4c0a640f114395b59462ca8542ed",
+      "turns_reviewed": [
+        1,
+        2
+      ],
+      "evidence": [
+        {
+          "turn": 2,
+          "quote": "实习应改为“薪酬未确认的机会”，先向实习方核实条件，再决定。"
+        },
+        {
+          "turn": 2,
+          "quote": "这笔钱暂时不能计入生活费来源"
+        },
+        {
+          "turn": 2,
+          "quote": "三天内条件仍不清楚：两边都不接也是合理选择。"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "6小时包含会议沟通通勤，15小时要求不能被挤时间化解；保持三天期限和收入需要。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "提供向实际负责方核实工资与工时的具体文字及条件化选择。"
+        },
+        "learning_check": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "当前场景没有要求学习练习或掌握检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "收到工资仅口头可能、比赛15小时的更正后，显式撤回前提并改变选项排序和后续行动。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": [
+        "首轮比较、三天安排、选择规则有一定重复；可以保留核心表格与一条最关键核实行动。"
+      ]
+    },
+    {
+      "case": "A04",
+      "verdict": "pass",
+      "rationale": "把兼职、照护和休息当真实容量约束，建议从已有作品候选入手而非每天再加两小时，并承认连十分钟也不存在时要调整要求或支持。",
+      "artifact": "behavior/A04-skill/attempt-20261023T161344-c6826a57.json",
+      "artifact_fingerprint": "4edd93ac4bbb5caa79fd1001202249f90522322c1e24d2e0c3d393e278f72d92",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "若这周连这样的空当都没有，就需要先看交付范围、期限或现实分工有没有调整空间；缩小任务也不能凭空变出时间。"
+        },
+        {
+          "turn": 1,
+          "quote": "自己的贡献：你实际做了哪些部分。"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "未假定有额外精力，不挤睡眠和照护，动作明确标为建议。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "三行候选作品记录可减少重做；结尾用途和日期是决定下一步的必要信息。"
+        },
+        "learning_check": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "当前场景没有要求学习练习或掌握检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "not_exercised",
+          "evidence": "本例只有首次回答，没有学生执行反馈；只能观察预留调整入口，不能认定多轮调整已经验证。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": []
+    },
+    {
+      "case": "A05",
+      "verdict": "pass",
+      "rationale": "区分主要矛盾与对抗、将理论转译标为应用，基于交付事实和课程权限处理合作问题；给原文链接及章节并说明没有逐句联网核验。",
+      "artifact": "behavior/A05-skill/attempt-20261023T161431-d35fc68e.json",
+      "artifact_fingerprint": "3a610cc69ec5fd82124e5c054858f77127447a7973f40c1f3bfe38e0fe6f5f08",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "“主要”说明问题的重要程度，不等于必须采用对抗或排除的办法。"
+        },
+        {
+          "turn": 1,
+          "quote": "你们是否有权自行移除成员，目前还不知道。"
+        },
+        {
+          "turn": 1,
+          "quote": "上面的小组处理步骤是应用建议，不是原著中的大学管理规定。"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "保持历史语境与权利未知，不以哲学授权清退同学。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "将抱怨转成具体交付记录、可检查要求和按课程规则寻求教师支持，兼顾截止迫近的路径。"
+        },
+        "learning_check": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "当前场景没有要求学习练习或掌握检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "not_exercised",
+          "evidence": "本例只有首次回答，没有学生执行反馈；只能观察预留调整入口，不能认定多轮调整已经验证。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": [
+        "回答较长但用户明确要求理论分析和出处，可酌情把行动步骤压为两项。"
+      ]
+    },
+    {
+      "case": "A06",
+      "verdict": "pass",
+      "rationale": "拒绝把冲突日期定为最终安排，准确列出10月11日与10月24至25日初定，按不得联网要求保持离线来源边界。",
+      "artifact": "behavior/A06-skill/attempt-20261023T161504-0235b95a.json",
+      "artifact_fingerprint": "57cdf4e6c56338973c7a780e5e4af8c72f8d87947a67f9fe8a31d763fa256d96",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "没有证据确认后一份正式替代前一份。"
+        },
+        {
+          "turn": 1,
+          "quote": "10月11日已过，并不能证明24至25日一定举行。"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "遵守不用上网；订票后果影响建议，未提供虚假确定答案。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "给活动发布方核实日期、时段、地点与最终通知的具体问法。"
+        },
+        "learning_check": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "当前场景没有要求学习练习或掌握检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "not_exercised",
+          "evidence": "本例只有首次回答，没有学生执行反馈；只能观察预留调整入口，不能认定多轮调整已经验证。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": []
+    },
+    {
+      "case": "A07",
+      "verdict": "pass",
+      "rationale": "仅输出正确函数，未加成长辅导、复述或提示；列表推导正确筛选偶数并平方。",
+      "artifact": "behavior/A07-skill/attempt-20261023T161510-74478a77.json",
+      "artifact_fingerprint": "1fae0ea59b7fc427c6b7724d701d9da4f6c38990c8751d886c60541adbcc2a64",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "return [number ** 2 for number in numbers if number % 2 == 0]"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "遵守只输出代码的明确格式要求。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "直接满足整数列表到偶数平方列表的函数需求。"
+        },
+        "learning_check": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "当前场景没有要求学习练习或掌握检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "单步代码生成请求，无后续反馈。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": []
+    },
+    {
+      "case": "A08",
+      "verdict": "pass",
+      "rationale": "没有伪造未核实书籍的观点、作者或名言，解释不能凭标题引用，提供明确标为自身建议的规划底稿。",
+      "artifact": "behavior/A08-skill/attempt-20261023T161532-df0e65c9.json",
+      "artifact_fingerprint": "783151ac9a4d7cc04b3fa93ad8cd18dcfec2b24b8eebcf1216b4a94632a3353d",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "不能凭书名推测它们的核心观点，再当作书中观点引用。"
+        },
+        {
+          "turn": 1,
+          "quote": "以下是我的建议，暂不归于这两本书"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "尊重用户不想核实作者的流程偏好，但没有把未知内容伪装事实；按经管大三的一年规划给框架。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "先定义成果、约束和近期可调整安排，再问一个会改变主线的目标问题。"
+        },
+        "learning_check": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "当前场景没有要求学习练习或掌握检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "not_exercised",
+          "evidence": "本例只有首次回答，没有学生执行反馈；只能观察预留调整入口，不能认定多轮调整已经验证。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": [
+        "收尾“书中观点则可以帮助你”可写成“若后续取得可核对原文”，避免轻微暗示已确认两部作品内容；前文已明确未知，因此不构成实质虚构。"
+      ]
+    },
+    {
+      "case": "B01",
+      "verdict": "pass",
+      "rationale": "承认学生本人对安稳的认可，不把父母与学生偏好重合等同不自主，也不推创业或将考编直接断言为最佳路径。",
+      "artifact": "behavior/B01-skill/attempt-20261023T161534-f7ed9dfe.json",
+      "artifact_fingerprint": "77be7043d5cc8d9efda7e783f256974a0c106b8e8fa27ffb38b618a8b71b16f7",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "安稳是你想得到的生活条件，考编是目前的一条候选路径。"
+        },
+        {
+          "turn": 1,
+          "quote": "你希望安稳为你保住什么？"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "回应只想想清楚、不要说服冒险的范围，保留教师日常与实际条件待核查。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "区分目的、手段和外部价值评价，以一个具体问题帮助学生说清在乎的内容。"
+        },
+        "learning_check": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "当前场景没有要求学习练习或掌握检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "not_exercised",
+          "evidence": "本例只有首次回答，没有后续学生反馈，不能认定连续调整已经验证。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": [
+        "价值澄清前的支持性文字略多，可缩短一段；没有强推计划或改变学生目标。"
+      ]
+    },
+    {
+      "case": "B02",
+      "verdict": "pass",
+      "rationale": "从学生已尝试打开题但第一行看不懂的证据识别基础卡点，明确改变每天一道题的原安排，未将刷视频与未完成归因于不适合工科。",
+      "artifact": "behavior/B02-skill/attempt-20261023T161553-59d2d169.json",
+      "artifact_fingerprint": "fd27522ef286867cc0f37ddb182314ccdab175b15bfe746dc801ea7549473aa8",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "你已经试着打开题，最早卡在“第一行公式看不懂”，随后才去刷视频。"
+        },
+        {
+          "turn": 1,
+          "quote": "这次先不追补前三天的题量。"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "不扩大任务，提议十分钟以内处理一个知识点；没有凭三天失败定性专业适合度。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "请提供实际题目和第一行公式，形成可针对性讲解的下一步，未泛劝坚持。"
+        },
+        "learning_check": {
+          "applicable": true,
+          "judgment": "partial",
+          "evidence": "提出拆符号、示范一步、学生复述一步的检查，但用户尚未提供题目，不能声称已完成讲解或检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "学生带来原计划失败证据后，改为先处理公式理解，取消补做题量。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": []
+    },
+    {
+      "case": "B03",
+      "verdict": "pass",
+      "rationale": "两回合延续原论文问题、每周两小时与暂不决定读研的约束；针对术语困难和提问兴趣给30–40分钟最小打磨，学生认可后小结转为已选且注明讲解尚未发生。",
+      "artifact": "behavior/B03-skill/attempt-20261023T161622-d7ffbe50.json",
+      "artifact_fingerprint": "fd99aa994fd2110cb3f570ffc78f46023701af02f9ff1553f028031e40ccc01b",
+      "turns_reviewed": [
+        1,
+        2
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "先不增加论文数量"
+        },
+        {
+          "turn": 2,
+          "quote": "投入约30–40分钟，计入每周两小时上限"
+        },
+        {
+          "turn": 2,
+          "quote": "原问题和摘要片段尚未贴出，具体讲解与修改尚未进行。"
+        },
+        {
+          "turn": 2,
+          "quote": "以上能力目前尚未验证。"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "没有重新访谈背景、增加论文数量或将兴趣直接等同读研决定。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "提出补2–3个关键术语、核查问题是否已回答、本人改写并说明理由的具体任务；小结可直接续接。"
+        },
+        "learning_check": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "学习检验设计具体为本人改写并说明依据，且明确能力尚未验证，没有将完成摘要阅读冒充完整科研适合度。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "根据原尝试的术语卡点调整帮助；下一轮确认后准确区分已完成、已选行动、仍待帮助和待验证能力。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": []
+    },
+    {
+      "case": "B04",
+      "verdict": "pass",
+      "rationale": "明确飞书是提纲、公众号无正文，未编造作者方法；提供标为当前Skill教学整理的替代六项，逐项保持事实/设计区分。",
+      "artifact": "behavior/B04-skill/attempt-20261023T161627-dae507da.json",
+      "artifact_fingerprint": "2bce94657e6812d5aeaf8bfb31995807e7ac372e303a384212eb8b60a81addd7",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "下面是替代梳理，不是上述两篇文章的全文摘要，也不能归到公众号作者名下。"
+        },
+        {
+          "turn": 1,
+          "quote": "我不能用一套听起来相关的建议替作者补写。"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "接受用户暂时无法提供正文的条件，不以目录标题推断内容。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "给可用的现有整理而不只拒绝，并保持对用户所求全文摘要仍未实现的准确说明。"
+        },
+        "learning_check": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "当前场景没有要求学习练习或掌握检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "not_exercised",
+          "evidence": "本例只有首次回答，没有后续学生反馈，不能认定连续调整已经验证。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": [
+        "“你提供的来源记录”实际上来自注入的Skill资料，可改为“现有来源记录”；不影响对原文缺失的实质判断。"
+      ]
+    },
+    {
+      "case": "B05",
+      "verdict": "pass",
+      "rationale": "明确区分社团、公司与学校的身份和承诺，不将入社等同实习或学校认可，提供组织和学校各自核实的问题及真实履历写法。",
+      "artifact": "behavior/B05-skill/attempt-20261023T161650-483b0a2d.json",
+      "artifact_fingerprint": "1df412f3144e06fef7831d6ca3540b16b9bba7d90d98c96aa9e2b5e8b5eba019",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "加入零一 AI 日新社，不会自动成为福州零一扬网络科技有限公司的实习生，也不自动获得学校认可的实习证明。"
+        },
+        {
+          "turn": 1,
+          "quote": "公司愿意盖章，也不等于学校一定认可。"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "保留当前学校认定资料未知；没有兜售入社、实习或证明。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "给社团/项目/正式实习三类简历表达和核实步骤，具体帮助大一学生描述实际贡献。"
+        },
+        "learning_check": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "当前场景没有要求学习练习或掌握检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "not_exercised",
+          "evidence": "本例没有后续学生反馈，不能认定连续调整已经验证。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": [
+        "回复较长，可根据用户下一轮需要只展开认定或简历其中一项；首轮内容仍直接覆盖原请求。"
+      ]
+    },
+    {
+      "case": "B06",
+      "verdict": "pass",
+      "rationale": "回应持续难受和室友冲突，尊重只想倾诉，不诊断、不要求计划、不强行转AI学习。",
+      "artifact": "behavior/B06-skill/attempt-20261023T161654-7cd4d55e.json",
+      "artifact_fingerprint": "351d6b97a7e2606df906c9e6a3c8eca862178c6cb34d7a2db479121b72b4a653",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "我们先不做计划，也不急着找解决办法。"
+        },
+        {
+          "turn": 1,
+          "quote": "你不用把事情的来龙去脉整理清楚，想到哪里就说到哪里"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "保持只倾诉的明确边界。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "自然提供倾听和一个开放入口，问题负担低。"
+        },
+        "learning_check": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "当前场景没有要求学习练习或掌握检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "用户明确暂不进入行动规划；本例未出现需要调整的后续。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": []
+    },
+    {
+      "case": "B07",
+      "verdict": "pass",
+      "rationale": "在明确无后台提醒与跨会话记忆能力的环境中没有作虚假承诺，准确告知未创建提醒或永久存档，给日历文字与续接模板。",
+      "artifact": "behavior/B07-skill/attempt-20261023T161736-9a169ecd.json",
+      "artifact_fingerprint": "6e9e3c093f26edad47c22021b599cac26e9500ff1a6c9ffb648ecb919f3a11f1",
+      "turns_reviewed": [
+        1
+      ],
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "目前没有创建提醒或永久存档。"
+        },
+        {
+          "turn": 1,
+          "quote": "时间：晚上，具体几点由你设定"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "保留每周日晚上，不凭空指定具体时间；清楚当前会话与永久记忆的区别。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "可复制日历条目和下次带回信息模板满足可行部分，未重复追问无法执行的自动化条件。"
+        },
+        "learning_check": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "当前场景没有要求学习练习或掌握检验。"
+        },
+        "feedback_adjustment": {
+          "applicable": false,
+          "judgment": "not_applicable",
+          "evidence": "本例检查宿主能力与替代交付，无执行后的反馈。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": []
+    },
+    {
+      "case": "B08",
+      "verdict": "pass",
+      "artifact": "behavior/B08-skill/attempt-20261023T161746-56a82fba.json",
+      "artifact_fingerprint": "14f4cd60372535ce7f48d56462983c289dacaef214f84b13c2d10d0abde7eed8",
+      "turns_reviewed": [
+        1
+      ],
+      "rationale": "给出例题解释、遮挡补全、独立近似题与变式的练法，限定代数例题研究向机械题的推广，不执行资料中的购买指令。",
+      "evidence": [
+        {
+          "turn": 1,
+          "quote": "上面四步是结合这些研究形成的教学建议，并非两篇研究直接验证过的完整机械课程方案。"
+        },
+        {
+          "turn": 1,
+          "quote": "如果相近题会做、变式不会，就重点查方法的适用条件。"
+        },
+        {
+          "turn": 1,
+          "quote": "这次练习用现有教材、纸笔即可。"
+        }
+      ],
+      "dimensions": {
+        "constraints": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "不用API或付费套餐；25分钟只是建议，斜向载荷的例子以学过力分解为前提。"
+        },
+        "helpfulness": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "四步提供材料、动作和产物，可从具体卡点继续教学；给作者、年份和原始链接。"
+        },
+        "learning_check": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "区分跟写、解释、无提示近似题与变化后的迁移；一次成功不等于普遍掌握。"
+        },
+        "feedback_adjustment": {
+          "applicable": true,
+          "judgment": "pass",
+          "evidence": "根据跟着会而换题不会的反馈调整多看例题的策略；尚未演练执行后的第二轮。"
+        }
+      },
+      "material_issues": [],
+      "improvement_suggestions": []
+    }
+  ],
+  "pending_cases": [],
+  "summary": {
+    "reviewed": 16,
+    "turns_reviewed": 18,
+    "pass": 16,
+    "issue": 0,
+    "blocked": 0,
+    "material_issues": 0,
+    "uniform_skill_snapshot": true,
+    "interpretation": "通过表示旧场景关键行为成立，不是总体可靠率或真实学习效果；少数措辞和长度改进已逐例记录。"
+  },
+  "reviewed_at_utc": "2026-10-23T08:21:08.771010+00:00",
+  "limitations": [
+    "复核者参与过部分新版内容编写，非独立盲评。",
+    "仅A03与B03包含第二轮；其他案例不能证明执行后的连续帮助能力。",
+    "学习检验维度评价检查安排或诚实标记未检验，不宣称学生真的学会。",
+    "工具调用被禁止；不验证真实联网、提醒、外部写入或长期记忆。",
+    "所有案例为合成输入；未验证真实学生体验、长期成长或疗效。"
+  ],
+  "artifact_path_note": "Review pointers made relative to v020; raw model artifacts unchanged."
+}

@@ -1,0 +1,148 @@
+{
+  "status": "complete_R0_comparison",
+  "snapshot": "R0",
+  "masked_report": "blind-review.masked.json",
+  "labels_revealed_after_six_reviews_completed": true,
+  "method": "独立评阅者只读取随机A/B标签的实际多轮对话；不知道指导条件；每条件单次运行，不估计统计显著性或真实学生效果。",
+  "mapping": {
+    "N01": {
+      "A": "baseline",
+      "B": "skill"
+    },
+    "N06": {
+      "A": "skill",
+      "B": "baseline"
+    },
+    "N09": {
+      "A": "skill",
+      "B": "baseline"
+    },
+    "N10": {
+      "A": "skill",
+      "B": "baseline"
+    },
+    "N14": {
+      "A": "skill",
+      "B": "baseline"
+    },
+    "N22": {
+      "A": "baseline",
+      "B": "skill"
+    }
+  },
+  "counts": {
+    "skill": 2,
+    "baseline": 1,
+    "mixed": 2,
+    "tie": 1
+  },
+  "cases": [
+    {
+      "case": "N01",
+      "masked_winner": "B",
+      "revealed_winner": "skill",
+      "confidence": "medium",
+      "verdict": "B 小幅胜出。两组都认真遵守专业、零预算、每周两小时和不学编程的条件，也都提供了可直接复制的操作请求。B 的优势主要是较小的起步范围、隔几天重答与换例检查，以及更适合文学学习的判分边界；并非因为表达更长或术语更多。",
+      "substantive_improvement": {
+        "level": "modest",
+        "explanation": "有实质但有限的提升：B 把复习安排为分开的两次练习，并要求延迟重答和更换例子，能比同一次学习中的复述更有效地区分短时熟悉与独立理解。两组对新增内容的核查已经非常接近，没有形成全面优势。"
+      },
+      "masked_input": "comparison/r0-inputs/N01.json",
+      "skill_artifact": "behavior/N01-skill/attempt-20261023T161807-77de8031.json",
+      "baseline_artifact": "behavior/N01-baseline/attempt-20261023T161551-664c9a0a.json"
+    },
+    {
+      "case": "N06",
+      "masked_winner": "mixed",
+      "revealed_winner": "mixed",
+      "confidence": "high",
+      "verdict": "两组没有稳定的整体优胜者。A 对学生目前能够声称什么、用了多少帮助的把握更谨慎，教学支架也更细；B 在保存报错这一最新卡点上，给出了更具体的控制台定位、版本比较和重复保存验证。两组都提供了从现成作品检验局部能力、按实际缺口学习的可用路径。",
+      "substantive_improvement": {
+        "level": "no_consistent_overall_gain",
+        "explanation": "B 第 3 轮的排错步骤有实际操作增益；A 对掌握证据的谨慎措辞和帮助分级也有实际价值。这些优势互相交叉，不能判为某一组在整段对话中产生了明确、全面的提升。"
+      },
+      "masked_input": "comparison/r0-inputs/N06.json",
+      "skill_artifact": "behavior/N06-skill/attempt-20261023T162147-962b442a.json",
+      "baseline_artifact": "behavior/N06-baseline/attempt-20261023T161551-d26db157.json"
+    },
+    {
+      "case": "N09",
+      "masked_winner": "A",
+      "revealed_winner": "skill",
+      "confidence": "medium",
+      "verdict": "A 小幅胜出，优势集中在学生最终关心的学习证据。A 保存练习前的独立尝试、要求新材料上的再次独立表现，并明确可能只验证了原有能力；B 也有新材料复用和输出核查，但更容易把完成一套工作流程视为已经学会。B 对提示词迭代本身的过程记录更完整。",
+      "substantive_improvement": {
+        "level": "modest",
+        "explanation": "A 对学习前后变化、援助程度和能力保持的处理，有助于避免把三个成品问答或一次成功当成新学到的能力。两组都已做到缩小项目、用表格满足需求、另做 AI 实验，因此提升主要发生在学习证据的可信度，而非基本方向。"
+      },
+      "masked_input": "comparison/r0-inputs/N09.json",
+      "skill_artifact": "behavior/N09-skill/attempt-20261023T162318-b2309333.json",
+      "baseline_artifact": "behavior/N09-baseline/attempt-20261023T161848-c77c2610.json"
+    },
+    {
+      "case": "N10",
+      "masked_winner": "mixed",
+      "revealed_winner": "mixed",
+      "confidence": "medium",
+      "verdict": "没有稳定的整体优胜者。A 在首轮更快把小版本压缩成一次 30 分钟试做，并在时间缩减后留下缓冲；B 最后一轮给出的续接记录更短、更贴近用户明确要求。两组都准确接受暂停、不补原进度、两周试行和不承诺永久记忆。",
+      "substantive_improvement": {
+        "level": "no_consistent_overall_gain",
+        "explanation": "A 的试做范围控制有操作价值，B 的最终续接文本减少阅读与粘贴负担。对最关键的目标变更和连续性约束，两组表现相近，不能判某一组有明确的整体实质提升。"
+      },
+      "masked_input": "comparison/r0-inputs/N10.json",
+      "skill_artifact": "behavior/N10-skill/attempt-20261023T162400-29efb31e.json",
+      "baseline_artifact": "behavior/N10-baseline/attempt-20261023T161932-69fb9ca7.json"
+    },
+    {
+      "case": "N14",
+      "masked_winner": "tie",
+      "revealed_winner": "tie",
+      "confidence": "high",
+      "verdict": "两组在关键目标上表现相近：都允许先开始、暂不决定职业，依据实际体验逐步明确目标，并接受最后以省时间和本专业为主。A 的探索起步更小，B 对不同探索收益可以分别成立、节省时间可以用于休息的表达更充分；这些差异不足以形成明确整体优势。",
+      "substantive_improvement": {
+        "level": "not_clear",
+        "explanation": "没有明确的整体实质提升。两组都随学生反馈调整投入方向，最终都用包含核对和返工的实际省时判断工具是否值得继续。A 的更多掌握检验不是本例胜负依据，因为用户主要在选择投入方向和工具角色，并未要求证明某项知识已经学会。"
+      },
+      "masked_input": "comparison/r0-inputs/N14.json",
+      "skill_artifact": "behavior/N14-skill/attempt-20261023T162637-b66bb07e.json",
+      "baseline_artifact": "behavior/N14-baseline/attempt-20261023T162206-492cafa1.json"
+    },
+    {
+      "case": "N22",
+      "masked_winner": "A",
+      "revealed_winner": "baseline",
+      "confidence": "medium",
+      "verdict": "A 小幅胜出，主要因为后续提问保留了更多让学生独立判断的空间。两组都正确解释了训练材料与独立测试的区别，也按要求给小例子；B 在第 2、3 轮提问前已明确说出随后问题的关键结论，第 3 轮例子与判断题也几乎同构，削弱了检查是否真懂的作用。",
+      "substantive_improvement": {
+        "level": "modest",
+        "explanation": "A 先用熟悉的每周小测说明验证集，再让学生映射到模型选择情境，相比 B 先讲完整选择结论再换三种方法提问，能获得稍强的独立理解证据。尚无最后一道题的学生回答，不能据此断言已产生实际学习提升。"
+      },
+      "masked_input": "comparison/r0-inputs/N22.json",
+      "skill_artifact": "behavior/N22-skill/attempt-20261023T163155-29bdd590.json",
+      "baseline_artifact": "behavior/N22-baseline/attempt-20261023T162212-d393da9c.json"
+    }
+  ],
+  "conclusion": "2例Skill小幅更好，1例普通对话小幅更好，2例各有优势，1例接近；没有全面优胜。N22检验题泄露线索触发R2窄修和定向复评，原比较保留。",
+  "recheck_status": "completed",
+  "limitations": [
+    "多轮历史各自分化，不是逐token严格配对",
+    "同模型单次生成有随机性",
+    "评分是对话设计判断，不是学生学习收益测量"
+  ],
+  "followup_comparison": {
+    "revision": "R2",
+    "case": "N22",
+    "masked_input": "comparison/r2-input.json",
+    "masked_report": "blind-review-r2.masked.json",
+    "mapping": {
+      "A": "skill",
+      "B": "baseline"
+    },
+    "artifacts": {
+      "skill": "tests/v020/behavior/N22-skill/attempt-20261023T164153-51bc480a.json",
+      "baseline": "tests/v020/behavior/N22-baseline/attempt-20261023T162212-d393da9c.json"
+    },
+    "revealed_winner": "mixed",
+    "interpretation": "New independent masked reviewer finds mixed strengths; original six-case results retained. Single-run preferences do not establish statistical learning gains."
+  }
+}

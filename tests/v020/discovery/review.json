@@ -1,0 +1,148 @@
+{
+  "checked_on": "2026-10-23",
+  "revision": "R2",
+  "configured_model": "gpt-6.1-sol",
+  "model_override": false,
+  "test_type": "isolated_native_installation_discovery_smoke",
+  "previous_rounds": [
+    "initial/review.json",
+    "r1/review.json"
+  ],
+  "preservation": "All three initial and R1 case directories, reviews and original README files retained unchanged. Runner stays in discovery/run_smoke.py.",
+  "cases": [
+    {
+      "case": "D01-explicit",
+      "revision": "R2",
+      "process_exit_code": 0,
+      "elapsed_seconds": 70.72,
+      "configured_model": "gpt-6.1-sol",
+      "same_default_model_in_all_three_rounds": true,
+      "semantic_verdict": "trigger_and_reference_loading_observed_with_entrypoint_observation_limit",
+      "native_skill_reference_reads_observed": true,
+      "entrypoint_separate_read_observed": false,
+      "expected_skill_use": true,
+      "manifest_matches_final_package": true,
+      "hash_method": "sha256(raw file bytes); identical method in initial, R1 and R2 discovery manifests",
+      "changed_files_since_r1": [
+        "references/learning-action.md"
+      ],
+      "changed_files_since_initial": [
+        "references/ai-pathways.md",
+        "references/learning-action.md"
+      ],
+      "observed_read_documents_unchanged_from_r1": true,
+      "read_command_evidence": [
+        {
+          "command": "/bin/zsh -lc pwd",
+          "exit_code": 0,
+          "output_chars": 50
+        },
+        {
+          "command": "/bin/zsh -lc 'cat .agents/skills/zeroone-university-compass/references/ai-pathways.md'",
+          "exit_code": 0,
+          "output_chars": 4478
+        },
+        {
+          "command": "/bin/zsh -lc 'cat .agents/skills/zeroone-university-compass/references/ai-practice.md'",
+          "exit_code": 0,
+          "output_chars": 7516
+        }
+      ],
+      "nonfatal_events": [
+        "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in [TEST_ROOT]/runtime/config.toml."
+      ],
+      "stderr_present": false,
+      "observation": "显式调用后成功读取AI路径与AI实践，直接提供原创新闻材料核对练习。未出现单独读取SKILL.md的命令事件；入口可能经宿主注入，但本事件日志不能直接证明，故只声明两份参考文件实际读取。"
+    },
+    {
+      "case": "D02-natural",
+      "revision": "R2",
+      "process_exit_code": 0,
+      "elapsed_seconds": 71.51,
+      "configured_model": "gpt-6.1-sol",
+      "same_default_model_in_all_three_rounds": true,
+      "semantic_verdict": "pass_for_this_single_run",
+      "native_skill_reference_reads_observed": true,
+      "entrypoint_separate_read_observed": true,
+      "expected_skill_use": true,
+      "manifest_matches_final_package": true,
+      "hash_method": "sha256(raw file bytes); identical method in initial, R1 and R2 discovery manifests",
+      "changed_files_since_r1": [
+        "references/learning-action.md"
+      ],
+      "changed_files_since_initial": [
+        "references/ai-pathways.md",
+        "references/learning-action.md"
+      ],
+      "observed_read_documents_unchanged_from_r1": true,
+      "read_command_evidence": [
+        {
+          "command": "/bin/zsh -lc \"pwd; rg --files -g 'AGENTS.md' -g 'SKILL.md' -g '*.md' .agents\"",
+          "exit_code": 0,
+          "output_chars": 709
+        },
+        {
+          "command": "/bin/zsh -lc 'cat .agents/skills/zeroone-university-compass/SKILL.md'",
+          "exit_code": 0,
+          "output_chars": 2380
+        },
+        {
+          "command": "/bin/zsh -lc \"rg --files -g AGENTS.md -g '\"'!node_modules'\"' -g '\"'!vendor'\"' .\"",
+          "exit_code": 1,
+          "output_chars": 0
+        },
+        {
+          "command": "/bin/zsh -lc 'cat .agents/skills/zeroone-university-compass/references/ai-pathways.md'",
+          "exit_code": 0,
+          "output_chars": 4478
+        },
+        {
+          "command": "/bin/zsh -lc 'cat .agents/skills/zeroone-university-compass/references/ai-practice.md'",
+          "exit_code": 0,
+          "output_chars": 7516
+        }
+      ],
+      "nonfatal_events": [
+        "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in [TEST_ROOT]/runtime/config.toml."
+      ],
+      "stderr_present": false,
+      "observation": "未点名Skill的AI新手请求实际读取SKILL、AI路径与AI实践；给出手机可用练习、核查步骤与按需补编程。一次目录搜索无匹配，未中断。"
+    },
+    {
+      "case": "D03-unrelated-code",
+      "revision": "R2",
+      "process_exit_code": 0,
+      "elapsed_seconds": 18.72,
+      "configured_model": "gpt-6.1-sol",
+      "same_default_model_in_all_three_rounds": true,
+      "semantic_verdict": "pass_for_this_single_run",
+      "native_skill_reference_reads_observed": false,
+      "entrypoint_separate_read_observed": false,
+      "expected_skill_use": false,
+      "manifest_matches_final_package": true,
+      "hash_method": "sha256(raw file bytes); identical method in initial, R1 and R2 discovery manifests",
+      "changed_files_since_r1": [
+        "references/learning-action.md"
+      ],
+      "changed_files_since_initial": [
+        "references/ai-pathways.md",
+        "references/learning-action.md"
+      ],
+      "observed_read_documents_unchanged_from_r1": true,
+      "read_command_evidence": [],
+      "nonfatal_events": [
+        "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in [TEST_ROOT]/runtime/config.toml."
+      ],
+      "stderr_present": false,
+      "observation": "无技能文件读取；最终仅为Python函数，保序去重与空列表检查通过，无成长规划内容。"
+    }
+  ],
+  "process_retries_this_round": 0,
+  "limits": [
+    "各轮每种触发只有一次新进程观察，三轮不构成触发稳定性实验。",
+    "D01本轮只直接观察到两份参考文件读取，不能声称日志独立证明SKILL.md已被读取。",
+    "R2只修改learning-action.md；本轮三例未读取该文件，因此这里只验证最终整包快照与原生触发，不评价该教学规则的实际改进效果。",
+    "只在当前CLI与项目.agents/skills安装检查，不代表其他宿主或真实学生多轮使用。",
+    "三个进程的开发中功能警告均保留；本轮stderr为空，无进程重试。"
+  ]
+}

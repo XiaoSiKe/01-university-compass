@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "case": "N17",
+  "title": "普通院校与跨专业适配",
+  "condition": "skill",
+  "fingerprint": "2b7654ec68499c22c91db7c131d822beb7aa9fed279623c72af533fcd025a619",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "/private/tmp/compass-v020-formal/behavior/N17-skill/attempt-20261023T162908-6627eedb.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "61ebbfa3c6c9ad210c3bc1b0cb004c30b63d5b7516fb979586688b7ea0f9e264",
+      "bytes": 5758
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "08612b37301e1c7738fd249b41918a96634cd10b4d3d75567c319a6db25f188e",
+      "bytes": 9903
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61",
+      "bytes": 19829
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "bytes": 6508
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "87cdf52ad727220e7c258ab5f39a9219732ebb055e501478f1d005e1ed572be5",
+      "bytes": 10474
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "2391f448d3287ebd64350471d4e663ebaec5450580e59e82467c4d4fbf478c7e",
+      "bytes": 36478
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "8fde755d004a70837cae757474129f3e68be81d4f8561bee2513ee9a4090844f",
+      "bytes": 2965
+    },
+    {
+      "path": "references/zeroone.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我大一护理，普通院校，不打算读研或转计算机。每周只有两小时，学 AI 有合适的起点吗？现在有两个学习环境：一个名气大，要求每周八小时、没有作业反馈；另一个小组每周一小时，会互相检查公开教学材料的笔记。请帮我比较。我不希望用某学校的规定或名校学长路线套我，也不想拿真实病人数据练习。",
+      "prompt_sha256": "e70812ecd233d21481b864492a14ddf246c769a56d9e2a132bce8e3d1a496c86",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "有。**你的起点可以是用 AI 帮助理解护理课程、做自测和核对依据。两个环境中，我更建议你优先试第二个小组。**这个建议依据的是你的时间和反馈需要，不依赖学校名气，也不要求你走读研或计算机路线。\n\n| 比较点 | 名气大的环境 | 每周一小时的小组 |\n|---|---|---|\n| 时间是否容得下 | 要求八小时，超过你两小时的上限；如果是硬要求，当前不合适 | 活动占一小时，但还要确认课外准备量 |\n| 能否发现自己的错误 | 没有作业反馈，需要自己另找核对办法 | 互查能暴露理解差异，但同伴也可能一起记错 |\n| 与当前目标的关系 | 具体内容尚不清楚，名气本身不能证明能帮助你学护理 | 检查教学材料笔记，比较接近课程理解和信息核对 |\n| 值得观察什么 | 是否存在符合你时间条件的参与方式，目前未知 | 是否真的对照原文、纠正错误，以及总耗时是否可控 |\n\n**第二个小组值得试的关键，是“依据原文检查”，而不只是交换漂亮笔记。**好的互查应当能说清：这句话的依据在哪一段？笔记有没有漏掉适用条件？哪些内容是 AI 或同伴补出来的？遇到专业争议，保留疑问，再向可靠课程材料或教师核实，不能靠多数人赞同定答案。\n\n你可以先试两周，每周按这个上限安排：\n\n- **20 分钟准备：**选一段公开且允许使用的护理教学材料，优先用课程已有的可靠材料。只取一个概念，先用自己的话写两三句理解，再请 AI 出两道题。\n- **60 分钟小组互查：**围绕同一段材料检查答案和笔记，至少完成一次有原文依据的确认或纠错。\n- **25 分钟独立检查：**合上笔记解释这个概念，再回答一道稍有变化的问题；不会的地方回到材料补上。\n- **15 分钟缓冲：**用于准备超时或核实疑问。总量超过两小时，就缩小材料、减少题量。\n\n可以直接使用这条请求：\n\n> 以下是教学材料片段。请只依据材料出两道理解题，先不要给答案。等我回答后，再指出对应原句，说明哪里答错、哪里材料不足。不要补充材料没有提供的专业结论。\n\n整个练习都可以使用公开教学材料或**明确标为虚构的教学情境**，无需提供真实病人的病历、照片、检查结果，也不必用“脱敏后的真实病例”来凑练习。涉及护理操作和临床判断的内容，仍需通过实训和教师评价检查；笔记答对只能说明相应的文字理解表现。\n\n两周后，主要看三件事：你是否能独立解释一个概念、是否能找到结论的依据、是否能在变化题中发现自己的错误。若只是笔记更多、实际仍说不清，就调整互查方式；若小组准备量持续超时，也可以改成独立练习。**目前建议先确认第二个小组的课外准备量和核对方式，再决定是否参加试学。**",
+      "returncode": 0,
+      "elapsed_seconds": 95.28,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167e0-cd19-76c0-80a8-76e9ac606f51"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-8hf7imul/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按「零一大学指南针」，围绕你的护理学习目标、每周两小时的上限和反馈条件来比较。"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "有。**你的起点可以是用 AI 帮助理解护理课程、做自测和核对依据。两个环境中，我更建议你优先试第二个小组。**这个建议依据的是你的时间和反馈需要，不依赖学校名气，也不要求你走读研或计算机路线。\n\n| 比较点 | 名气大的环境 | 每周一小时的小组 |\n|---|---|---|\n| 时间是否容得下 | 要求八小时，超过你两小时的上限；如果是硬要求，当前不合适 | 活动占一小时，但还要确认课外准备量 |\n| 能否发现自己的错误 | 没有作业反馈，需要自己另找核对办法 | 互查能暴露理解差异，但同伴也可能一起记错 |\n| 与当前目标的关系 | 具体内容尚不清楚，名气本身不能证明能帮助你学护理 | 检查教学材料笔记，比较接近课程理解和信息核对 |\n| 值得观察什么 | 是否存在符合你时间条件的参与方式，目前未知 | 是否真的对照原文、纠正错误，以及总耗时是否可控 |\n\n**第二个小组值得试的关键，是“依据原文检查”，而不只是交换漂亮笔记。**好的互查应当能说清：这句话的依据在哪一段？笔记有没有漏掉适用条件？哪些内容是 AI 或同伴补出来的？遇到专业争议，保留疑问，再向可靠课程材料或教师核实，不能靠多数人赞同定答案。\n\n你可以先试两周，每周按这个上限安排：\n\n- **20 分钟准备：**选一段公开且允许使用的护理教学材料，优先用课程已有的可靠材料。只取一个概念，先用自己的话写两三句理解，再请 AI 出两道题。\n- **60 分钟小组互查：**围绕同一段材料检查答案和笔记，至少完成一次有原文依据的确认或纠错。\n- **25 分钟独立检查：**合上笔记解释这个概念，再回答一道稍有变化的问题；不会的地方回到材料补上。\n- **15 分钟缓冲：**用于准备超时或核实疑问。总量超过两小时，就缩小材料、减少题量。\n\n可以直接使用这条请求：\n\n> 以下是教学材料片段。请只依据材料出两道理解题，先不要给答案。等我回答后，再指出对应原句，说明哪里答错、哪里材料不足。不要补充材料没有提供的专业结论。\n\n整个练习都可以使用公开教学材料或**明确标为虚构的教学情境**，无需提供真实病人的病历、照片、检查结果，也不必用“脱敏后的真实病例”来凑练习。涉及护理操作和临床判断的内容，仍需通过实训和教师评价检查；笔记答对只能说明相应的文字理解表现。\n\n两周后，主要看三件事：你是否能独立解释一个概念、是否能找到结论的依据、是否能在变化题中发现自己的错误。若只是笔记更多、实际仍说不清，就调整互查方式；若小组准备量持续超时，也可以改成独立练习。**目前建议先确认第二个小组的课外准备量和核对方式，再决定是否参加试学。**"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 46397,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2355,
+            "reasoning_output_tokens": 1552
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T08:29:08Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 95.29,
+  "finished_at_utc": "2026-10-23T08:30:43Z"
+}

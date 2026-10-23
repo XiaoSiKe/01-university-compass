@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "case": "N06",
+  "title": "AI 代做后的掌握错觉",
+  "condition": "baseline",
+  "fingerprint": "31ea965e8191053c31ec6e8136969118fb1f0d8ea282f87f8e961c9484fbdc29",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "/private/tmp/compass-v020-formal/behavior/N06-baseline/attempt-20261023T161551-d26db157.json",
+  "skill_manifest": [],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我大一，AI 帮我写出了一个小网页，按钮都能用。我可以在简历里写熟练掌握前端开发了吗？其实很多代码我还看不懂。",
+      "prompt_sha256": "f05df7664ef08682d396ad57748fbd40509fe9f7c731047f8014ce62e0507d2b",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**现在还不适合写“熟练掌握前端开发”，但可以把这个网页写进项目经历。** 你已经做出了能运行的作品；“熟练掌握”还需要你能解释、修改和排查其中的主要逻辑。\n\n使用 AI 做项目很正常。简历里的表述要经得起追问：如果面试官让你解释一个按钮为什么能用，或者现场加一个功能，你能完成到什么程度？\n\n目前可以这样写，项目名称和功能换成实际内容：\n\n> **XX 网页｜个人学习项目**  \n> 在 AI 辅助下完成网页搭建，实现按钮点击等基础交互。\n\n技能栏可以写“前端入门，有 AI 辅助网页实践经验”。暂时别把代码里出现过的技术都列成“熟练掌握”。\n\n你不需要逐行背代码，可以先用这个网页检验三件事：\n\n- **讲得清：**找到一个按钮，说明点击后执行哪段代码、页面为什么变化。\n- **改得动：**给它增加一个小需求，例如点击后禁用，或输入为空时提示；能检查 AI 给出的修改是否正确。\n- **查得出：**功能失效时，能打开浏览器控制台查看报错，并逐步定位原因。\n\n你现在最值得做的一步，是挑一个按钮，把从“点击”到“页面变化”的过程弄懂，再自己改一个小功能。这样做几轮后，你就能更准确地写出“我会什么”，面试时也更有底气。\n\n**大一写“入门”完全不丢人。一个你能讲透的小项目，比一个你解释不了的“熟练掌握”更有说服力。**",
+      "returncode": 0,
+      "elapsed_seconds": 51.34,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167d4-a51e-7d80-b514-397dd7a19a35"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-96qsyzq0/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "**现在还不适合写“熟练掌握前端开发”，但可以把这个网页写进项目经历。** 你已经做出了能运行的作品；“熟练掌握”还需要你能解释、修改和排查其中的主要逻辑。\n\n使用 AI 做项目很正常。简历里的表述要经得起追问：如果面试官让你解释一个按钮为什么能用，或者现场加一个功能，你能完成到什么程度？\n\n目前可以这样写，项目名称和功能换成实际内容：\n\n> **XX 网页｜个人学习项目**  \n> 在 AI 辅助下完成网页搭建，实现按钮点击等基础交互。\n\n技能栏可以写“前端入门，有 AI 辅助网页实践经验”。暂时别把代码里出现过的技术都列成“熟练掌握”。\n\n你不需要逐行背代码，可以先用这个网页检验三件事：\n\n- **讲得清：**找到一个按钮，说明点击后执行哪段代码、页面为什么变化。\n- **改得动：**给它增加一个小需求，例如点击后禁用，或输入为空时提示；能检查 AI 给出的修改是否正确。\n- **查得出：**功能失效时，能打开浏览器控制台查看报错，并逐步定位原因。\n\n你现在最值得做的一步，是挑一个按钮，把从“点击”到“页面变化”的过程弄懂，再自己改一个小功能。这样做几轮后，你就能更准确地写出“我会什么”，面试时也更有底气。\n\n**大一写“入门”完全不丢人。一个你能讲透的小项目，比一个你解释不了的“熟练掌握”更有说服力。**"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 13033,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 906,
+            "reasoning_output_tokens": 516
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "如果现在让我独立改成另一个主题，我会让 AI 再生成一遍。我该怎么检查到底哪些是我会的？",
+      "prompt_sha256": "2524dc66625680cdd8b8dc43d57343d7588a7584a5668eeb36e4f4d443b9e477",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "**可以把“我会前端吗”换成几个小问题：我能找到哪里要改、能预判改完会怎样、能亲手改成功吗？** 让 AI 重新生成整页，会让这些差别很难看出来。\n\n拿你现有的网页做一次小检查就行。先留一个副本，每项独立试 5～10 分钟。可以查语法和文档，但先不让 AI 给出答案；卡住时记下具体卡在哪里。\n\n| 小任务 | 检查什么 |\n|---|---|\n| 找出控制网页标题、背景颜色、按钮点击行为的代码 | 你能否读懂代码的大致分工 |\n| 选一个按钮，先说出“点击后哪段代码执行、什么内容变化”，再运行验证 | 你是否理解这个交互 |\n| 把标题和主色换成另一个主题需要的内容，保留原有按钮功能 | 你能否在现有代码上做局部修改 |\n| 给按钮加一个小功能，例如点击后显示“已报名”，再点击恢复 | 你能否把一个需求转成代码 |\n\n**每项分别记录完成方式，不用算总分：**\n\n- **独立完成，或查文档后完成：**这部分可以算你目前会做的。会查资料本来就是开发能力，不要求背语法。\n- **AI 提示后完成：**记为“需要提示”。再看提示涉及什么：是忘了语法，还是不知道该改哪个文件、该用什么思路？\n- **AI 直接生成，复制后能运行：**说明效果做出来了，但这次还没有证明你掌握了对应的代码。\n\n对于第三种情况，可以再加一道检查：**关掉 AI 的回答，换个相似的小需求做一次。** 比如 AI 帮你实现了“点击显示文字”，你再尝试“点击隐藏一段文字”。如果仍然无从下手，就说明你目前还需要学习这一部分，能复述刚才的解释还不够。\n\n最后，你得到的结论应该像这样具体：\n\n> 我能找到并修改标题和配色；能看懂一个简单按钮的执行过程；增加交互还需要 AI 提示；目前还不会独立排查按钮失效。\n\n这比“我会一点”准确，也能直接告诉你下一步学什么。**先从一个你能看懂、能修改、能验证的按钮开始，不必一次证明自己会做整个网站。**",
+      "returncode": 0,
+      "elapsed_seconds": 74.18,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167d5-6d9c-7743-b233-c26fb59e6251"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-96qsyzq0/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "**可以把“我会前端吗”换成几个小问题：我能找到哪里要改、能预判改完会怎样、能亲手改成功吗？** 让 AI 重新生成整页，会让这些差别很难看出来。\n\n拿你现有的网页做一次小检查就行。先留一个副本，每项独立试 5～10 分钟。可以查语法和文档，但先不让 AI 给出答案；卡住时记下具体卡在哪里。\n\n| 小任务 | 检查什么 |\n|---|---|\n| 找出控制网页标题、背景颜色、按钮点击行为的代码 | 你能否读懂代码的大致分工 |\n| 选一个按钮，先说出“点击后哪段代码执行、什么内容变化”，再运行验证 | 你是否理解这个交互 |\n| 把标题和主色换成另一个主题需要的内容，保留原有按钮功能 | 你能否在现有代码上做局部修改 |\n| 给按钮加一个小功能，例如点击后显示“已报名”，再点击恢复 | 你能否把一个需求转成代码 |\n\n**每项分别记录完成方式，不用算总分：**\n\n- **独立完成，或查文档后完成：**这部分可以算你目前会做的。会查资料本来就是开发能力，不要求背语法。\n- **AI 提示后完成：**记为“需要提示”。再看提示涉及什么：是忘了语法，还是不知道该改哪个文件、该用什么思路？\n- **AI 直接生成，复制后能运行：**说明效果做出来了，但这次还没有证明你掌握了对应的代码。\n\n对于第三种情况，可以再加一道检查：**关掉 AI 的回答，换个相似的小需求做一次。** 比如 AI 帮你实现了“点击显示文字”，你再尝试“点击隐藏一段文字”。如果仍然无从下手，就说明你目前还需要学习这一部分，能复述刚才的解释还不够。\n\n最后，你得到的结论应该像这样具体：\n\n> 我能找到并修改标题和配色；能看懂一个简单按钮的执行过程；增加交互还需要 AI 提示；目前还不会独立排查按钮失效。\n\n这比“我会一点”准确，也能直接告诉你下一步学什么。**先从一个你能看懂、能修改、能验证的按钮开始，不必一次证明自己会做整个网站。**"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 13493,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1595,
+            "reasoning_output_tokens": 1034
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 3,
+      "user": "我试着改了一个按钮文字，能成功；改数据保存逻辑就报错。我不想因此从头学完全部前端，有更合适的下一步吗？",
+      "prompt_sha256": "9800a4a990370c2d1ece105d8c198626cb7dfe462005e39e3685136686417f6e",
+      "history_messages": 4,
+      "status": "completed",
+      "answer": "**有。下一步可以只围绕“这条数据怎样保存”补知识，不必从头学完全部前端。** 你这次已经确认：能独立修改按钮文字；保存逻辑暂时还改不顺。一次报错还不能说明你缺了多少知识，先找出具体卡点。\n\n给自己安排一次 **30～45 分钟的小修复**，目标只定为：“弄清一个报错，修好一条保存流程。”\n\n1. **先保留能运行的版本，缩小改动。**  \n   只改一个保存需求，例如保存输入框里的一句话。暂时别同时换主题、改页面结构、加其他功能。\n\n2. **抓住第一条报错。**  \n   打开浏览器控制台，重新触发保存，记下第一条红色报错及对应位置。先确认原来的版本能否保存，再比较自己的修改。这样能区分原有问题和这次改动带来的问题。\n\n3. **让 AI 帮你定位，并限制它的任务范围。**  \n   可以这样问：\n\n   > 我是前端初学者。这是我修改前后的保存代码和第一条报错。请先指出报错位置，解释出错原因，以及数据从哪里来、要存到哪里。给出最小修改，并说明为什么这样改。不要重写整个页面；如果信息不足，请告诉我还缺哪段代码。\n\n   解释里遇到哪个概念影响理解，就补哪个。比如确实卡在“对象为什么要转成字符串”，再学这部分；不需要顺着展开成整套课程。\n\n4. **修好后，自己验证并做一次小迁移。**  \n   如果需求是刷新后仍能保留内容，就检查：保存后是否显示正确、刷新后是否还在、修改后再次保存是否更新。然后关掉 AI 回答，尝试把保存的内容换成另一个简单字段，看看自己能否找到并修改对应位置。\n\n**这轮的验收标准是：你能说出数据从哪里来、在哪里保存、怎样读回，以及这次为什么报错。** 如果修好了却仍然讲不清，就把“讲不清的那一步”作为下一个学习点。\n\n你可以贴出第一条报错原文，以及你改动前后的那一小段保存代码；去掉密码、密钥和真实个人数据即可。我们就从这个卡点继续。",
+      "returncode": 0,
+      "elapsed_seconds": 51.93,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a167d6-8f63-7010-aac2-ab09ce0ab09b"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-96qsyzq0/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "**有。下一步可以只围绕“这条数据怎样保存”补知识，不必从头学完全部前端。** 你这次已经确认：能独立修改按钮文字；保存逻辑暂时还改不顺。一次报错还不能说明你缺了多少知识，先找出具体卡点。\n\n给自己安排一次 **30～45 分钟的小修复**，目标只定为：“弄清一个报错，修好一条保存流程。”\n\n1. **先保留能运行的版本，缩小改动。**  \n   只改一个保存需求，例如保存输入框里的一句话。暂时别同时换主题、改页面结构、加其他功能。\n\n2. **抓住第一条报错。**  \n   打开浏览器控制台，重新触发保存，记下第一条红色报错及对应位置。先确认原来的版本能否保存，再比较自己的修改。这样能区分原有问题和这次改动带来的问题。\n\n3. **让 AI 帮你定位，并限制它的任务范围。**  \n   可以这样问：\n\n   > 我是前端初学者。这是我修改前后的保存代码和第一条报错。请先指出报错位置，解释出错原因，以及数据从哪里来、要存到哪里。给出最小修改，并说明为什么这样改。不要重写整个页面；如果信息不足，请告诉我还缺哪段代码。\n\n   解释里遇到哪个概念影响理解，就补哪个。比如确实卡在“对象为什么要转成字符串”，再学这部分；不需要顺着展开成整套课程。\n\n4. **修好后，自己验证并做一次小迁移。**  \n   如果需求是刷新后仍能保留内容，就检查：保存后是否显示正确、刷新后是否还在、修改后再次保存是否更新。然后关掉 AI 回答，尝试把保存的内容换成另一个简单字段，看看自己能否找到并修改对应位置。\n\n**这轮的验收标准是：你能说出数据从哪里来、在哪里保存、怎样读回，以及这次为什么报错。** 如果修好了却仍然讲不清，就把“讲不清的那一步”作为下一个学习点。\n\n你可以贴出第一条报错原文，以及你改动前后的那一小段保存代码；去掉密码、密钥和真实个人数据即可。我们就从这个卡点继续。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 14135,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1062,
+            "reasoning_output_tokens": 516
+          }
+        }
+      ],
+      "stderr": "2026-10-23T08:18:02.092719Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out\n",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T08:15:51Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 177.47,
+  "finished_at_utc": "2026-10-23T08:18:48Z"
+}
