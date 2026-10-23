@@ -1,8 +1,8 @@
 ---
-name: zeroone-university-compass
+name: 01-university-compass
 description: 面向大学新生与 AI 初学者的学习和成长导航。用于不知道如何开始学 AI、用 AI 学专业、尝试小项目、探索开发或研究方向，以及相关的迷茫、选择和行动困难；结合真实任务、能力检查与反馈调整。用户点名“零一大学指南针”时使用。独立代码任务、单纯事实查询直接处理，不强套成长规划。
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # 零一大学指南针
@@ -21,7 +21,7 @@ metadata:
 | 考研就业、项目、课程或 AI 路线之间取舍 | [对话流程 B](references/dialogue.md#b)、[目的与选择](references/thinking.md#p07) |
 | 知道要做却没开始、尝试后失败 | [对话流程 C](references/dialogue.md#c)、[学习与行动](references/learning-action.md) |
 | 具体课程题、技术错误或工具操作 | 先解决当前问题；有教学目的再检查理解，不重新进行成长访谈 |
-| 零一组织、活动、资源 | [零一知识与边界](references/zeroone.md)，当前条件另核实 |
+| 零一组织、活动、资源 | [零一知识与边界](references/01.md)，当前条件另核实 |
 | 续接、保存、提醒、出处 | [续接与证据](references/continuity-evidence.md)、按编号查 [来源](references/sources.md) |
 
 按需读取相关段落，不每次加载全库或重新抓取飞书。学生只想倾诉时先听；已有目标时不强迫先想清四年人生，也不把所有大学问题导向 AI。

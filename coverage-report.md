@@ -1,6 +1,10 @@
 # 资料覆盖与版本记录
 
-本版：0.2.0；教学内容维护于2026-10-23，旧飞书快照为2026-10-22。**没有完成全库逐页、逐附件、逐外链的完整蒸馏**。本轮按新生任务定向补充教学方法，未将旧来源的未读状态提升为已完成。
+本版：0.2.1；教学内容维护于2026-10-23，旧飞书快照为2026-10-22。**没有完成全库逐页、逐附件、逐外链的完整蒸馏**。本轮按新生任务定向补充教学方法，未将旧来源的未读状态提升为已完成。
+
+## 0.2.1 命名与视觉更新
+
+仓库、安装目录和调用名统一为 `01-university-compass`，社团知识文件改为 `references/01.md`。README封面直接使用社团原始Logo，采用黑白与中性灰；教学方法与任务没有扩展或重写。命名迁移、内容等价与原生安装检查见[本版验证](tests/v021/report.md)。旧版模型输出、评审和0.2.0发布记录保留原貌，不能把旧证据冒称为重新测试新版。
 
 ## 0.2.0 新增范围
 
@@ -10,7 +14,7 @@
 - 对话、学习与续接规则同步更新；正式行为验证和隔离安装发现结果见[新版测试报告](tests/test-report.md)。教学示范和实际测试记录分别标识。
 - 原创方法与练习独立编写，来源原文、图表、代码不随安装包分发。旧研究原始全文与工具日志仍只在原制作工作区，本包保留阅读笔记。
 
-当前文件、卡片、来源与链接数量由[结构检查](tests/v020/structure-results.json)生成；实际测试通过范围由测试报告给出。真实学生试用尚未开展，已有[自愿试用材料](tests/pilot-guide.md)。
+当前文件、卡片、来源与链接数量由[结构检查](tests/v021/structure-results.json)生成；实际测试通过范围由测试报告给出。真实学生试用尚未开展，已有[自愿试用材料](tests/pilot-guide.md)。
 
 ## 2026-10-22 资料基础（历史口径）
 
@@ -61,8 +65,8 @@ FUKATHON活动方案最后编辑2026-09-29，写10月11日；招募页最后编�
 - [飞书逐页清单CSV](research/feishu-inventory.csv) / [JSON](research/feishu-inventory.json)：标题、原链接、目录、作者、更新时间、主题、对象、场景、读取范围、蒸馏位置和外链。
 - [外链逐项清单CSV](research/external-inventory.csv) / [JSON](research/external-inventory.json)：296项逐项状态，全部尚未实质内容蒸馏。
 - [嵌入对象清单](research/embedded-inventory.json)：150条父页关联记录，包括18个不同工作表引用；不是150份已读资料。
-- [研究计划](research/research-plan.md) / [研究来源清单](research/sources.json) / [调用用来源表](zeroone-university-compass/references/sources.md)。
-- [主题地图](zeroone-university-compass/references/topic-map.md)，[原始档案说明](archive/ARCHIVE.md)。
+- [研究计划](research/research-plan.md) / [研究来源清单](research/sources.json) / [调用用来源表](01-university-compass/references/sources.md)。
+- [主题地图](01-university-compass/references/topic-map.md)，[原始档案说明](archive/ARCHIVE.md)。
 
 ## 未完成飞书页面
 

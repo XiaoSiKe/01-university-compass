@@ -289,7 +289,7 @@ def main():
     parser.add_argument("--case", action="append", help="Case ID; can repeat")
     parser.add_argument("--condition", choices=["skill", "baseline", "both"], default="skill")
     parser.add_argument("--output", type=Path, default=ROOT / "tests" / "v020")
-    parser.add_argument("--skill", type=Path, default=ROOT / "zeroone-university-compass")
+    parser.add_argument("--skill", type=Path, default=ROOT / "01-university-compass")
     parser.add_argument("--config-home", type=Path, default=Path(os.environ.get("CODEX_HOME", str(Path.home() / ".codex"))))
     parser.add_argument("--timeout", type=float, default=240, help="Seconds per actual model turn")
     parser.add_argument("--jobs", type=int, default=2, help="Concurrent independent cases")

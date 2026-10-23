@@ -1,0 +1,35 @@
+[
+  {
+    "type": "thread.started",
+    "thread_id": "01a16844-13e0-7f42-84ed-ce9e9f8e6059"
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_0",
+      "type": "error",
+      "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in [TEST_ROOT]/runtime/config.toml."
+    }
+  },
+  {
+    "type": "turn.started"
+  },
+  {
+    "type": "item.completed",
+    "item": {
+      "id": "item_1",
+      "type": "agent_message",
+      "text": "def stable_unique(items):\n    return list(dict.fromkeys(items))\n"
+    }
+  },
+  {
+    "type": "turn.completed",
+    "usage": {
+      "input_tokens": 13701,
+      "cached_input_tokens": 8192,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 140,
+      "reasoning_output_tokens": 121
+    }
+  }
+]

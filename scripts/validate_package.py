@@ -8,7 +8,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / 'zeroone-university-compass'
+SKILL = ROOT / '01-university-compass'
 
 def digest(data): return hashlib.sha256(data).hexdigest()
 def slug(text):
@@ -26,7 +26,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--build', action='store_true')
     ap.add_argument('--exclude-env', help='environment variable containing JSON array')
-    ap.add_argument('--output', default='tests/v020/structure-results.json')
+    ap.add_argument('--output', default='tests/v021/structure-results.json')
     args = ap.parse_args()
     errors=[]; links=0
     files=sorted(p for p in SKILL.rglob('*') if p.is_file())
@@ -36,11 +36,11 @@ def main():
         except UnicodeDecodeError: errors.append(f'Non UTF-8 file: {p.relative_to(ROOT)}')
     main_text=text_files.get(SKILL/'SKILL.md','')
     if not main_text.startswith('---\n'): errors.append('Missing YAML frontmatter')
-    if not re.search(r'^name: zeroone-university-compass$',main_text,re.M): errors.append('Skill name mismatch')
+    if not re.search(r'^name: 01-university-compass$',main_text,re.M): errors.append('Skill name mismatch')
     version=re.search(r'^  version: "([^"]+)"$',main_text,re.M)
-    if not version or version[1]!='0.2.0': errors.append('Version mismatch')
+    if not version or version[1]!='0.2.1': errors.append('Version mismatch')
     ui=text_files.get(SKILL/'agents/openai.yaml','')
-    if '$zeroone-university-compass' not in ui: errors.append('Default prompt lacks explicit Skill invocation')
+    if '$01-university-compass' not in ui: errors.append('Default prompt lacks explicit Skill invocation')
     desc=re.search(r'^  short_description: "(.+)"$',ui,re.M)
     if not desc or not 25<=len(desc[1])<=64: errors.append('UI description length outside 25–64')
     for p,txt in text_files.items():
@@ -73,13 +73,13 @@ def main():
     manifest=[{'path':str(p.relative_to(SKILL)),'bytes':p.stat().st_size,'sha256':digest(p.read_bytes())} for p in files]
     if args.build and not errors:
         (ROOT/'skill-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
-        with zipfile.ZipFile(ROOT/'zeroone-university-compass.zip','w',zipfile.ZIP_DEFLATED) as z:
+        with zipfile.ZipFile(ROOT/'01-university-compass.zip','w',zipfile.ZIP_DEFLATED) as z:
             for p in files: z.write(p,p.relative_to(ROOT))
     manifest_ok=False; zip_ok=False
     try:
         manifest_ok=json.loads((ROOT/'skill-manifest.json').read_text(encoding='utf-8-sig'))==manifest
         if not manifest_ok: errors.append('Manifest differs from current Skill; use --build after checks')
-        with zipfile.ZipFile(ROOT/'zeroone-university-compass.zip') as z:
+        with zipfile.ZipFile(ROOT/'01-university-compass.zip') as z:
             expected={str(p.relative_to(ROOT)):p.read_bytes() for p in files}
             zip_ok=set(z.namelist())==set(expected) and all(z.read(n)==data for n,data in expected.items())
             if not zip_ok: errors.append('ZIP differs from current Skill')

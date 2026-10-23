@@ -1,0 +1,86 @@
+{
+  "version": "0.2.1",
+  "status": "PASS",
+  "scope": "Only active identifiers, relative references and version changed; teaching text equivalent under deterministic rename. Historical actual model evidence was not rewritten.",
+  "files": [
+    {
+      "old_path": "zeroone-university-compass/SKILL.md",
+      "new_path": "01-university-compass/SKILL.md",
+      "expected_naming_only": true,
+      "before_sha256": "61ebbfa3c6c9ad210c3bc1b0cb004c30b63d5b7516fb979586688b7ea0f9e264",
+      "after_sha256": "5689dcc3ac47c14f13d58a21d7c6d71e03bc1563a2409a938a941d7833edca0b"
+    },
+    {
+      "old_path": "zeroone-university-compass/agents/openai.yaml",
+      "new_path": "01-university-compass/agents/openai.yaml",
+      "expected_naming_only": true,
+      "before_sha256": "56bfbffc2a144e187312f79ef46977a4e03e52676bf52ff2c26dacebf23680f9",
+      "after_sha256": "c06319902b634b1ff9f8397708d9e96be0fa174c80aba090a2436591bad31150"
+    },
+    {
+      "old_path": "zeroone-university-compass/references/ai-pathways.md",
+      "new_path": "01-university-compass/references/ai-pathways.md",
+      "expected_naming_only": true,
+      "before_sha256": "f3a1c1c5e442fc685cc8de7768c7ff3addbd5d003508705591bce79d672f3868",
+      "after_sha256": "f3a1c1c5e442fc685cc8de7768c7ff3addbd5d003508705591bce79d672f3868"
+    },
+    {
+      "old_path": "zeroone-university-compass/references/ai-practice.md",
+      "new_path": "01-university-compass/references/ai-practice.md",
+      "expected_naming_only": true,
+      "before_sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61",
+      "after_sha256": "8ac1ad1213c6a4f2b466a2ae172504be6f4f460dd3384412c633070c4c8f0c61"
+    },
+    {
+      "old_path": "zeroone-university-compass/references/continuity-evidence.md",
+      "new_path": "01-university-compass/references/continuity-evidence.md",
+      "expected_naming_only": true,
+      "before_sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "after_sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170"
+    },
+    {
+      "old_path": "zeroone-university-compass/references/dialogue.md",
+      "new_path": "01-university-compass/references/dialogue.md",
+      "expected_naming_only": true,
+      "before_sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4",
+      "after_sha256": "1fb680f9a7c57a104f6565195998cc6599278479d8a4209d194b1e0e5992d4d4"
+    },
+    {
+      "old_path": "zeroone-university-compass/references/learning-action.md",
+      "new_path": "01-university-compass/references/learning-action.md",
+      "expected_naming_only": true,
+      "before_sha256": "47d146aabda2fd669ce41f7f54bb5eeb6e297ea8469b08819e11903321d249eb",
+      "after_sha256": "47d146aabda2fd669ce41f7f54bb5eeb6e297ea8469b08819e11903321d249eb"
+    },
+    {
+      "old_path": "zeroone-university-compass/references/sources.md",
+      "new_path": "01-university-compass/references/sources.md",
+      "expected_naming_only": true,
+      "before_sha256": "2391f448d3287ebd64350471d4e663ebaec5450580e59e82467c4d4fbf478c7e",
+      "after_sha256": "2d0f42088aff64a5c2f518c3e5340fcafff9f07a8c93f66d2496d10f8fbc843c"
+    },
+    {
+      "old_path": "zeroone-university-compass/references/thinking.md",
+      "new_path": "01-university-compass/references/thinking.md",
+      "expected_naming_only": true,
+      "before_sha256": "9960226710134f1d7d35f3e433c4a4a3fd69b859e8fd72c473868829b5294b86",
+      "after_sha256": "9960226710134f1d7d35f3e433c4a4a3fd69b859e8fd72c473868829b5294b86"
+    },
+    {
+      "old_path": "zeroone-university-compass/references/topic-map.md",
+      "new_path": "01-university-compass/references/topic-map.md",
+      "expected_naming_only": true,
+      "before_sha256": "8fde755d004a70837cae757474129f3e68be81d4f8561bee2513ee9a4090844f",
+      "after_sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622"
+    },
+    {
+      "old_path": "zeroone-university-compass/references/zeroone.md",
+      "new_path": "01-university-compass/references/01.md",
+      "expected_naming_only": true,
+      "before_sha256": "a56f20df1fd5ccee14ba30d9aee98a93b9d7c815abd3367b6e78f898510181f4",
+      "after_sha256": "a56f20df1fd5ccee14ba30d9aee98a93b9d7c815abd3367b6e78f898510181f4"
+    }
+  ],
+  "logo_embedded_byte_identical": true,
+  "logo_sha256": "e53bc1189f5c75c6ed0a1c3140759ad508b2924f107694993f6bd82b0e02f70b"
+}

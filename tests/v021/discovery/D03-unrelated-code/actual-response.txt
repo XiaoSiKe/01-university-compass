@@ -1,0 +1,3 @@
+def stable_unique(items):
+    return list(dict.fromkeys(items))
+

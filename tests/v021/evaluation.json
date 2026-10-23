@@ -1,0 +1,55 @@
+{
+  "version": "0.2.1",
+  "status": "PASS（命名、安装发现与封面检查；教学验证保留0.2.0范围）",
+  "skill_name": "01-university-compass",
+  "teaching_validation_version": "0.2.0",
+  "teaching_content_changed": false,
+  "migration_proof": "migration-checks.json",
+  "native_discovery_cases": [
+    {
+      "case": "D01-explicit",
+      "exit_code": 0,
+      "model": "gpt-6.1-sol",
+      "manifest_matches": true,
+      "loaded_paths": [
+        ".agents/skills/01-university-compass/SKILL.md",
+        ".agents/skills/01-university-compass/references/ai-pathways.md",
+        ".agents/skills/01-university-compass/references/ai-practice.md",
+        "SKILL.md"
+      ],
+      "elapsed_seconds": 68.03,
+      "stderr_present": false,
+      "observation": "新$01调用实际读取入口与两份AI参考，给出20分钟新闻摘要核对练习。"
+    },
+    {
+      "case": "D02-natural",
+      "exit_code": 0,
+      "model": "gpt-6.1-sol",
+      "manifest_matches": true,
+      "loaded_paths": [
+        ".agents/skills/01-university-compass/SKILL.md",
+        ".agents/skills/01-university-compass/references/ai-pathways.md",
+        ".agents/skills/01-university-compass/references/ai-practice.md"
+      ],
+      "elapsed_seconds": 75.87,
+      "stderr_present": false,
+      "observation": "不含Skill名称仍实际读取新安装目录，给出手机可做的材料核验，保留每周两小时上限。"
+    },
+    {
+      "case": "D03-unrelated-code",
+      "exit_code": 0,
+      "model": "gpt-6.1-sol",
+      "manifest_matches": true,
+      "loaded_paths": [],
+      "elapsed_seconds": 22.57,
+      "stderr_present": false,
+      "observation": "零文件读取，仅返回保序去重函数。"
+    }
+  ],
+  "function_samples_passed": 2,
+  "scope_limits": [
+    "仅三条新进程输入的一次观察，不是全场景触发保证。",
+    "没有重复0.2.0的38例教学验证；用确定性替换对照确认教学正文未改。",
+    "本轮只读本地资料，不验证真实联网、自动提醒和学生效果。"
+  ]
+}

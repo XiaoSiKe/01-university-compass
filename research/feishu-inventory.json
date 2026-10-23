@@ -29,7 +29,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z04"
+      "01-university-compass/references/01.md#z04"
     ],
     "text_reviewed_fully": true
   },
@@ -65,7 +65,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z04"
+      "01-university-compass/references/01.md#z04"
     ],
     "text_reviewed_fully": true
   },
@@ -101,7 +101,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z02"
+      "01-university-compass/references/01.md#z02"
     ],
     "text_reviewed_fully": true
   },
@@ -133,7 +133,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/topic-map.md"
+      "01-university-compass/references/topic-map.md"
     ],
     "text_reviewed_fully": true
   },
@@ -165,7 +165,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/topic-map.md"
+      "01-university-compass/references/topic-map.md"
     ],
     "text_reviewed_fully": true
   },
@@ -193,7 +193,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/topic-map.md"
+      "01-university-compass/references/topic-map.md"
     ],
     "text_reviewed_fully": true
   },
@@ -225,7 +225,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/topic-map.md"
+      "01-university-compass/references/topic-map.md"
     ],
     "text_reviewed_fully": true
   },
@@ -255,7 +255,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z03"
+      "01-university-compass/references/01.md#z03"
     ],
     "text_reviewed_fully": true
   },
@@ -300,7 +300,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z04"
+      "01-university-compass/references/01.md#z04"
     ],
     "text_reviewed_fully": true
   },
@@ -330,7 +330,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z03"
+      "01-university-compass/references/01.md#z03"
     ],
     "text_reviewed_fully": true
   },
@@ -360,7 +360,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z04"
+      "01-university-compass/references/01.md#z04"
     ],
     "text_reviewed_fully": true
   },
@@ -390,7 +390,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z04"
+      "01-university-compass/references/01.md#z04"
     ],
     "text_reviewed_fully": true
   },
@@ -425,7 +425,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z01"
+      "01-university-compass/references/01.md#z01"
     ],
     "text_reviewed_fully": true
   },
@@ -455,7 +455,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/topic-map.md"
+      "01-university-compass/references/topic-map.md"
     ],
     "text_reviewed_fully": true
   },
@@ -492,7 +492,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z01"
+      "01-university-compass/references/01.md#z01"
     ],
     "text_reviewed_fully": true
   },
@@ -524,7 +524,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/topic-map.md"
+      "01-university-compass/references/topic-map.md"
     ],
     "text_reviewed_fully": true
   },
@@ -556,7 +556,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/topic-map.md"
+      "01-university-compass/references/topic-map.md"
     ],
     "text_reviewed_fully": true
   },
@@ -588,7 +588,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z03"
+      "01-university-compass/references/01.md#z03"
     ],
     "text_reviewed_fully": true
   },
@@ -616,7 +616,7 @@
     "distilled": true,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": true
   },
@@ -666,7 +666,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z05"
+      "01-university-compass/references/01.md#z05"
     ],
     "text_reviewed_fully": true
   },
@@ -697,7 +697,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/topic-map.md"
+      "01-university-compass/references/topic-map.md"
     ],
     "text_reviewed_fully": true
   },
@@ -727,7 +727,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z05"
+      "01-university-compass/references/01.md#z05"
     ],
     "text_reviewed_fully": true
   },
@@ -766,7 +766,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z01"
+      "01-university-compass/references/01.md#z01"
     ],
     "text_reviewed_fully": true
   },
@@ -794,7 +794,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": false
   },
@@ -822,7 +822,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": false
   },
@@ -873,7 +873,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": false
   },
@@ -1001,7 +1001,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": false
   },
@@ -1052,7 +1052,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": false
   },
@@ -1114,7 +1114,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": false
   },
@@ -1176,7 +1176,7 @@
     "distilled": true,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z05"
+      "01-university-compass/references/01.md#z05"
     ],
     "text_reviewed_fully": true
   },
@@ -1204,7 +1204,7 @@
     "distilled": true,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": true
   },
@@ -1264,7 +1264,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": false
   },
@@ -1429,7 +1429,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": false
   },
@@ -1471,7 +1471,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": false
   },
@@ -1504,7 +1504,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z05"
+      "01-university-compass/references/01.md#z05"
     ],
     "text_reviewed_fully": true
   },
@@ -1534,7 +1534,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": true
   },
@@ -1578,7 +1578,7 @@
     "distilled": false,
     "text_distilled": false,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": false
   },
@@ -1613,7 +1613,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": true
   },
@@ -1641,7 +1641,7 @@
     "distilled": true,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": true
   },
@@ -1709,7 +1709,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z06"
+      "01-university-compass/references/01.md#z06"
     ],
     "text_reviewed_fully": true
   },
@@ -2236,7 +2236,7 @@
     "distilled": false,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z02"
+      "01-university-compass/references/01.md#z02"
     ],
     "text_reviewed_fully": true
   },
@@ -2264,7 +2264,7 @@
     "distilled": true,
     "text_distilled": true,
     "knowledge_entries": [
-      "zeroone-university-compass/references/zeroone.md#z02"
+      "01-university-compass/references/01.md#z02"
     ],
     "text_reviewed_fully": true
   },

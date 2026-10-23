@@ -4,7 +4,7 @@
 
 制作阶段取得的飞书正文、外部网页、论文全文和工具原始日志保留在制作工作区，未附在这个分享包。清单中的archive/raw_archive字段是原始工作区的归档定位，不保证该文件已随包提供；不能据此把原始正文缺口视为补齐。
 
-阅读笔记放在本包archive/research。完整来源的取得、读取、蒸馏状态见coverage-report.md及research清单。Skill日常调用只需要zeroone-university-compass文件夹，无需原始缓存。
+阅读笔记放在本包archive/research。完整来源的取得、读取、蒸馏状态见coverage-report.md及research清单。Skill日常调用只需要01-university-compass文件夹，无需原始缓存。
 
 
 ## 0.2.0 新阅读记录

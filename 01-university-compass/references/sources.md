@@ -175,48 +175,48 @@ P07（目的与路径对应）与P08（同等条件下比较选择）是本项�
 
 |编号/原页|作者|更新时间（UTC）|读取范围|蒸馏位置/状态|
 |---|---|---|---|---|
-|F-DDaiw0 · [零一 AI 日新社【从零到一】](https://scn96l2kzmbn.feishu.cn/wiki/DDaiw0qKoifo7jkd2H2c9mxhnYe)|零一扬（网页署名）|2026-10-22T08:39:45Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z04)；文字范围完成，嵌入/图片待补|
-|F-I543ww · [从零到一](https://scn96l2kzmbn.feishu.cn/wiki/I543wwFoni8Hu8kzzpmc1JclnNh)|未知|2026-10-20T15:37:34Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z04)；文字范围完成，嵌入/图片待补|
-|F-Mbjzwb · [零一实践](https://scn96l2kzmbn.feishu.cn/wiki/MbjzwbBvdirC1HkgPBKcDOPjnBg)|未知|2026-10-20T15:39:14Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z02)；文字范围完成，嵌入/图片待补|
+|F-DDaiw0 · [零一 AI 日新社【从零到一】](https://scn96l2kzmbn.feishu.cn/wiki/DDaiw0qKoifo7jkd2H2c9mxhnYe)|零一扬（网页署名）|2026-10-22T08:39:45Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z04)；文字范围完成，嵌入/图片待补|
+|F-I543ww · [从零到一](https://scn96l2kzmbn.feishu.cn/wiki/I543wwFoni8Hu8kzzpmc1JclnNh)|未知|2026-10-20T15:37:34Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z04)；文字范围完成，嵌入/图片待补|
+|F-Mbjzwb · [零一实践](https://scn96l2kzmbn.feishu.cn/wiki/MbjzwbBvdirC1HkgPBKcDOPjnBg)|未知|2026-10-20T15:39:14Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z02)；文字范围完成，嵌入/图片待补|
 |F-IHBPwD · [AI 入门 一本通【从零到一】](https://scn96l2kzmbn.feishu.cn/wiki/IHBPwDsfXi5ctzkEpobcsbJ1n6g)|零一扬（网页署名）|2026-10-15T23:57:55Z|目录或占位：目录/占位文字已读；不代表引用目标已读|[条目](topic-map.md)；目录定位完成，无实质知识蒸馏|
 |F-SO0GwN · [AI 进阶 一本通【一到一百】](https://scn96l2kzmbn.feishu.cn/wiki/SO0GwNaXkis0u8kRqwHclMKmnlc)|未知|2026-09-06T01:28:50Z|目录或占位：目录/占位文字已读；不代表引用目标已读|[条目](topic-map.md)；目录定位完成，无实质知识蒸馏|
 |F-Qjfxwz · [零一大学 指南针【答疑解惑】](https://scn96l2kzmbn.feishu.cn/wiki/QjfxwzH8ZiCoFvkv0Lpcboy4neg)|未知|2026-10-20T13:32:38Z|目录或占位：目录/占位文字已读；不代表引用目标已读|[条目](topic-map.md)；目录定位完成，无实质知识蒸馏|
 |F-OsL0wa · [零一开源【AI 项目库】](https://scn96l2kzmbn.feishu.cn/wiki/OsL0waujXi3wkkk44AocNVFGnmg)|未知|2026-10-21T02:40:27Z|目录或占位：目录/占位文字已读；不代表引用目标已读|[条目](topic-map.md)；目录定位完成，无实质知识蒸馏|
-|F-Pw4Fwa · [组织架构与社团系统](https://scn96l2kzmbn.feishu.cn/wiki/Pw4FwagW6iPaVqkzyeNc7rRSnub)|未知|2026-10-20T01:57:20Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z03)；文字范围完成，嵌入/图片待补|
-|F-HLEfwV · [领航先锋](https://scn96l2kzmbn.feishu.cn/wiki/HLEfwV9BFiutsQkFxAQcPAB1nvb)|未知|2026-10-21T05:29:00Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z04)；文字范围完成，嵌入/图片待补|
-|F-GIh6wo · [建言献策](https://scn96l2kzmbn.feishu.cn/wiki/GIh6woke5ilTbikyNNrcIUPdnJg)|未知|2026-10-16T03:32:24Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z03)；文字范围完成，嵌入/图片待补|
-|F-X7h6wI · [零一 AI 日新社【合作生态】](https://scn96l2kzmbn.feishu.cn/wiki/X7h6wI8SCiAuZAkpYF2caNv7nTG)|未知|2026-10-22T09:14:27Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z04)；文字范围完成，嵌入/图片待补|
-|F-PIqKwg · [零一高校分社计划【开源共建】](https://scn96l2kzmbn.feishu.cn/wiki/PIqKwgPI7iIrtXkHps9cqavKn4c)|未知|2026-10-22T13:56:07Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z04)；文字范围完成，嵌入/图片待补|
-|F-J1jewh · [入门指南与道法术器【AI 导学篇】](https://scn96l2kzmbn.feishu.cn/wiki/J1jewhiEri2SiLkPvo7cQM1Inl3)|未知|2026-09-04T03:51:07Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z01)；文字范围完成，嵌入/图片待补|
+|F-Pw4Fwa · [组织架构与社团系统](https://scn96l2kzmbn.feishu.cn/wiki/Pw4FwagW6iPaVqkzyeNc7rRSnub)|未知|2026-10-20T01:57:20Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z03)；文字范围完成，嵌入/图片待补|
+|F-HLEfwV · [领航先锋](https://scn96l2kzmbn.feishu.cn/wiki/HLEfwV9BFiutsQkFxAQcPAB1nvb)|未知|2026-10-21T05:29:00Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z04)；文字范围完成，嵌入/图片待补|
+|F-GIh6wo · [建言献策](https://scn96l2kzmbn.feishu.cn/wiki/GIh6woke5ilTbikyNNrcIUPdnJg)|未知|2026-10-16T03:32:24Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z03)；文字范围完成，嵌入/图片待补|
+|F-X7h6wI · [零一 AI 日新社【合作生态】](https://scn96l2kzmbn.feishu.cn/wiki/X7h6wI8SCiAuZAkpYF2caNv7nTG)|未知|2026-10-22T09:14:27Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z04)；文字范围完成，嵌入/图片待补|
+|F-PIqKwg · [零一高校分社计划【开源共建】](https://scn96l2kzmbn.feishu.cn/wiki/PIqKwgPI7iIrtXkHps9cqavKn4c)|未知|2026-10-22T13:56:07Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z04)；文字范围完成，嵌入/图片待补|
+|F-J1jewh · [入门指南与道法术器【AI 导学篇】](https://scn96l2kzmbn.feishu.cn/wiki/J1jewhiEri2SiLkPvo7cQM1Inl3)|未知|2026-09-04T03:51:07Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z01)；文字范围完成，嵌入/图片待补|
 |F-CZKcwI · [AI 通识课【基础认知】](https://scn96l2kzmbn.feishu.cn/wiki/CZKcwIyPSih43TkqBpyc6CwznIc)|未知|2026-09-07T01:20:40Z|目录或占位：目录/占位文字已读；不代表引用目标已读|[条目](topic-map.md)；目录定位完成，无实质知识蒸馏|
-|F-FcgFwy · [Vibe coding 一本通](https://scn96l2kzmbn.feishu.cn/wiki/FcgFwyUotiQr9skbl9Ucfqfwnze)|未知|2026-09-04T03:53:22Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z01)；文字范围完成，嵌入/图片待补|
+|F-FcgFwy · [Vibe coding 一本通](https://scn96l2kzmbn.feishu.cn/wiki/FcgFwyUotiQr9skbl9Ucfqfwnze)|未知|2026-09-04T03:53:22Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z01)；文字范围完成，嵌入/图片待补|
 |F-DKebwH · [Codex、Claude Code 一本通【从零到一】](https://scn96l2kzmbn.feishu.cn/wiki/DKebwHE1kib9mwkFQO7chSyNntd)|未知|2026-09-09T07:16:31Z|目录或占位：目录/占位文字已读；不代表引用目标已读|[条目](topic-map.md)；目录定位完成，无实质知识蒸馏|
 |F-F5kZw4 · [AIGC 入门一本通【从零到一】](https://scn96l2kzmbn.feishu.cn/wiki/F5kZw4PtriM5uFkZqq2csOVjnJh)|未知|2026-09-04T11:10:10Z|目录或占位：目录/占位文字已读；不代表引用目标已读|[条目](topic-map.md)；目录定位完成，无实质知识蒸馏|
-|F-JVRHwT · [关于 Github 入门教学](https://scn96l2kzmbn.feishu.cn/wiki/JVRHwTzhqih6xKkOyxXcpfTBnkb)|未知|2026-09-06T01:28:31Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z03)；文字范围完成，嵌入/图片待补|
-|F-M5kAwV · [随风：Codex 子代理高效处理【大型任务实战指南】](https://scn96l2kzmbn.feishu.cn/wiki/M5kAwVbo2iCvk4kWgVJc4JnSncd)|随风（标题署名）|2026-08-29T01:35:05Z|完整读取：本页导出正文完整审读；外链另计|[条目](zeroone.md#z06)；完成|
-|F-HjQ6wy · [Agent Skill 的使用教程与推荐大全](https://scn96l2kzmbn.feishu.cn/wiki/HjQ6wysqViD9fAkAgeecY6kLnkh)|未知|2026-10-16T00:30:39Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z05)；文字范围完成，嵌入/图片待补|
+|F-JVRHwT · [关于 Github 入门教学](https://scn96l2kzmbn.feishu.cn/wiki/JVRHwTzhqih6xKkOyxXcpfTBnkb)|未知|2026-09-06T01:28:31Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z03)；文字范围完成，嵌入/图片待补|
+|F-M5kAwV · [随风：Codex 子代理高效处理【大型任务实战指南】](https://scn96l2kzmbn.feishu.cn/wiki/M5kAwVbo2iCvk4kWgVJc4JnSncd)|随风（标题署名）|2026-08-29T01:35:05Z|完整读取：本页导出正文完整审读；外链另计|[条目](01.md#z06)；完成|
+|F-HjQ6wy · [Agent Skill 的使用教程与推荐大全](https://scn96l2kzmbn.feishu.cn/wiki/HjQ6wysqViD9fAkAgeecY6kLnkh)|未知|2026-10-16T00:30:39Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z05)；文字范围完成，嵌入/图片待补|
 |F-ZzPDw6 · [关于复杂 Bug 修复与方案](https://scn96l2kzmbn.feishu.cn/wiki/ZzPDw6fecipd55kCa9JcXcT9nzd)|未知|2026-09-04T04:00:47Z|目录或占位：目录/占位文字已读；不代表引用目标已读|[条目](topic-map.md)；目录定位完成，无实质知识蒸馏|
-|F-GdN5wD · [关于 飞书 CLI 的入门教学](https://scn96l2kzmbn.feishu.cn/wiki/GdN5wDtzJifiFxkPFQ9cPfk7nse)|未知|2026-09-06T01:28:20Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z05)；文字范围完成，嵌入/图片待补|
-|F-BBgUww · [怎么快速入门 AI？【站在巨人的肩膀上】](https://scn96l2kzmbn.feishu.cn/wiki/BBgUwwVL8iqf2Tk5D6Pc6F1LniD)|未知|2026-09-07T01:37:23Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z01)；文字范围完成，嵌入/图片待补|
-|F-ELB0wA · [100个 AI 基础概念扫盲【解释】](https://scn96l2kzmbn.feishu.cn/wiki/ELB0wAhOWi1CuRk5j2lcAJ55n6L)|未知|2026-08-23T15:40:43Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](zeroone.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
-|F-FeEwwu · [入门 AI 百问百答](https://scn96l2kzmbn.feishu.cn/wiki/FeEwwuf39iQ4BwkKwkRcgFjpnhc)|未知|2026-08-23T15:39:59Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](zeroone.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
-|F-QmT1wJ · [学习 AI 的推荐书单](https://scn96l2kzmbn.feishu.cn/wiki/QmT1wJze4iv6Iwk0VwdcIo12nq6)|未知|2026-07-25T07:34:11Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](zeroone.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
-|F-QtOowS · [AIGC 学习手册](https://scn96l2kzmbn.feishu.cn/wiki/QtOowS8FBirsxzkCaArcrV23nPz)|未知|2026-07-25T07:34:18Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](zeroone.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
-|F-L3xJwY · [AI编程蓝皮书2.0【AI产品黄叔】- Part 1](https://scn96l2kzmbn.feishu.cn/wiki/L3xJwYGcWiEZ6qkWKDNcglltn0g)|AI产品黄叔（正文自述）|2026-07-25T07:34:40Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](zeroone.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
-|F-PRTXwz · [AI编程蓝皮书2.0【AI产品黄叔】- Part 2](https://scn96l2kzmbn.feishu.cn/wiki/PRTXwzlcBi4Ogtke4hYcmBo7nUf)|AI产品黄叔（正文自述）|2026-07-25T07:34:44Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](zeroone.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
-|F-Qt8pwN · [工具专区【推荐阅读】](https://scn96l2kzmbn.feishu.cn/wiki/Qt8pwNVYDi83aUktFcncEYN3nVf)|未知|2026-07-25T07:34:51Z|完整读取：本页导出正文完整审读；外链另计|[条目](zeroone.md#z05)；完成|
-|F-Xc3jwM · [Vercel 简介](https://scn96l2kzmbn.feishu.cn/wiki/Xc3jwMRiciSrELk0XKVcd3nanqh)|未知|2026-07-25T07:34:54Z|完整读取：本页导出正文完整审读；外链另计|[条目](zeroone.md#z06)；完成|
-|F-ZmF3wM · [最适合新手的Claude Code、MCP、Skills全套教程【熊猫Jay】](https://scn96l2kzmbn.feishu.cn/wiki/ZmF3wMxWNiw4cSkmVm7c6Qs3nvh)|熊猫Jay（标题署名）|2026-07-25T07:34:57Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](zeroone.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
-|F-WaDDwu · [相关Rules和Prompt](https://scn96l2kzmbn.feishu.cn/wiki/WaDDwugayig8LdkNhsackUdpnRb)|未知|2026-07-25T07:34:48Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](zeroone.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
-|F-T9TuwJ · [Codex 免费教学【从安装到登录】](https://scn96l2kzmbn.feishu.cn/wiki/T9TuwJCYQiDPtrkLvqOcJzO6nNc)|未知|2026-09-20T02:39:31Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](zeroone.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
-|F-PDPcwL · [Codex 常见使用问题合集与解答](https://scn96l2kzmbn.feishu.cn/wiki/PDPcwLDZFiqn7Ek9D87c75GKn3d)|未知|2026-09-04T03:54:58Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z05)；文字范围完成，嵌入/图片待补|
-|F-LoIyw2 · [Codex 新手入门与基础](https://scn96l2kzmbn.feishu.cn/wiki/LoIyw26PGiepphksu4rcVxsFn9d)|未知|2026-09-04T03:55:06Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z06)；文字范围完成，嵌入/图片待补|
-|F-QsaOwx · [Claude code 免费教学【从安装到登录】](https://scn96l2kzmbn.feishu.cn/wiki/QsaOwxHCIipYvlkzf2vc6vvBnxh)|未知|2026-09-20T02:40:11Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](zeroone.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
-|F-GH9mwY · [如何使用 API Key 进行生图创作？](https://scn96l2kzmbn.feishu.cn/wiki/GH9mwY3R9iPFlKkAxy0cLqJLnMh)|未知|2026-08-30T15:24:00Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z06)；文字范围完成，嵌入/图片待补|
-|F-OoxcwN · [零一生图【提示词工程】](https://scn96l2kzmbn.feishu.cn/wiki/OoxcwNw1IiJzDQkdEGKciXhxnug)|未知|2026-09-04T11:10:13Z|完整读取：本页导出正文完整审读；外链另计|[条目](zeroone.md#z06)；完成|
-|F-PTrqwN · [万物摩尔定律  Sam Altman](https://scn96l2kzmbn.feishu.cn/wiki/PTrqwNzuOiOdpskIY3RcXomWn8d)|Sam Altman（标题署名；译者未知）|2026-04-14T07:35:52Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z06)；文字范围完成，嵌入/图片待补|
-|F-AJzmwY · [FUKATHON 01｜福州大学首届 AI 黑客松活动方案](https://scn96l2kzmbn.feishu.cn/wiki/AJzmwYCEQi8CSykuTjtcV0hWnfN)|未知|2026-09-29T02:01:55Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](zeroone.md#z02)；文字范围完成，嵌入/图片待补|
-|F-GZsww4 · [FUKATHON 01｜福州大学首届 AI 黑客松](https://scn96l2kzmbn.feishu.cn/wiki/GZsww4AOQiZPAtkIGN0cCDIYnSf)|未知|2026-10-12T00:02:11Z|完整读取：本页导出正文完整审读；外链另计|[条目](zeroone.md#z02)；完成|
+|F-GdN5wD · [关于 飞书 CLI 的入门教学](https://scn96l2kzmbn.feishu.cn/wiki/GdN5wDtzJifiFxkPFQ9cPfk7nse)|未知|2026-09-06T01:28:20Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z05)；文字范围完成，嵌入/图片待补|
+|F-BBgUww · [怎么快速入门 AI？【站在巨人的肩膀上】](https://scn96l2kzmbn.feishu.cn/wiki/BBgUwwVL8iqf2Tk5D6Pc6F1LniD)|未知|2026-09-07T01:37:23Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z01)；文字范围完成，嵌入/图片待补|
+|F-ELB0wA · [100个 AI 基础概念扫盲【解释】](https://scn96l2kzmbn.feishu.cn/wiki/ELB0wAhOWi1CuRk5j2lcAJ55n6L)|未知|2026-08-23T15:40:43Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](01.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
+|F-FeEwwu · [入门 AI 百问百答](https://scn96l2kzmbn.feishu.cn/wiki/FeEwwuf39iQ4BwkKwkRcgFjpnhc)|未知|2026-08-23T15:39:59Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](01.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
+|F-QmT1wJ · [学习 AI 的推荐书单](https://scn96l2kzmbn.feishu.cn/wiki/QmT1wJze4iv6Iwk0VwdcIo12nq6)|未知|2026-07-25T07:34:11Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](01.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
+|F-QtOowS · [AIGC 学习手册](https://scn96l2kzmbn.feishu.cn/wiki/QtOowS8FBirsxzkCaArcrV23nPz)|未知|2026-07-25T07:34:18Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](01.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
+|F-L3xJwY · [AI编程蓝皮书2.0【AI产品黄叔】- Part 1](https://scn96l2kzmbn.feishu.cn/wiki/L3xJwYGcWiEZ6qkWKDNcglltn0g)|AI产品黄叔（正文自述）|2026-07-25T07:34:40Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](01.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
+|F-PRTXwz · [AI编程蓝皮书2.0【AI产品黄叔】- Part 2](https://scn96l2kzmbn.feishu.cn/wiki/PRTXwzlcBi4Ogtke4hYcmBo7nUf)|AI产品黄叔（正文自述）|2026-07-25T07:34:44Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](01.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
+|F-Qt8pwN · [工具专区【推荐阅读】](https://scn96l2kzmbn.feishu.cn/wiki/Qt8pwNVYDi83aUktFcncEYN3nVf)|未知|2026-07-25T07:34:51Z|完整读取：本页导出正文完整审读；外链另计|[条目](01.md#z05)；完成|
+|F-Xc3jwM · [Vercel 简介](https://scn96l2kzmbn.feishu.cn/wiki/Xc3jwMRiciSrELk0XKVcd3nanqh)|未知|2026-07-25T07:34:54Z|完整读取：本页导出正文完整审读；外链另计|[条目](01.md#z06)；完成|
+|F-ZmF3wM · [最适合新手的Claude Code、MCP、Skills全套教程【熊猫Jay】](https://scn96l2kzmbn.feishu.cn/wiki/ZmF3wMxWNiw4cSkmVm7c6Qs3nvh)|熊猫Jay（标题署名）|2026-07-25T07:34:57Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](01.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
+|F-WaDDwu · [相关Rules和Prompt](https://scn96l2kzmbn.feishu.cn/wiki/WaDDwugayig8LdkNhsackUdpnRb)|未知|2026-07-25T07:34:48Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](01.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
+|F-T9TuwJ · [Codex 免费教学【从安装到登录】](https://scn96l2kzmbn.feishu.cn/wiki/T9TuwJCYQiDPtrkLvqOcJzO6nNc)|未知|2026-09-20T02:39:31Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](01.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
+|F-PDPcwL · [Codex 常见使用问题合集与解答](https://scn96l2kzmbn.feishu.cn/wiki/PDPcwLDZFiqn7Ek9D87c75GKn3d)|未知|2026-09-04T03:54:58Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z05)；文字范围完成，嵌入/图片待补|
+|F-LoIyw2 · [Codex 新手入门与基础](https://scn96l2kzmbn.feishu.cn/wiki/LoIyw26PGiepphksu4rcVxsFn9d)|未知|2026-09-04T03:55:06Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z06)；文字范围完成，嵌入/图片待补|
+|F-QsaOwx · [Claude code 免费教学【从安装到登录】](https://scn96l2kzmbn.feishu.cn/wiki/QsaOwxHCIipYvlkzf2vc6vvBnxh)|未知|2026-09-20T02:40:11Z|部分读取：目录和开头/相关片段筛查；全文未逐项审读|[条目](01.md#z06)；部分：资源定位与采用边界，全文蒸馏未完成|
+|F-GH9mwY · [如何使用 API Key 进行生图创作？](https://scn96l2kzmbn.feishu.cn/wiki/GH9mwY3R9iPFlKkAxy0cLqJLnMh)|未知|2026-08-30T15:24:00Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z06)；文字范围完成，嵌入/图片待补|
+|F-OoxcwN · [零一生图【提示词工程】](https://scn96l2kzmbn.feishu.cn/wiki/OoxcwNw1IiJzDQkdEGKciXhxnug)|未知|2026-09-04T11:10:13Z|完整读取：本页导出正文完整审读；外链另计|[条目](01.md#z06)；完成|
+|F-PTrqwN · [万物摩尔定律  Sam Altman](https://scn96l2kzmbn.feishu.cn/wiki/PTrqwNzuOiOdpskIY3RcXomWn8d)|Sam Altman（标题署名；译者未知）|2026-04-14T07:35:52Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z06)；文字范围完成，嵌入/图片待补|
+|F-AJzmwY · [FUKATHON 01｜福州大学首届 AI 黑客松活动方案](https://scn96l2kzmbn.feishu.cn/wiki/AJzmwYCEQi8CSykuTjtcV0hWnfN)|未知|2026-09-29T02:01:55Z|部分读取：可导出文字已读；嵌入/图片内容未完整审读|[条目](01.md#z02)；文字范围完成，嵌入/图片待补|
+|F-GZsww4 · [FUKATHON 01｜福州大学首届 AI 黑客松](https://scn96l2kzmbn.feishu.cn/wiki/GZsww4AOQiZPAtkIGN0cCDIYnSf)|未知|2026-10-12T00:02:11Z|完整读取：本页导出正文完整审读；外链另计|[条目](01.md#z02)；完成|
 
 ## 必须随知识一起保留的缺口
 

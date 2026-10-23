@@ -1,9 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/cover-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/readme/cover-light.svg">
-    <img src="assets/readme/cover-light.svg" alt="零一大学指南针：找到方向，从一次实践开始。AI时代的大学学习与成长导航。" width="1400">
-  </picture>
+  <img src="assets/readme/cover.svg" alt="零一大学指南针：学会学习，也学会选择。封面使用零一AI日新社原始Logo。" width="1400">
 </p>
 
 <h1 align="center">零一大学指南针</h1>
@@ -16,11 +12,11 @@
 <p align="center">
   <a href="#quick-start">开始使用</a> &nbsp; / &nbsp;
   <a href="#pathways">选择路径</a> &nbsp; / &nbsp;
-  <a href="zeroone-university-compass/references/ai-practice.md">查看任务</a> &nbsp; / &nbsp;
+  <a href="01-university-compass/references/ai-practice.md">查看任务</a> &nbsp; / &nbsp;
   <a href="tests/test-report.md">验证记录</a>
 </p>
 
-<p align="center"><sub>0.2.0 &nbsp; · &nbsp; 中文优先 &nbsp; · &nbsp; 普通设备友好 &nbsp; · &nbsp; 支持零新增预算</sub></p>
+<p align="center"><sub>0.2.1 &nbsp; · &nbsp; 中文优先 &nbsp; · &nbsp; 普通设备友好 &nbsp; · &nbsp; 支持零新增预算</sub></p>
 
 ---
 
@@ -40,15 +36,15 @@
 
 **直接下载安装包**
 
-[下载 0.2.0 轻量安装包](https://github.com/XiaoSiKe/zeroone-university-compass/releases/download/v0.2.0/zeroone-university-compass.zip) · [仓库内安装包](zeroone-university-compass.zip)
+[下载 0.2.1 轻量安装包](https://github.com/XiaoSiKe/01-university-compass/releases/download/v0.2.1/01-university-compass.zip) · [仓库内安装包](01-university-compass.zip)
 
-解压后，将整个 `zeroone-university-compass` 文件夹放入 Codex 的用户级 `skills` 目录，保留内部结构。已有同名版本时，先备份并比对本地改动。
+解压后，将整个 `01-university-compass` 文件夹放入 Codex 的用户级 `skills` 目录，保留内部结构。已有同名版本时，先备份并比对本地改动。
 
 | 使用环境 | 安装位置 |
 | :--- | :--- |
-| macOS / Linux | `~/.codex/skills/` |
-| Windows | `%USERPROFILE%\.codex\skills\` |
-| 已配置 `CODEX_HOME` | 该目录下的 `skills/` |
+| macOS / Linux | `~/.agents/skills/` |
+| Windows | `%USERPROFILE%\.agents\skills\` |
+| 已有旧版安装位置 | 原 `~/.codex/skills/` 等目录仍需先检查，避免留下同名旧版 |
 
 <details>
 <summary><strong>习惯命令行？使用 Skills CLI 安装</strong></summary>
@@ -56,7 +52,7 @@
 需要 Node.js 22.20 或更新版本。运行后选择要安装到的 AI 助手：
 
 ```sh
-npx skills add XiaoSiKe/zeroone-university-compass --skill zeroone-university-compass
+npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 ```
 
 默认安装到当前项目。需要跨项目使用时，添加 `-g`；具体选项以 [Skills CLI 官方说明](https://github.com/vercel-labs/skills#install-a-skill)为准。本项目的原生调用验证使用 Codex，其他宿主的行为以实际能力为准。
@@ -66,7 +62,7 @@ npx skills add XiaoSiKe/zeroone-university-compass --skill zeroone-university-co
 ### 02 / 带着一个问题，打开新聊天
 
 ```text
-使用 $zeroone-university-compass。
+使用 $01-university-compass。
 我刚上大学，没有编程基础，今晚有20分钟，
 想试一次AI帮助课程学习。
 ```
@@ -116,7 +112,7 @@ npx skills add XiaoSiKe/zeroone-university-compass --skill zeroone-university-co
 | **从哪里开始** | 一段读得懂的材料和一个明确问题 | 一个输入输出清楚的小功能 | 一个可比较的问题和评价标准 |
 | **留下什么证据** | 能解释依据，能发现无根据的补充 | 能运行样例，能亲手修改关键部分 | 能区分观察与解释，能指出反例 |
 
-[阅读完整学习路径 →](zeroone-university-compass/references/ai-pathways.md)
+[阅读完整学习路径 →](01-university-compass/references/ai-pathways.md)
 
 ## 把学习落到六类任务里
 
@@ -129,7 +125,7 @@ npx skills add XiaoSiKe/zeroone-university-compass --skill zeroone-university-co
 | **05 · 体验不同路线** | 用同一主题体验应用、开发与研究，记录兴趣和困难 |
 | **06 · 比较专业方向** | 把目的、日常任务、前置能力、投入代价和自身体验连起来 |
 
-[打开六类任务与三条多轮示范 →](zeroone-university-compass/references/ai-practice.md)
+[打开六类任务与三条多轮示范 →](01-university-compass/references/ai-practice.md)
 
 手机、普通电脑、暂时没有 API 或遇到访问限制时，都可以选择相应的练习形式。使用预制输出或纸面推演时，会明确哪些能力已经练习、哪些实际操作仍待验证。
 
@@ -151,15 +147,17 @@ npx skills add XiaoSiKe/zeroone-university-compass --skill zeroone-university-co
 
 当前版本包含 11 个安装文件。来源覆盖学习研究、哲学与思考方法，以及经过筛选的 AI 课程和教学 Skill；记录具体章节、实际阅读范围与采用边界。
 
-验证覆盖 **38 个 Skill 情境、6 组同模型对照**，并针对发现进行两轮定向修改与复测，保留 **101 条实际模型回答**。原始结果与修订前记录均可查阅。
+0.2.0 教学版的验证覆盖 **38 个 Skill 情境、6 组同模型对照**，并针对发现进行两轮定向修改与复测，保留 **101 条实际模型回答**。原始结果与修订前记录均可查阅。
 
 对照呈现局部优势与差异。当前验证说明这些输入下的实际表现，**真实学生的长期使用效果仍待试用验证**；三条教学示范是编写的练习，不冒充真实学生经历。
 
 | 你想了解 | 从这里查看 |
 | :--- | :--- |
 | 测了哪些情境，发现了什么 | [验证报告](tests/test-report.md) · [测试设计](tests/test-plan.md) |
-| 来源读到了哪里，还有哪些缺口 | [资料覆盖报告](coverage-report.md) · [来源与许可记录](zeroone-university-compass/references/sources.md) |
+| 来源读到了哪里，还有哪些缺口 | [资料覆盖报告](coverage-report.md) · [来源与许可记录](01-university-compass/references/sources.md) |
 | 想组织一次自愿试用 | [任务、反馈表与复盘模板](tests/pilot-guide.md) |
+
+本次 0.2.1 更新统一了 `01` 命名与社团黑白视觉，教学内容保持上一版范围。新版名称和安装检查见 [0.2.1 验证记录](tests/v021/report.md)。已安装旧名称的用户，应先将旧目录移出技能搜索路径，再安装新版，避免重复触发。
 
 ## 给维护者
 
@@ -167,7 +165,7 @@ npx skills add XiaoSiKe/zeroone-university-compass --skill zeroone-university-co
 <summary><strong>仓库结构、检查与重新打包</strong></summary>
 
 ```text
-zeroone-university-compass/
+01-university-compass/
 ├── SKILL.md           # 入口与对话规则
 ├── agents/            # 展示信息
 └── references/        # 路径、任务、方法卡和来源
@@ -177,7 +175,7 @@ tests/                 # 行为测试、评审与试用材料
 scripts/               # 检查、打包与说明页面生成
 ```
 
-完整仓库用于维护。实际安装只需要 `zeroone-university-compass/` 文件夹。
+完整仓库用于维护。实际安装只需要 `01-university-compass/` 文件夹。
 
 在仓库根目录使用 Python 3 检查：
 
@@ -200,4 +198,4 @@ python3 scripts/render_delivery.py
 
 ---
 
-<p align="center"><strong>从你真正关心的一个问题开始。</strong><br><sub>零一大学指南针 · 0.2.0</sub></p>
+<p align="center"><strong>从你真正关心的一个问题开始。</strong><br><sub>零一大学指南针 · 0.2.1</sub></p>

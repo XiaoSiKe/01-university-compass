@@ -1,13 +1,18 @@
 [
   {
     "path": "SKILL.md",
-    "bytes": 5758,
-    "sha256": "61ebbfa3c6c9ad210c3bc1b0cb004c30b63d5b7516fb979586688b7ea0f9e264"
+    "bytes": 5748,
+    "sha256": "5689dcc3ac47c14f13d58a21d7c6d71e03bc1563a2409a938a941d7833edca0b"
   },
   {
     "path": "agents/openai.yaml",
-    "bytes": 383,
-    "sha256": "56bfbffc2a144e187312f79ef46977a4e03e52676bf52ff2c26dacebf23680f9"
+    "bytes": 378,
+    "sha256": "c06319902b634b1ff9f8397708d9e96be0fa174c80aba090a2436591bad31150"
+  },
+  {
+    "path": "references/01.md",
+    "bytes": 9216,
+    "sha256": "a56f20df1fd5ccee14ba30d9aee98a93b9d7c815abd3367b6e78f898510181f4"
   },
   {
     "path": "references/ai-pathways.md",
@@ -36,8 +41,8 @@
   },
   {
     "path": "references/sources.md",
-    "bytes": 36478,
-    "sha256": "2391f448d3287ebd64350471d4e663ebaec5450580e59e82467c4d4fbf478c7e"
+    "bytes": 36308,
+    "sha256": "2d0f42088aff64a5c2f518c3e5340fcafff9f07a8c93f66d2496d10f8fbc843c"
   },
   {
     "path": "references/thinking.md",
@@ -46,12 +51,7 @@
   },
   {
     "path": "references/topic-map.md",
-    "bytes": 2965,
-    "sha256": "8fde755d004a70837cae757474129f3e68be81d4f8561bee2513ee9a4090844f"
-  },
-  {
-    "path": "references/zeroone.md",
-    "bytes": 9216,
-    "sha256": "a56f20df1fd5ccee14ba30d9aee98a93b9d7c815abd3367b6e78f898510181f4"
+    "bytes": 2945,
+    "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622"
   }
 ]

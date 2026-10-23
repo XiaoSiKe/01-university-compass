@@ -20,11 +20,12 @@
   "research_sources": 24,
   "research_archive_full": 9,
   "knowledge_cards": 28,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "teaching_checked_on": "2026-10-23",
   "feishu_snapshot": "2026-10-22",
   "original_research_sources": 15,
   "ai_teaching_sources": 9,
   "skill_files": 11,
-  "research_archive_scope": "原15项研究来源的历史工作区归档统计；本分享包只附阅读笔记"
+  "research_archive_scope": "原15项研究来源的历史工作区归档统计；本分享包只附阅读笔记",
+  "teaching_validation_version": "0.2.0"
 }
