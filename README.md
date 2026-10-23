@@ -30,14 +30,6 @@
 
 目前没有可在线对话的网页版。仓库中的 HTML 是说明和测试对话的静态阅读版；实际使用需要 Codex 等支持 Skill 的 AI 助手。
 
-### 三种常见的帮助
-
-| 你带来的问题 | 指南针怎样推进 | 关注的结果 |
-| :--- | :--- | :--- |
-| **“我不会编程，想用 AI 学懂一段课程材料。”** | 用当前设备和可用时间选一个小任务，边做边讲任务表达、上下文和结果核对 | 做成一次尝试，并能解释其中一个关键判断 |
-| **“AI 帮我做完了，但我讲不清。”** | 找到具体卡点，给解释或示范，再用变化任务检查；需要时暂时撤去辅助 | 分开记录作品能否使用、本人能否独立完成 |
-| **“大家都在学，我不知道该选什么。”** | 分清目的与手段，比较真实任务、前置条件和代价，用有限体验补信息 | 得到有依据的暂定方向，也可以调整、暂停或停止 |
-
 <a id="quick-start"></a>
 
 ## ↗ 开始使用
@@ -84,6 +76,14 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 
 本 Skill 不要求额外购买课程、API 或算力。AI 助手自身的账号、费用和可用性以实际环境为准。
 
+### 三种常见的帮助
+
+| 你带来的问题 | 指南针怎样推进 | 关注的结果 |
+| :--- | :--- | :--- |
+| **“我不会编程，想用 AI 学懂一段课程材料。”** | 用当前设备和可用时间选一个小任务，边做边讲任务表达、上下文和结果核对 | 做成一次尝试，并能解释其中一个关键判断 |
+| **“AI 帮我做完了，但我讲不清。”** | 找到具体卡点，给解释或示范，再用变化任务检查；需要时暂时撤去辅助 | 分开记录作品能否使用、本人能否独立完成 |
+| **“大家都在学，我不知道该选什么。”** | 分清目的与手段，比较真实任务、前置条件和代价，用有限体验补信息 | 得到有依据的暂定方向，也可以调整、暂停或停止 |
+
 <a id="methods"></a>
 
 ## ◇ 思想与方法
@@ -92,15 +92,15 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 
 ### 调查、实践与自主选择
 
-| 已采用的来源 | 提取的方法 | 在对话中怎样使用 |
-| :--- | :--- | :--- |
-| **《实践论》** · 毛泽东 | 在实践与认识之间往返，承认可靠的间接经验 | 把“我适不适合”暂作假设，通过可承受的体验增加信息，再修正判断 · [P01](01-university-compass/references/thinking.md#p01) |
-| **《矛盾论》** · 毛泽东 | 研究具体条件，识别阶段重点，允许重点变化 | 查看课程、项目、生活问题的期限和相互影响，选当前重点并保留必要保障 · [P02](01-university-compass/references/thinking.md#p02) |
-| **《反对本本主义》** · 毛泽东 | 调查实际情况，检查脱离条件的结论 | 区分事实与解释，找正式材料和具体经历，不照搬一个成功故事 · [P03](01-university-compass/references/thinking.md#p03) |
-| **《我们怎样思维》第六章** · 杜威 | 界定问题、提出解释、推演与观察检验 | 为一次失败寻找其他可能原因，用证据决定补基础还是换方法 · [P03](01-university-compass/references/thinking.md#p03) |
-| **《论自由》第三章** · 密尔 | 个性发展、生活试验与他人利益边界 | 尊重本人认可的目标和责任，允许兴趣、收入、照护与生活平衡并存 · [P04](01-university-compass/references/thinking.md#p04) |
-| **《手册》第一节** · 爱比克泰德 | 区分由己与非由己的事 | 承认感受，分清能直接行动、能协商影响和暂不能改变的部分，寻找现实支持 · [P05](01-university-compass/references/thinking.md#p05) |
-| **自我决定理论** · Ryan 与 Deci | 自主、胜任和关系需要 | 检查目标是否认同、难度与支持是否合适，不把困难一概归因为不够努力 · [P06](01-university-compass/references/thinking.md#p06) |
+| 来源与提炼的方法 | 在学生场景中怎样用 |
+| :--- | :--- |
+| **《实践论》** · 毛泽东<br>在实践与认识之间往返，承认可靠的间接经验 | 把“我适不适合”暂作假设，通过可承受的体验增加信息，再修正判断 · [P01](01-university-compass/references/thinking.md#p01) |
+| **《矛盾论》** · 毛泽东<br>研究具体条件，识别阶段重点，允许重点变化 | 查看课程、项目、生活问题的期限和相互影响，选当前重点并保留必要保障 · [P02](01-university-compass/references/thinking.md#p02) |
+| **《反对本本主义》** · 毛泽东<br>调查实际情况，检查脱离条件的结论 | 区分事实与解释，找正式材料和具体经历，不照搬一个成功故事 · [P03](01-university-compass/references/thinking.md#p03) |
+| **《我们怎样思维》第六章** · 杜威<br>界定问题、提出解释、推演与观察检验 | 为一次失败寻找其他可能原因，用证据决定补基础还是换方法 · [P03](01-university-compass/references/thinking.md#p03) |
+| **《论自由》第三章** · 密尔<br>个性发展、生活试验与他人利益边界 | 尊重本人认可的目标和责任，允许兴趣、收入、照护与生活平衡并存 · [P04](01-university-compass/references/thinking.md#p04) |
+| **《手册》第一节** · 爱比克泰德<br>区分由己与非由己的事 | 承认感受，分清能直接行动、能协商影响和暂不能改变的部分，寻找现实支持 · [P05](01-university-compass/references/thinking.md#p05) |
+| **自我决定理论** · Ryan 与 Deci<br>自主、胜任和关系需要 | 检查目标是否认同、难度与支持是否合适，不把困难一概归因为不够努力 · [P06](01-university-compass/references/thinking.md#p06) |
 
 这里采用的是《毛泽东选集》相关篇章的具体方法启发，保留其历史语境；不把原文的政治斗争语境转成大学人际规范，也不要求学生先认同某种哲学。爱比克泰德的“三类行动范围”是本项目的应用转译。
 
@@ -108,38 +108,38 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 
 ### 学习科学与行动方法
 
-| 方法与研究线索 | 怎样安排学习 | 怎样检查 |
-| :--- | :--- | :--- |
-| **提取练习与间隔学习** · Dunlosky 等；Roediger 等 | 看懂后合上材料尝试回答，核对纠错，再隔一段时间重试 | 能否在延迟后提取关键知识；间隔按目标和错误调整 · [L01](01-university-compass/references/learning-action.md#l01) |
-| **自我解释与有用笔记** · Dunlosky 等 | 用自己的话说明因果与步骤，标记不懂处，保存来源和疑问 | 解释是否正确、是否有依据；熟悉和流畅不直接算掌握 · [L02](01-university-compass/references/learning-action.md#l02) |
-| **例题学习与迁移** · Sweller 与 Cooper | 从合适的完整示例进入，再补步骤、独立练习、改变条件 | 会跟做之后，能否处理新的表示或情境 · [L03](01-university-compass/references/learning-action.md#l03) |
-| **有支持的问题学习** · Hmelo-Silver | 用真实有限问题识别知识缺口，结合范例、教师或同伴支持 | 成果是否解决问题，个人能否解释关键决定 · [L04](01-university-compass/references/learning-action.md#l04) |
-| **自我调节与元认知校准** · Zimmerman；Dunlosky 与 Rawson | 设具体目标，对照自我预估与实际表现，调整策略 | 分开“接触过、看懂了、可独立使用”，必要时换题或延迟复测 · [L05](01-university-compass/references/learning-action.md#l05) |
-| **按真实容量安排时间** · Aeon 等 | 课程、兼职、照护和休息先占位，为少量重点留缓冲 | 比较计划与实际，删减、协商或调整；不以压缩睡眠补进度 · [L06](01-university-compass/references/learning-action.md#l06) |
-| **实施意图** · Gollwitzer 与 Sheeran | 把明确行为接到实际会出现的情境：“当……，我就……” | 查清没开始时是目标、材料、疲惫还是情境不合适 · [L07](01-university-compass/references/learning-action.md#l07) |
+| 方法与学习安排 | 怎样检查 |
+| :--- | :--- |
+| **提取练习与间隔学习** · Dunlosky 等；Roediger 等<br>看懂后合上材料尝试回答，核对纠错，再隔一段时间重试 | 能否在延迟后提取关键知识；间隔按目标和错误调整 · [L01](01-university-compass/references/learning-action.md#l01) |
+| **自我解释与有用笔记** · Dunlosky 等<br>用自己的话说明因果与步骤，标记不懂处，保存来源和疑问 | 解释是否正确、是否有依据；熟悉和流畅不直接算掌握 · [L02](01-university-compass/references/learning-action.md#l02) |
+| **例题学习与迁移** · Sweller 与 Cooper<br>从合适的完整示例进入，再补步骤、独立练习、改变条件 | 会跟做之后，能否处理新的表示或情境 · [L03](01-university-compass/references/learning-action.md#l03) |
+| **有支持的问题学习** · Hmelo-Silver<br>用真实有限问题识别知识缺口，结合范例、教师或同伴支持 | 成果是否解决问题，个人能否解释关键决定 · [L04](01-university-compass/references/learning-action.md#l04) |
+| **自我调节与元认知校准** · Zimmerman；Dunlosky 与 Rawson<br>设具体目标，对照自我预估与实际表现，调整策略 | 分开“接触过、看懂了、可独立使用”，必要时换题或延迟复测 · [L05](01-university-compass/references/learning-action.md#l05) |
+| **按真实容量安排时间** · Aeon 等<br>课程、兼职、照护和休息先占位，为少量重点留缓冲 | 比较计划与实际，删减、协商或调整；不以压缩睡眠补进度 · [L06](01-university-compass/references/learning-action.md#l06) |
+| **实施意图** · Gollwitzer 与 Sheeran<br>把明确行为接到实际会出现的情境：“当……，我就……” | 查清没开始时是目标、材料、疲惫还是情境不合适 · [L07](01-university-compass/references/learning-action.md#l07) |
 
 **帮助可以充分，掌握要另行检查。** 缺概念就解释，缺步骤就示范；能跟做之后减少提示。用变化任务或延迟检查观察迁移，保留仍需帮助的部分。研究启发了这些设计，但没有单篇论文验证过本项目整套教学流程。
 
 ### AI 教学与进阶资料
 
-| 已采用的资料 | 借鉴的教学方法 | 适合怎样使用 |
-| :--- | :--- | :--- |
-| **Microsoft · Generative AI for Beginners / AI for Beginners** | 概念与制作分层，预测、运行或观察、修改、解释与独立实验 | 按当前任务选章节，不把整套课程或云账号当入门门槛 |
-| **Anthropic · AI Fluency for Students** | 人机分工、学习伙伴、事实核查与学生贡献 | 先决定 AI 帮哪一部分，再保留本人判断和理解检查 |
-| **TuTor / AI Tutor Skill** | 动手验证、直白解释、具体例子与渐进支持 | 按实际卡点增减帮助，允许完整示范，检查类比边界 |
-| **Datawhale · LLM Universe** | 有限问答、失败样本与系统评估 | 已有 Python 基础后，区分资料缺失、检索失败与生成错误 |
-| **Happy-LLM / Hugging Face LLM Course** | 从使用模型到数据、原理和实验，明确前置条件 | 按数学、编程和设备条件进入进阶，不默认人人训练模型 |
-| **Datawhale · Hello-Agents** | 有限项目、可检查交付、异常处理与反馈修改 | 做过基础小应用后，再尝试一个有需求和评价标准的流程 |
+| 资料与借鉴方法 | 适合怎样使用 |
+| :--- | :--- |
+| **Microsoft · Generative AI for Beginners / AI for Beginners**<br>概念与制作分层，预测、运行或观察、修改、解释与独立实验 | 按当前任务选章节，不把整套课程或云账号当入门门槛 |
+| **Anthropic · AI Fluency for Students**<br>人机分工、学习伙伴、事实核查与学生贡献 | 先决定 AI 帮哪一部分，再保留本人判断和理解检查 |
+| **TuTor / AI Tutor Skill**<br>动手验证、直白解释、具体例子与渐进支持 | 按实际卡点增减帮助，允许完整示范，检查类比边界 |
+| **Datawhale · LLM Universe**<br>有限问答、失败样本与系统评估 | 已有 Python 基础后，区分资料缺失、检索失败与生成错误 |
+| **Happy-LLM / Hugging Face LLM Course**<br>从使用模型到数据、原理和实验，明确前置条件 | 按数学、编程和设备条件进入进阶，不默认人人训练模型 |
+| **Datawhale · Hello-Agents**<br>有限项目、可检查交付、异常处理与反馈修改 | 做过基础小应用后，再尝试一个有需求和评价标准的流程 |
 
 [查看 R16–R24 的具体章节、版本、许可与前置条件 ↗](01-university-compass/references/sources.md)
 
 ### 0.3.0 新增：AI 适用性、工作流与撤去辅助检查
 
-| 新参考 | 转化成什么帮助 | 使用边界 |
-| :--- | :--- | :--- |
-| **UNESCO · AI competency framework for students（R25）** | 先判断任务是否适合 AI、需要什么材料、人应保留哪些判断，再选择用法 · [AI 适用性](01-university-compass/references/ai-judgment.md#fit) | 学生能力框架用于设计提问与练习，不是本 Skill 的认证或效果实验 |
-| **Anthropic · Building effective agents（R26）** | 从简单工具或固定流程开始；确有动态决策需要时再考虑 Agent，明确检查点、成本和停止条件 · [工作流选择](01-university-compass/references/ai-judgment.md#workflow) | 工程经验按任务使用，不承诺复杂架构更好，不照搬旧配置 |
-| **Bastani 等 · Generative AI without guardrails can harm learning（R27，PNAS 2025）** | 分开“借助 AI 完成”和“撤去辅助后会做”，在合适的变化任务中检查，并据结果补支持 · [撤去辅助检查](01-university-compass/references/ai-judgment.md#check) | 土耳其单所高中数学短期试验；辅导式工具缓解了负面影响，撤去辅助后的考试未显著优于无 AI 组；不能外推本 Skill 或大学生长期效果 |
+| 参考与具体帮助 | 使用边界 |
+| :--- | :--- |
+| **UNESCO · 学生 AI 能力框架（R25）**<br>先判断任务是否适合 AI、需要什么材料、人应保留哪些判断，再选择用法 · [AI 适用性](01-university-compass/references/ai-judgment.md#fit) | 学生能力框架用于设计提问与练习，不是本 Skill 的认证或效果实验 |
+| **Anthropic · Agent 工程经验（R26）**<br>从简单工具或固定流程开始；确有动态决策需要时再考虑 Agent，明确检查点、成本和停止条件 · [工作流选择](01-university-compass/references/ai-judgment.md#workflow) | 工程经验按任务使用，不承诺复杂架构更好，不照搬旧配置 |
+| **Bastani 等 · AI 辅助学习实验（R27，PNAS 2025）**<br>分开“借助 AI 完成”和“撤去辅助后会做”，在合适的变化任务中检查，并据结果补支持 · [撤去辅助检查](01-university-compass/references/ai-judgment.md#check) | 土耳其单所高中数学短期试验；辅导式工具缓解了负面影响，撤去辅助后的考试未显著优于无 AI 组；不能外推本 Skill 或大学生长期效果 |
 
 这些方法服务于具体任务。需要一个确定性的计算或查找时，可以直接用计算器、程序或正式材料；任务不需要 AI，也能成为清楚的选择。
 
