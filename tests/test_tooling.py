@@ -177,7 +177,11 @@ class RendererTests(unittest.TestCase):
             newest = evaluation.parent / 'behavior/V01-skill/attempt-999.json'
             write_json(newest, {'case': 'V01', 'condition': 'skill', 'status': 'timeout',
                                 'turns': [{'user': 'later', 'answer': 'UNREVIEWED_LATER_FAILURE'}]})
+            before = {p.relative_to(root): p.read_bytes() for p in root.rglob('*') if p.is_file()}
             report = renderer.render(root, evaluation)
+            after = {p.relative_to(root): p.read_bytes() for p in root.rglob('*') if p.is_file()}
+            self.assertEqual(set(after), set(before) | {Path('tests/实际对话记录.html')})
+            self.assertTrue(all(after[path] == content for path, content in before.items()))
             rendered = (root / 'tests/实际对话记录.html').read_text(encoding='utf-8')
             boundary = rendered.index('<h2>未采用与历史尝试</h2>')
             self.assertLess(rendered.index('REVIEWED_OLDER_ANSWER'), boundary)
@@ -196,7 +200,7 @@ class RendererTests(unittest.TestCase):
             self.assertEqual(report['baseline_cases'], 0)
             self.assertNotIn('EXPLICIT_BASELINE_ANSWER', (root / 'tests/实际对话记录.html').read_text(encoding='utf-8'))
 
-    def test_invalid_adoption_never_replaces_existing_pages(self):
+    def test_invalid_adoption_never_replaces_existing_transcript(self):
         variants = ['missing', 'evaluation_version', 'evaluation_digest', 'evaluation_status',
                     'case_status', 'duplicate', 'artifact_checksum', 'artifact_version',
                     'artifact_digest', 'artifact_status', 'artifact_identity', 'empty_turn']
@@ -234,7 +238,7 @@ class RendererTests(unittest.TestCase):
                     write_json(artifact, item)
                     index['cases'][0]['artifact_sha256'] = common.digest(artifact.read_bytes())
                 write_json(evaluation, index)
-                pages = [root / '00_先读说明.html', root / 'tests/实际对话记录.html']
+                pages = [root / 'tests/实际对话记录.html']
                 for path in pages:
                     path.write_text('ORIGINAL_PAGE', encoding='utf-8')
                 with self.assertRaises(renderer.EvidenceError):
