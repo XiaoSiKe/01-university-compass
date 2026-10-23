@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/readme/club-banner.png" alt="零一 AI 日新社旗帜：黑底银白徽记，零一 AI 日新社与 01 AI CLUB 字样。" width="1200">
+  <img src="assets/readme/club-banner-cropped.png" alt="零一 AI 日新社徽记：黑底银白 Logo，已裁去上下多余留白。" width="1200">
 </p>
 
 <h1 align="center">零一大学指南针</h1>
