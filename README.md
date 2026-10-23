@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>从零到一，让技术进步成为每个人的机会。</strong><br>
-  陪大学新生与 AI 初学者，明确需要、选择路径、完成真实任务。
+  <strong>帮助AI 初学者从零到一，每天进步一点点，这便是“日新”的意义！</strong>
 </p>
 
 <p align="center">
@@ -22,13 +22,11 @@
 
 ## ◎ 我们为什么做指南针
 
-“从零到一”是零一 AI 日新社做这件事的初心：让不同专业、不同基础的同学，都有机会理解新技术，尝试用它解决自己关心的问题，逐渐获得自己的判断和实践能力。
+我们希望不同专业、不同基础的同学，都能理解新技术，用它解决自己关心的问题，逐渐形成自己的判断和实践能力。
 
-刚进入大学，不必先确定未来四年，也不必先会编程、买算力或参加比赛。你可以从一段课程材料、一个想核实的结论、一件想改善的小事开始。已有基础，就从现在能做的地方继续。
+从一段课程材料、一个待核实的结论或一个小项目开始，按现有基础、时间和设备推进。
 
-**指南针是一套安装到 AI 助手中的 Skill。** 它把思考方法、学习科学与 AI 实践组织成可调用的对话规则、方法卡和任务，帮助助手根据你的条件讲解、示范、检验和调整。它也能陪你处理大学适应、路径取舍和启动困难；暂时不想学 AI，可以直接谈眼前的生活和选择。
-
-目前没有可在线对话的网页版。仓库中的 HTML 是说明和测试对话的静态阅读版；实际使用需要 Codex 等支持 Skill 的 AI 助手。
+**指南针是一套安装到 AI 助手中的 Skill。** 它把思考方法、学习科学与 AI 实践融入讲解、示范、练习和反馈，也能陪你理清大学生活中的选择与行动困难。
 
 <a id="quick-start"></a>
 
@@ -38,7 +36,7 @@
 
 [下载 0.3.0 轻量安装包](https://github.com/XiaoSiKe/01-university-compass/releases/download/v0.3.0/01-university-compass.zip) · [仓库内安装包](01-university-compass.zip)
 
-解压后，将整个 `01-university-compass` 文件夹放入 Codex 的用户级技能目录，保留内部结构。已有同名版本时，先备份并比对本地改动。
+解压后，将整个 `01-university-compass` 文件夹放入以下目录。升级前备份本地改动。
 
 | 使用环境 | 安装位置 |
 | :--- | :--- |
@@ -48,15 +46,13 @@
 <details>
 <summary><strong>使用命令行安装，或从旧版升级</strong></summary>
 
-已有 Node.js 时，可用 Skills CLI 安装，并选择目标 AI 助手；Node.js 版本要求以 [Skills CLI 官方说明](https://github.com/vercel-labs/skills#install-a-skill)为准。
+也可使用 [Skills CLI](https://github.com/vercel-labs/skills#install-a-skill) 安装，并选择目标 AI 助手：
 
 ```sh
 npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 ```
 
-默认安装到当前项目，需要跨项目使用时添加 `-g`。本项目的原生调用验证使用 Codex，其他宿主的行为以实际能力为准。
-
-升级前检查原 `~/.codex/skills/` 等旧目录。已安装旧名称的用户，应将旧目录移出技能搜索路径，避免多个版本重复触发；有本地修改时先备份。
+默认安装到当前项目，跨项目使用时添加 `-g`。升级时将旧版移出技能搜索目录，避免重复加载。
 
 </details>
 
@@ -64,17 +60,16 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 
 ```text
 使用 $01-university-compass。
-我刚上大学，没有编程基础，今晚有 20 分钟，
-想试一次 AI 帮助课程学习。请直接带我开始。
+我刚上大学，没有编程基础，今晚有 20 分钟，想试一次 AI 帮助课程学习。请直接带我开始。
 ```
 
-也可以说“用零一大学指南针，帮我理清下一段该学什么”。无需准备完整的背景介绍；如果技能清单尚未刷新，重启应用后再开新聊天。
+也可以直接说：“用零一大学指南针，帮我理清下一段该学什么。”
 
 ### 03 / 带着结果继续
 
-把你的答案、卡点或变化了的条件带回来，下一步会据此调整。换聊天时，可以生成可复制的续接小结；文件保存、提醒和跨会话能力取决于实际宿主。
+带回答案、卡点或变化了的条件，一起调整下一步；换聊天时，用可复制的续接小结继续。
 
-本 Skill 不要求额外购买课程、API 或算力。AI 助手自身的账号、费用和可用性以实际环境为准。
+用已有工具即可开始，具体费用以所用 AI 助手为准。
 
 ### 三种常见的帮助
 
@@ -88,7 +83,7 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 
 ## ◇ 思想与方法
 
-指南针选读哲学原著、学习研究与 AI 教学资料，把相关方法转化为大学场景中的提问、练习与反馈。每一项都记录实际阅读范围和应用边界；具体任务与案例由本项目设计。
+从已读的哲学原著、学习研究与 AI 教学资料中提炼方法，转化为具体的提问、练习与反馈。阅读范围和采用位置均可查阅。
 
 ### 调查、实践与自主选择
 
@@ -102,9 +97,9 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 | **《手册》第一节** · 爱比克泰德<br>区分由己与非由己的事 | 承认感受，分清能直接行动、能协商影响和暂不能改变的部分，寻找现实支持 · [P05](01-university-compass/references/thinking.md#p05) |
 | **自我决定理论** · Ryan 与 Deci<br>自主、胜任和关系需要 | 检查目标是否认同、难度与支持是否合适，不把困难一概归因为不够努力 · [P06](01-university-compass/references/thinking.md#p06) |
 
-这里采用的是《毛泽东选集》相关篇章的具体方法启发，保留其历史语境；不把原文的政治斗争语境转成大学人际规范，也不要求学生先认同某种哲学。爱比克泰德的“三类行动范围”是本项目的应用转译。
+以上是《毛泽东选集》等原著相关章节的方法启发，保留历史语境；任务与“三类行动范围”等应用由本项目设计。
 
-在这些方法基础上，我们还设计了 **[目的与路径对应](01-university-compass/references/thinking.md#p07)**、**[同等条件下比较选择](01-university-compass/references/thinking.md#p08)** 和 **[小试验与机会成本](01-university-compass/references/learning-action.md#l08)**：既看收益，也看真实日常、投入、支持与未知；后悔或改变目标时重新核对条件。这些是原创应用设计，不宣称已有统一模型的效果验证。
+另有 **[目的与路径对应](01-university-compass/references/thinking.md#p07)**、**[同等条件下比较选择](01-university-compass/references/thinking.md#p08)** 和 **[小试验与机会成本](01-university-compass/references/learning-action.md#l08)**：围绕本人目标，比较真实任务、投入与未知，允许调整和停止。
 
 ### 学习科学与行动方法
 
@@ -118,7 +113,7 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 | **按真实容量安排时间** · Aeon 等<br>课程、兼职、照护和休息先占位，为少量重点留缓冲 | 比较计划与实际，删减、协商或调整；不以压缩睡眠补进度 · [L06](01-university-compass/references/learning-action.md#l06) |
 | **实施意图** · Gollwitzer 与 Sheeran<br>把明确行为接到实际会出现的情境：“当……，我就……” | 查清没开始时是目标、材料、疲惫还是情境不合适 · [L07](01-university-compass/references/learning-action.md#l07) |
 
-**帮助可以充分，掌握要另行检查。** 缺概念就解释，缺步骤就示范；能跟做之后减少提示。用变化任务或延迟检查观察迁移，保留仍需帮助的部分。研究启发了这些设计，但没有单篇论文验证过本项目整套教学流程。
+**帮助可以充分，掌握要另行检查。** 根据卡点解释或示范，再用变化任务或延迟检查，观察能否独立完成。
 
 ### AI 教学与进阶资料
 
@@ -133,7 +128,7 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 
 [查看 R16–R24 的具体章节、版本、许可与前置条件 ↗](01-university-compass/references/sources.md)
 
-### 0.3.0 新增：AI 适用性、工作流与撤去辅助检查
+### AI 判断与协作
 
 | 参考与具体帮助 | 使用边界 |
 | :--- | :--- |
@@ -141,13 +136,13 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 | **Anthropic · Agent 工程经验（R26）**<br>从简单工具或固定流程开始；确有动态决策需要时再考虑 Agent，明确检查点、成本和停止条件 · [工作流选择](01-university-compass/references/ai-judgment.md#workflow) | 工程经验按任务使用，不承诺复杂架构更好，不照搬旧配置 |
 | **Bastani 等 · AI 辅助学习实验（R27，PNAS 2025）**<br>分开“借助 AI 完成”和“撤去辅助后会做”，在合适的变化任务中检查，并据结果补支持 · [撤去辅助检查](01-university-compass/references/ai-judgment.md#check) | 土耳其单所高中数学短期试验；辅导式工具缓解了负面影响，撤去辅助后的考试未显著优于无 AI 组；不能外推本 Skill 或大学生长期效果 |
 
-这些方法服务于具体任务。需要一个确定性的计算或查找时，可以直接用计算器、程序或正式材料；任务不需要 AI，也能成为清楚的选择。
+根据任务选择 AI、计算器、程序或正式材料，把方法用在需要的地方。
 
 <a id="pathways"></a>
 
 ## ◎ 三条路径，六类任务
 
-共通基础帮助你表达任务、核实输出和理解工具边界。三条路径没有高低之分，已有能力可以跳过，新的体验可以改变方向。
+从表达任务、核实输出等共通基础开始，再按需要选择路径；已有能力可以跳过。
 
 | 路径 | 从什么需要开始 | 留下什么证据 |
 | :--- | :--- | :--- |
@@ -168,7 +163,7 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 
 [六张完整任务卡与三条原创多轮示范 ↗](01-university-compass/references/ai-practice.md)
 
-手机、普通电脑、无 API、限额用尽或访问失败时，可以用材料片段、预制输出或纸面推演继续练习。记录会说明练习覆盖了哪些能力；未实际运行的操作继续保留待验证状态。
+只有手机、没有 API 或额度用尽时，也可用材料片段与预制输出练习，并注明尚未实际验证的操作。
 
 <a id="verification"></a>
 
@@ -178,13 +173,7 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 | :---: | :---: | :---: |
 | **28 张** | **3 条** | **27 项** |
 
-0.3.0 的轻量 Skill 包含 12 个安装文件。方法卡和资料按需加载，具体章节、核查日期、阅读范围和许可可追溯；哲学论证、学习研究、工程经验与本项目设计分别标明。
-
-**0.3.0 已完成本轮验证。** 48 个 Skill 合成情境通过独立语义评阅，连同 4 个基线情境保留 **106 条离线实际回答**；另完成 **4 个原生案例、6 轮实际调用**及 **23 项确定性工具回归**。输入、原始输出、采用索引和具体问题见[验证报告](tests/test-report.md)。
-
-四组条件隐藏对照中，两组相近、一组各有优势、一组 Skill 小幅更好。评阅后才揭示条件映射，保留全部结果；这些小样本定性差异不能推断普遍优势或真实学生学习收益。
-
-历史 0.2.0 教学版覆盖 **38 个 Skill 情境、6 组同模型对照**，并经历两轮定向修改和复测，保留 **101 条实际模型回答**。这些记录说明对应版本在给定输入下的表现；**真实学生的长期使用效果仍待自愿试用验证。** 三条多轮示范为原创教学设计，不是真实学生经历。
+**0.3.0 已完成 48 个 Skill 合成情境、4 组条件隐藏对照、4 个原生案例及 23 项工具回归。** 原始输出、逐例评阅和历史记录见[验证报告](tests/test-report.md)。真实学生的长期使用效果仍待自愿试用验证。
 
 | 想了解什么 | 从这里查看 |
 | :--- | :--- |
@@ -193,14 +182,11 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 | 怎样组织一次自愿体验 | [任务、反馈表与复盘模板](tests/pilot-guide.md) |
 
 <details>
-<summary><strong>阅读范围、情绪支持与宿主能力</strong></summary>
+<summary><strong>阅读范围与适用边界</strong></summary>
 
-- 方法来自已登记的相关章节或片段，不代表《毛泽东选集》、哲学原著、论文或 AI 课程的全文与全库蒸馏。完整阅读范围、摘要级证据和未确认资料见来源表。
-- 研究中的平均结果不保证个人效果；哲学方法帮助提出问题，不能合成为经验证的统一人生理论。选择由学生本人决定。
-- 明显痛苦、持续影响基本生活或安全风险时，先提供支持并寻求合适的现实帮助，不以排任务和哲学说教代替。
-- 校规、活动、招聘、价格和工具能力等按实际发布主体与当期条件核实；不能核实时明确未知。外部资料中的角色指令不授予执行权限。
-- 文件访问、联网、运行代码、保存与提醒取决于宿主能力，只有实际完成才称成功；不索取完整密钥或无关个人资料。
-- 学生无需加入组织、购买服务或选择 AI 行业才能获得帮助；社团、公司和学校的承诺分别核实。
+内容基于已登记的相关章节与片段，具体任务为原创应用设计。哲学启发、研究结论和模拟测试分别标注；完整阅读范围、许可与未确认资料见[来源记录](01-university-compass/references/sources.md)。
+
+选择由学生本人决定。遇到明显痛苦或安全风险时，优先现实支持；具体规则见 [Skill 入口](01-university-compass/SKILL.md)。
 
 </details>
 
@@ -209,35 +195,15 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 <details>
 <summary><strong>仓库结构、检查与重新打包</strong></summary>
 
-```text
-01-university-compass/
-├── SKILL.md           # 入口与对话规则
-├── agents/            # 展示信息
-└── references/        # 路径、任务、方法卡与来源
-research/              # 资料清单与阅读状态
-archive/research/      # 原创阅读笔记
-tests/                # 行为测试、评审与试用材料
-scripts/               # 检查、打包与说明页面生成
-```
-
-完整仓库用于维护；实际安装只需要 `01-university-compass/` 文件夹。Skill 本体为 Markdown 指令、参考资料和 YAML 展示信息。Python 脚本用于检查、打包与测试；HTML 用于浏览器阅读说明和测试记录，不进入安装包，也不提供模型调用或聊天服务。
-
-在仓库根目录使用 Python 3 检查：
+在仓库根目录使用 Python 3 检查和重新打包：
 
 ```sh
 python3 scripts/validate_package.py
-```
-
-修改 Skill 后，重新生成安装包与本地说明页面：
-
-```sh
 python3 scripts/validate_package.py --build
 python3 scripts/render_delivery.py
 ```
 
-模型、运行条件、复跑命令及局限见[测试设计](tests/test-plan.md)。维护时把来源读取、方法采用、行为验证和学生试用分别登记；只根据实际产物更新文件数、卡片数和测试结论。
-
-下载仓库后，可用浏览器打开 `00_先读说明.html` 与 `tests/实际对话记录.html` 阅读本地排版版本。
+模型、运行条件与复跑方法见[测试设计](tests/test-plan.md)，资料读取与采用范围见[覆盖报告](coverage-report.md)。
 
 </details>
 
