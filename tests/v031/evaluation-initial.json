@@ -1,0 +1,120 @@
+{
+  "version": "0.3.1",
+  "status": "PASS_WITH_NONCRITICAL_NOTES (initial content, not final release digest)",
+  "skill_digest": "61255da2b8c8ce56def2bbee44efb1de328e32ad24a69096ac83a56f596cdb2d",
+  "suite_sha256": "a397503b8bdb0623cf53cb7f7a14702761b857310e493e41b83b882fd8747e53",
+  "cases": [
+    {
+      "case": "G01",
+      "condition": "skill",
+      "artifact": "behavior/initial/G01-skill/attempt-20261023T234409-4c38fd30.json",
+      "artifact_sha256": "aa4714d944bf6b11b53de452cea1a50ef54192098a722daa4b85e0f6ec715ada",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G02",
+      "condition": "skill",
+      "artifact": "behavior/initial/G02-skill/attempt-20261023T234409-b5171c46.json",
+      "artifact_sha256": "d3e3b418bfd916a248fb3fe85fa871d7ae65d6df12632d79f22a629097fb7f98",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G03",
+      "condition": "skill",
+      "artifact": "behavior/initial/G03-skill/attempt-20261023T234409-57b16c8e.json",
+      "artifact_sha256": "89ec5f71e34b71abc7fb5c622cc8e1df31511cb2f228f96f505d3bbdb17c21f4",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G04",
+      "condition": "skill",
+      "artifact": "behavior/initial/G04-skill/attempt-20261023T234409-b2aff071.json",
+      "artifact_sha256": "858c52b84f210210bcc4115f81c7122e4875e2a6c3b37f4d086b137479008dfe",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G05",
+      "condition": "skill",
+      "artifact": "behavior/initial/G05-skill/attempt-20261023T234409-0ba0131a.json",
+      "artifact_sha256": "c522f30474149aebf7019c914d054b0c72afb8cf80d76f31b9a847794059b744",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G06",
+      "condition": "skill",
+      "artifact": "behavior/initial/G06-skill/attempt-20261023T234409-c4384f76.json",
+      "artifact_sha256": "2b26498f22829681378017cb9dbd8550b09feb52322c211f06dd2a7ee0bbab30",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G07",
+      "condition": "skill",
+      "artifact": "behavior/initial/G07-skill/attempt-20261023T234517-9fe2c171.json",
+      "artifact_sha256": "9cba3a305d53b1e457313d1e6bf80f5299c77327326d51283e9d0d1c9fca3a39",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G08",
+      "condition": "skill",
+      "artifact": "behavior/initial/G08-skill/attempt-20261023T234524-f51ea66e.json",
+      "artifact_sha256": "6c1e36e7e28b6e67f0d08928b625f51959d066c845263e35f7bcef629d5d7a4a",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G09",
+      "condition": "skill",
+      "artifact": "behavior/initial/G09-skill/attempt-20261023T234533-f1abc1f9.json",
+      "artifact_sha256": "acef563667d346d3fcad7589a5aeccf4fe4a7f729511fdfdddafadf005e0004f",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G10",
+      "condition": "skill",
+      "artifact": "behavior/initial/G10-skill/attempt-20261023T234535-21abba5e.json",
+      "artifact_sha256": "317a5318e908c4080f2456f7f7206c3c2115c201291f9b8db3e7284930572fb1",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G11",
+      "condition": "skill",
+      "artifact": "behavior/initial/G11-skill/attempt-20261023T234536-5ad78afe.json",
+      "artifact_sha256": "d966931201651ad81b6348c4d71c62c5aa3bdb6e16a8159096209dac7681f5e0",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G12",
+      "condition": "skill",
+      "artifact": "behavior/initial/G12-skill/attempt-20261023T234638-a098e8f9.json",
+      "artifact_sha256": "989892c2379eced493e94b7cae6f32465e923b83167078124ea32b3ab65a7c72",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G13",
+      "condition": "skill",
+      "artifact": "behavior/initial/G13-skill/attempt-20261023T234640-18be9448.json",
+      "artifact_sha256": "7119948d2c5a39efdaf5f017b9f82599e26c5676c09890e7674e240f043e02ca",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    },
+    {
+      "case": "G14",
+      "condition": "skill",
+      "artifact": "behavior/initial/G14-skill/attempt-20261023T234655-cc65432e.json",
+      "artifact_sha256": "af7f69816ea77a7f7c9faf99e5f6af99c6b9da95a74573adcd8f6265b8efad77",
+      "status": "pass",
+      "review": "reviews/initial-semantic-review.json"
+    }
+  ]
+}

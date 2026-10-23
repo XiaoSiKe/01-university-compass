@@ -1,0 +1,9 @@
+{
+  "version": "0.3.1",
+  "status": "PASS",
+  "scope": "Local link targets in README, coverage, current report/design and pilot guide; Skill internal links checked by package validator. External URLs and GitHub theme rendering not retested.",
+  "checked_local_targets": 117,
+  "banner_exists": true,
+  "tagline_single_source_line": true,
+  "errors": []
+}

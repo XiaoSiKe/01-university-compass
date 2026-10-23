@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "version": "0.3.1",
+  "skill_digest": "61255da2b8c8ce56def2bbee44efb1de328e32ad24a69096ac83a56f596cdb2d",
+  "attempt_created_ns": 1792770249009335000,
+  "case": "G06",
+  "title": "预设分支中的LLM不自动成为Agent",
+  "condition": "skill",
+  "fingerprint": "ce3c35d2c7d52b8db38396e37285fb8decfa79d8a5d35e1871675526c01fd15e",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "tests/v031/behavior/initial/G06-skill/attempt-20261023T234409-c4384f76.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "850f6bff89ea9caa4912c5f90883cca2bca480a64063aba44fc6c1a37ab553f8",
+      "bytes": 8042
+    },
+    {
+      "path": "references/01.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "sha256": "c46a019d3d5cdf78df12b45814b716b704c35f8eb4658966d4ebf259918f4481",
+      "bytes": 7004
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "9a0703399ba3fd1aefcdf77a220ef73447ffd99896fb6164efc1509feb644681",
+      "bytes": 12196
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+      "bytes": 22162
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "f40e49193e6918a87b8af9f82a5b20ac725fcb752bd326a3f171346fbbd76675",
+      "bytes": 9208
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "9bd666bb1de2069bf6e7be4428b46f84c04dbfa4ac42a46f70887f54031c8ffb",
+      "bytes": 13064
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f",
+      "bytes": 42049
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622",
+      "bytes": 2945
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我做了个程序：先让模型判断问题是课程还是活动，再按写死的两个分支生成摘要，失败就固定重试一次。它用了大模型、分支和循环，所以一定算Agent吗？请讲清楚关键区别。",
+      "prompt_sha256": "3e08e9802503dfbdd51bdd9c4ab7ab8701ffd46b216d4b1b1a7567504924784a",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "**按你的描述，更准确的叫法是“带模型分类和重试的工作流”，不能因为用了大模型、分支和循环，就认定它是 Agent。**\n\n你的程序可以写成：\n\n> 模型判断类别 → 进入预设的课程或活动分支 → 生成摘要 → 失败则重试一次。\n\n这里，模型负责判断内容和生成摘要；“有哪些处理路径、每条路径做什么、失败后怎么办”都已经由你安排好了。模型分类后触发不同分支，仍然可以是工作流。\n\n**关键区别在于：你把多大程度的“行动安排”交给了模型。**\n\n- **工作流**：程序预先规定步骤及其连接方式，模型完成其中的任务。可以包含模型分类、工具调用、条件分支和循环。\n- **Agent**：模型围绕目标，根据执行过程中得到的结果，动态决定接下来采取什么行动，例如选哪个工具、先查什么、是否补充信息、何时结束。\n\n用你的摘要程序举例：假设你给模型“依据现有材料，完成一份有依据的摘要”这个目标，并允许它读取材料、检索段落、向用户提问。它读完后发现信息不足，自己决定再查哪部分；发现资料冲突，决定进一步比较；仍无法确定，就报告未知或提出问题。**如果这些行动的选择、顺序和组合由模型根据反馈组织，就更符合 Agent 的特征。** 如果你把这些情况都写成固定处理路径，它仍可以是一个更复杂的工作流。\n\n还要注意：Agent 同样可以限定工具、权限和最多执行次数。“最多执行五步”这样的限制，并不会取消它动态选择行动的特点；反过来，“失败就固定重试一次”也不会让工作流变成 Agent。\n\n所以，判断时要看：**模型是在预先安排好的流程里完成任务，还是也承担了根据进展组织后续行动的职责。** 你目前的程序属于前一种，这种设计清楚、容易检查，完全可以满足摘要任务。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 68.05,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a1696f-1209-70b3-8572-3d7fcc3c212e"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-aftibs7j/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按“零一大学指南针”里的区分，结合你这个程序说明关键差别。"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "**按你的描述，更准确的叫法是“带模型分类和重试的工作流”，不能因为用了大模型、分支和循环，就认定它是 Agent。**\n\n你的程序可以写成：\n\n> 模型判断类别 → 进入预设的课程或活动分支 → 生成摘要 → 失败则重试一次。\n\n这里，模型负责判断内容和生成摘要；“有哪些处理路径、每条路径做什么、失败后怎么办”都已经由你安排好了。模型分类后触发不同分支，仍然可以是工作流。\n\n**关键区别在于：你把多大程度的“行动安排”交给了模型。**\n\n- **工作流**：程序预先规定步骤及其连接方式，模型完成其中的任务。可以包含模型分类、工具调用、条件分支和循环。\n- **Agent**：模型围绕目标，根据执行过程中得到的结果，动态决定接下来采取什么行动，例如选哪个工具、先查什么、是否补充信息、何时结束。\n\n用你的摘要程序举例：假设你给模型“依据现有材料，完成一份有依据的摘要”这个目标，并允许它读取材料、检索段落、向用户提问。它读完后发现信息不足，自己决定再查哪部分；发现资料冲突，决定进一步比较；仍无法确定，就报告未知或提出问题。**如果这些行动的选择、顺序和组合由模型根据反馈组织，就更符合 Agent 的特征。** 如果你把这些情况都写成固定处理路径，它仍可以是一个更复杂的工作流。\n\n还要注意：Agent 同样可以限定工具、权限和最多执行次数。“最多执行五步”这样的限制，并不会取消它动态选择行动的特点；反过来，“失败就固定重试一次”也不会让工作流变成 Agent。\n\n所以，判断时要看：**模型是在预先安排好的流程里完成任务，还是也承担了根据进展组织后续行动的职责。** 你目前的程序属于前一种，这种设计清楚、容易检查，完全可以满足摘要任务。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 52787,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1526,
+            "reasoning_output_tokens": 1034
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T15:44:09Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 68.07,
+  "finished_at_utc": "2026-10-23T15:45:17Z"
+}

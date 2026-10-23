@@ -1,0 +1,10 @@
+{
+  "version": "0.3.1",
+  "case_files": [
+    "cases-final.json"
+  ],
+  "conditions": [
+    "skill"
+  ],
+  "scope": "Six affected regression cases after fixing unsupported confidence from self-reported tool use. Initial 14-case run remains historical on its own frozen digest."
+}

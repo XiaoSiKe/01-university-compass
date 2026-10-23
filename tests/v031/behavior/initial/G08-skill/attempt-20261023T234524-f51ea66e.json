@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "version": "0.3.1",
+  "skill_digest": "61255da2b8c8ce56def2bbee44efb1de328e32ad24a69096ac83a56f596cdb2d",
+  "attempt_created_ns": 1792770324555475000,
+  "case": "G08",
+  "title": "温和教学仍保留独立检验边界",
+  "condition": "skill",
+  "fingerprint": "ca9ddbf73d693a984d97a22a3d3c72c40c46b9ab97b0348ed7aab2519425da58",
+  "configured_model": "gpt-6.1-sol",
+  "evaluation_status": "requires_manual_review",
+  "status": "completed",
+  "artifact": "tests/v031/behavior/initial/G08-skill/attempt-20261023T234524-f51ea66e.json",
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "sha256": "850f6bff89ea9caa4912c5f90883cca2bca480a64063aba44fc6c1a37ab553f8",
+      "bytes": 8042
+    },
+    {
+      "path": "references/01.md",
+      "sha256": "8cf13e0ea91eefa3919fc17419fee1bf9eaceb35bb1559d3a85ef2cc28757990",
+      "bytes": 9121
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "sha256": "c46a019d3d5cdf78df12b45814b716b704c35f8eb4658966d4ebf259918f4481",
+      "bytes": 7004
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "sha256": "9a0703399ba3fd1aefcdf77a220ef73447ffd99896fb6164efc1509feb644681",
+      "bytes": 12196
+    },
+    {
+      "path": "references/ai-practice.md",
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c",
+      "bytes": 22162
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170",
+      "bytes": 5005
+    },
+    {
+      "path": "references/dialogue.md",
+      "sha256": "f40e49193e6918a87b8af9f82a5b20ac725fcb752bd326a3f171346fbbd76675",
+      "bytes": 9208
+    },
+    {
+      "path": "references/learning-action.md",
+      "sha256": "9bd666bb1de2069bf6e7be4428b46f84c04dbfa4ac42a46f70887f54031c8ffb",
+      "bytes": 13064
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f",
+      "bytes": 42049
+    },
+    {
+      "path": "references/thinking.md",
+      "sha256": "a476a0e30f09430a83c52068a02fa92fbabfbde838f69dd047cad6f92650ea1a",
+      "bytes": 11789
+    },
+    {
+      "path": "references/topic-map.md",
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622",
+      "bytes": 2945
+    }
+  ],
+  "context_method": "fresh_process_per_turn_with_complete_actual_history",
+  "tool_policy": "offline_no_external_tools_same_in_both_conditions",
+  "turns": [
+    {
+      "number": 1,
+      "user": "能先用一个不需要公式的例子，给我完整讲清训练集和测试集吗？我完全没基础，先别出题。",
+      "prompt_sha256": "396a0527bc109b2b758cad382184cfac08fcd7998d79a252b8e98a10bd80ecdc",
+      "history_messages": 0,
+      "status": "completed",
+      "answer": "假设你想做一个手机助手，让它看到一条短信，就能判断这是“垃圾短信”还是“正常短信”。\n\n**训练集，就是拿来教它的短信；测试集，就是留到学完后，检查它遇到新短信时表现怎样的短信。** 我们顺着这件事从头看。\n\n你先收集一批短信，请人确认每条属于哪一类。例如：\n\n- “恭喜中奖，缴纳手续费即可领奖。”——垃圾短信。\n- “明天的班会改到下午三点，请准时参加。”——正常短信。\n\n这里，每条短信后面的正确分类，就叫**标签**。你可以把它理解为这条短信的标准答案。\n\n接下来，**在训练开始之前，就把这些短信分成两份**：一份用来教它，叫训练集；另一份先收起来，不让它在学习时接触，叫测试集。\n\n**先用训练集，让它逐渐学会判断。**\n\n训练时，模型会接触短信内容和对应的正确分类。如果它把一条垃圾短信判断成了正常短信，训练过程就会利用正确答案，调整它内部的判断方式。\n\n经过许多这样的例子，它可能逐渐发现：有些措辞、内容组合，常出现在垃圾短信里；另一些则更常出现在正常通知里。\n\n这不等于人给它写了一条“出现中奖两个字就判垃圾”的死规则。模型是在大量例子中学习规律，但它也可能学偏，比如过分依赖某几个词。\n\n**学完后，再用测试集检查。**\n\n这时，把之前收起来的短信拿出来，只给模型看短信正文，让它逐条判断。\n\n例如，一条它在训练时没见过的短信写着：“您的号码获得特别奖励，请先转账完成领取。”我们看它能不能作出正确分类。\n\n测试集也可以有事先确认好的标准答案，**只是作答时不给模型看**。等它判断完，评估的人或程序再拿它的回答与标准答案比较，看看它在哪些短信上判断正确、哪些地方容易出错。在这次测试过程中，不利用这些标准答案继续训练它。\n\n为什么要专门留一份？因为**训练材料上表现好，还不能说明遇到新材料也能做好**。\n\n它可能记住了训练里的具体短信，也可能碰巧学到一些只适用于那批短信的规律。测试集能帮助我们检查：它学到的东西，能不能用在没见过的同类短信上。\n\n这里有两个容易混淆的地方：\n\n- **测试短信要与训练短信有实际区别。** 把训练短信原样复制一份，或者只改几个标点，就很难检查它处理新短信的能力。\n- **不能一边看测试答案，一边反复修改模型，还把同一份测试成绩当作独立检验。** 这样修改久了，模型的设计就会逐渐迎合这份测试材料。需要继续调整时，应另外留一份未参与调整的数据，做最后检查。\n\n测试材料选得怎样也会影响结论。如果里面全是特别明显的垃圾短信，即使模型全部判断正确，也不能说明它能应付现实中各种复杂短信。因此，测试集需要尽量接近它将来真正要处理的情况，既包含垃圾短信，也包含容易被误判的正常短信。\n\n一份合适的测试集能为模型是否有用提供证据；它能说明模型在这些已检查的情境中表现怎样，未来遇到新类型的短信，仍可能出错。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 99.03,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a16970-3889-7ad1-bf18-f3348b1b1abb"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-xwi6f0qv/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "我会按零一大学指南针的讲解方式，用“识别垃圾短信”这一个例子从头讲清楚，不用公式，也不出题。\n"
+          }
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_2",
+            "type": "agent_message",
+            "text": "假设你想做一个手机助手，让它看到一条短信，就能判断这是“垃圾短信”还是“正常短信”。\n\n**训练集，就是拿来教它的短信；测试集，就是留到学完后，检查它遇到新短信时表现怎样的短信。** 我们顺着这件事从头看。\n\n你先收集一批短信，请人确认每条属于哪一类。例如：\n\n- “恭喜中奖，缴纳手续费即可领奖。”——垃圾短信。\n- “明天的班会改到下午三点，请准时参加。”——正常短信。\n\n这里，每条短信后面的正确分类，就叫**标签**。你可以把它理解为这条短信的标准答案。\n\n接下来，**在训练开始之前，就把这些短信分成两份**：一份用来教它，叫训练集；另一份先收起来，不让它在学习时接触，叫测试集。\n\n**先用训练集，让它逐渐学会判断。**\n\n训练时，模型会接触短信内容和对应的正确分类。如果它把一条垃圾短信判断成了正常短信，训练过程就会利用正确答案，调整它内部的判断方式。\n\n经过许多这样的例子，它可能逐渐发现：有些措辞、内容组合，常出现在垃圾短信里；另一些则更常出现在正常通知里。\n\n这不等于人给它写了一条“出现中奖两个字就判垃圾”的死规则。模型是在大量例子中学习规律，但它也可能学偏，比如过分依赖某几个词。\n\n**学完后，再用测试集检查。**\n\n这时，把之前收起来的短信拿出来，只给模型看短信正文，让它逐条判断。\n\n例如，一条它在训练时没见过的短信写着：“您的号码获得特别奖励，请先转账完成领取。”我们看它能不能作出正确分类。\n\n测试集也可以有事先确认好的标准答案，**只是作答时不给模型看**。等它判断完，评估的人或程序再拿它的回答与标准答案比较，看看它在哪些短信上判断正确、哪些地方容易出错。在这次测试过程中，不利用这些标准答案继续训练它。\n\n为什么要专门留一份？因为**训练材料上表现好，还不能说明遇到新材料也能做好**。\n\n它可能记住了训练里的具体短信，也可能碰巧学到一些只适用于那批短信的规律。测试集能帮助我们检查：它学到的东西，能不能用在没见过的同类短信上。\n\n这里有两个容易混淆的地方：\n\n- **测试短信要与训练短信有实际区别。** 把训练短信原样复制一份，或者只改几个标点，就很难检查它处理新短信的能力。\n- **不能一边看测试答案，一边反复修改模型，还把同一份测试成绩当作独立检验。** 这样修改久了，模型的设计就会逐渐迎合这份测试材料。需要继续调整时，应另外留一份未参与调整的数据，做最后检查。\n\n测试材料选得怎样也会影响结论。如果里面全是特别明显的垃圾短信，即使模型全部判断正确，也不能说明它能应付现实中各种复杂短信。因此，测试集需要尽量接近它将来真正要处理的情况，既包含垃圾短信，也包含容易被误判的正常短信。\n\n一份合适的测试集能为模型是否有用提供证据；它能说明模型在这些已检查的情境中表现怎样，未来遇到新类型的短信，仍可能出错。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 52771,
+            "cached_input_tokens": 7552,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2290,
+            "reasoning_output_tokens": 1452
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 2,
+      "user": "现在可以给一道新情境让我自己判断了。这次先不附答案、解法或提示，等我回答再反馈。",
+      "prompt_sha256": "0b90d62f80cf871b89a526382b065f12af993696601102029bb97d315354e865",
+      "history_messages": 2,
+      "status": "completed",
+      "answer": "假设一个小组想做一个**识别手写数字的模型**，帮助整理纸质记录。\n\n他们收集了一批已经标好正确答案的数字图片，在训练前分成两份：一份用于训练，另一份有100张，先收起来。\n\n训练结束后，模型在收起来的100张图片中答对了80张。小组查看了答错的图片，据此调整模型，再用这100张图片测试。他们这样反复调整了多次，最后答对了99张。\n\n于是，小组宣布：“模型遇到从未见过的手写数字图片，也能达到99%的正确率。”\n\n**你如何判断这个结论？请说说理由。**",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 52.0,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a16971-bb46-7c43-b995-54bf1c396cd0"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-xwi6f0qv/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "假设一个小组想做一个**识别手写数字的模型**，帮助整理纸质记录。\n\n他们收集了一批已经标好正确答案的数字图片，在训练前分成两份：一份用于训练，另一份有100张，先收起来。\n\n训练结束后，模型在收起来的100张图片中答对了80张。小组查看了答错的图片，据此调整模型，再用这100张图片测试。他们这样反复调整了多次，最后答对了99张。\n\n于是，小组宣布：“模型遇到从未见过的手写数字图片，也能达到99%的正确率。”\n\n**你如何判断这个结论？请说说理由。**"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 53657,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1027,
+            "reasoning_output_tokens": 867
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    },
+    {
+      "number": 3,
+      "user": "我觉得用最终测试集比较十种模型、选分数最高的，再报同一份测试成绩，没有问题，因为它们都没被拿回去训练。",
+      "prompt_sha256": "c612f0e5de2528ca6e21e69f441f70b93e594116da378b098dcd956c87d5a173",
+      "history_messages": 4,
+      "status": "completed",
+      "answer": "你说对了一点：**这十个模型都没有用测试集继续训练。** 但还需要补上一点：**用测试集决定“最后选哪个模型”，也让它参与了模型选择。** 所以，选出模型以后，这份成绩就不能再当作一次独立的最终检验。\n\n沿用手写数字的例子：十个模型各有擅长和不擅长的写法。这100张测试图片里，可能恰好有较多某个模型擅长的写法，让它拿了最高分。这个高分可能包含真实的能力优势，也可能包含“刚好适合这批图片”的因素。只看这份成绩，还分不开两者。\n\n即使十个模型的真实水平差不多，也可能因为这批图片的特点而分出高低。你专门挑最高分，就容易挑中一个在这批图片上发挥特别好的模型；换一批新图片，它未必还能拿到同样的成绩。**整个过程不需要再训练，也可能让最终报告的分数偏乐观。**\n\n因此，常见的分工是：\n\n- **训练集**：用来训练各个模型。\n- **验证集**：用来比较这十个模型，决定选哪个，也可以帮助调整方案。\n- **测试集**：在模型选定、方案确定后，用此前没有参与这些决定的数据做最后检查。\n\n你描述的那份“最终测试集”，实际承担了验证集的作用。如果已经用它选出了模型，就需要另外一份未参与训练和选择的数据，才能做独立的最终检验。\n\n原来的最高分仍然可以如实报告，只需说明“我们根据这份数据从十个模型中选出了最高分模型”；对它在新图片上的表现，还需要保留判断。",
+      "returncode": 0,
+      "history_replay_safe": true,
+      "elapsed_seconds": 58.51,
+      "events": [
+        {
+          "type": "thread.started",
+          "thread_id": "01a16972-8666-7cd2-8900-9bf33c13c43f"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_0",
+            "type": "error",
+            "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /private/tmp/compass-behavior-xwi6f0qv/codex/config.toml."
+          }
+        },
+        {
+          "type": "turn.started"
+        },
+        {
+          "type": "item.completed",
+          "item": {
+            "id": "item_1",
+            "type": "agent_message",
+            "text": "你说对了一点：**这十个模型都没有用测试集继续训练。** 但还需要补上一点：**用测试集决定“最后选哪个模型”，也让它参与了模型选择。** 所以，选出模型以后，这份成绩就不能再当作一次独立的最终检验。\n\n沿用手写数字的例子：十个模型各有擅长和不擅长的写法。这100张测试图片里，可能恰好有较多某个模型擅长的写法，让它拿了最高分。这个高分可能包含真实的能力优势，也可能包含“刚好适合这批图片”的因素。只看这份成绩，还分不开两者。\n\n即使十个模型的真实水平差不多，也可能因为这批图片的特点而分出高低。你专门挑最高分，就容易挑中一个在这批图片上发挥特别好的模型；换一批新图片，它未必还能拿到同样的成绩。**整个过程不需要再训练，也可能让最终报告的分数偏乐观。**\n\n因此，常见的分工是：\n\n- **训练集**：用来训练各个模型。\n- **验证集**：用来比较这十个模型，决定选哪个，也可以帮助调整方案。\n- **测试集**：在模型选定、方案确定后，用此前没有参与这些决定的数据做最后检查。\n\n你描述的那份“最终测试集”，实际承担了验证集的作用。如果已经用它选出了模型，就需要另外一份未参与训练和选择的数据，才能做独立的最终检验。\n\n原来的最高分仍然可以如实报告，只需说明“我们根据这份数据从十个模型中选出了最高分模型”；对它在新图片上的表现，还需要保留判断。"
+          }
+        },
+        {
+          "type": "turn.completed",
+          "usage": {
+            "input_tokens": 53878,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1272,
+            "reasoning_output_tokens": 866
+          }
+        }
+      ],
+      "stderr": "",
+      "tool_call_evidence": [],
+      "tool_call_count": 0
+    }
+  ],
+  "started_at_utc": "2026-10-23T15:45:24Z",
+  "previous_attempt": null,
+  "elapsed_seconds": 209.57,
+  "finished_at_utc": "2026-10-23T15:48:54Z"
+}

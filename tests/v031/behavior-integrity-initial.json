@@ -1,0 +1,96 @@
+{
+  "version": "0.3.1",
+  "status": "PASS",
+  "scope": "run_integrity_only_not_semantic_or_student_effectiveness",
+  "skill_digest": "61255da2b8c8ce56def2bbee44efb1de328e32ad24a69096ac83a56f596cdb2d",
+  "model": "gpt-6.1-sol",
+  "adopted_cases": 14,
+  "actual_answers": 26,
+  "records": [
+    {
+      "case": "G01",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "G02",
+      "condition": "skill",
+      "turns": 2,
+      "status": "PASS"
+    },
+    {
+      "case": "G03",
+      "condition": "skill",
+      "turns": 2,
+      "status": "PASS"
+    },
+    {
+      "case": "G04",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "G05",
+      "condition": "skill",
+      "turns": 2,
+      "status": "PASS"
+    },
+    {
+      "case": "G06",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "G07",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "G08",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "G09",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "G10",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "G11",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    },
+    {
+      "case": "G12",
+      "condition": "skill",
+      "turns": 2,
+      "status": "PASS"
+    },
+    {
+      "case": "G13",
+      "condition": "skill",
+      "turns": 3,
+      "status": "PASS"
+    },
+    {
+      "case": "G14",
+      "condition": "skill",
+      "turns": 1,
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

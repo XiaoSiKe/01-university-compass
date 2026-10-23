@@ -1,0 +1,128 @@
+{
+  "case": "D04-natural-guidance",
+  "title": "自然语言学习引导发现",
+  "condition": "native",
+  "version": "0.3.1",
+  "configured_model": "gpt-6.1-sol",
+  "status": "completed",
+  "runner_sha256": "9056de4eaf3154f6bad194fa0582094b7d269b3378cfd5bd92318362348bae6a",
+  "config_sha256": "ad8379a0287b51a4bac3476c57d57588aeb733a0140f389e8e0a33459652f094",
+  "input_sha256": "3b4617f5287f2f722becd6017a9ff39614f9adc1a63efca094b8fe18791c5dbc",
+  "method": "fresh_cli_native_project_skill_discovery",
+  "context_method": "actual_history_replayed_per_turn_without_skill_text_injection",
+  "tool_policy": "read_only_local_skill_documents; external_tools_disabled",
+  "semantic_status": "requires_manual_review",
+  "turns": [
+    {
+      "number": 1,
+      "user": "我刚上大一，不会编程，想学会用AI帮我理解课程。网上教程一堆我有点乱，我只有手机，今天十分钟。请你用通俗的话带我开始，别先让我填一大堆背景问题。",
+      "answer": "**用手机在这个聊天窗口里，就能开始。今天十分钟，只争取弄懂一个小知识点。** 用 AI 帮你学课程，不需要先会编程。\n\n你可以把 AI 当成一位能陪你反复讨论的课后助教。遇到听不懂的内容，直接这样说：\n\n> 这段课我没听懂：【贴一句课本或笔记】。请先用大白话解释，再举一个生活例子。一次只讲一个重点；材料没说清的地方请指出来。讲完问我一道小题，等我回答后再讲答案。\n\n我们现在就练一次。暂时没有课程材料，就用下面这个小例子。\n\n**前四分钟：听懂“平均数”。**\n\n三位同学去教室，分别用了 **5、10、45 分钟**。总共是 60 分钟，除以 3，平均每人就是 **20 分钟**。\n\n“平均”就像把三个人花的时间放在一起，再平分成三份。它能概括这组数据，但实际没有一个人刚好用了 20 分钟。\n\n**接着两分钟：核对 AI 的话。**\n\n比如 AI 接着说：“他们都坐公交上学。”\n\n回头看材料，只给了时间，没说交通方式。这句话就没有依据。用 AI 学课程时，也要这样回到课本或笔记，看看它的说法从哪里来；暂时核对不了的地方先留着。\n\n**剩下四分钟：你来试一句。**\n\n另一个小组有五个人，目前只记到了三人的通勤时间：6、12、18 分钟。有人说：“这五个人的平均通勤时间是 12 分钟。”\n\n你赞同吗？说一句理由就好。答得不完整也可以，我们接着讲。",
+      "status": "completed",
+      "returncode": 0,
+      "history_messages": 0,
+      "prompt_sha256": "6e6f357a0aebccdf066a84a6094f9e9a91280b8227077d3c1bd92b1bc51abf7c",
+      "elapsed_seconds": 78.34,
+      "paths_observed_in_successful_read_commands": [
+        {
+          "path": "SKILL.md",
+          "bytes": 8042,
+          "sha256": "850f6bff89ea9caa4912c5f90883cca2bca480a64063aba44fc6c1a37ab553f8"
+        },
+        {
+          "path": "references/ai-pathways.md",
+          "bytes": 12196,
+          "sha256": "9a0703399ba3fd1aefcdf77a220ef73447ffd99896fb6164efc1509feb644681"
+        },
+        {
+          "path": "references/ai-practice.md",
+          "bytes": 22162,
+          "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c"
+        }
+      ],
+      "read_command_evidence": [
+        {
+          "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/SKILL.md'",
+          "exit_code": 0,
+          "output_chars": 3242
+        },
+        {
+          "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/references/ai-pathways.md'",
+          "exit_code": 0,
+          "output_chars": 5002
+        },
+        {
+          "command": "/bin/zsh -lc 'cat .agents/skills/01-university-compass/references/ai-practice.md'",
+          "exit_code": 0,
+          "output_chars": 8347
+        }
+      ],
+      "tool_call_count": 6
+    }
+  ],
+  "skill_manifest": [
+    {
+      "path": "SKILL.md",
+      "bytes": 8042,
+      "sha256": "850f6bff89ea9caa4912c5f90883cca2bca480a64063aba44fc6c1a37ab553f8"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 378,
+      "sha256": "c06319902b634b1ff9f8397708d9e96be0fa174c80aba090a2436591bad31150"
+    },
+    {
+      "path": "references/01.md",
+      "bytes": 9216,
+      "sha256": "a56f20df1fd5ccee14ba30d9aee98a93b9d7c815abd3367b6e78f898510181f4"
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "bytes": 7004,
+      "sha256": "c46a019d3d5cdf78df12b45814b716b704c35f8eb4658966d4ebf259918f4481"
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "bytes": 12196,
+      "sha256": "9a0703399ba3fd1aefcdf77a220ef73447ffd99896fb6164efc1509feb644681"
+    },
+    {
+      "path": "references/ai-practice.md",
+      "bytes": 22162,
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c"
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "bytes": 5005,
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170"
+    },
+    {
+      "path": "references/dialogue.md",
+      "bytes": 9208,
+      "sha256": "f40e49193e6918a87b8af9f82a5b20ac725fcb752bd326a3f171346fbbd76675"
+    },
+    {
+      "path": "references/learning-action.md",
+      "bytes": 13064,
+      "sha256": "9bd666bb1de2069bf6e7be4428b46f84c04dbfa4ac42a46f70887f54031c8ffb"
+    },
+    {
+      "path": "references/sources.md",
+      "bytes": 42049,
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f"
+    },
+    {
+      "path": "references/thinking.md",
+      "bytes": 11938,
+      "sha256": "9960226710134f1d7d35f3e433c4a4a3fd69b859e8fd72c473868829b5294b86"
+    },
+    {
+      "path": "references/topic-map.md",
+      "bytes": 2945,
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622"
+    }
+  ],
+  "skill_digest": "61255da2b8c8ce56def2bbee44efb1de328e32ad24a69096ac83a56f596cdb2d",
+  "install_location": ".agents/skills/01-university-compass",
+  "elapsed_seconds": 78.36,
+  "has_final": true
+}

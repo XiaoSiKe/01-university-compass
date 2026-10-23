@@ -1,0 +1,72 @@
+{
+  "version": "0.3.1",
+  "skill_digest": "61255da2b8c8ce56def2bbee44efb1de328e32ad24a69096ac83a56f596cdb2d",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "bytes": 8042,
+      "sha256": "850f6bff89ea9caa4912c5f90883cca2bca480a64063aba44fc6c1a37ab553f8"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 378,
+      "sha256": "c06319902b634b1ff9f8397708d9e96be0fa174c80aba090a2436591bad31150"
+    },
+    {
+      "path": "references/01.md",
+      "bytes": 9216,
+      "sha256": "a56f20df1fd5ccee14ba30d9aee98a93b9d7c815abd3367b6e78f898510181f4"
+    },
+    {
+      "path": "references/ai-judgment.md",
+      "bytes": 7004,
+      "sha256": "c46a019d3d5cdf78df12b45814b716b704c35f8eb4658966d4ebf259918f4481"
+    },
+    {
+      "path": "references/ai-pathways.md",
+      "bytes": 12196,
+      "sha256": "9a0703399ba3fd1aefcdf77a220ef73447ffd99896fb6164efc1509feb644681"
+    },
+    {
+      "path": "references/ai-practice.md",
+      "bytes": 22162,
+      "sha256": "e777cfd8b0555ee89d0e573436b46f359928d21daf8ee9c71cc5f56415bb387c"
+    },
+    {
+      "path": "references/continuity-evidence.md",
+      "bytes": 5005,
+      "sha256": "eeec77040651e517a206f9b3101bc5fe89f4739cb61fa9fb65a4d8b628603170"
+    },
+    {
+      "path": "references/dialogue.md",
+      "bytes": 9208,
+      "sha256": "f40e49193e6918a87b8af9f82a5b20ac725fcb752bd326a3f171346fbbd76675"
+    },
+    {
+      "path": "references/learning-action.md",
+      "bytes": 13064,
+      "sha256": "9bd666bb1de2069bf6e7be4428b46f84c04dbfa4ac42a46f70887f54031c8ffb"
+    },
+    {
+      "path": "references/sources.md",
+      "bytes": 42049,
+      "sha256": "866042074e657e4e94205b34ea504391b050623f7ee36fc7d9497cc3d5c7083f"
+    },
+    {
+      "path": "references/thinking.md",
+      "bytes": 11938,
+      "sha256": "9960226710134f1d7d35f3e433c4a4a3fd69b859e8fd72c473868829b5294b86"
+    },
+    {
+      "path": "references/topic-map.md",
+      "bytes": 2945,
+      "sha256": "7e8e7d20a3a88fa1eb47a4029e884f80a0e34fcfc0a4a6169981b9ead8632622"
+    }
+  ],
+  "cases_sha256": "d1ddd1468411f41d144fc7ae68d70a980cf13ceb92ee4ae65970815fc6312f61",
+  "suite_sha256": "a0a134110e2c976f3705f97925edc41409549a522fa48f78eda3387e26b151fc",
+  "runner_sha256": "6512de62f2437d8007a08f259a38889ce7c0fa6068d7b99cbee1fd19aa2d215d",
+  "discovery_runner_sha256": "9056de4eaf3154f6bad194fa0582094b7d269b3378cfd5bd92318362348bae6a",
+  "original_skill_git_ref": "64ba8b069debd740800510d6580a80df42afb6c7",
+  "scope": "Targeted 14-case/26-turn 0.3.1 suite; original 0.3.0 source is retrievable from the Git ref."
+}

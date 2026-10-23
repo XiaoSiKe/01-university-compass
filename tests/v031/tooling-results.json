@@ -1,0 +1,8 @@
+{
+  "version": "0.3.1",
+  "status": "PASS",
+  "tests_run": 24,
+  "method": "unittest using synthetic process events and temporary projects; no model invoked",
+  "raw_log": "tooling-unittest.txt",
+  "raw_log_sha256": "a4aefe6c6e6c9109af6412d36e8fdcedc75606892d7d2b024715c01e9c7e09e4"
+}

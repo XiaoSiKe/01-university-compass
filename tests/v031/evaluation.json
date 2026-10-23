@@ -1,0 +1,56 @@
+{
+  "version": "0.3.1",
+  "status": "PASS (final affected scope; see report for initial run and limitations)",
+  "skill_digest": "7cf045b502d5f7c76fc60980f38e5efcd087593d7eb1a0eaf6c3563cef7f7307",
+  "suite_sha256": "dec92cbdbc4febf114d73bde614c7a7c51ddec492da9db97d5ed348b8c18f6b9",
+  "cases": [
+    {
+      "case": "G01",
+      "condition": "skill",
+      "artifact": "behavior/after-evidence-fix/G01-skill/attempt-20261024T000138-f651b037.json",
+      "artifact_sha256": "7adb3f2730a308a92ad1c969295b075cc2208d676111a13070e3183d16dbac99",
+      "status": "pass",
+      "review": "reviews/final-semantic-review.json"
+    },
+    {
+      "case": "G03",
+      "condition": "skill",
+      "artifact": "behavior/after-evidence-fix/G03-skill/attempt-20261024T000138-0120b466.json",
+      "artifact_sha256": "62c8386a0f434788674c06f2c3be175723cb6853d5ea2a13b84fd774d9dde77f",
+      "status": "pass",
+      "review": "reviews/final-semantic-review.json"
+    },
+    {
+      "case": "G06",
+      "condition": "skill",
+      "artifact": "behavior/after-evidence-fix/G06-skill/attempt-20261024T000138-31fcc648.json",
+      "artifact_sha256": "70e720c3f773f21ebc3755f3675295fe6201ec699e6cf83b8cdeb568f5db2c80",
+      "status": "pass",
+      "review": "reviews/final-semantic-review.json"
+    },
+    {
+      "case": "G10",
+      "condition": "skill",
+      "artifact": "behavior/after-evidence-fix/G10-skill/attempt-20261024T000138-8743568d.json",
+      "artifact_sha256": "7525a80bd1dc35a4a8b196c9377d2c52fe801e89844a67ca767ab604b507e0e4",
+      "status": "pass",
+      "review": "reviews/final-semantic-review.json"
+    },
+    {
+      "case": "G13",
+      "condition": "skill",
+      "artifact": "behavior/after-evidence-fix/G13-skill/attempt-20261024T000138-f6dacb05.json",
+      "artifact_sha256": "02e8053a997623af943f506d8adb6a3e0d1b27e3ac1ca47896cf49b0cbd55a08",
+      "status": "pass",
+      "review": "reviews/final-semantic-review.json"
+    },
+    {
+      "case": "G15",
+      "condition": "skill",
+      "artifact": "behavior/after-evidence-fix/G15-skill/attempt-20261024T000138-5cc3c1d6.json",
+      "artifact_sha256": "20b657654dcd407bbc66640ac21dfbab08872a83910da3d07ec70ff878681a15",
+      "status": "pass",
+      "review": "reviews/final-semantic-review.json"
+    }
+  ]
+}

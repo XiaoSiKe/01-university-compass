@@ -1,0 +1,25 @@
+[
+  {
+    "id": "D01-agent-gentle",
+    "title": "自然概念入口与不理解反馈",
+    "user_turns": [
+      "使用 $01-university-compass。我不懂agent，怎么办？我刚接触AI，先通俗讲一下。",
+      "还是有点绕，能换个日常例子，先别让我做题吗？",
+      "我以为有工具就一定能保证答案对。请温和地帮我改正这个理解，先不要出题。"
+    ]
+  },
+  {
+    "id": "D02-natural-explain",
+    "title": "自然语言发现与只求解释",
+    "user_turns": [
+      "刚接触AI，RAG这个词是什么意思？请像日常聊天那样用一个例子讲清楚，先不要让我答题。"
+    ]
+  },
+  {
+    "id": "D03-unrelated-code",
+    "title": "普通代码不误触发",
+    "user_turns": [
+      "用Python写stable_unique(items)，对可哈希元素保留第一次出现的顺序。只给代码。"
+    ]
+  }
+]

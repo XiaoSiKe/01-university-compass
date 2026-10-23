@@ -16,7 +16,7 @@
   <a href="#verification">验证与边界</a>
 </p>
 
-<p align="center"><sub>0.3.0 &nbsp; · &nbsp; 中文优先 &nbsp; · &nbsp; 普通设备友好 &nbsp; · &nbsp; 支持零新增预算</sub></p>
+<p align="center"><sub>0.3.1 &nbsp; · &nbsp; 中文优先 &nbsp; · &nbsp; 普通设备友好 &nbsp; · &nbsp; 支持零新增预算</sub></p>
 
 ---
 
@@ -28,13 +28,15 @@
 
 **指南针是一套安装到 AI 助手中的 Skill。** 它把思考方法、学习科学与 AI 实践融入讲解、示范、练习和反馈，也能陪你理清大学生活中的选择与行动困难。
 
+先用通俗的话和熟悉的例子讲清楚，再根据反馈逐渐加深。卡住时换例子或示范，需要时再练习、检查理解。
+
 <a id="quick-start"></a>
 
 ## ↗ 开始使用
 
 ### 01 / 安装
 
-[下载 0.3.0 轻量安装包](https://github.com/XiaoSiKe/01-university-compass/releases/download/v0.3.0/01-university-compass.zip) · [仓库内安装包](01-university-compass.zip)
+[下载 0.3.1 轻量安装包](https://github.com/XiaoSiKe/01-university-compass/releases/download/v0.3.1/01-university-compass.zip) · [仓库内安装包](01-university-compass.zip)
 
 解压后，将整个 `01-university-compass` 文件夹放入以下目录。升级前备份本地改动。
 
@@ -173,7 +175,7 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 | :---: | :---: | :---: |
 | **28 张** | **3 条** | **27 项** |
 
-**0.3.0 已完成 48 个 Skill 合成情境、4 组条件隐藏对照、4 个原生案例及 23 项工具回归。** 原始输出、逐例评阅和历史记录见[验证报告](tests/test-report.md)。真实学生的长期使用效果仍待自愿试用验证。
+**0.3.1 完成针对性多轮对话、条件隐藏对照和原生调用检查，24 项工具回归通过。** 原始输出、逐例评阅和历史记录见[验证报告](tests/test-report.md)。真实学生的长期使用效果仍待自愿试用验证。
 
 | 想了解什么 | 从这里查看 |
 | :--- | :--- |
@@ -209,4 +211,4 @@ python3 scripts/render_delivery.py
 
 ---
 
-<p align="center"><strong>从你真正关心的一个问题开始。</strong><br><sub>零一大学指南针 · 0.3.0</sub></p>
+<p align="center"><strong>从你真正关心的一个问题开始。</strong><br><sub>零一大学指南针 · 0.3.1</sub></p>

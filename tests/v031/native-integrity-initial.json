@@ -1,0 +1,53 @@
+{
+  "version": "0.3.1",
+  "scope": "native_run_integrity_and_observable_reads_only; semantic review is separate",
+  "status": "PASS",
+  "skill_digest": "61255da2b8c8ce56def2bbee44efb1de328e32ad24a69096ac83a56f596cdb2d",
+  "cases": [
+    {
+      "case": "D01-agent-gentle",
+      "artifact": "discovery/initial/D01-agent-gentle/result.json",
+      "artifact_sha256": "cd9a877cf9824990790183543908b28b25c309cc242e00f59d9256ed10d70eba",
+      "turns": 3,
+      "status": "PASS",
+      "observed_read_paths": [
+        "SKILL.md",
+        "references/ai-judgment.md"
+      ],
+      "full_entrypoint_content_observed": true
+    },
+    {
+      "case": "D02-natural-explain",
+      "artifact": "discovery/initial/D02-natural-explain/result.json",
+      "artifact_sha256": "2f8fca09262f51b28a521292ba3abb2a9d4d1d0de759116f899964c233795003",
+      "turns": 1,
+      "status": "PASS",
+      "observed_read_paths": [],
+      "full_entrypoint_content_observed": false
+    },
+    {
+      "case": "D03-unrelated-code",
+      "artifact": "discovery/initial/D03-unrelated-code/result.json",
+      "artifact_sha256": "a60e7abea5b7bb206675d8a3009c8565d135d6ac81791ebfe635530ea6bbca38",
+      "turns": 1,
+      "status": "PASS",
+      "observed_read_paths": [],
+      "full_entrypoint_content_observed": false
+    },
+    {
+      "case": "D04-natural-guidance",
+      "artifact": "discovery/natural-followup/D04-natural-guidance/result.json",
+      "artifact_sha256": "918cd5509caebe33551e872df065d7b18f1793c25224481bb77cd716e6bb4329",
+      "turns": 1,
+      "status": "PASS",
+      "observed_read_paths": [
+        "SKILL.md",
+        "references/ai-pathways.md",
+        "references/ai-practice.md"
+      ],
+      "full_entrypoint_content_observed": true
+    }
+  ],
+  "errors": [],
+  "note": "D02 is a plain term explanation with no observed Skill read; it does not establish discovery. D04 separately tests a natural-language learning-guidance request."
+}

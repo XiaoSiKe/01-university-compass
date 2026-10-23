@@ -1,0 +1,10 @@
+{
+  "version": "0.3.1",
+  "case_files": [
+    "../cases-v031.json"
+  ],
+  "conditions": [
+    "skill"
+  ],
+  "scope": "14 targeted cases: 8 interaction/teaching scenarios and 6 unchanged legacy prompts. Not a full rerun of the 0.3.0 catalog."
+}

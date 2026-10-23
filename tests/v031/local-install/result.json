@@ -1,0 +1,23 @@
+{
+  "version": "0.3.1",
+  "method": "fresh_local_codex_user_skill_discovery",
+  "parent_history": false,
+  "skill_text_injected": false,
+  "temporary_project_skill_copy": false,
+  "model_override": false,
+  "exit_code": 0,
+  "has_final": true,
+  "elapsed_seconds": 44.97,
+  "read_commands": [
+    {
+      "command": "/bin/zsh -lc \"rg -n -A 65 -B 8 'workflow|Agent|流程' [USER_HOME]/.agents/skills/01-university-compass/references/ai-judgment.md\"",
+      "exit_code": 0,
+      "output_chars": 2953,
+      "contains_exact_entrypoint": false,
+      "matching_source_files": []
+    }
+  ],
+  "skill_digest": "7cf045b502d5f7c76fc60980f38e5efcd087593d7eb1a0eaf6c3563cef7f7307",
+  "files_verified": 12,
+  "status": "FAIL"
+}

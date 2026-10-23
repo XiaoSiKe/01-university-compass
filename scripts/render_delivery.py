@@ -151,7 +151,7 @@ def render(root, evaluation):
 当前验收
 状态：{status}
 安装文件 {files} 个；方法与任务卡 {cards} 张；研究与教学参考 {sources} 项。
-采用 {skill_cases} 个 Skill 情境、{baseline_cases} 个基线情境，共 {actual_turns} 条实际回答；另保留 {historical_turns} 条未采用或历史尝试回答。
+采用 {skill_cases} 个 Skill 情境、{baseline_cases} 个基线情境，共 {actual_turns} 条实际回答；所选记录的同目录另有 {historical_turns} 条未采用尝试，其他运行轮次和历史版本见报告。
 基线记录的采用表示证据完整、可用于对照，不表示其教学表现已通过与 Skill 相同的语义评审。
 采用索引：{evaluation}
 报告：{report}
@@ -193,6 +193,7 @@ python3 scripts/render_delivery.py --evaluation {evaluation}
                    root / '给社长的转发说明.txt': forwarding.encode()})
     publish_files({root / 'tests/实际对话记录.html': page('实际对话记录 · ' + version, transcript).encode()})
     return dict(counts, version=version, evaluation=status, skill_digest=skill_digest,
+                history_scope='unselected_attempts_in_directories_of_adopted_artifacts',
                 overview='00_先读说明.html', adopted_artifacts=len(cases))
 
 
