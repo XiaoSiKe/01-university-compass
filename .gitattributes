@@ -7,3 +7,7 @@ README.md text eol=lf
 .gitattributes text eol=lf
 assets/readme/*.svg text eol=lf
 scripts/*.py text eol=lf
+
+# Static reading copies are documentation, not a web application.
+00_先读说明.html linguist-documentation=true
+tests/实际对话记录*.html linguist-documentation=true
