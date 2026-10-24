@@ -192,6 +192,16 @@ npx skills add XiaoSiKe/01-university-compass --skill 01-university-compass
 
 </details>
 
+## 一起改进指南针
+
+欢迎通过 Issue、讨论和 Pull Request 一起改进。文字纠错、使用反馈、任务卡优化、资料核实、测试与工具改进都可以参与。
+
+- [报告问题或提出建议](https://github.com/XiaoSiKe/01-university-compass/issues/new/choose)
+- [交流使用体验与想法](https://github.com/XiaoSiKe/01-university-compass/discussions)
+- [阅读贡献指南](CONTRIBUTING.md)：Fork → 新建分支 → 修改并检查 → 向 `main` 提交 PR，由维护者审核合并。
+
+提交 PR 无需提前申请协作者权限。第一次参与，也可以从一个错别字或一条具体反馈开始。
+
 ## 给维护者
 
 <details>
